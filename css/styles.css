@@ -405,3 +405,127 @@ header:hover {
   font-size: 14px;
   color: #333;
 }
+/* ===========================exclusive sale======================= */
+.section-exclusive-sale {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.container-exclusive-sale {
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+.exclusive-sale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.exclusive-sale h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.exclusive-sale .timer {
+  display: flex;
+  align-items: center;
+}
+.exclusive-sale .timer div {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+.tabs-exclusive-sale {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.tabs-exclusive-sale div {
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.tabs-exclusive-sale .active-exclusive-sale {
+  border-bottom: 2px solid #ff4d4f;
+}
+.active-exclusive-sale {
+  display: flex;
+  justify-content: space-between;
+}
+.product-exclusive-sale {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 23%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.product-exclusive-sale img {
+  width: 100%;
+}
+.product-exclusive-sale .discount-exclusive-sale {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4d4f;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+.product-exclusive-sale .new {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff4d4f;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+.product-exclusive-sale .info-exclusive-sale {
+  padding: 10px;
+}
+.product-exclusive-sale .info-exclusive-sale .price-exclusive-sale {
+  color: #ff4d4f;
+  font-weight: bold;
+}
+.product-exclusive-sale .info-exclusive-sale .old-price-exclusive-sale {
+  text-decoration: line-through;
+  color: #999;
+}
+.product-exclusive-sale .info-exclusive-sale .sold-exclusive-sale {
+  color: #999;
+  font-size: 12px;
+}
+.product-exclusive-sale .info-exclusive-sale .progress-exclusive-sale {
+  height: 5px;
+  background-color: #ff4d4f;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+.product-exclusive-sale .info-exclusive-sale .voucher-exclusive-sale {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.product-exclusive-sale .info-exclusive-sale .voucher-exclusive-sale div {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.load-more {
+  text-align: center;
+  margin: 20px 0;
+}
+.load-more button {
+  padding: 10px 20px;
+  border: 1px solid #999;
+  background-color: rgb(243, 84, 84);
+  color: #000;
+  cursor: pointer;
+  border-radius: 5px;
+}

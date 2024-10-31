@@ -38,3 +38,22 @@ function slider(index) {
   dotItem[index].classList.add("active");
 }
 setInterval(imgSlide, 5000);
+//==================================== boy-girl===========================
+const girlTab = document.getElementById("girl-tab");
+const boyTab = document.getElementById("boy-tab");
+const girlCategory = document.getElementById("girl-category");
+const boyCategory = document.getElementById("boy-category");
+
+girlTab.addEventListener("click", () => {
+  girlCategory.style.display = "flex";
+  boyCategory.style.display = "none";
+  girlTab.classList.add("active");
+  boyTab.classList.remove("active");
+});
+
+boyTab.addEventListener("click", () => {
+  girlCategory.style.display = "none";
+  boyCategory.style.display = "flex";
+  boyTab.classList.add("active");
+  girlTab.classList.remove("active");
+});

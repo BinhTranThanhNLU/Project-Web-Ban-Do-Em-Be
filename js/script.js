@@ -57,3 +57,62 @@ boyTab.addEventListener("click", () => {
   boyTab.classList.add("active");
   girlTab.classList.remove("active");
 });
+// ==============================================section-exclusive-sale==================================================
+// đồng hồ đếm ngược
+// Đặt thời gian kết thúc cho đếm ngược (ví dụ: 3 giờ từ hiện tại)
+const countdownDate = new Date().getTime() + 3 * 60 * 60 * 1000; // 3 giờ tính từ bây giờ
+
+function updateTimer() {
+  const now = new Date().getTime();
+  const distance = countdownDate - now;
+
+  // Tính giờ, phút, giây
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Cập nhật nội dung hiển thị
+  document.querySelector(
+    ".timer div:nth-child(1)"
+  ).innerHTML = `${hours}<br>Giờ`;
+  document.querySelector(
+    ".timer div:nth-child(2)"
+  ).innerHTML = `${minutes}<br>Phút`;
+  document.querySelector(
+    ".timer div:nth-child(3)"
+  ).innerHTML = `${seconds}<br>Giây`;
+
+  // Kiểm tra khi hết thời gian
+  if (distance < 0) {
+    clearInterval(countdownInterval);
+    document.querySelector(".timer").innerHTML = "Hết hạn";
+  }
+}
+
+// Cập nhật đồng hồ mỗi giây
+const countdownInterval = setInterval(updateTimer, 1000);
+
+// chuyển tab của sale up tu 70 50
+
+function showTab(index) {
+  // Lấy tất cả các tab và nội dung của chúng
+  const tabs = document.querySelectorAll(".tab");
+  const tabContents = document.querySelectorAll(".tab-content-item");
+
+  // Ẩn tất cả các tab và nội dung
+  tabs.forEach((tab) => {
+    tab.classList.remove("active-exclusive-sale");
+  });
+  tabContents.forEach((content) => {
+    content.style.display = "none";
+  });
+
+  // Hiện tab và nội dung được chọn
+  tabs[index].classList.add("active-exclusive-sale");
+  tabContents[index].style.display = "block";
+}
+
+// Khởi động bằng cách hiển thị tab đầu tiên
+showTab(0);

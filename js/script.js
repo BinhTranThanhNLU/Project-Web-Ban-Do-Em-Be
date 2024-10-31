@@ -116,3 +116,26 @@ function showTab(index) {
 
 // Khởi động bằng cách hiển thị tab đầu tiên
 showTab(0);
+//=================================cuộn lên xuống thanh menu==========================
+let lastScrollTop = 0; // Vị trí cuộn trước đó
+const navbar = document.querySelector("header"); // Chọn thanh điều hướng
+
+window.addEventListener("scroll", function () {
+  const currentScroll =
+    window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop && currentScroll > 80) {
+    // Nếu cuộn xuống và đã cuộn qua 80px
+    navbar.style.top = "-80px"; // Đưa navbar lên ngoài màn hình
+  } else if (currentScroll < lastScrollTop) {
+    // Nếu cuộn lên
+    if (currentScroll <= 80) {
+      // Nếu cuộn lên đến trên cùng
+      navbar.style.top = "80px"; // Đặt lại vị trí navbar về 80px
+    } else {
+      navbar.style.top = "0"; // Hiện navbar
+    }
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Đảm bảo không bị âm
+});

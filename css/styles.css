@@ -369,3 +369,39 @@ header:hover {
 .dot.active {
   background: #000;
 }
+/* =============================boy-girl======================= */
+.category-header {
+  margin: 20px 0;
+  text-align: center;
+}
+.category-header a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  margin: 0 15px;
+}
+.category-header a.active {
+  color: orange;
+  text-decoration: underline;
+}
+.category-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.category-item {
+  text-align: center;
+}
+.category-item img {
+  border-radius: 50%;
+  background-color: #ffe6f2;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+}
+.category-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}

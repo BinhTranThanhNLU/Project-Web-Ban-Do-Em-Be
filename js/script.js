@@ -139,3 +139,18 @@ window.addEventListener("scroll", function () {
 
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Đảm bảo không bị âm
 });
+// đăng nhập đăng kí user ở thanh menu
+const userIcon = document.querySelector(".user-menu i");
+const dropdown = document.querySelector(".user-menu .dropdown");
+
+userIcon.addEventListener("click", function () {
+  dropdown.style.display =
+    dropdown.style.display === "block" ? "none" : "block";
+});
+
+// Đóng menu khi nhấp bên ngoài
+window.addEventListener("click", function (event) {
+  if (!event.target.closest(".user-menu")) {
+    dropdown.style.display = "none";
+  }
+});

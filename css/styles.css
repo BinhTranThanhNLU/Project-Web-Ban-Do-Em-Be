@@ -529,3 +529,112 @@ header:hover {
   cursor: pointer;
   border-radius: 5px;
 }
+/* =============================girl-fashion-====================== */
+.section-girl-fashion {
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.container-girl {
+  width: 90%;
+  margin: 0 auto;
+}
+.girl-fashion {
+  text-align: center;
+  padding: 20px 0;
+}
+.girl-fashion h1 {
+  font-size: 24px;
+  margin: 0;
+}
+.nav-girl-fashion {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  cursor: pointer;
+}
+.nav-girl-fashion p {
+  color: black;
+  padding: 10px 20px;
+  border-bottom: 2px solid transparent;
+  margin: 0 10px;
+}
+.nav-girl-fashion p.active {
+  border-bottom: 2px solid black;
+}
+.products-girl-fashion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.product-girl-fashion {
+  background-color: white;
+  width: 23%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.product-girl-fashion img {
+  width: 100%;
+  height: auto;
+}
+.product-girl-fashion .info-girl-fashion {
+  padding: 10px;
+}
+.product-girl-fashion .info-girl-fashion h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+.product-girl-fashion .info-girl-fashion .price-girl-fashion {
+  color: #ff5722;
+  font-size: 18px;
+  font-weight: bold;
+}
+.product-girl-fashion .info-girl-fashion .voucher-girl-fashion {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.product-girl-fashion .info-girl-fashion .voucher-girl-fashion span {
+  background-color: #ff5722;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.product-girl-fashion .info-girl-fashion .voucher-girl-fashion span:last-child {
+  background-color: #3f51b5;
+}
+.product-girl-fashion .info-girl-fashion .colors {
+  display: flex;
+  margin: 10px 0;
+}
+.product-girl-fashion .info-girl-fashion .colors span {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: inline-block;
+}
+.product-girl-fashion .info-girl-fashion .colors span.color1 {
+  background-color: #ff5722;
+}
+.product-girl-fashion .info-girl-fashion .colors span.color2 {
+  background-color: #3f51b5;
+}
+.product-girl-fashion .info-girl-fashion .colors span.color3 {
+  background-color: #4caf50;
+}
+
+.load-more {
+  text-align: center;
+  margin: 20px 0;
+}
+.load-more button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #000;
+  cursor: pointer;
+}

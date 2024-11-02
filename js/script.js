@@ -154,3 +154,33 @@ window.addEventListener("click", function (event) {
     dropdown.style.display = "none";
   }
 });
+// ===================================bé gái====================================
+function showTabGirl(tabName) {
+  // Ẩn tất cả các sản phẩm
+  const products = document.querySelectorAll(".products-girl-fashion");
+  products.forEach((product) => {
+    product.style.display = "none";
+  });
+
+  // Hiển thị sản phẩm tương ứng với tab đã chọn
+  const selectedTab = document.getElementById(tabName);
+  if (selectedTab) {
+    selectedTab.style.display = "flex";
+  }
+
+  // Cập nhật trạng thái của tab
+  const tabs = document.querySelectorAll(".nav-girl-fashion div");
+  tabs.forEach((tab) => {
+    tab.classList.remove("active");
+  });
+
+  const activeTab = [...tabs].find((tab) =>
+    tab.getAttribute("onclick").includes(tabName)
+  );
+  if (activeTab) {
+    activeTab.classList.add("active");
+  }
+}
+
+// Khởi tạo trạng thái tab đầu tiên
+showTabGirl("dam-vay");

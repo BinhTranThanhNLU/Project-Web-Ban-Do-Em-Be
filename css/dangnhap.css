@@ -53,7 +53,7 @@ body{
    position: relative;
    width: 75%;
    height: 90%;
-   background-image: url(dark-sunset.jpg);
+   background-image: url(/images/dark-sunset.jpg);
    background-repeat: no-repeat;
    background-size: cover;
    display: flex;

@@ -530,12 +530,13 @@ header:hover {
   border-radius: 5px;
 }
 /* =============================girl-fashion-====================== */
+
 .section-girl-fashion {
-  margin-right: 5%;
-  margin-left: 5%;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 .container-girl {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 .girl-fashion {
@@ -568,7 +569,7 @@ header:hover {
 }
 .product-girl-fashion {
   background-color: white;
-  width: 23%;
+  width: 22%;
   margin-bottom: 20px;
   border-radius: 8px;
   overflow: hidden;

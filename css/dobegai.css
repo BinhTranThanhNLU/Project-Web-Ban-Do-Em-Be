@@ -1,0 +1,37 @@
+/* section bread-crumb */
+.bread-crumb {
+    display: block;
+    width: 100%;
+    clear: both;
+    position: relative;
+    left: 180px;
+    margin: 20px 0;
+}
+
+
+.bread-crumb ul.breadcrumb {
+    display: flex;
+    flex-wrap: wrap; 
+    padding: 0;
+    margin: 0;
+}
+
+.bread-crumb ul.breadcrumb li {
+    list-style-type: none;
+}
+
+/* section dbg-header-image */
+.dbg-header-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header-image img {
+    width: 100%;     
+    max-width: 1410px; 
+    height: auto;
+    display: block;
+}
+

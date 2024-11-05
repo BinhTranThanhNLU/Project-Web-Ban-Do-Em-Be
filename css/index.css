@@ -827,3 +827,65 @@ header:hover {
   background-color: #fff;
   cursor: pointer;
 }
+/* ================================footer========================== */
+
+.number {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.footer {
+  background-color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid #eaeaea;
+}
+.footer-column {
+  flex: 1;
+  margin: 0 20px;
+}
+.footer-column h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.footer-column p,
+.footer-column a {
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  line-height: 1.6;
+}
+.footer-column a:hover {
+  text-decoration: underline;
+}
+.footer-column .subscribe {
+  display: flex;
+  margin-top: 20px;
+}
+.footer-column .subscribe input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  flex: 1;
+}
+.footer-column .subscribe button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+.footer-column .social-icons {
+  margin-top: 20px;
+}
+.footer-column .social-icons a {
+  margin-right: 10px;
+  color: #333;
+  font-size: 20px;
+}
+.footer-column .payment-icons img {
+  margin-right: 10px;
+  height: 30px;
+}

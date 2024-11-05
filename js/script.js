@@ -184,3 +184,29 @@ function showTabGirl(tabName) {
 
 // Khởi tạo trạng thái tab đầu tiên
 showTabGirl("dam-vay");
+// =================================bestseller============================
+function showTabB(tabName) {
+  // Ẩn tất cả các tab
+  const tabs = document.querySelectorAll(".products-sale");
+  tabs.forEach((tab) => {
+    tab.style.display = "none";
+  });
+
+  // Hiện tab được chọn
+  document.getElementById(tabName).style.display = "flex";
+
+  // Cập nhật trạng thái nút
+  const buttons = document.querySelectorAll(".tab-button");
+  buttons.forEach((button) => {
+    button.classList.remove("active");
+  });
+  const activeButton = [...buttons].find((button) =>
+    button.innerText.includes(
+      tabName === "best-seller" ? "Bán Chạy Nhất" : "BST Disney"
+    )
+  );
+  activeButton.classList.add("active");
+}
+
+// Mặc định hiển thị tab "Bán Chạy Nhất"
+showTabB("best-seller");

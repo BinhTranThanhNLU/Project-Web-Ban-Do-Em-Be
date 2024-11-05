@@ -210,3 +210,25 @@ function showTabB(tabName) {
 
 // Mặc định hiển thị tab "Bán Chạy Nhất"
 showTabB("best-seller");
+// ===================================bé trai====================================
+function showTabBoy(tabName) {
+  // Ẩn tất cả các sản phẩm
+  var tabs = document.querySelectorAll(".products-boy-fashion");
+  tabs.forEach(function (tab) {
+    tab.style.display = "none";
+  });
+
+  // Hiện tab được chọn
+  document.getElementById(tabName).style.display = "flex";
+  // Cập nhật class active cho các tab
+  var navItems = document.querySelectorAll(".nav-boy-fashion p");
+  navItems.forEach(function (item) {
+    item.classList.remove("active");
+    if (
+      item.innerText ===
+      tabName.charAt(0).toUpperCase() + tabName.slice(1).replace("-", " ")
+    ) {
+      item.classList.add("active");
+    }
+  });
+}

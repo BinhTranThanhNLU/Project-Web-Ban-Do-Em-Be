@@ -639,3 +639,100 @@ header:hover {
   color: #000;
   cursor: pointer;
 }
+/* ========================bán chạy nhất============================*/
+.section-best-seller {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+}
+.container h1 {
+  font-size: 24px;
+  margin: 0;
+}
+.best-seller {
+  margin: 20px 0;
+  display: flex;
+  text-align: center;
+}
+
+.best-seller .tab-button {
+  cursor: pointer;
+  border-bottom: 2px solid #ff4d4f;
+}
+.best-seller p {
+  font-size: 16px;
+  color: #888;
+}
+.products-sale {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.product-sale {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: 22.5%;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: left;
+}
+.product-sale img {
+  width: 100%;
+  border-radius: 8px;
+}
+.product-sale h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+/*  khoảng cách trên dưới */
+.product-sale p {
+  font-size: 14px;
+  color: #888;
+  margin: 5px 0;
+}
+.product-sale .price-sale {
+  font-size: 16px;
+  color: #e74c3c;
+  font-weight: bold;
+}
+.product-sale .voucher-sale {
+  background-color: #ff6f00;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+.product-sale .freeship-sale {
+  background-color: #3498db;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.product-sale .icons-sale {
+  margin-top: 10px;
+}
+.product-sale .icons-sale i {
+  color: #ff6f00;
+  margin-right: 5px;
+}
+.load-more {
+  margin: 20px 0;
+}
+.load-more button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

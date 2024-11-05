@@ -25,13 +25,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    padding: 20px; 
+    background-color: #f5f5f5; 
 }
 
 .header-image img {
-    width: 100%;     
-    max-width: 1410px; 
+    width: 100%;
+    max-width: 1410px;
     height: auto;
     display: block;
+    border-radius: 8px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    object-fit: cover; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Hiệu ứng phóng to khi di chuột */
+.header-image img:hover {
+    transform: scale(0.75); 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
 }
 

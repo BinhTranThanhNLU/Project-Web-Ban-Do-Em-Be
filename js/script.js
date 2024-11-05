@@ -38,6 +38,45 @@ function slider(index) {
   dotItem[index].classList.add("active");
 }
 setInterval(imgSlide, 5000);
+
+//=================================cuộn lên xuống thanh menu==========================
+let lastScrollTop = 0; // Vị trí cuộn trước đó
+const navbar = document.querySelector("header"); // Chọn thanh điều hướng
+
+window.addEventListener("scroll", function () {
+  const currentScroll =
+    window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop && currentScroll > 80) {
+    // Nếu cuộn xuống và đã cuộn qua 80px
+    navbar.style.top = "-80px"; // Đưa navbar lên ngoài màn hình
+  } else if (currentScroll < lastScrollTop) {
+    // Nếu cuộn lên
+    if (currentScroll <= 80) {
+      // Nếu cuộn lên đến trên cùng
+      navbar.style.top = "80px"; // Đặt lại vị trí navbar về 80px
+    } else {
+      navbar.style.top = "0"; // Hiện navbar
+    }
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Đảm bảo không bị âm
+});
+// đăng nhập đăng kí user ở thanh menu
+const userIcon = document.querySelector(".user-menu i");
+const dropdown = document.querySelector(".user-menu .dropdown");
+
+userIcon.addEventListener("click", function () {
+  dropdown.style.display =
+    dropdown.style.display === "block" ? "none" : "block";
+});
+
+// Đóng menu khi nhấp bên ngoài
+window.addEventListener("click", function (event) {
+  if (!event.target.closest(".user-menu")) {
+    dropdown.style.display = "none";
+  }
+});
 //==================================== boy-girl===========================
 const girlTab = document.getElementById("girl-tab");
 const boyTab = document.getElementById("boy-tab");
@@ -57,8 +96,7 @@ boyTab.addEventListener("click", () => {
   boyTab.classList.add("active");
   girlTab.classList.remove("active");
 });
-// ==============================================section-exclusive-sale==================================================
-// đồng hồ đếm ngược
+// ===========================section-exclusive-sale=======================
 // Đặt thời gian kết thúc cho đếm ngược (ví dụ: 3 giờ từ hiện tại)
 const countdownDate = new Date().getTime() + 3 * 60 * 60 * 1000; // 3 giờ tính từ bây giờ
 
@@ -116,44 +154,34 @@ function showTab(index) {
 
 // Khởi động bằng cách hiển thị tab đầu tiên
 showTab(0);
-//=================================cuộn lên xuống thanh menu==========================
-let lastScrollTop = 0; // Vị trí cuộn trước đó
-const navbar = document.querySelector("header"); // Chọn thanh điều hướng
 
-window.addEventListener("scroll", function () {
-  const currentScroll =
-    window.pageYOffset || document.documentElement.scrollTop;
+// ====================section-exclusive-sale ============================
+// =================================bestseller============================
+function showTabB(tabName) {
+  // Ẩn tất cả các tab
+  const tabs = document.querySelectorAll(".products-sale");
+  tabs.forEach((tab) => {
+    tab.style.display = "none";
+  });
 
-  if (currentScroll > lastScrollTop && currentScroll > 80) {
-    // Nếu cuộn xuống và đã cuộn qua 80px
-    navbar.style.top = "-80px"; // Đưa navbar lên ngoài màn hình
-  } else if (currentScroll < lastScrollTop) {
-    // Nếu cuộn lên
-    if (currentScroll <= 80) {
-      // Nếu cuộn lên đến trên cùng
-      navbar.style.top = "80px"; // Đặt lại vị trí navbar về 80px
-    } else {
-      navbar.style.top = "0"; // Hiện navbar
-    }
-  }
+  // Hiện tab được chọn
+  document.getElementById(tabName).style.display = "flex";
 
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Đảm bảo không bị âm
-});
-// đăng nhập đăng kí user ở thanh menu
-const userIcon = document.querySelector(".user-menu i");
-const dropdown = document.querySelector(".user-menu .dropdown");
+  // Cập nhật trạng thái nút
+  const buttons = document.querySelectorAll(".tab-button");
+  buttons.forEach((button) => {
+    button.classList.remove("active");
+  });
+  const activeButton = [...buttons].find((button) =>
+    button.innerText.includes(
+      tabName === "best-seller" ? "Bán Chạy Nhất" : "BST Disney"
+    )
+  );
+  activeButton.classList.add("active");
+}
 
-userIcon.addEventListener("click", function () {
-  dropdown.style.display =
-    dropdown.style.display === "block" ? "none" : "block";
-});
-
-// Đóng menu khi nhấp bên ngoài
-window.addEventListener("click", function (event) {
-  if (!event.target.closest(".user-menu")) {
-    dropdown.style.display = "none";
-  }
-});
+// Mặc định hiển thị tab "Bán Chạy Nhất"
+showTabB("best-seller");
 // ===================================bé gái====================================
 function showTabGirl(tabName) {
   // Ẩn tất cả các sản phẩm
@@ -184,32 +212,6 @@ function showTabGirl(tabName) {
 
 // Khởi tạo trạng thái tab đầu tiên
 showTabGirl("dam-vay");
-// =================================bestseller============================
-function showTabB(tabName) {
-  // Ẩn tất cả các tab
-  const tabs = document.querySelectorAll(".products-sale");
-  tabs.forEach((tab) => {
-    tab.style.display = "none";
-  });
-
-  // Hiện tab được chọn
-  document.getElementById(tabName).style.display = "flex";
-
-  // Cập nhật trạng thái nút
-  const buttons = document.querySelectorAll(".tab-button");
-  buttons.forEach((button) => {
-    button.classList.remove("active");
-  });
-  const activeButton = [...buttons].find((button) =>
-    button.innerText.includes(
-      tabName === "best-seller" ? "Bán Chạy Nhất" : "BST Disney"
-    )
-  );
-  activeButton.classList.add("active");
-}
-
-// Mặc định hiển thị tab "Bán Chạy Nhất"
-showTabB("best-seller");
 // ===================================bé trai====================================
 function showTabBoy(tabName) {
   // Ẩn tất cả các sản phẩm

@@ -1,47 +1,50 @@
 //==============================hieu ung di chuyen cua anh dau trang============================
-const header = document.querySelector("header");
-window.addEventListener("scroll", function () {
-  x = window.pageYOffset;
-  if (x > 0) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-});
 
-const imgPosition = document.querySelectorAll(".aspect-ratio-169 img");
-const imgContainer = document.querySelector(".aspect-ratio-169");
-const dotItem = document.querySelectorAll(".dot");
+let slider = document.querySelector(".slider .list");
+let items = document.querySelectorAll(".slider .list .item");
+let next = document.getElementById("next");
+let prev = document.getElementById("prev");
+let dots = document.querySelectorAll(".slider .dots li");
 
-let imgNumber = imgPosition.length;
-let index = 0;
-imgPosition.forEach(function (image, index) {
-  image.style.left = index * 100 + "%";
-  dotItem[index].addEventListener("click", function () {
-    slider(index);
+let lengthItems = items.length - 1;
+let active = 0;
+next.onclick = function () {
+  active = active + 1 <= lengthItems ? active + 1 : 0;
+  reloadSlider();
+};
+prev.onclick = function () {
+  active = active - 1 >= 0 ? active - 1 : lengthItems;
+  reloadSlider();
+};
+let refreshInterval = setInterval(() => {
+  next.click();
+}, 3000);
+function reloadSlider() {
+  slider.style.left = -items[active].offsetLeft + "px";
+  //
+  let last_active_dot = document.querySelector(".slider .dots li.active");
+  last_active_dot.classList.remove("active");
+  dots[active].classList.add("active");
+
+  clearInterval(refreshInterval);
+  refreshInterval = setInterval(() => {
+    next.click();
+  }, 3000);
+}
+
+dots.forEach((li, key) => {
+  li.addEventListener("click", () => {
+    active = key;
+    reloadSlider();
   });
 });
-
-function imgSlide() {
-  index++;
-  console.log(index);
-  if (index >= imgNumber) {
-    index = 0;
-  }
-  slider(index);
-}
-
-function slider(index) {
-  imgContainer.style.left = "-" + index * 100 + "%";
-  const dotActive = document.querySelector(".active");
-  dotActive.classList.remove("active");
-  dotItem[index].classList.add("active");
-}
-setInterval(imgSlide, 5000);
+window.onresize = function (event) {
+  reloadSlider();
+};
 
 //=================================cuộn lên xuống thanh menu==========================
 let lastScrollTop = 0; // Vị trí cuộn trước đó
-const navbar = document.querySelector("header"); // Chọn thanh điều hướng
+const navbar = document.querySelector("nav"); // Chọn thanh điều hướng
 
 window.addEventListener("scroll", function () {
   const currentScroll =
@@ -96,6 +99,7 @@ boyTab.addEventListener("click", () => {
   boyTab.classList.add("active");
   girlTab.classList.remove("active");
 });
+
 // ===========================section-exclusive-sale=======================
 // Đặt thời gian kết thúc cho đếm ngược (ví dụ: 3 giờ từ hiện tại)
 const countdownDate = new Date().getTime() + 3 * 60 * 60 * 1000; // 3 giờ tính từ bây giờ
@@ -155,7 +159,6 @@ function showTab(index) {
 // Khởi động bằng cách hiển thị tab đầu tiên
 showTab(0);
 
-// ====================section-exclusive-sale ============================
 // =================================bestseller============================
 function showTabB(tabName) {
   // Ẩn tất cả các tab
@@ -197,13 +200,14 @@ function showTabGirl(tabName) {
   }
 
   // Cập nhật trạng thái của tab
-  const tabs = document.querySelectorAll(".nav-girl-fashion div");
+  const tabs = document.querySelectorAll(".nav-girl-fashion p");
   tabs.forEach((tab) => {
     tab.classList.remove("active");
   });
 
-  const activeTab = [...tabs].find((tab) =>
-    tab.getAttribute("onclick").includes(tabName)
+  // Đặt tab đã chọn thành active
+  const activeTab = document.querySelector(
+    `.nav-girl-fashion p[onclick="showTabGirl('${tabName}')"]`
   );
   if (activeTab) {
     activeTab.classList.add("active");
@@ -212,25 +216,66 @@ function showTabGirl(tabName) {
 
 // Khởi tạo trạng thái tab đầu tiên
 showTabGirl("dam-vay");
+
 // ===================================bé trai====================================
+
 function showTabBoy(tabName) {
-  // Ẩn tất cả các sản phẩm
-  var tabs = document.querySelectorAll(".products-boy-fashion");
-  tabs.forEach(function (tab) {
-    tab.style.display = "none";
+  // Ẩn tất cả các sản phẩm của boy
+  const products = document.querySelectorAll(".products-boy-fashion");
+  products.forEach((product) => {
+    product.style.display = "none";
   });
 
-  // Hiện tab được chọn
-  document.getElementById(tabName).style.display = "flex";
-  // Cập nhật class active cho các tab
-  var navItems = document.querySelectorAll(".nav-boy-fashion p");
-  navItems.forEach(function (item) {
-    item.classList.remove("active");
-    if (
-      item.innerText ===
-      tabName.charAt(0).toUpperCase() + tabName.slice(1).replace("-", " ")
-    ) {
-      item.classList.add("active");
-    }
+  // Hiển thị sản phẩm tương ứng với tab đã chọn
+  const selectedTab = document.getElementById(tabName);
+  if (selectedTab) {
+    selectedTab.style.display = "flex";
+  }
+
+  // Cập nhật trạng thái của tab
+  const tabs = document.querySelectorAll(".nav-boy-fashion p");
+  tabs.forEach((tab) => {
+    tab.classList.remove("active");
   });
+
+  // Đặt tab đã chọn thành active
+  const activeTab = document.querySelector(
+    `.nav-boy-fashion p[onclick="showTabBoy('${tabName}')"]`
+  );
+  if (activeTab) {
+    activeTab.classList.add("active");
+  }
 }
+
+// Khởi tạo trạng thái tab đầu tiên
+showTabBoy("ao-boy");
+// jhKDKLDHFJ
+new Swiper(".card-wrapper", {
+  // Optional parameters
+  loop: true,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 3000, // Thời gian dừng giữa các slide (3000ms = 3 giây)
+    disableOnInteraction: false, // Tiếp tục tự chạy sau khi người dùng tương tác
+  },
+  // pagination bullets
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      slidesPerView: 2,
+      slidesPerView: 3,
+      slidesPerView: 4,
+    },
+  },
+});

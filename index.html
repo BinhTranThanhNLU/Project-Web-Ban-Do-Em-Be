@@ -3,18 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Little Whale </title>
+    <title>Little Whale</title>
+    <style></style>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <!-- =====================================Header============================== -->
     <section class="section-header">
       <div class="header">
-        <div class="logo">
+        <div class="logo-header">
           <img
             alt="Company Logo"
             height="50"
@@ -22,25 +26,25 @@
             width="100"
           />
         </div>
-        <div class="search-bar">
+        <div class="search-bar-header">
           <input placeholder="Bạn cần tìm gì?" type="text" />
           <i class="fas fa-search"> </i>
         </div>
-        <div class="contact-info">
-          <div class="icon">
+        <div class="contact-info-header">
+          <div class="icon-header">
             <i class="fas fa-phone-alt"> </i>
           </div>
-          <div class="text">1900633520</div>
-          <div class="icon">
+          <div class="text-header">1900633520</div>
+          <div class="icon-header">
             <i class="fas fa-file-alt"> </i>
           </div>
-          <div class="text">Kiểm tra đơn hàng</div>
+          <div class="text-header">Kiểm tra đơn hàng</div>
         </div>
       </div>
     </section>
     <!-- =====================================Nav================================= -->
     <section class="navigation">
-      <header>
+      <nav>
         <!-- menu  -->
         <div class="navbar">
           <div class="menu">
@@ -51,7 +55,7 @@
                 <a href="#">Bé gái</a>
                 <!-- <ion-icon name="chevron-down-outline"></ion-icon> -->
               </div>
-              <div class="dropdown">
+              <div class="dropdown dropdown-full">
                 <!-- Dropdown cho Bé gái -->
                 <div class="column">
                   <h3>ĐẦM VÁY</h3>
@@ -88,9 +92,6 @@
                   <a href="#">Bộ Easy Wear</a>
                 </div>
                 <div class="column">
-                  <h3>ĐỒ BƠI</h3>
-                </div>
-                <div class="column">
                   <h3>PHỤ KIỆN</h3>
                   <a href="#">Đồ Lót</a>
                   <a href="#">Balo/túi xách</a>
@@ -109,7 +110,7 @@
                 <a href="#">Bé trai</a>
               </div>
 
-              <div class="dropdown">
+              <div class="dropdown dropdown-full">
                 <!-- Dropdown cho Bé gái -->
                 <div class="column">
                   <h3>Áo</h3>
@@ -146,9 +147,6 @@
                   <a href="#">Bình nước</a>
                 </div>
                 <div class="column">
-                  <h3>ĐỒ BƠI</h3>
-                </div>
-                <div class="column">
                   <h3>&nbsp;</h3>
                 </div>
               </div>
@@ -174,7 +172,6 @@
                 <div class="column"></div>
               </div> -->
             </div>
-
             <div class="dropdown-menu">
               <div class="navheight"><a href="#">New Arrival</a></div>
               <div class="dropdown-3">
@@ -187,9 +184,6 @@
                 </div>
               </div>
             </div>
-            
-            <a href="#">Cửa hàng</a>
-
             <div class="dropdown-menu">
               <div class="navheight"><a href="#">Tin Tức</a></div>
               <div class="dropdown-4">
@@ -223,24 +217,42 @@
             </div>
           </div>
         </div>
-      </header>
+      </nav>
     </section>
     <!-- ================Hiệu ứng di chuyển hình ảnh ở đầu trang can js============-->
     <section id="Slider">
-      <!-- Tham khao tren viblo aspect-ratio-169-->
-      <div class="aspect-ratio-169">
-        <img class="ratio" src="images/Slider1.jpg" alt="" />
-        <img class="ratio" src="images/Slider2.jpg" alt="" />
-        <img class="ratio" src="images/Slider3.jpg" alt="" />
-        <img class="ratio" src="images/Slider4.jpg" alt="" />
-      </div>
-      <div class="dot-container">
-        <div class="dot active"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
+      <div class="slider">
+        <div class="list">
+          <div class="item">
+            <img class="slider-img" src="./images/Slider2.jpg" alt="Slide 2" />
+          </div>
+          <div class="item">
+            <img class="slider-img" src="./images/Slider3.jpg" alt="Slide 3" />
+          </div>
+          <div class="item">
+            <img class="slider-img" src="./images/Slider4.jpg" alt="Slide 4" />
+          </div>
+          <div class="item">
+            <img class="slider-img" src="./images/Slider1.jpg" alt="Slide 1" />
+          </div>
+          <div class="item">
+            <img class="slider-img" src="./images/Slider3.jpg" alt="Slide 3" />
+          </div>
+        </div>
+        <div class="buttons">
+          <button id="prev"><</button>
+          <button id="next">></button>
+        </div>
+        <ul class="dots">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
     </section>
+
     <!-- =================================bé trai bé gái========================== -->
     <section class="boy-girl">
       <div class="category-header">
@@ -324,7 +336,7 @@
       </div>
 
       <div id="boy-category" class="category-container" style="display: none">
-        <div class="category-item">
+        <div class="category-item-boy">
           <img
             alt="Image of a pink dress"
             height="100"
@@ -333,7 +345,7 @@
           />
           <p>Áo</p>
         </div>
-        <div class="category-item">
+        <div class="category-item-boy">
           <img
             alt="Image of a pink outfit"
             height="100"
@@ -342,7 +354,7 @@
           />
           <p>Quần</p>
         </div>
-        <div class="category-item">
+        <div class="category-item-boy">
           <img
             alt="Image of a pink hoodie"
             height="100"
@@ -351,7 +363,7 @@
           />
           <p>Đồ Bộ</p>
         </div>
-        <div class="category-item">
+        <div class="category-item-boy">
           <img
             alt="Image of a red shirt with a heart"
             height="100"
@@ -360,7 +372,7 @@
           />
           <p>Áo Khoác</p>
         </div>
-        <div class="category-item">
+        <div class="category-item-boy">
           <img
             alt="Image of pink shorts with a bow"
             height="100"
@@ -369,7 +381,7 @@
           />
           <p>Áo Sơ Mi</p>
         </div>
-        <div class="category-item">
+        <div class="category-item-boy">
           <img
             alt="Image of pink underwear"
             height="100"
@@ -378,7 +390,7 @@
           />
           <p>Marvel</p>
         </div>
-        <div class="category-item">
+        <div class="category-item-boy">
           <img
             alt="Image of a pink backpack"
             height="100"
@@ -387,7 +399,7 @@
           />
           <p>Đồ Lót</p>
         </div>
-        <div class="category-item">
+        <div class="category-item-boy">
           <img
             alt="Easy Wear logo"
             height="100"
@@ -398,7 +410,6 @@
         </div>
       </div>
     </section>
-    <!-- =================================sale độc quyền========================== -->
     <section class="section-exclusive-sale">
       <div class="container-exclusive-sale">
         <div class="exclusive-sale">
@@ -410,290 +421,238 @@
           </div>
         </div>
         <div class="tabs-exclusive-sale">
-          
-
           <div class="tab" onclick="showTab(0)">Sale up to 70%</div>
           <div class="tab" onclick="showTab(1)">Sale 50 - 70%</div>
           <div class="tab" onclick="showTab(2)">Sale 20 - 40%</div>
         </div>
         <div class="tab-content-item">
-          <div class="active-exclusive-sale">
-            <div class="product-exclusive-sale">
-              <img
-                alt="Boy wearing red sweater and jeans"
-                height="400"
-                src="./images/sale20.webp"
-                width="300"
-              />
-              <div class="discount-exclusive-sale">-50%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>Thêm Vào Giỏ Hàng</div>
-                  <div>Xem Chi Tiết</div>
-                </div>
-                <p>Áo dài tay bé trai Rabity x ELLE Kids - designed in...</p>
-                <p class="price-exclusive-sale">
-                  124,500đ
-                  <span class="old-price-exclusive-sale"> 249,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 100 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 50%"></div>
-              </div>
-            </div>
-            <div class="product-exclusive-sale">
-              <img
-                alt="Red polo shirt for kids"
-                height="400"
-                src="./images/sale20.webp"
-                width="300"
-              />
-              <div class="discount-exclusive-sale">-50%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>Thêm Vào Giỏ Hàng</div>
-                  <div>Xem Chi Tiết</div>
-                </div>
-                <p>Áo thun polo cổ bé dài tay bé trai Rabity x ELLE Kid...</p>
-                <p class="price-exclusive-sale">
-                  119,500đ
-                  <span class="old-price-exclusive-sale"> 239,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 122 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 60%"></div>
-              </div>
-            </div>
-            <div class="product-exclusive-sale">
-              <img
-                alt="Pink dress with bunny print for girls"
-                height="400"
-                src="./images/sale20.webp"
-                width="300"
-              />
-              <div class="new">Mới</div>
-              <div class="discount-exclusive-sale">-30%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>Thêm Vào Giỏ Hàng</div>
-                  <div>Xem Chi Tiết</div>
-                </div>
-                <p>Đầm váy thun thỏ xinh ngắn tay bé gái Rabity...</p>
-                <p class="price-exclusive-sale">
-                  139,300đ
-                  <span class="old-price-exclusive-sale"> 199,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 100 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 50%"></div>
-              </div>
-            </div>
-            <div class="product-exclusive-sale">
-              <img
-                alt="Pink vest with bear print for kids"
-                height="400"
-                src="./images/sale20.webp"
-                width="300"
-              />
-              <div class="discount-exclusive-sale">-50%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>Thêm Vào Giỏ Hàng</div>
-                  <div>Xem Chi Tiết</div>
-                </div>
-                <p>Áo khoác Gile phao bé trai/ bé gái Rabity 921.001</p>
-                <p class="price-exclusive-sale">
-                  129,500đ
-                  <span class="old-price-exclusive-sale"> 259,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 152 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 75%"></div>
-              </div>
+          <div class="container-sale swiper">
+            <div class="card-wrapper swiper-wrapper">
+              <ul class="card-list swiper-wrapper">
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124.000đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124.000đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124.000đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124,500đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124,500đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/aosomi-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124,500đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+              </ul>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-slide-button swiper-button-prev"></div>
+              <div class="swiper-slide-button swiper-button-next"></div>
             </div>
           </div>
         </div>
-
         <div class="tab-content-item">
-          <div class="active-exclusive-sale">
-            <div class="product-exclusive-sale">
-              <img
-                alt="Boy wearing red sweater and jeans"
-                height="400"
-                src="./images/sale1.webp"
-                width="300"
-              />
-              <div class="discount-exclusive-sale">-50%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>Thêm vào giỏ hàng </div>
-                  <div>Xem Chi Tiết</div>
-                </div>
-                <p>Áo dài tay bé trai Rabity x ELLE Kids - designed in...</p>
-                <p class="price-exclusive-sale">
-                  124,500đ
-                  <span class="old-price-exclusive-sale"> 249,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 100 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 50%"></div>
-              </div>
-            </div>
-            <div class="product-exclusive-sale">
-              <img
-                alt="Red polo shirt for kids"
-                height="400"
-                src="./images/sale1.webp"
-                width="300"
-              />
-              <div class="discount-exclusive-sale">-50%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>Thêm Vào Giỏ Hàng</div>
-                  <div>Xem Chi Tiết</div>
-                </div>
-                <p>Áo thun polo cổ bé dài tay bé trai Rabity x ELLE Kid...</p>
-                <p class="price-exclusive-sale">
-                  119,500đ
-                  <span class="old-price-exclusive-sale"> 239,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 122 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 60%"></div>
-              </div>
-            </div>
-            <div class="product-exclusive-sale">
-              <img
-                alt="Pink dress with bunny print for girls"
-                height="400"
-                src="./images/sale1.webp"
-                width="300"
-              />
-              <div class="new">Mới</div>
-              <div class="discount-exclusive-sale">-30%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>Thêm Vào Giỏ Hàng</div>
-                  <div>Xem Chi Tiết</div>
-                </div>
-                <p>Đầm váy thun thỏ xinh ngắn tay bé gái Rabity...</p>
-                <p class="price-exclusive-sale">
-                  139,300đ
-                  <span class="old-price-exclusive-sale"> 199,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 100 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 50%"></div>
-              </div>
-            </div>
-            <div class="product-exclusive-sale">
-              <img
-                alt="Pink vest with bear print for kids"
-                height="400"
-                src="./images/sale1.webp"
-                width="300"
-              />
-              <div class="discount-exclusive-sale">-50%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>Thêm Vào Giỏ Hàng</div>
-                  <div>Xem Chi Tiết</div>
-                </div>
-                <p>Áo khoác Gile phao bé trai/ bé gái Rabity 921.001</p>
-                <p class="price-exclusive-sale">
-                  129,500đ
-                  <span class="old-price-exclusive-sale"> 259,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 152 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 75%"></div>
-              </div>
+          <div class="container-sale swiper">
+            <div class="card-wrapper swiper-wrapper">
+              <ul class="card-list swiper-wrapper">
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao.webp" alt="" />
+                    <!-- <p class="badge">Deverlop</p> -->
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124.000đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124.000đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124.000đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124,500đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124,500đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124,500đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+              </ul>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-slide-button swiper-button-prev"></div>
+              <div class="swiper-slide-button swiper-button-next"></div>
             </div>
           </div>
         </div>
-
         <div class="tab-content-item">
-          <div class="active-exclusive-sale">
-            <div class="product-exclusive-sale">
-              <img
-                alt="Boy wearing red sweater and jeans"
-                height="400"
-                src="./images/sale1.webp"
-                width="300"
-              />
-              <div class="discount-exclusive-sale">-50%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>Thêm Vào Giỏ Hàng</div>
-                  <div>Xem Chi Tiết</div>
-                </div>
-                <p>Áo dài tay bé trai Rabity x ELLE Kids - designed in...</p>
-                <p class="price-exclusive-sale">
-                  124,500đ
-                  <span class="old-price-exclusive-sale"> 249,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 100 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 50%"></div>
-              </div>
-            </div>
-            <div class="product-exclusive-sale">
-              <img
-                alt="Red polo shirt for kids"
-                height="400"
-                src="./images/sale2.webp"
-                width="300"
-              />
-              <div class="discount-exclusive-sale">-50%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>Thêm Vào Giỏ Hàng</div>
-                  <div>Xem Chi Tiết</div>
-                </div>
-                <p>Áo thun polo cổ bé dài tay bé trai Rabity x ELLE Kid...</p>
-                <p class="price-exclusive-sale">
-                  119,500đ
-                  <span class="old-price-exclusive-sale"> 239,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 122 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 60%"></div>
-              </div>
-            </div>
-            <div class="product-exclusive-sale">
-              <img
-                alt="Pink dress with bunny print for girls"
-                height="400"
-                src="./images/sale3.webp"
-                width="300"
-              />
-              <div class="new">Mới</div>
-              <div class="discount-exclusive-sale">-30%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>Thêm Vào Giỏ Hàng</div>
-                  <div>Xem Chi Tiết</div>
-                </div>
-                <p>Đầm váy thun thỏ xinh ngắn tay bé gái Rabity...</p>
-                <p class="price-exclusive-sale">
-                  139,300đ
-                  <span class="old-price-exclusive-sale"> 199,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 100 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 50%"></div>
-              </div>
-            </div>
-            <div class="product-exclusive-sale">
-              <img
-                alt="Pink vest with bear print for kids"
-                height="400"
-                src="./images/sale1.webp"
-                width="300"
-              />
-              <div class="discount-exclusive-sale">-50%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>Thêm Vào Giỏ Hàng</div>
-                  <div>Xem Chi Tiết</div>
-                </div>
-                <p>Áo khoác Gile phao bé trai/ bé gái Rabity 921.001</p>
-                <p class="price-exclusive-sale">
-                  129,500đ
-                  <span class="old-price-exclusive-sale"> 259,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 152 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 75%"></div>
-              </div>
+          <div class="container-sale swiper">
+            <div class="card-wrapper swiper-wrapper">
+              <ul class="card-list swiper-wrapper">
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/aosomi-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124.000đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/aosomi-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124.000đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/aosomi-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124.000đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/aosomi-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124,500đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/aosomi-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124,500đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/aosomi-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124,500đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+              </ul>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-slide-button swiper-button-prev"></div>
+              <div class="swiper-slide-button swiper-button-next"></div>
             </div>
           </div>
         </div>
@@ -703,9 +662,8 @@
         </div>
       </div>
     </section>
-    <!-- ===================================bán chạy nhất========================= -->
     <section class="section-best-seller">
-      <div class="container">
+      <div class="container-best-seller">
         <h1>BÁN CHẠY NHẤT</h1>
         <div class="best-seller">
             <div class="tab-button active" onclick="showTabB('best-seller')">Bán Chạy Nhất</div>
@@ -1020,10 +978,10 @@
           <h1>THỜI TRANG BÉ GÁI</h1>
         </div>
         <div class="nav-girl-fashion">
-          <p class="active" onclick="showTabGirl('dam-vay')">Đầm Váy</p>
-          <p class="tab" onclick="showTabGirl('ao')">Áo</p>
-          <p class="tab" onclick="showTabGirl('do-lot')">Đồ Lót</p>
-          <p class="tab" onclick="showTabGirl('do-bo')">Đồ Bộ</p>
+          <p id="girl-damvay-tab" class="active" onclick="showTabGirl('dam-vay')">Đầm Váy</p>
+          <p id="girl-ao-tab" class="tab" onclick="showTabGirl('ao')">Áo</p>
+          <p id="girl-dolot-tab" class="tab" onclick="showTabGirl('do-lot')">Đồ Lót</p>
+          <p id="girl-dobo-tab" class="tab" onclick="showTabGirl('do-bo')">Đồ Bộ</p>
         </div>
        <div class="products-girl-fashion" id="dam-vay">
           <div class="product-girl-fashion">
@@ -1040,7 +998,7 @@
               </div>
               <h3>Đầm váy công chúa voan Elsa ngắn tay bé gái</h3>
               <div class="price-girl-fashion">339,000đ</div>
-              <div class="colors">
+              <div class="colors-girl-fashion">
                 <span class="color1"> </span>
                 <span class="color2"> </span>
               </div>
@@ -1666,7 +1624,7 @@
               </div>
               <h3>Đầm váy voan công chúa ngắn tay bé gái</h3>
               <div class="price-girl-fashion">259,000đ</div>
-              <div class="colors">
+              <div class="colors-girl-fashion">
                 <span class="color1"> </span>
                 <span class="color2"> </span>
               </div>
@@ -2357,14 +2315,14 @@
       </div>
     </section>
     <!-- ====================================footer=============================== -->
-    <section class="number">
+    <section class="section-footer">
       <div class="footer">
         <div class="footer-column">
           <img
-            alt="Rabity Logo"
+            alt="Little Whale Logo"
             height="50"
-            src="./images/logo-footer.webp"
-            width="150"
+            src="./images/logo.png"
+            width="100"
           />
           <p>
             Rabity là thương hiệu thời trang trẻ em hàng đầu Việt Nam với hơn 60
@@ -2425,15 +2383,7 @@
         </div>
       </div>
     </section>
-
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./js/script.js"></script>
-  <script
-    type="module"
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-  ></script>
-  <script
-    nomodule
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-  ></script>
 </html>

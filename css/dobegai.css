@@ -137,6 +137,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 
@@ -144,7 +145,7 @@
 .container-filter {
     width: 230px;
     font-family: Arial, sans-serif;
-    margin-bottom: 180px;
+    margin-bottom: 300px;
     margin-left: 50px;
 }
 
@@ -427,4 +428,75 @@ input[type="checkbox"]:hover::after {
 
 .off {
     font-size: 14px;
+}
+
+/* Container-PageNav */
+.container-pagenav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px; /* Điều chỉnh khoảng cách từ lề phải */
+    margin-bottom: 20px; /* Khoảng cách phía trên nếu cần */
+}
+
+.nav_pagi {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0;
+    position: relative;
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+}
+
+.page-item {
+    display: inline-block;
+}
+
+
+.page-item a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.page-item a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.page-item.disabled a {
+    color: #ccc;
+    pointer-events: none;
+    border-color: #eee;
+}
+
+.page-item.active a {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.icon {
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pagination {
+        gap: 4px;
+    }
+    .page-item a {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
 }

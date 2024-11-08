@@ -300,6 +300,21 @@ input[type="checkbox"]:hover::after {
     transform: rotate(180deg);
 }
 
+/* Set height and overflow for collapsed sections */
+.filter-item .filter-color.collapsed,
+.filter-item .filter-price.collapsed,
+.filter-item .filter-size.collapsed,
+.filter-item .filter-type.collapsed {
+    height: 15vh; /* Adjust as needed */
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+/* Full height when expanded */
+.filter-color {
+    transition: height 0.3s ease; /* Smooth transition */
+}
+
 
 
 /* Container-products */
@@ -315,6 +330,7 @@ input[type="checkbox"]:hover::after {
     justify-content: space-around;
 }
 
+/* General card styling */
 .col-card {
     flex: 0 1 200px;
     margin-bottom: 50px;
@@ -336,14 +352,6 @@ input[type="checkbox"]:hover::after {
     width: 100%;
     height: auto;
     border-radius: 10px;
-}
-
-.discount {
-    background-color: red;
-    padding: 1px 4px;
-    font-size: 10px;
-    border-radius: 6px;
-    color: #fff;
 }
 
 .wishlist {
@@ -404,12 +412,47 @@ input[type="checkbox"]:hover::after {
     padding-top: 5px;
 }
 
+/* Color and size selectors */
+.color-select {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.color-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .color-select .btn {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    margin-right: 5px;
+    margin-bottom: 5px;
+    border: 2px solid; /* Set default border width */
 }
+
+.color-option .grey {
+    border-color: grey;
+}
+
+.color-option .red {
+    border-color: red;
+}
+
+.color-option .blue {
+    border-color: blue;
+}
+
+.color-name {
+    font-size: 10px;
+    color: #555;
+    text-align: center;
+}
+
+
+
 
 .size-select .btn {
     width: 15px;
@@ -441,11 +484,26 @@ input[type="checkbox"]:hover::after {
     color: grey;
 }
 
-.buy {
-    font-size: 12px;
+/* Button styling */
+.buy-btn, .details-btn {
+    background-color: transparent;
+    border: 1px solid purple;
     color: purple;
-    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    width: 80px;
+    text-align: center;
+    margin: 0 2px;
 }
+
+.buy-btn:hover, .details-btn:hover {
+    background-color: purple;
+    color: white;
+}
+
+  
 
 .voutchers {
     background-color: #fff;
@@ -493,6 +551,36 @@ input[type="checkbox"]:hover::after {
 .off {
     font-size: 14px;
 }
+
+/* Color option selected */
+.color-select .color-option input[type="button"].selected.grey {
+    background-color: grey;
+    border-color: grey;
+}
+
+.color-select .color-option input[type="button"].selected.red {
+    background-color: red;
+    border-color: red;
+}
+
+.color-select .color-option input[type="button"].selected.blue {
+    background-color: blue;
+    border-color: blue;
+}
+
+/* Gray background for selected size */
+.size-select .item-size.selected {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+/* Filled red heart for selected state */
+.wishlist .fa-heart.selected {
+    color: red;
+    font-weight: bold; /* Optional to make it look more filled */
+}
+
+
 
 /* Container-PageNav */
 .container-pagenav {
@@ -555,6 +643,19 @@ input[type="checkbox"]:hover::after {
     font-size: 16px;
     vertical-align: middle;
 }
+
+/* Fade out effect */
+.container-pagenav.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Fade in effect */
+.container-pagenav.fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {

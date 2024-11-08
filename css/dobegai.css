@@ -12,7 +12,8 @@
     width: 100%;
     clear: both;
     position: relative;
-    margin: 20px 0 20px 180px; /* Gộp lệnh left và margin */
+    margin: 20px 0 20px 180px;
+    /* Gộp lệnh left và margin */
 }
 
 .bread-crumb .breadcrumb {
@@ -48,7 +49,8 @@
 
 /* Hiệu ứng phóng to khi di chuột */
 .header-image img:hover {
-    transform: scale(1.05); /* Phóng to khi hover */
+    transform: scale(1.05);
+    /* Phóng to khi hover */
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -89,7 +91,8 @@
 #sort-by {
     display: flex;
     align-items: baseline;
-    position: relative; /* Đảm bảo vị trí cho pseudo-element */
+    position: relative;
+    /* Đảm bảo vị trí cho pseudo-element */
 }
 
 #sort-by label {
@@ -101,7 +104,8 @@
 .coll-sortby select {
     margin-left: 5px;
     height: 30px;
-    padding: 0 20px 0 5px; /* Điều chỉnh lại padding để tránh trùng lặp */
+    padding: 0 20px 0 5px;
+    /* Điều chỉnh lại padding để tránh trùng lặp */
 }
 
 #sort-by::after {
@@ -147,6 +151,7 @@
     font-family: Arial, sans-serif;
     margin-bottom: 300px;
     margin-left: 50px;
+
 }
 
 .filters h3 {
@@ -154,6 +159,10 @@
     font-weight: bold;
     margin-bottom: 10px;
     color: #333;
+}
+
+.filter-price {
+    width: 200px;
 }
 
 .filter-item {
@@ -435,8 +444,10 @@ input[type="checkbox"]:hover::after {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding-right: 20px; /* Điều chỉnh khoảng cách từ lề phải */
-    margin-bottom: 20px; /* Khoảng cách phía trên nếu cần */
+    padding-right: 20px;
+    /* Điều chỉnh khoảng cách từ lề phải */
+    margin-bottom: 20px;
+    /* Khoảng cách phía trên nếu cần */
 }
 
 .nav_pagi {
@@ -495,8 +506,92 @@ input[type="checkbox"]:hover::after {
     .pagination {
         gap: 4px;
     }
+
     .page-item a {
         padding: 6px 10px;
         font-size: 14px;
     }
 }
+
+/* Container-descriptiom */
+.container-description {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.description-content p {
+    margin: 15px 0;
+}
+
+.description-content span {
+    font-weight: bold;
+    color: #FF5A00;
+}
+
+.body-content h2 {
+    color: #FF5A00;
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+}
+
+.body-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.body-content ul li {
+    margin: 8px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.body-content ul li::before {
+    content: "•";
+    color: #FF5A00;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.highlight {
+    color: #FF5A00;
+    font-weight: bold;
+}
+
+.italic-text {
+    font-style: italic;
+    text-align: center;
+    color: #555;
+    margin-top: 5px;
+}
+
+.body-content img {
+    width: 100%;
+    max-width: 800px; /* Matches container width */
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+.body-content div {
+    text-align: center;
+    margin: 20px 0;
+}
+
+@media (min-width: 768px) {
+    .body-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .body-content div {
+        width: 100%;
+    }
+}
+

@@ -3,18 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Little Whale Shop</title>
+    <title>Little Whale</title>
+    <style></style>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/header-nav-footer.css">
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <!-- =====================================Header============================== -->
     <section class="section-header">
       <div class="header">
-        <div class="logo">
+        <div class="logo-header">
           <img
             alt="Company Logo"
             height="50"
@@ -22,35 +27,36 @@
             width="100"
           />
         </div>
-        <div class="search-bar">
+        <div class="search-bar-header">
           <input placeholder="Bạn cần tìm gì?" type="text" />
           <i class="fas fa-search"> </i>
         </div>
-        <div class="contact-info">
-          <div class="icon">
+        <div class="contact-info-header">
+          <div class="icon-header">
             <i class="fas fa-phone-alt"> </i>
           </div>
-          <div class="text">1900633520</div>
-          <div class="icon">
+          <div class="text-header">1900633520</div>
+          <div class="icon-header">
             <i class="fas fa-file-alt"> </i>
           </div>
-          <div class="text">Kiểm tra đơn hàng</div>
+          <div class="text-header">Kiểm tra đơn hàng</div>
         </div>
       </div>
     </section>
     <!-- =====================================Nav================================= -->
     <section class="navigation">
-      <header>
+      <nav class="index-nav">
         <!-- menu  -->
         <div class="navbar">
           <div class="menu">
+            <a href="#">Trang Chủ</a>
             <div class="dropdown-menu">
               <!-- Thêm lớp cho Bé gái -->
               <div class="navheight">
                 <a href="#">Bé gái</a>
                 <!-- <ion-icon name="chevron-down-outline"></ion-icon> -->
               </div>
-              <div class="dropdown">
+              <div class="dropdown dropdown-full">
                 <!-- Dropdown cho Bé gái -->
                 <div class="column">
                   <h3>ĐẦM VÁY</h3>
@@ -87,9 +93,6 @@
                   <a href="#">Bộ Easy Wear</a>
                 </div>
                 <div class="column">
-                  <h3>ĐỒ BƠI</h3>
-                </div>
-                <div class="column">
                   <h3>PHỤ KIỆN</h3>
                   <a href="#">Đồ Lót</a>
                   <a href="#">Balo/túi xách</a>
@@ -108,7 +111,7 @@
                 <a href="#">Bé trai</a>
               </div>
 
-              <div class="dropdown">
+              <div class="dropdown dropdown-full">
                 <!-- Dropdown cho Bé gái -->
                 <div class="column">
                   <h3>Áo</h3>
@@ -145,9 +148,6 @@
                   <a href="#">Bình nước</a>
                 </div>
                 <div class="column">
-                  <h3>ĐỒ BƠI</h3>
-                </div>
-                <div class="column">
                   <h3>&nbsp;</h3>
                 </div>
               </div>
@@ -170,10 +170,9 @@
             <div class="dropdown-menu">
               <div class="navheight"><a href="#">Sale sốc</a></div>
               <!-- <div class="dropdown-2">
-                      <div class="column"></div>
-                    </div> -->
+                <div class="column"></div>
+              </div> -->
             </div>
-
             <div class="dropdown-menu">
               <div class="navheight"><a href="#">New Arrival</a></div>
               <div class="dropdown-3">
@@ -186,9 +185,6 @@
                 </div>
               </div>
             </div>
-
-            <a href="#">Cửa hàng</a>
-
             <div class="dropdown-menu">
               <div class="navheight"><a href="#">Tin Tức</a></div>
               <div class="dropdown-4">
@@ -211,8 +207,8 @@
             <div class="user-menu">
               <i class="fas fa-user"></i>
               <div class="dropdown">
-                <a href="#login">Đăng nhập</a>
-                <a href="#register">Đăng ký</a>
+                <a href="./dangnhap.html">Đăng nhập</a>
+                <a href="./dangki.html">Đăng ký</a>
               </div>
             </div>
 
@@ -222,24 +218,43 @@
             </div>
           </div>
         </div>
-      </header>
+      </nav>
     </section>
     <!-- ================Hiệu ứng di chuyển hình ảnh ở đầu trang can js============-->
     <section id="Slider">
-      <!-- Tham khao tren viblo aspect-ratio-169-->
-      <div class="aspect-ratio-169">
-        <img class="ratio" src="images/Slider1.jpg" alt="" />
-        <img class="ratio" src="images/Slider2.jpg" alt="" />
-        <img class="ratio" src="images/Slider3.jpg" alt="" />
-        <img class="ratio" src="images/Slider4.jpg" alt="" />
-      </div>
-      <div class="dot-container">
-        <div class="dot active"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
+      <div class="slider">
+        <div class="list">
+          <div class="item">
+            <img class="slider-img" src="./images/Slider2.jpg" alt="Slide 2" />
+          </div>
+          <div class="item">
+            <img class="slider-img" src="./images/Slider3.jpg" alt="Slide 3" />
+          </div>
+          <div class="item">
+            <img class="slider-img" src="./images/Slider4.jpg" alt="Slide 4" />
+          </div>
+          <div class="item">
+            <img class="slider-img" src="./images/Slider1.jpg" alt="Slide 1" />
+          </div>
+          <div class="item">
+            <img class="slider-img" src="./images/Slider3.jpg" alt="Slide 3" />
+          </div>
+        </div>
+        <div class="buttons">
+          <button id="prev"><</button>
+          <button id="next">></button>
+        </div>
+        <ul class="dots">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
     </section>
+
+    <!-- =================================bé trai bé gái========================== -->
     <section class="boy-girl">
       <div class="category-header">
         <a id="girl-tab" class="active" href="javascript:void(0)">Bé gái</a>
@@ -322,7 +337,7 @@
       </div>
 
       <div id="boy-category" class="category-container" style="display: none">
-        <div class="category-item">
+        <div class="category-item-boy">
           <img
             alt="Image of a pink dress"
             height="100"
@@ -331,7 +346,7 @@
           />
           <p>Áo</p>
         </div>
-        <div class="category-item">
+        <div class="category-item-boy">
           <img
             alt="Image of a pink outfit"
             height="100"
@@ -340,7 +355,7 @@
           />
           <p>Quần</p>
         </div>
-        <div class="category-item">
+        <div class="category-item-boy">
           <img
             alt="Image of a pink hoodie"
             height="100"
@@ -349,7 +364,7 @@
           />
           <p>Đồ Bộ</p>
         </div>
-        <div class="category-item">
+        <div class="category-item-boy">
           <img
             alt="Image of a red shirt with a heart"
             height="100"
@@ -358,7 +373,7 @@
           />
           <p>Áo Khoác</p>
         </div>
-        <div class="category-item">
+        <div class="category-item-boy">
           <img
             alt="Image of pink shorts with a bow"
             height="100"
@@ -367,7 +382,7 @@
           />
           <p>Áo Sơ Mi</p>
         </div>
-        <div class="category-item">
+        <div class="category-item-boy">
           <img
             alt="Image of pink underwear"
             height="100"
@@ -376,7 +391,7 @@
           />
           <p>Marvel</p>
         </div>
-        <div class="category-item">
+        <div class="category-item-boy">
           <img
             alt="Image of a pink backpack"
             height="100"
@@ -385,7 +400,7 @@
           />
           <p>Đồ Lót</p>
         </div>
-        <div class="category-item">
+        <div class="category-item-boy">
           <img
             alt="Easy Wear logo"
             height="100"
@@ -412,283 +427,233 @@
           <div class="tab" onclick="showTab(2)">Sale 20 - 40%</div>
         </div>
         <div class="tab-content-item">
-          <div class="active-exclusive-sale">
-            <div class="product-exclusive-sale">
-              <img
-                alt="Boy wearing red sweater and jeans"
-                height="400"
-                src="./images/sale20.webp"
-                width="300"
-              />
-              <div class="discount-exclusive-sale">-50%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>voucher 50K</div>
-                  <div>FREESHIP 15K</div>
-                </div>
-                <p>Áo dài tay bé trai Rabity x ELLE Kids - designed in...</p>
-                <p class="price-exclusive-sale">
-                  124,500đ
-                  <span class="old-price-exclusive-sale"> 249,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 100 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 50%"></div>
-              </div>
-            </div>
-            <div class="product-exclusive-sale">
-              <img
-                alt="Red polo shirt for kids"
-                height="400"
-                src="./images/sale20.webp"
-                width="300"
-              />
-              <div class="discount-exclusive-sale">-50%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>VOUCHER 50K</div>
-                  <div>FREESHIP 15K</div>
-                </div>
-                <p>Áo thun polo cổ bé dài tay bé trai Rabity x ELLE Kid...</p>
-                <p class="price-exclusive-sale">
-                  119,500đ
-                  <span class="old-price-exclusive-sale"> 239,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 122 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 60%"></div>
-              </div>
-            </div>
-            <div class="product-exclusive-sale">
-              <img
-                alt="Pink dress with bunny print for girls"
-                height="400"
-                src="./images/sale20.webp"
-                width="300"
-              />
-              <div class="new">Mới</div>
-              <div class="discount-exclusive-sale">-30%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>VOUCHER 50K</div>
-                  <div>FREESHIP 15K</div>
-                </div>
-                <p>Đầm váy thun thỏ xinh ngắn tay bé gái Rabity...</p>
-                <p class="price-exclusive-sale">
-                  139,300đ
-                  <span class="old-price-exclusive-sale"> 199,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 100 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 50%"></div>
-              </div>
-            </div>
-            <div class="product-exclusive-sale">
-              <img
-                alt="Pink vest with bear print for kids"
-                height="400"
-                src="./images/sale20.webp"
-                width="300"
-              />
-              <div class="discount-exclusive-sale">-50%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>VOUCHER 50K</div>
-                  <div>FREESHIP 15K</div>
-                </div>
-                <p>Áo khoác Gile phao bé trai/ bé gái Rabity 921.001</p>
-                <p class="price-exclusive-sale">
-                  129,500đ
-                  <span class="old-price-exclusive-sale"> 259,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 152 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 75%"></div>
-              </div>
+          <div class="container-sale swiper">
+            <div class="card-wrapper swiper-wrapper">
+              <ul class="card-list swiper-wrapper">
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124.000đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124.000đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124.000đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124,500đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124,500đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/aosomi-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124,500đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+              </ul>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-slide-button swiper-button-prev"></div>
+              <div class="swiper-slide-button swiper-button-next"></div>
             </div>
           </div>
         </div>
-
         <div class="tab-content-item">
-          <div class="active-exclusive-sale">
-            <div class="product-exclusive-sale">
-              <img
-                alt="Boy wearing red sweater and jeans"
-                height="400"
-                src="./images/sale1.webp"
-                width="300"
-              />
-              <div class="discount-exclusive-sale">-50%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>voucher-exclusive-sale-exclusive-sale 50K</div>
-                  <div>FREESHIP 15K</div>
-                </div>
-                <p>Áo dài tay bé trai Rabity x ELLE Kids - designed in...</p>
-                <p class="price-exclusive-sale">
-                  124,500đ
-                  <span class="old-price-exclusive-sale"> 249,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 100 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 50%"></div>
-              </div>
-            </div>
-            <div class="product-exclusive-sale">
-              <img
-                alt="Red polo shirt for kids"
-                height="400"
-                src="./images/sale1.webp"
-                width="300"
-              />
-              <div class="discount-exclusive-sale">-50%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>VOUCHER 50K</div>
-                  <div>FREESHIP 15K</div>
-                </div>
-                <p>Áo thun polo cổ bé dài tay bé trai Rabity x ELLE Kid...</p>
-                <p class="price-exclusive-sale">
-                  119,500đ
-                  <span class="old-price-exclusive-sale"> 239,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 122 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 60%"></div>
-              </div>
-            </div>
-            <div class="product-exclusive-sale">
-              <img
-                alt="Pink dress with bunny print for girls"
-                height="400"
-                src="./images/sale1.webp"
-                width="300"
-              />
-              <div class="new">Mới</div>
-              <div class="discount-exclusive-sale">-30%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>VOUCHER 50K</div>
-                  <div>FREESHIP 15K</div>
-                </div>
-                <p>Đầm váy thun thỏ xinh ngắn tay bé gái Rabity...</p>
-                <p class="price-exclusive-sale">
-                  139,300đ
-                  <span class="old-price-exclusive-sale"> 199,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 100 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 50%"></div>
-              </div>
-            </div>
-            <div class="product-exclusive-sale">
-              <img
-                alt="Pink vest with bear print for kids"
-                height="400"
-                src="./images/sale1.webp"
-                width="300"
-              />
-              <div class="discount-exclusive-sale">-50%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>VOUCHER 50K</div>
-                  <div>FREESHIP 15K</div>
-                </div>
-                <p>Áo khoác Gile phao bé trai/ bé gái Rabity 921.001</p>
-                <p class="price-exclusive-sale">
-                  129,500đ
-                  <span class="old-price-exclusive-sale"> 259,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 152 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 75%"></div>
-              </div>
+          <div class="container-sale swiper">
+            <div class="card-wrapper swiper-wrapper">
+              <ul class="card-list swiper-wrapper">
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao.webp" alt="" />
+                    <!-- <p class="badge">Deverlop</p> -->
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124.000đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124.000đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124.000đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124,500đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124,500đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/ao.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124,500đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+              </ul>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-slide-button swiper-button-prev"></div>
+              <div class="swiper-slide-button swiper-button-next"></div>
             </div>
           </div>
         </div>
-
         <div class="tab-content-item">
-          <div class="active-exclusive-sale">
-            <div class="product-exclusive-sale">
-              <img
-                alt="Boy wearing red sweater and jeans"
-                height="400"
-                src="./images/sale1.webp"
-                width="300"
-              />
-              <div class="discount-exclusive-sale">-50%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>voucher 50K</div>
-                  <div>FREESHIP 15K</div>
-                </div>
-                <p>Áo dài tay bé trai Rabity x ELLE Kids - designed in...</p>
-                <p class="price-exclusive-sale">
-                  124,500đ
-                  <span class="old-price-exclusive-sale"> 249,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 100 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 50%"></div>
-              </div>
-            </div>
-            <div class="product-exclusive-sale">
-              <img
-                alt="Red polo shirt for kids"
-                height="400"
-                src="./images/sale2.webp"
-                width="300"
-              />
-              <div class="discount-exclusive-sale">-50%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>VOUCHER 50K</div>
-                  <div>FREESHIP 15K</div>
-                </div>
-                <p>Áo thun polo cổ bé dài tay bé trai Rabity x ELLE Kid...</p>
-                <p class="price-exclusive-sale">
-                  119,500đ
-                  <span class="old-price-exclusive-sale"> 239,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 122 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 60%"></div>
-              </div>
-            </div>
-            <div class="product-exclusive-sale">
-              <img
-                alt="Pink dress with bunny print for girls"
-                height="400"
-                src="./images/sale3.webp"
-                width="300"
-              />
-              <div class="new">Mới</div>
-              <div class="discount-exclusive-sale">-30%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>VOUCHER 50K</div>
-                  <div>FREESHIP 15K</div>
-                </div>
-                <p>Đầm váy thun thỏ xinh ngắn tay bé gái Rabity...</p>
-                <p class="price-exclusive-sale">
-                  139,300đ
-                  <span class="old-price-exclusive-sale"> 199,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 100 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 50%"></div>
-              </div>
-            </div>
-            <div class="product-exclusive-sale">
-              <img
-                alt="Pink vest with bear print for kids"
-                height="400"
-                src="./images/sale1.webp"
-                width="300"
-              />
-              <div class="discount-exclusive-sale">-50%</div>
-              <div class="info-exclusive-sale">
-                <div class="voucher-exclusive-sale">
-                  <div>VOUCHER 50K</div>
-                  <div>FREESHIP 15K</div>
-                </div>
-                <p>Áo khoác Gile phao bé trai/ bé gái Rabity 921.001</p>
-                <p class="price-exclusive-sale">
-                  129,500đ
-                  <span class="old-price-exclusive-sale"> 259,000đ </span>
-                </p>
-                <p class="sold-exclusive-sale">Đã bán 152 sản phẩm</p>
-                <div class="progress-exclusive-sale" style="width: 75%"></div>
-              </div>
+          <div class="container-sale swiper">
+            <div class="card-wrapper swiper-wrapper">
+              <ul class="card-list swiper-wrapper">
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/aosomi-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124.000đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/aosomi-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124.000đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/aosomi-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124.000đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/aosomi-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124,500đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/aosomi-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124,500đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="" class="card-link">
+                    <img src="./images/aosomi-boy.webp" alt="" />
+                    <p class="badge">Deverlop</p>
+                    <h2 class="card-title">Áo dài tay bé trai Rabity x ELLE</h2>
+                    <p>124,500đ</p>
+                    <button class="card-button material-symbols-rounded">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </a>
+                </li>
+              </ul>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-slide-button swiper-button-prev"></div>
+              <div class="swiper-slide-button swiper-button-next"></div>
             </div>
           </div>
         </div>
@@ -698,6 +663,1728 @@
         </div>
       </div>
     </section>
+    <section class="section-best-seller">
+      <div class="container-best-seller">
+        <h1>BÁN CHẠY NHẤT</h1>
+        <div class="best-seller">
+            <div class="tab-button active" onclick="showTabB('best-seller')">Bán Chạy Nhất</div>
+            <p>&nbsp;|&nbsp;</p>
+            <div class="tab-button" onclick="showTabB('disney')">BST Disney</div>
+          </div>
+  
+        </div>
+        <div class="products-sale" id="best-seller">
+          <div class="product-sale">
+            <img
+              alt="Áo thun ngắn tay Capybara bé trai/gái"
+              height="200"
+              src="./images/item-clothes-6.jpg"
+              width="200"
+            />
+            <h3>Áo thun ngắn tay Capybara bé trai/gái Rabity 125.900đ</h3>
+            <p class="price-sale">125,900đ</p>
+            <div>
+              <span class="voucher-sale"> Thêm Vào Giỏ Hàng </span>
+              <span class="freeship-sale"> Xem Chi Tiết </span>
+            </div>
+            <div class="icons-sale">
+              <i class="fas fa-heart"> </i>
+              <i class="fas fa-shopping-cart"> </i>
+            </div>
+          </div>
+          <div class="product-sale">
+            <img
+              alt="Đồ bộ thun dài bé gái"
+              height="200"
+              src="./images/item-clothes-6.jpg"
+              width="200"
+            />
+            <h3>Đồ bộ thun dài bé gái dài tay Rabity Minnie 5644 239.400đ</h3>
+            <p class="price-sale">239,400đ</p>
+            <div>
+              <span class="voucher-sale"> Thêm Vào Giỏ Hàng </span>
+              <span class="freeship-sale"> Xem Chi Tiết </span>
+            </div>
+            <div class="icons-sale">
+              <i class="fas fa-heart"> </i>
+              <i class="fas fa-shopping-cart"> </i>
+            </div>
+          </div>
+          <div class="product-sale">
+            <img
+              alt="Đầm váy thun xòe ngắn tay bé gái"
+              height="200"
+              src="./images/item-clothes-6.jpg"
+              width="200"
+            />
+            <h3>Đầm váy thun xòe ngắn tay bé gái Rabity 139.900đ</h3>
+            <p class="price-sale">139,900đ</p>
+            <div>
+              <span class="voucher-sale"> Thêm Vào Giỏ Hàng </span>
+              <span class="freeship-sale"> Xem Chi Tiết </span>
+            </div>
+            <div class="icons-sale">
+              <i class="fas fa-heart"> </i>
+              <i class="fas fa-shopping-cart"> </i>
+            </div>
+          </div>
+          <div class="product-sale">
+            <img
+              alt="Áo thun ngắn tay bé trai"
+              height="200"
+              src="./images/item-clothes-6.jpg"
+              width="200"
+            />
+            <h3>Áo thun ngắn tay bé trai Rabity 900.066 89.500đ</h3>
+            <p class="price-sale">89,500đ</p>
+            <div>
+              <span class="voucher-sale"> Thêm Vào Giỏ Hàng </span>
+              <span class="freeship-sale"> Xem Chi Tiết </span>
+            </div>
+            <div class="icons-sale">
+              <i class="fas fa-heart"> </i>
+              <i class="fas fa-shopping-cart"> </i>
+            </div>
+          </div>
+          <div class="product-sale">
+            <img
+              alt="Áo thun ngắn tay bé gái"
+              height="200"
+              src="./images/item-clothes-6.jpg"
+              width="200"
+            />
+            <h3>Áo thun ngắn tay bé gái Rabity 900.069 89.500đ</h3>
+            <p class="price-sale">89,500đ</p>
+            <div>
+              <span class="voucher-sale"> Thêm Vào Giỏ Hàng </span>
+              <span class="freeship-sale"> Xem Chi Tiết </span>
+            </div>
+            <div class="icons-sale">
+              <i class="fas fa-heart"> </i>
+              <i class="fas fa-shopping-cart"> </i>
+            </div>
+          </div>
+          <div class="product-sale">
+            <img
+              alt="Áo thun ngắn tay bé gái"
+              height="200"
+              src="./images/item-clothes-6.jpg"
+              width="200"
+            />
+            <h3>Áo thun ngắn tay bé gái Rabity 900.068 89.500đ</h3>
+            <p class="price-sale">89,500đ</p>
+            <div>
+              <span class="voucher-sale"> Thêm Vào Giỏ Hàng </span>
+              <span class="freeship-sale"> Xem Chi Tiết </span>
+            </div>
+            <div class="icons-sale">
+              <i class="fas fa-heart"> </i>
+              <i class="fas fa-shopping-cart"> </i>
+            </div>
+          </div>
+          <div class="product-sale">
+            <img
+              alt="Áo thun ngắn tay bé trai"
+              height="200"
+              src="./images/item-clothes-6.jpg"
+              width="200"
+            />
+            <h3>Áo thun ngắn tay bé trai Rabity 900.067 89.500đ</h3>
+            <p class="price-sale">89,500đ</p>
+            <div>
+              <span class="voucher-sale"> Thêm Vào Giỏ Hàng </span>
+              <span class="freeship-sale"> Xem Chi Tiết </span>
+            </div>
+            <div class="icons-sale">
+              <i class="fas fa-heart"> </i>
+              <i class="fas fa-shopping-cart"> </i>
+            </div>
+          </div>
+          <div class="product-sale">
+            <img
+              alt="Đồ bộ thun dài bé gái"
+              height="200"
+              src="./images/item-clothes-6.jpg"
+              width="200"
+            />
+            <h3>Đồ bộ thun dài bé gái dài tay Rabity 2842 134.500đ</h3>
+            <p class="price-sale">134,500đ</p>
+            <div>
+              <span class="voucher-sale"> Thêm Vào Giỏ Hàng </span>
+              <span class="freeship-sale"> Xem Chi Tiết </span>
+            </div>
+            <div class="icons-sale">
+              <i class="fas fa-heart"> </i>
+              <i class="fas fa-shopping-cart"> </i>
+            </div>
+          </div>
+        </div>
+
+        <div class="products-sale" id="disney" style="display: none">
+          <div class="product-sale">
+            <img
+              alt="Áo thun ngắn tay Capybara bé trai/gái"
+              height="200"
+              src="https://storage.googleapis.com/a1aa/image/91eyXszu95W3YCOsEoMt3dofSHn9FHSe5Ub2bbDCxtwIZbXnA.jpg"
+              width="200"
+            />
+            <h3>Áo thun ngắn tay Capybara bé trai/gái Rabity 125.900đ</h3>
+            <p class="price-sale">125,900đ</p>
+            <div>
+              <span class="voucher-sale"> Thêm Vào Giỏ Hàng </span>
+              <span class="freeship-sale"> Xem Chi Tiết </span>
+            </div>
+            <div class="icons-sale">
+              <i class="fas fa-heart"> </i>
+              <i class="fas fa-shopping-cart"> </i>
+            </div>
+          </div>
+          <div class="product-sale">
+            <img
+              alt="Đồ bộ thun dài bé gái"
+              height="200"
+              src="https://storage.googleapis.com/a1aa/image/U72IZ1F63tJ5NdkDRx5ZGpaQ0teQq8PMYDpYpvlENEmT221JA.jpg"
+              width="200"
+            />
+            <h3>Đồ bộ thun dài bé gái dài tay Rabity Minnie 5644 239.400đ</h3>
+            <p class="price-sale">239,400đ</p>
+            <div>
+              <span class="voucher-sale"> Thêm Vào Giỏ Hàng </span>
+              <span class="freeship-sale"> Xem Chi Tiết </span>
+            </div>
+            <div class="icons-sale">
+              <i class="fas fa-heart"> </i>
+              <i class="fas fa-shopping-cart"> </i>
+            </div>
+          </div>
+          <div class="product-sale">
+            <img
+              alt="Đầm váy thun xòe ngắn tay bé gái"
+              height="200"
+              src="https://storage.googleapis.com/a1aa/image/ZoVRfLbOGSxfbkzh3R4rAGt1FctTFvLB54qBHLgDqEljstrTA.jpg"
+              width="200"
+            />
+            <h3>Đầm váy thun xòe ngắn tay bé gái Rabity 139.900đ</h3>
+            <p class="price-sale">139,900đ</p>
+            <div>
+              <span class="voucher-sale"> Thêm Vào Giỏ Hàng </span>
+              <span class="freeship-sale"> Xem Chi Tiết </span>
+            </div>
+            <div class="icons-sale">
+              <i class="fas fa-heart"> </i>
+              <i class="fas fa-shopping-cart"> </i>
+            </div>
+          </div>
+          <div class="product-sale">
+            <img
+              alt="Áo thun ngắn tay bé trai"
+              height="200"
+              src="https://storage.googleapis.com/a1aa/image/WGyMmH5mZj56KByqXaUUcyhG6ODHv7HC0SpecQy6EsfhstrTA.jpg"
+              width="200"
+            />
+            <h3>Áo thun ngắn tay bé trai Rabity 900.066 89.500đ</h3>
+            <p class="price-sale">89,500đ</p>
+            <div>
+              <span class="voucher-sale"> Thêm Vào Giỏ Hàng </span>
+              <span class="freeship-sale"> Xem Chi Tiết </span>
+            </div>
+            <div class="icons-sale">
+              <i class="fas fa-heart"> </i>
+              <i class="fas fa-shopping-cart"> </i>
+            </div>
+          </div>
+          <div class="product-sale">
+            <img
+              alt="Áo thun ngắn tay bé gái"
+              height="200"
+              src="https://storage.googleapis.com/a1aa/image/Fx5R8RYQTK6WO9TyPhmFM24P6fDCPXiJyYDuiiOBIKoS221JA.jpg"
+              width="200"
+            />
+            <h3>Áo thun ngắn tay bé gái Rabity 900.069 89.500đ</h3>
+            <p class="price-sale">89,500đ</p>
+            <div>
+              <span class="voucher-sale"> Thêm Vào Giỏ Hàng </span>
+              <span class="freeship-sale"> Xem Chi Tiết </span>
+            </div>
+            <div class="icons-sale">
+              <i class="fas fa-heart"> </i>
+              <i class="fas fa-shopping-cart"> </i>
+            </div>
+          </div>
+          <div class="product-sale">
+            <img
+              alt="Áo thun ngắn tay bé gái"
+              height="200"
+              src="https://storage.googleapis.com/a1aa/image/Fx5R8RYQTK6WO9TyPhmFM24P6fDCPXiJyYDuiiOBIKoS221JA.jpg"
+              width="200"
+            />
+            <h3>Áo thun ngắn tay bé gái Rabity 900.068 89.500đ</h3>
+            <p class="price-sale">89,500đ</p>
+            <div>
+              <span class="voucher-sale"> Thêm Vào Giỏ Hàng </span>
+              <span class="freeship-sale"> Xem Chi Tiết </span>
+            </div>
+            <div class="icons-sale">
+              <i class="fas fa-heart"> </i>
+              <i class="fas fa-shopping-cart"> </i>
+            </div>
+          </div>
+          <div class="product-sale">
+            <img
+              alt="Áo thun ngắn tay bé trai"
+              height="200"
+              src="https://storage.googleapis.com/a1aa/image/WGyMmH5mZj56KByqXaUUcyhG6ODHv7HC0SpecQy6EsfhstrTA.jpg"
+              width="200"
+            />
+            <h3>Áo thun ngắn tay bé trai Rabity 900.067 89.500đ</h3>
+            <p class="price-sale">89,500đ</p>
+            <div>
+              <span class="voucher-sale"> Thêm Vào Giỏ Hàng </span>
+              <span class="freeship-sale"> Xem Chi Tiết </span>
+            </div>
+            <div class="icons-sale">
+              <i class="fas fa-heart"> </i>
+              <i class="fas fa-shopping-cart"> </i>
+            </div>
+          </div>
+          <div class="product-sale">
+            <img
+              alt="Đồ bộ thun dài bé gái"
+              height="200"
+              src="https://storage.googleapis.com/a1aa/image/U72IZ1F63tJ5NdkDRx5ZGpaQ0teQq8PMYDpYpvlENEmT221JA.jpg"
+              width="200"
+            />
+            <h3>Đồ bộ thun dài bé gái dài tay Rabity 2842 134.500đ</h3>
+            <p class="price-sale">134,500đ</p>
+            <div>
+              <span class="voucher-sale"> Thêm Vào Giỏ Hàng </span>
+              <span class="freeship-sale"> Xem Chi Tiết </span>
+            </div>
+            <div class="icons-sale">
+              <i class="fas fa-heart"> </i>
+              <i class="fas fa-shopping-cart"> </i>
+            </div>
+          </div>
+        </div>
+
+        <div class="load-more">
+          <button>Xem thêm</button>
+        </div>
+      </div>
+    </section>
+    <!-- ===================================thời trang nữ========================- -->
+    <section class="section-girl-fashion">
+      <div class="container-girl">
+        <div class="girl-fashion">
+          <h1>THỜI TRANG BÉ GÁI</h1>
+        </div>
+        <div class="nav-girl-fashion">
+          <p id="girl-damvay-tab" class="active" onclick="showTabGirl('dam-vay')">Đầm Váy</p>
+          <p id="girl-ao-tab" class="tab" onclick="showTabGirl('ao')">Áo</p>
+          <p id="girl-dolot-tab" class="tab" onclick="showTabGirl('do-lot')">Đồ Lót</p>
+          <p id="girl-dobo-tab" class="tab" onclick="showTabGirl('do-bo')">Đồ Bộ</p>
+        </div>
+       <div class="products-girl-fashion" id="dam-vay">
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy công chúa voan Elsa ngắn tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/fw13OOOHrt1fu04iief6CaMDgaCGbuIXuWJiAFEjbgRPG5uOB.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy công chúa voan Elsa ngắn tay bé gái</h3>
+              <div class="price-girl-fashion">339,000đ</div>
+              <div class="colors-girl-fashion">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy công chúa thổ cẩm Elsa ngắn tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/fw13OOOHrt1fu04iief6CaMDgaCGbuIXuWJiAFEjbgRPG5uOB.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy công chúa thổ cẩm Elsa ngắn tay bé gái</h3>
+              <div class="price-girl-fashion">439,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy nhung dài tay Minnie bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/fw13OOOHrt1fu04iief6CaMDgaCGbuIXuWJiAFEjbgRPG5uOB.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy nhung dài tay Minnie bé gái</h3>
+              <div class="price-girl-fashion">399,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy thun Gấu Dâu Lotso dài tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/fw13OOOHrt1fu04iief6CaMDgaCGbuIXuWJiAFEjbgRPG5uOB.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy thun Gấu Dâu Lotso dài tay bé gái</h3>
+              <div class="price-girl-fashion">239,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy công chúa ngắn sát nách bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/PUflx7bF88xZNqEPkESOpYEujhL5B97Js7BwsvGfrfHdjcXnA.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy công chúa ngắn sát nách bé gái</h3>
+              <div class="price-girl-fashion">299,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy thun thú xinh ngắn tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/PUflx7bF88xZNqEPkESOpYEujhL5B97Js7BwsvGfrfHdjcXnA.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy thun thú xinh ngắn tay bé gái</h3>
+              <div class="price-girl-fashion">139,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy thô ngắn tay caro bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/PUflx7bF88xZNqEPkESOpYEujhL5B97Js7BwsvGfrfHdjcXnA.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy thô ngắn tay caro bé gái</h3>
+              <div class="price-girl-fashion">239,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy voan công chúa ngắn tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/PUflx7bF88xZNqEPkESOpYEujhL5B97Js7BwsvGfrfHdjcXnA.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy voan công chúa ngắn tay bé gái</h3>
+              <div class="price-girl-fashion">259,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="products-girl-fashion" id="ao" style="display: none;">
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy công chúa voan Elsa ngắn tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/fw13OOOHrt1fu04iief6CaMDgaCGbuIXuWJiAFEjbgRPG5uOB.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy công chúa voan Elsa ngắn tay bé gái</h3>
+              <div class="price-girl-fashion">339,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy công chúa thổ cẩm Elsa ngắn tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/UwVIUw04z177OxwjxUGDMWOtBCAolJPcQzowjAaRwt5Zk76E.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy công chúa thổ cẩm Elsa ngắn tay bé gái</h3>
+              <div class="price-girl-fashion">439,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy nhung dài tay Minnie bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/seMFDPIUOmTpIqUQlDdu0YkIjff99pOnRFCRU0awCCf3G5uOB.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy nhung dài tay Minnie bé gái</h3>
+              <div class="price-girl-fashion">399,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy thun Gấu Dâu Lotso dài tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/sgwOVAtn7f15eUi9PG0kqE4PDuJlUUgsxcwqV9mWHOeXjcXnA.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy thun Gấu Dâu Lotso dài tay bé gái</h3>
+              <div class="price-girl-fashion">239,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy công chúa ngắn sát nách bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/PUflx7bF88xZNqEPkESOpYEujhL5B97Js7BwsvGfrfHdjcXnA.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy công chúa ngắn sát nách bé gái</h3>
+              <div class="price-girl-fashion">299,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy thun thú xinh ngắn tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/TxjDogfcqNQeUEDb7ZicwIgDOwyrM1b73QQ0FSrbcFBqRurTA.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy thun thú xinh ngắn tay bé gái</h3>
+              <div class="price-girl-fashion">139,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy thô ngắn tay caro bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/ojGc34ynDipZMRwmL9SGkoMh2klfWpSmsy0jgFfoNn4lRurTA.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy thô ngắn tay caro bé gái</h3>
+              <div class="price-girl-fashion">239,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy voan công chúa ngắn tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/Dn2XbjGftnw5e0FwclmrfZtW0hiTojUzd1cfIsAMPJLjG5uOB.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy voan công chúa ngắn tay bé gái</h3>
+              <div class="price-girl-fashion">259,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+        </div>
+       <div class="products-girl-fashion" id="do-lot" style="display: none;">
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy công chúa voan Elsa ngắn tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/fw13OOOHrt1fu04iief6CaMDgaCGbuIXuWJiAFEjbgRPG5uOB.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy công chúa voan Elsa ngắn tay bé gái</h3>
+              <div class="price-girl-fashion">339,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy công chúa thổ cẩm Elsa ngắn tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/UwVIUw04z177OxwjxUGDMWOtBCAolJPcQzowjAaRwt5Zk76E.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy công chúa thổ cẩm Elsa ngắn tay bé gái</h3>
+              <div class="price-girl-fashion">439,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy nhung dài tay Minnie bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/seMFDPIUOmTpIqUQlDdu0YkIjff99pOnRFCRU0awCCf3G5uOB.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy nhung dài tay Minnie bé gái</h3>
+              <div class="price-girl-fashion">399,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy thun Gấu Dâu Lotso dài tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/sgwOVAtn7f15eUi9PG0kqE4PDuJlUUgsxcwqV9mWHOeXjcXnA.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy thun Gấu Dâu Lotso dài tay bé gái</h3>
+              <div class="price-girl-fashion">239,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy công chúa ngắn sát nách bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/PUflx7bF88xZNqEPkESOpYEujhL5B97Js7BwsvGfrfHdjcXnA.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy công chúa ngắn sát nách bé gái</h3>
+              <div class="price-girl-fashion">299,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy thun thú xinh ngắn tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/TxjDogfcqNQeUEDb7ZicwIgDOwyrM1b73QQ0FSrbcFBqRurTA.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy thun thú xinh ngắn tay bé gái</h3>
+              <div class="price-girl-fashion">139,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy thô ngắn tay caro bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/ojGc34ynDipZMRwmL9SGkoMh2klfWpSmsy0jgFfoNn4lRurTA.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy thô ngắn tay caro bé gái</h3>
+              <div class="price-girl-fashion">239,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy voan công chúa ngắn tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/Dn2XbjGftnw5e0FwclmrfZtW0hiTojUzd1cfIsAMPJLjG5uOB.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy voan công chúa ngắn tay bé gái</h3>
+              <div class="price-girl-fashion">259,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <div class="products-girl-fashion" id="do-bo" style="display: none;">
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy công chúa voan Elsa ngắn tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/fw13OOOHrt1fu04iief6CaMDgaCGbuIXuWJiAFEjbgRPG5uOB.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy công chúa voan Elsa ngắn tay bé gái</h3>
+              <div class="price-girl-fashion">339,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy công chúa thổ cẩm Elsa ngắn tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/UwVIUw04z177OxwjxUGDMWOtBCAolJPcQzowjAaRwt5Zk76E.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy công chúa thổ cẩm Elsa ngắn tay bé gái</h3>
+              <div class="price-girl-fashion">439,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy nhung dài tay Minnie bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/seMFDPIUOmTpIqUQlDdu0YkIjff99pOnRFCRU0awCCf3G5uOB.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy nhung dài tay Minnie bé gái</h3>
+              <div class="price-girl-fashion">399,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy thun Gấu Dâu Lotso dài tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/sgwOVAtn7f15eUi9PG0kqE4PDuJlUUgsxcwqV9mWHOeXjcXnA.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy thun Gấu Dâu Lotso dài tay bé gái</h3>
+              <div class="price-girl-fashion">239,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy công chúa ngắn sát nách bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/PUflx7bF88xZNqEPkESOpYEujhL5B97Js7BwsvGfrfHdjcXnA.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy công chúa ngắn sát nách bé gái</h3>
+              <div class="price-girl-fashion">299,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy thun thú xinh ngắn tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/TxjDogfcqNQeUEDb7ZicwIgDOwyrM1b73QQ0FSrbcFBqRurTA.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy thun thú xinh ngắn tay bé gái</h3>
+              <div class="price-girl-fashion">139,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy thô ngắn tay caro bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/ojGc34ynDipZMRwmL9SGkoMh2klfWpSmsy0jgFfoNn4lRurTA.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy thô ngắn tay caro bé gái</h3>
+              <div class="price-girl-fashion">239,000đ</div>
+              <div class="colors">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="product-girl-fashion">
+            <img
+              alt="Đầm váy voan công chúa ngắn tay bé gái"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/Dn2XbjGftnw5e0FwclmrfZtW0hiTojUzd1cfIsAMPJLjG5uOB.jpg"
+              width="300"
+            />
+            <div class="info-girl-fashion">
+              <div class="voucher-girl-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <h3>Đầm váy voan công chúa ngắn tay bé gái</h3>
+              <div class="price-girl-fashion">259,000đ</div>
+              <div class="colors-girl-fashion">
+                <span class="color1"> </span>
+                <span class="color2"> </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="load-more">
+          <button>Xem thêm</button>
+        </div>
+      </div>
+    </section>
+    <!-- ===================================thời trang nam=======================- -->
+    <section class="section-boy-fashion">
+      <div class="container-boy-fashion">
+        <div class="boy-fashion">
+          <h1>THỜI TRANG BÉ TRAI</h1>
+        </div>
+        <div class="nav-boy-fashion">
+          <p class="active" onclick="showTabBoy('ao-boy')">Áo</p>
+          <p class="tab" onclick="showTabBoy('do-bo-boy')">Đồ Bộ</p>
+          <p class="tab" onclick="showTabBoy('quan')">Quần</p>
+          <p class="tab" onclick="showTabBoy('ao-khoac')">Áo Khoác</p>
+        </div>
+        
+        <div class="products-boy-fashion" id="ao-boy">
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun ngắn tay Spider-man bé trai Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/M68ayL95nOJpI1t3JCPjippMhB0WjvP8fxFVCw00nnpA781JA.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun ngắn tay Spider-man bé trai Rabity</p>
+              <p class="price-boy-fashion">169,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun ngắn tay Spider-Man bé trai Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/M68ayL95nOJpI1t3JCPjippMhB0WjvP8fxFVCw00nnpA781JA.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun ngắn tay Spider-Man bé trai Rabity</p>
+              <p class="price-boy-fashion">169,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun dài tay Marvel Avengers bé trai Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/M68ayL95nOJpI1t3JCPjippMhB0WjvP8fxFVCw00nnpA781JA.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun dài tay Marvel Avengers bé trai Rabity</p>
+              <p class="price-boy-fashion">199,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun Spider-Man dài tay bé trai Rabity 510.001"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/M68ayL95nOJpI1t3JCPjippMhB0WjvP8fxFVCw00nnpA781JA.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun Spider-Man dài tay bé trai Rabity 510.001</p>
+              <p class="price-boy-fashion">189,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun ngắn tay Capybara bé trai đỏ tươi gói Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/M68ayL95nOJpI1t3JCPjippMhB0WjvP8fxFVCw00nnpA781JA.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun ngắn tay Capybara bé trai đỏ tươi gói Rabity</p>
+              <p class="price-boy-fashion">125,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun ngắn tay phi hành gia bé trai đỏ gói Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/mA1OZ5hq5f2uUyE8th85keOEVOux4BUz9MOiuPGSPPnF25rTA.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>
+                (Độc quyền Online) Áo thun ngắn tay phi hành gia bé trai đỏ gói
+                Rabity
+              </p>
+              <p class="price-boy-fashion">107,400đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo khoác Gile phao bé trai vàng gói Rabity 321.002"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/mA1OZ5hq5f2uUyE8th85keOEVOux4BUz9MOiuPGSPPnF25rTA.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo khoác Gile phao bé trai vàng gói Rabity 321.002</p>
+              <p class="price-boy-fashion">129,500đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo gile len bé trai đỏ gói Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/mA1OZ5hq5f2uUyE8th85keOEVOux4BUz9MOiuPGSPPnF25rTA.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>(Độc quyền Online) Áo gile len bé trai đỏ gói Rabity</p>
+              <p class="price-boy-fashion">169,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="products-boy-fashion" id="do-bo-boy" style="display: none;">
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun ngắn tay Spider-man bé trai Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/mA1OZ5hq5f2uUyE8th85keOEVOux4BUz9MOiuPGSPPnF25rTA.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun ngắn tay Spider-man bé trai Rabity</p>
+              <p class="price-boy-fashion">169,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun ngắn tay Spider-Man bé trai Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/mA1OZ5hq5f2uUyE8th85keOEVOux4BUz9MOiuPGSPPnF25rTA.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun ngắn tay Spider-Man bé trai Rabity</p>
+              <p class="price-boy-fashion">169,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun dài tay Marvel Avengers bé trai Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/mA1OZ5hq5f2uUyE8th85keOEVOux4BUz9MOiuPGSPPnF25rTA.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun dài tay Marvel Avengers bé trai Rabity</p>
+              <p class="price-boy-fashion">199,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun Spider-Man dài tay bé trai Rabity 510.001"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/mA1OZ5hq5f2uUyE8th85keOEVOux4BUz9MOiuPGSPPnF25rTA.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun Spider-Man dài tay bé trai Rabity 510.001</p>
+              <p class="price-boy-fashion">189,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun ngắn tay Capybara bé trai đỏ tươi gói Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/mA1OZ5hq5f2uUyE8th85keOEVOux4BUz9MOiuPGSPPnF25rTA.jpg""
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun ngắn tay Capybara bé trai đỏ tươi gói Rabity</p>
+              <p class="price-boy-fashion">125,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun ngắn tay phi hành gia bé trai đỏ gói Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/5KeqS3mikEXvCSd6e6RDIggdqLGTanLCweeJqoQaliOOYnvOB.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>
+                (Độc quyền Online) Áo thun ngắn tay phi hành gia bé trai đỏ gói
+                Rabity
+              </p>
+              <p class="price-boy-fashion">107,400đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo khoác Gile phao bé trai vàng gói Rabity 321.002"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/5KeqS3mikEXvCSd6e6RDIggdqLGTanLCweeJqoQaliOOYnvOB.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo khoác Gile phao bé trai vàng gói Rabity 321.002</p>
+              <p class="price-boy-fashion">129,500đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo gile len bé trai đỏ gói Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/Sd0C1qZ9wg4jJ9f67bBmi3yrLW0273eLV8iele4fwi0vvOf6E.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>(Độc quyền Online) Áo gile len bé trai đỏ gói Rabity</p>
+              <p class="price-boy-fashion">169,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="products-boy-fashion" id="quan" style="display: none;">
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun ngắn tay Spider-man bé trai Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/M68ayL95nOJpI1t3JCPjippMhB0WjvP8fxFVCw00nnpA781JA.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun ngắn tay Spider-man bé trai Rabity</p>
+              <p class="price-boy-fashion">169,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun ngắn tay Spider-Man bé trai Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/M68ayL95nOJpI1t3JCPjippMhB0WjvP8fxFVCw00nnpA781JA.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun ngắn tay Spider-Man bé trai Rabity</p>
+              <p class="price-boy-fashion">169,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun dài tay Marvel Avengers bé trai Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/M68ayL95nOJpI1t3JCPjippMhB0WjvP8fxFVCw00nnpA781JA.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun dài tay Marvel Avengers bé trai Rabity</p>
+              <p class="price-boy-fashion">199,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun Spider-Man dài tay bé trai Rabity 510.001"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/M68ayL95nOJpI1t3JCPjippMhB0WjvP8fxFVCw00nnpA781JA.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun Spider-Man dài tay bé trai Rabity 510.001</p>
+              <p class="price-boy-fashion">189,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun ngắn tay Capybara bé trai đỏ tươi gói Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/M68ayL95nOJpI1t3JCPjippMhB0WjvP8fxFVCw00nnpA781JA.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun ngắn tay Capybara bé trai đỏ tươi gói Rabity</p>
+              <p class="price-boy-fashion">125,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun ngắn tay phi hành gia bé trai đỏ gói Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/mA1OZ5hq5f2uUyE8th85keOEVOux4BUz9MOiuPGSPPnF25rTA.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>
+                (Độc quyền Online) Áo thun ngắn tay phi hành gia bé trai đỏ gói
+                Rabity
+              </p>
+              <p class="price-boy-fashion">107,400đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo khoác Gile phao bé trai vàng gói Rabity 321.002"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/5KeqS3mikEXvCSd6e6RDIggdqLGTanLCweeJqoQaliOOYnvOB.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo khoác Gile phao bé trai vàng gói Rabity 321.002</p>
+              <p class="price-boy-fashion">129,500đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo gile len bé trai đỏ gói Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/Sd0C1qZ9wg4jJ9f67bBmi3yrLW0273eLV8iele4fwi0vvOf6E.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>(Độc quyền Online) Áo gile len bé trai đỏ gói Rabity</p>
+              <p class="price-boy-fashion">169,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="products-boy-fashion" id="ao-khoac" style="display: none;">
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun ngắn tay Spider-man bé trai Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/Sd0C1qZ9wg4jJ9f67bBmi3yrLW0273eLV8iele4fwi0vvOf6E.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun ngắn tay Spider-man bé trai Rabity</p>
+              <p class="price-boy-fashion">169,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun ngắn tay Spider-Man bé trai Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/Sd0C1qZ9wg4jJ9f67bBmi3yrLW0273eLV8iele4fwi0vvOf6E.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun ngắn tay Spider-Man bé trai Rabity</p>
+              <p class="price-boy-fashion">169,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun dài tay Marvel Avengers bé trai Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/Sd0C1qZ9wg4jJ9f67bBmi3yrLW0273eLV8iele4fwi0vvOf6E.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun dài tay Marvel Avengers bé trai Rabity</p>
+              <p class="price-boy-fashion">199,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun Spider-Man dài tay bé trai Rabity 510.001"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/Sd0C1qZ9wg4jJ9f67bBmi3yrLW0273eLV8iele4fwi0vvOf6E.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun Spider-Man dài tay bé trai Rabity 510.001</p>
+              <p class="price-boy-fashion">189,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun ngắn tay Capybara bé trai đỏ tươi gói Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/Sd0C1qZ9wg4jJ9f67bBmi3yrLW0273eLV8iele4fwi0vvOf6E.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo thun ngắn tay Capybara bé trai đỏ tươi gói Rabity</p>
+              <p class="price-boy-fashion">125,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo thun ngắn tay phi hành gia bé trai đỏ gói Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/Sd0C1qZ9wg4jJ9f67bBmi3yrLW0273eLV8iele4fwi0vvOf6E.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>
+                (Độc quyền Online) Áo thun ngắn tay phi hành gia bé trai đỏ gói
+                Rabity
+              </p>
+              <p class="price-boy-fashion">107,400đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo khoác Gile phao bé trai vàng gói Rabity 321.002"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/Sd0C1qZ9wg4jJ9f67bBmi3yrLW0273eLV8iele4fwi0vvOf6E.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>Áo khoác Gile phao bé trai vàng gói Rabity 321.002</p>
+              <p class="price-boy-fashion">129,500đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="product-boy-fashion">
+            <img
+              alt="Áo gile len bé trai đỏ gói Rabity"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/Sd0C1qZ9wg4jJ9f67bBmi3yrLW0273eLV8iele4fwi0vvOf6E.jpg"
+              width="300"
+            />
+            <div class="product-boy-fashion-info">
+              <p>(Độc quyền Online) Áo gile len bé trai đỏ gói Rabity</p>
+              <p class="price-boy-fashion">169,000đ</p>
+              <div class="voucher-boy-fashion">
+                <span> Thêm Vào Giỏ Hàng </span>
+                <span> Xem Chi Tiết </span>
+              </div>
+              <div class="icons-boy-fashion">
+                <i class="fas fa-heart"> </i>
+                <i class="fas fa-share-alt"> </i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="load-more">
+          <button>Xem thêm</button>
+        </div>
+      </div>
+    </section>
+    <!-- ====================================footer=============================== -->
+    <section class="section-footer">
+      <div class="footer">
+        <div class="footer-column">
+          <img
+            alt="Little Whale Logo"
+            height="50"
+            src="./images/logo.png"
+            width="100"
+          />
+          <p>
+            Rabity là thương hiệu thời trang trẻ em hàng đầu Việt Nam với hơn 60
+            showroom trên toàn quốc, mang đến cho bé những bộ quần áo thoải mái
+            cho bé "tự do khám phá" thế giới và trải nghiệm niềm vui mỗi ngày.
+          </p>
+          <h3>ĐĂNG KÝ NHẬN TIN</h3>
+          <div class="subscribe">
+            <input placeholder="Nhập địa chỉ email" type="email" />
+            <button>Đăng ký</button>
+          </div>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>VỀ RABITY</h3>
+          <a href="#">Giới thiệu về Rabity</a>
+          <br />
+          <a href="#">Tin tức Rabity</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+          <a href="#">Tra cứu đơn hàng</a>
+          <br />
+          <a href="#">Chính sách đổi trả hàng Online</a>
+          <br />
+          <a href="#">Chính sách Khách hàng thân thiết</a>
+          <br />
+          <a href="#">Giao hàng &amp; phí giao hàng</a>
+          <br />
+          <a href="#">Hướng dẫn chọn size</a>
+          <br />
+          <a href="#">Chính sách bảo mật thông tin</a>
+          <br />
+          <a href="#">Chính sách đại lý</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>CÔNG TY TNHH Little Whale</h3>
+          <p>Địa chỉ:</p>
+          <p>
+            Văn phòng phía Bắc: VQCR+GP6, khu phố 6, Thủ Đức, Hồ Chí Minh
+          </p>
+          <p>
+            Văn phòng phía Nam: Số 33 đường 12A Khu Đô Thị Lake View City, Bình
+            Trưng Đông, Quận 2, TP HCM
+          </p>
+          <p>Điện thoại: 1900633520</p>
+          <p>Email: cskh@littleWhale</p>
+        </div>
+      </div>
+    </section>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./js/script.js"></script>
 </html>

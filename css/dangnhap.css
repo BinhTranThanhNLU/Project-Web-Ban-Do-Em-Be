@@ -1,0 +1,264 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, 
+h1, h2, h3, h4, h5, h6, p, i,  ul, li,
+ form, label {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+   font-family: 'Spartan', sans-serif;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+
+
+*{
+   box-sizing: border-box;
+}
+html{
+   width: 100%;
+   height: 100%;
+}
+
+body{
+   
+   width: 100%;
+   height: 100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   z-index: 1;
+   overflow: hidden;
+   
+}
+
+
+
+
+.login-container{
+   position: relative;
+   width: 75%;
+   height: 90%;
+   background-image: url("../images/dark-sunset.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   justify-content: space-between;
+   padding-left: 100px;
+   color: white;
+   font-weight: 300;
+
+}
+
+.login-container>div:first-child{
+   max-width: 45%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 100px 0;
+   padding-bottom: 70px;
+}
+
+
+
+
+.register > div:first-child{
+   font-size: 32px;
+   max-width: 300px;
+   line-height: 1.3;
+   margin-bottom: 20px;
+}
+.register > p{
+   font-size: 14px;
+   line-height: 1.4;
+   color: rgb(197, 202, 206);
+   margin-bottom: 24px;
+}
+.register .social{
+   margin-left: -20px;
+}
+.register .social a{
+   margin-left: 20px;
+}
+.register .social  i{
+   color:white;
+   font-size: 15px;
+}
+
+.register .social a:hover i
+{
+   color: rgb(216, 134, 26);
+}
+
+.form-login{
+   width: 55%;
+   max-width: 53%;
+   height: 100%;
+   backdrop-filter: blur(8px);
+   background-color: rgba(54, 52, 52, 0.2);
+   /* display: flex; */
+   /* align-items: center; */
+   padding:50px 30px;
+}
+
+.form-login .form-group{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   margin-top: 40px;
+}
+
+.form-login .form-group.f-term{
+   display: flex;
+   flex-direction: row !important;
+   align-items: center;
+}
+
+.f-term label{
+   margin-top: 10px;
+   margin-left: 7px;
+}
+.f-term label a{
+   margin-left: 2px;
+   color: rgb(209, 100, 27);
+   font-size: 15px;
+   Text-decoration: none
+}
+
+.f-term label a:hover{
+   color: red;
+}
+
+.form-login .form .form-group input{
+   background-color: transparent;
+   outline: none;
+   border: none;
+   border-bottom: 1px solid rgba(159, 171, 175, 0.534);
+   margin-top: 10px;
+   color: white;
+   font-size: 17px;
+}
+
+.form-login .form .form-group input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: rgba(255, 255, 255, 0.658);
+   opacity: 1; /* Firefox */
+ }
+ 
+ .form-login .form .form-group .form-label{
+   color: rgba(255, 255, 255, 0.658);
+   font-size: 13px;
+ }
+
+.form-login .form .heading{
+   font-size: 30px;
+   margin-top: 7px;
+}
+
+
+.form-login .form .sign-up{
+   margin-top: 50px;
+   display: flex;
+   align-items: center;
+}
+
+.form-login .form .sign-up .dangnhap{  
+   background-color: rgb(233, 87, 20);
+   width: 160px;
+   height: 35px;
+   border: none;
+   outline: none;
+   font-size: 16px;
+   display: flex;
+   align-items: center;
+   padding-left: 25px;
+
+
+
+}
+.form-login .form .sign-up .dangnhap a{
+   Text-decoration: none;
+   color: rgb(190, 189, 187);
+}
+
+.form-login .form .sign-up .dangnhap:hover{
+   background-color:rgb(117, 80, 12);
+   cursor: pointer;
+   opacity: 0.97;
+}
+
+
+
+.sign-up .dangki a{
+   /* display: block; */
+   margin-left: 35px;
+   color: rgb(190, 189, 187);
+   font-size: 14px;
+   text-underline-position: under;
+   /* align-items: center; */
+}
+
+.sign-up .dangki a:hover{
+   color: red;
+}
+
+
+/* button */
+.login-button {
+   margin-top: 35px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 13px 10px;
+   margin-left: 30px;
+   text-decoration: none;
+   color: white;
+   border-radius: 5px;
+   font-size: 13px;
+   font-weight: bold;
+   width: 190px; /* Tùy chỉnh độ rộng cho giống ảnh */
+}
+.form-icon > p{
+   font-size: 16px;
+   color: rgb(197, 202, 206);
+   margin-top: 40px;
+   margin-left: 130px;
+}
+.button_icon{
+   display: flex;
+}
+
+.google-login {
+   background-color: #db4437;
+   display: flex;
+   align-items: center;
+}
+
+.facebook-login {
+   background-color: #3b5998;
+   display: flex;
+   align-items: center;
+}
+.google-login i,
+.facebook-login i {
+   margin-right: 10px;
+   font-size: 15px; /* Kích thước biểu tượng */
+}
+
+
+.login-button:hover {
+   opacity: 0.8; /* Hiệu ứng hover nhẹ */
+}

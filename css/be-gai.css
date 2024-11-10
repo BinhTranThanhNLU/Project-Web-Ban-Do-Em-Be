@@ -7,7 +7,6 @@
 }
 
 /* section bread-crumb */
-/* Breadcrumb Section */
 .bread-crumb {
     display: block;
     width: 100%;
@@ -40,18 +39,25 @@
 
 .bread-crumb .breadcrumb li + li::before {
     content: " / ";
-    color: #888;
+    color: white;
     padding: 0 5px;
 }
 
 .bread-crumb .breadcrumb li:last-child a {
-    color: #666;
+    /* color: #666; */
     cursor: default;
 }
 
 .bread-crumb .breadcrumb li:last-child a:hover {
     text-decoration: none;
 }
+
+.bread-crumb .breadcrumb li a:hover {
+    color: #007bff; /* Màu xanh dương */
+}
+
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -80,6 +86,7 @@
         font-size: 12px; /* Even smaller font for extra-small screens */
     }
 }
+
 
 
 /* section dbg-header-image */
@@ -455,8 +462,8 @@ input[type="checkbox"]:hover::after {
 
 
 .size-select .btn {
-    width: 15px;
-    height: 15px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     background: #fff;
     border: 1px solid grey;

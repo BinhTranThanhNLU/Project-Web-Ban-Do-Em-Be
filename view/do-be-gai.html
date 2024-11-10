@@ -7,8 +7,10 @@
   <title>Đồ Bé Gái</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <link rel="stylesheet" href="./css/header-nav-footer.css">
-  <link rel="stylesheet" href="./css/dobegai.css">
+  <link rel="stylesheet" href="../css/header-nav-footer.css">
+  <!-- <link rel="stylesheet" href="../css/be-gai.css"> -->
+  <link rel="stylesheet" href="../css/card-product.css">
+  <link rel="stylesheet" href="../css/do-be-gai.css">
 </head>
 
 <body>
@@ -19,7 +21,7 @@
         <img
           alt="Company Logo"
           height="50"
-          src="./images/logo.png"
+          src="../images/logo.png"
           width="100"
         />
       </div>
@@ -45,7 +47,7 @@
       <!-- menu  -->
       <div class="navbar">
         <div class="menu">
-          <a href="./index.html">Trang Chủ</a>
+          <a href="#">Trang Chủ</a>
           <div class="dropdown-menu">
             <!-- Thêm lớp cho Bé gái -->
             <div class="navheight">
@@ -56,7 +58,7 @@
               <!-- Dropdown cho Bé gái -->
               <div class="column">
                 <h3>ĐẦM VÁY</h3>
-                <a href="#">Tất cả Đầm váy</a>
+                <a href="#" id="all-dresses">Tất cả Đầm váy</a>
                 <a href="#">Đầm ngắn tay</a>
                 <a href="#">Đầm dài tay</a>
                 <a href="#">Đầm hai dây</a>
@@ -203,7 +205,7 @@
           <div class="user-menu">
             <i class="fas fa-user"></i>
             <div class="dropdown">
-              <a href="./dangnhap.html">Đăng nhập</a>
+              <a href="#login">Đăng nhập</a>
               <a href="#register">Đăng ký</a>
             </div>
           </div>
@@ -229,7 +231,12 @@
           </li>
 
           <li>
-            <a href="" itemprop="url" target="_self"><span itemprop="title">Thời Trang Bé Gái</span></a>
+            <a href="./be-gai.html" itemprop="url" target="_self"><span itemprop="title">Thời Trang Bé Gái</span></a>
+            <span class="">&nbsp;/&nbsp;</span>
+          </li>
+
+          <li>
+            <a href="./do-be-gai.html" itemprop="url" target="_self"><span itemprop="title">Đầm-Váy Bé Gái</span></a>
             <span class="">&nbsp;/&nbsp;</span>
           </li>
 
@@ -284,7 +291,7 @@
   
         <div class="container-filter-products">
           <!-- Lọc và sản phẩm -->
-          <div class="container-filter">
+          <div class="container-filter" style="margin-bottom: 800px;">
             <!-- Filter Sidebar -->
             <div class="filters">
               <div class="filter-item">
@@ -331,14 +338,18 @@
               <div class="filter-item">
                 <div class="filter-size">
                   <h3>Kích thước</h3>
-                  <label><input type="checkbox" /> 1Y-9 11kg</label>
-                  <label><input type="checkbox" /> 2Y-11 12kg</label>
-                  <label><input type="checkbox" /> 3Y-12 13kg</label>
-                  <label><input type="checkbox" /> 4Y-12 16kg</label>
-                  <label><input type="checkbox" /> 5Y-12 19kg</label>
-                  <label><input type="checkbox" /> 7Y-12 21kg</label>
-                  <label><input type="checkbox" /> 9Y-12 25kg</label>
-                  <label><input type="checkbox" /> 10Y-12 30kg</label>
+                  <label><input type="checkbox" /> 1Y 9-11kg</label>
+                  <label><input type="checkbox" /> 2Y 11-12kg</label>
+                  <label><input type="checkbox" /> 3Y 12-13kg</label>
+                  <label><input type="checkbox" /> 4Y 14-16kg</label>
+                  <label><input type="checkbox" /> 5Y 17-19kg</label>
+                  <label><input type="checkbox" /> 6Y 19-21kg</label>
+                  <label><input type="checkbox" /> 7Y 21-23kg</label>
+                  <label><input type="checkbox" /> 8Y 23-25kg</label>
+                  <label><input type="checkbox" /> 9Y 25-27kg</label>
+                  <label><input type="checkbox" /> 10Y 27-31kg</label>
+                  <label><input type="checkbox" /> 11Y 31-33kg</label>
+                  <label><input type="checkbox" /> 12Y 33-35kg</label>
                 </div>
                 <button class="collapse-btn">Thu gọn <i class="fa-solid fa-chevron-up"></i></button>
               </div>
@@ -357,7 +368,7 @@
                     <div class="first">
                       <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
                     </div>
-                    <img src="https://shopvnb.com//uploads/gallery/ao-hoodie-yonex-logo-nho-xanh-than_1702258699.webp"
+                    <img src="https://cdn.kkfashion.vn/27441-large_default/dam-lua-do-du-tiec-vat-dap-cheo-kk165-20.jpg"
                       class="thumbnail-image">
                   </div>
   
@@ -387,9 +398,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -424,7 +435,7 @@
                     <div class="first">
                       <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
                     </div>
-                    <img src="https://shopvnb.com//uploads/gallery/ao-hoodie-yonex-logo-nho-xanh-than_1702258699.webp"
+                    <img src="https://cdn.kkfashion.vn/27441-large_default/dam-lua-do-du-tiec-vat-dap-cheo-kk165-20.jpg"
                       class="thumbnail-image">
                   </div>
   
@@ -454,9 +465,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -491,7 +502,7 @@
                     <div class="first">
                       <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
                     </div>
-                    <img src="https://shopvnb.com//uploads/gallery/ao-hoodie-yonex-logo-nho-xanh-than_1702258699.webp"
+                    <img src="https://cdn.kkfashion.vn/27441-large_default/dam-lua-do-du-tiec-vat-dap-cheo-kk165-20.jpg"
                       class="thumbnail-image">
                   </div>
   
@@ -521,9 +532,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -558,7 +569,7 @@
                     <div class="first">
                       <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
                     </div>
-                    <img src="https://shopvnb.com//uploads/gallery/ao-hoodie-yonex-logo-nho-xanh-than_1702258699.webp"
+                    <img src="https://cdn.kkfashion.vn/27441-large_default/dam-lua-do-du-tiec-vat-dap-cheo-kk165-20.jpg"
                       class="thumbnail-image">
                   </div>
   
@@ -588,9 +599,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -628,7 +639,7 @@
                     <div class="first">
                       <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
                     </div>
-                    <img src="https://shopvnb.com//uploads/gallery/ao-hoodie-yonex-logo-nho-xanh-than_1702258699.webp"
+                    <img src="https://cdn.kkfashion.vn/27441-large_default/dam-lua-do-du-tiec-vat-dap-cheo-kk165-20.jpg"
                       class="thumbnail-image">
                   </div>
   
@@ -658,9 +669,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -695,7 +706,7 @@
                     <div class="first">
                       <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
                     </div>
-                    <img src="https://shopvnb.com//uploads/gallery/ao-hoodie-yonex-logo-nho-xanh-than_1702258699.webp"
+                    <img src="https://cdn.kkfashion.vn/27441-large_default/dam-lua-do-du-tiec-vat-dap-cheo-kk165-20.jpg"
                       class="thumbnail-image">
                   </div>
   
@@ -725,9 +736,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -762,7 +773,7 @@
                     <div class="first">
                       <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
                     </div>
-                    <img src="https://shopvnb.com//uploads/gallery/ao-hoodie-yonex-logo-nho-xanh-than_1702258699.webp"
+                    <img src="https://cdn.kkfashion.vn/27441-large_default/dam-lua-do-du-tiec-vat-dap-cheo-kk165-20.jpg"
                       class="thumbnail-image">
                   </div>
   
@@ -792,9 +803,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -829,7 +840,7 @@
                     <div class="first">
                       <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
                     </div>
-                    <img src="https://shopvnb.com//uploads/gallery/ao-hoodie-yonex-logo-nho-xanh-than_1702258699.webp"
+                    <img src="https://cdn.kkfashion.vn/27441-large_default/dam-lua-do-du-tiec-vat-dap-cheo-kk165-20.jpg"
                       class="thumbnail-image">
                   </div>
   
@@ -859,9 +870,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -899,7 +910,7 @@
                     <div class="first">
                       <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
                     </div>
-                    <img src="https://shopvnb.com//uploads/gallery/ao-hoodie-yonex-logo-nho-xanh-than_1702258699.webp"
+                    <img src="https://cdn.kkfashion.vn/27441-large_default/dam-lua-do-du-tiec-vat-dap-cheo-kk165-20.jpg"
                       class="thumbnail-image">
                   </div>
   
@@ -929,9 +940,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -966,7 +977,7 @@
                     <div class="first">
                       <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
                     </div>
-                    <img src="https://shopvnb.com//uploads/gallery/ao-hoodie-yonex-logo-nho-xanh-than_1702258699.webp"
+                    <img src="https://cdn.kkfashion.vn/27441-large_default/dam-lua-do-du-tiec-vat-dap-cheo-kk165-20.jpg"
                       class="thumbnail-image">
                   </div>
   
@@ -996,9 +1007,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -1033,7 +1044,7 @@
                     <div class="first">
                       <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
                     </div>
-                    <img src="https://shopvnb.com//uploads/gallery/ao-hoodie-yonex-logo-nho-xanh-than_1702258699.webp"
+                    <img src="https://cdn.kkfashion.vn/27441-large_default/dam-lua-do-du-tiec-vat-dap-cheo-kk165-20.jpg"
                       class="thumbnail-image">
                   </div>
   
@@ -1063,9 +1074,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -1100,7 +1111,7 @@
                     <div class="first">
                       <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
                     </div>
-                    <img src="https://shopvnb.com//uploads/gallery/ao-hoodie-yonex-logo-nho-xanh-than_1702258699.webp"
+                    <img src="https://cdn.kkfashion.vn/27441-large_default/dam-lua-do-du-tiec-vat-dap-cheo-kk165-20.jpg"
                       class="thumbnail-image">
                   </div>
   
@@ -1130,9 +1141,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -1187,89 +1198,80 @@
   <section class="container-description">
     <div class="description-content">
       <p>
-        <span>Rabity</span> là một thương hiệu thời trang trẻ em hàng đầu Việt Nam với chất lượng cao cấp, đa dạng mẫu mã,
-        màu
-        sắc và phong cách với hệ thống cửa hàng phủ sóng trên toàn quốc,
-        mang đến cho bé những bộ quần áo thoải mái, "tự do khám phá" thế giới và trải nghiệm niềm vui mỗi ngày, với hàng
-        loạt
-        mẫu mới được các mẹ vô cùng săn đón.
-        Đặc biệt những mẫu quần áo thời trang bé gái luôn là dòng sản phẩm vô cùng bán chạy tại nhà Thỏ.
+        <span>Rabity</span> là một thương hiệu thời trang trẻ em hàng đầu Việt Nam với chất lượng cao cấp, đa dạng mẫu mã, màu sắc và phong cách với hệ thống cửa hàng phủ sóng trên toàn quốc,
+         mang đến cho bé những bộ quần áo thoải mái, "tự do khám phá" thế giới và trải nghiệm niềm vui mỗi ngày, với hàng loạt mẫu mới được các mẹ vô cùng săn đón.
+         Đặc biệt những mẫu quần áo thời trang bé gái luôn là dòng sản phẩm vô cùng bán chạy tại nhà Thỏ.
       </p>
-  
-      <div class="body-content">
-        <h2>1. Thời trang bé gái tại Rabity có những dòng sản phẩm hot nào?</h3>
-          <p>Với sự phong phú và sáng tạo trong thời trang trẻ em, Rabity đã cho ra mắt đa dạng dòng sản phẩm từ áo quần,
-            đầm váy đến phụ kiện. Do đó, ba mẹ có thể dễ dàng tìm ra những bộ trang phục dành cho bé gái phù hợp với phong
-            cách và sở thích riêng của bé nhà mình. Dưới đây là một số BST đang rất được ưa chuộng tại hệ thống bán lẻ
-            Rabity:</p>
-          <ul>
-            <li><span class="highlight">Đầm, váy:</span> Chúng không chỉ là một item làm đẹp mà còn giúp bé gái đáng yêu
-              và dịu dàng. Các sản phẩm váy đầm đầy màu sắc, dễ thương phù hợp với các bé gái ở mọi lứa tuổi.</li>
-            <li><span class="highlight">Quần áo bộ:</span> Các thiết kế đồ bộ trẻ em của Rabity mang lại sự thoải mái khi
-              vận động. Đây cũng là sản phẩm không thể thiếu trong bất kỳ BST nào dành cho các bé gái vì sự dễ thương và
-              phù hợp với mọi tình huống.</li>
-            <li><span class="highlight">Quần legging, quần jean:</span> Rabity cung cấp đa dạng mẫu quần cho bé gái từ
-              quần short đến quần dài với kiểu dáng thời trang và chất liệu vải thoáng mát, thoải mái khi vận động.</li>
-            <li><span class="highlight">Áo phông, áo thun:</span> Các mẫu áo thun với họa tiết dễ thương và đa dạng màu
-              sắc được thiết kế phù hợp cho mọi lứa tuổi. Áo thun của Rabity có chất liệu cotton an toàn, rất mềm mịn, dễ
-              chịu khi mặc và không gây ngứa da.</li>
-            <li><span class="highlight">Áo khoác, áo gió:</span> Một item không thể thiếu cho những ngày lạnh đầu và giữa
-              mùa đông, với áo khoác giữ ấm nhưng không gây nặng nề khi mặc. Rabity với sự đa dạng màu sắc, mẫu mã giúp bé
-              gái của bạn luôn nổi bật.</li>
-            <li><span class="highlight">Chân váy bé gái:</span> Là một trong những dòng sản phẩm bé gái phổ biến nhất,
-              chân váy thiết kế làm nổi bật sự đáng yêu, dễ thương phù hợp với mọi lứa tuổi từ 1-14 tuổi.</li>
-            <li><span class="highlight">Đồ bơi bé gái:</span> Đồ bơi bé gái được thiết kế thời trang và an toàn với chất
-              liệu phù hợp, giúp bé thoải mái vui chơi khi đến biển, hồ bơi.</li>
-            <li><span class="highlight">Phụ kiện bé gái:</span> Với các phụ kiện như băng đô, khẩu trang, tất và các món
-              đồ trang trí khác giúp hoàn thiện bộ trang phục của bé gái. Bộ sưu tập phụ kiện bé gái có thể làm nổi bật cá
-              tính của bé và cũng là món quà tuyệt vời cho các dịp sinh nhật hay lễ tết.</li>
-          </ul>
-          <img src="https://cdn.tgdd.vn/Files/2022/05/13/1432136/cach-phoi-do-cho-be-gai-12-tuoi-vua-dep-vua-nang-dong-thoai-mai-202205130838010474.jpg" alt="">
-      </div>
-  
-      <div class="body-content">
-        <h2>2. Phong cách thời trang cho bé gái đẹp, đặc trưng từ thương hiệu Rabity</h2>
-        <p>
-  
-          Đây là một trong những phong cách chính mà Rabity đang hướng tới và chiếm phần lớn thiết kế
-          các sản phẩm quần áo thời trang cho bé gái tại nhà Thỏ. Với những thiết kế tối giản, tính ứng dụng cao nhưng vẫn
-          vô cùng năng động, đáng yêu
-          và hiện đại để công chúa nhỏ tha hồ diện và phối nhiều outfits khác nhau trong mọi hoàn cảnh từ đi học, đi chơi
-          hay sinh hoạt hằng ngày.
-        </p>
-        <div>
+      <div class="description-collections">
+        <div class="header-content">
+          <h2>1. Thời trang bé gái tại Rabity có những dòng sản phẩm hot nào?</h3>
+          <p>Nàng công chúa nhỏ của nhà mình sẽ thêm phần nổi bật và đáng yêu khi bé sở hữu những chiếc đầm váy trẻ em ngay sau đây!</p>
+        </div>
+        <div class="body-content">
+          <h3>1.1. Đầm váy bé gái thun cotton mát mẻ và năng động</h3>
+          <p>
+            Kiểu đầm váy thun bé gái với kiểu dáng thiết kế tối giản, vô cùng dễ mặc cho các bé gái từ 1 đến 14 tuổi, với dáng suông rộng rãi, 
+            co giãn giúp bé mặc thật thoáng mát vào mùa hè. Ngay cả mùa thu hay mùa đông bé cũng có thể phối thêm quần tất hoặc áo khoác mặc vô cùng ấm áp nhưng vẫn rất thời trang.
+            Những chiếc váy thun dễ dàng mix & match, màu sắc tươi mới, họa tiết đáng yêu, cùng với kiểu dáng phù hợp giúp bé thoải mái vui chơi, vận động.
+          </p>
           <img src="https://product.hstatic.net/1000290074/product/mau_nhi_1_3fccac74cde547ca9ba46f1ae2d75434.jpg" alt="">
-          <p class="italic-text">Thời trang bé gái phong cách đơn giản nhưng vô cùng năng động, tiện dụng</p>
         </div>
-        <p>
-          <span>Phong cách công chúa điệu đà, dự tiệc sang chảnh:</span>
-          Bất kỳ bé gái nào cũng mê được hóa thân thành những nàng công chúa nhỏ thật đáng yêu.
-          Vì vậy, những chiếc đầm mang kiểu dáng và họa tiết phong cách công chúa cũng được nhà Thỏ dành sự trau chuốt tỉ
-          mỉ. Với những họa tiết,
-          màu sắc bắt mắt, những điểm nhấn như phần chân váy nhiều lớp bồng bềnh, nơ bản to cách điệu, hay đính cườm lấp
-          lánh, điệu đà,...
-        </p>
-        <div>
-          <img src="https://fiancemedia.com/wp-content/uploads/2024/03/thoi-trang-tre-2.jpg" alt="">
-          <p class="italic-text">Phong cách thời trang cho bé gái mê công chúa điệu đà</p>
+        <div class="body-content">
+          <h3>1.2. Váy công chúa bé gái điệu đà với những lớp voan phồng bồng bềnh</h3>
+          <p>
+            Những chiếc váy dạ hội công chúa, váy công chúa Disney, váy hồng công chúa sẽ là sự lựa chọn hoàn hảo của 
+            mẹ giúp cho bé diện đồ thật xinh thỏa ước mơ hóa thân thành một cô công chúa bé nhỏ.
+            Những chiếc váy công chúa với thiết kế voan bồng bềnh nhiều lớp, màu sắc bắt mắt mang phong cách tiểu thư điệu đà. 
+            Thường được trang trí họa tiết lấp lánh nổi bật, nơ bản to, tay áo voan hoặc bồng. Đặc biệt, những chiếc váy công 
+            chúa Elsa cho bé gái với điểm nhấn là hình in Elsa bản quyền Disney được các bé gái vô cùng yêu thích và ưa chuộng.
+          </p>
+          <img src="https://www.moby.com.vn/data/ck/images/dv546-dam-cong-chua-elsa-de-thuong-cho-be-mau-xanh.png" alt="">
         </div>
-        <p>
-          <span>Phong cách tươi sáng, sắc màu xuống phố:</span>
-          Không dừng lại ở các kiểu dáng đồ bé gái trơn, đơn giản,
-          Rabity còn tạo ra những trang phục với vô vàn màu sắc phù hợp với sở thích khác nhau của các nàng thơ nhí.
-        </p>
-        <div>
-          <img src="https://file.hstatic.net/1000290074/file/thoi-trang-be-gai-phong-cach-thanh-lich-di-hoc_a87e50f370564132a3b6b28a7eb46718.jpg" alt="">
-          <p class="italic-text">Rabity sở hữu những bộ đồ bé gái phong cách sắc màu tươi sáng </p>
+        <div class="body-content">
+          <h3>1.3. Đầm váy xòe chất vải thô cotton nhẹ tênh với họa tiết đáng yêu</h3>
+          <p>
+            Kiểu váy xòe đáng yêu luôn là item được các bé gái yêu thích, với đa dạng kiểu dáng từ xếp ly, váy suông, nhún cho đến tay bèo, cánh tiên xinh xắn, hay kiểu váy 2 dây và cổ yếm điệu đà, tất cả đều được các tiểu thư nhí vô cùng yêu thích.
+            Từ những chiếc váy trơn màu đến những họa tiết hoa nhí, ngựa pony, kẻ sắc màu, chấm bi,... hay váy caro bé gái, mỗi một thiết kế đều mang đến cho bé một diện mạo thật nổi bật và đáng yêu.
+            Với chất liệu cotton thô nhẹ tênh, thoáng mát, êm mịn an toàn cho làn da trẻ nhỏ, bé tha hồ mặc mọi lúc, mọi nơi từ đi học, đi chơi hay dự tiệc mà vẫn thoải mái vô cùng.
+          </p>
+          <img src="https://cdn.becungshop.vn/images/300x300/dam-thun-xoe-hoa-tiet-ngua-pony-3d-cuc-xinh-danh-cho-be-gai-p268606ee68477-300x300.jpg" alt="">
         </div>
-        <p>
-          <span>Phong cách thanh lịch, chỉn chu đi học:</span>
-          đây cũng là một phong cách nữa mà đồ bé gái Rabity cũng hướng tới, với lối thiết kế tối giản nhưng vẫn hiện đại, 
-          phá cách từ những chiếc áo sơ mi, áo polo hay những chiếc quần dài, chân váy kaki và jean đứng form.
-        </p>
-        <div>
-          <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSg_-h87EmM3QUNI49Lm2lsfUCDGlOiinLG9w9iPZYO1LMU6znI1Kn71b-cVINVP64yKRL4AbigycFW_yoOUs2Iw4eoLJ2XdMJY4Zj5CY8" alt="">
-          <p class="italic-text">Những mẫu quần áo bé gái lịch sự nhưng không kém phần phong cách cho bé đi học </p>
+        <div class="body-content">
+          <h3>1.4. Váy bé gái dài tay giữ ấm trong những ngày se lạnh</h3>
+          <p>
+            Mùa thu đông càng thêm ấm áp và không kém phần thời trang với những chiếc váy dài tay xinh xắn cho bé. Thiết kế lớp vải thun hoặc dày dặn hơn là vải nhung, nỉ, 
+            dạ nhưng vẫn vô cùng mềm mại và thoải mái cho bé, không gây cảm giác nặng nề khó chịu.
+            Mẹ có thể kết hợp thêm những chiếc mũ len, khăn choàng cổ và tất vào tiết trời se lạnh để bé thêm ấm áp nhé.
+          </p>
+          <img src="https://cdn.becungshop.vn/images/500x500/dam-cong-chua-tay-dai-theu-ren-cho-be-gai-tu-3-8-tuoi-p2389072d20cd4-500x500.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="description-note">
+        <div class="header-content">
+          <h2>2. Một số lưu ý khi mua đầm váy trẻ em chất lượng và phù hợp</h3>
+        </div>
+        <div class="body-content">
+          <h3>2.1. Kiểu dáng - Sự phù hợp giúp bé tự tin và tỏa sáng</h3>
+          <p>
+            Những chiếc đầm váy dành cho bé gái từ 1 - 12 tuổi với nhiều kiểu dáng thiết kế khác nhau sẽ giúp bé yêu nhà bạn đa dạng tủ đồ của mình, từ váy suông đơn giản năng động, đến những chiếc váy xếp ly đáng yêu, hay chiếc váy voan nhiều 
+            lớp bồng bềnh và điệu đà,... cho nàng công chúa nhỏ nhiều sự lựa chọn vào những dịp khác nhau.
+          </p>
+        </div>
+        <div class="body-content">
+          <h3>2.2. Chất liệu - Yếu tố quan trọng ảnh hưởng đến làn da của bé</h3>
+          <p>
+            Chất liệu vải được trực tiếp tiếp xúc với làn da trẻ nhỏ nên đây là yếu tố vô cùng quan trọng. Mẹ hãy ưu tiên lựa chọn những chiếc đầm váy trẻ em cao cấp có 
+            chất liệu cotton hoặc thun mát mềm mại, thoáng khí,... Tránh những chiếc váy có chất lượng kém sẽ ảnh hưởng đến làn da nhạy cảm của bé, vô tình làm bé khó chịu.
+          </p>
+        </div>
+        <div class="body-content">
+          <h3>2.3. Chọn kích thước đầm váy phù hợp - Đảm bảo thoải mái khi vận động</h3>
+          <p>
+            Trẻ em rất mau lớn, các mẹ không nên lựa chọn những chiếc váy vừa in với bé nếu không muốn chỉ sau một thời gian ngắn váy cho bé gái đã bị chật. Ví dụ như khi lựa chọn những chiếc đầm váy trẻ em đẹp vào mùa hè, 
+            các mẹ nên lựa chọn những chiếc váy rộng hơn so với dáng người của bé.
+            Đồng thời, nếu bé nhà bạn đang trong giai đoạn chập chững biết đi thì mẹ nên chú ý chọn những chiếc đầm váy với kích thước và chiều dài không gây bất tiện cho bé.
+          <img src="../images/bang-size-quan-ao-tre-em.png" alt="">
         </div>
       </div>
     </div>
@@ -1282,7 +1284,7 @@
         <img
           alt="Little Whale Logo"
           height="50"
-          src="./images/logo.png"
+          src="../images/logo.png"
           width="100"
         />
         <p>
@@ -1345,8 +1347,9 @@
     </div>
   </section>
 
-  <script src="./js/script.js"></script>
-  <script src="./js/interaction-dobegai.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/interaction-dobegai.js"></script>
+
 
 </body>
 

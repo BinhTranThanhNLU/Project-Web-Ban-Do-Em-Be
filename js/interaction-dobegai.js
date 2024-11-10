@@ -1,3 +1,4 @@
+// EVENT CHO CARD-PRODUCT
 document.addEventListener("DOMContentLoaded", function () {
     // Toggle color selection for each card
     const colorSelects = document.querySelectorAll('.color-select');
@@ -36,6 +37,18 @@ document.addEventListener("DOMContentLoaded", function () {
             this.classList.toggle('selected');
         });
     });
+
+    // Increase cart count on "mua" button click
+    const buyButtons = document.querySelectorAll('.buy-btn');
+    const cartBadge = document.querySelector('.cart .badge');
+    let cartCount = parseInt(cartBadge.textContent);
+
+    buyButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            cartCount++;
+            cartBadge.textContent = cartCount;
+        });
+    });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -65,34 +78,69 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const pageLinks = document.querySelectorAll('.pagination .page-item a');
+    const urlParams = new URLSearchParams(window.location.search);
+    let currentPage = parseInt(urlParams.get('page')) || 1;
 
+    // Cập nhật trạng thái nút trái và phải dựa trên trang hiện tại
+    const leftButton = document.querySelector('.pagination .fa-angle-left').closest('.page-item');
+    const rightButton = document.querySelector('.pagination .fa-angle-right').closest('.page-item');
+
+    function updateNavigationButtons() {
+        if (currentPage > 1) {
+            leftButton.classList.remove('disabled');
+        } else {
+            leftButton.classList.add('disabled');
+        }
+
+        // Nếu cần thêm điều kiện cho rightButton (VD: totalPages là số trang cuối)
+        // if (currentPage < totalPages) {
+        //     rightButton.classList.remove('disabled');
+        // } else {
+        //     rightButton.classList.add('disabled');
+        // }
+    }
+
+    // Sự kiện click cho các trang
     pageLinks.forEach(link => {
         link.addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent default link behavior
+            event.preventDefault();
 
-            // Get the page number from the clicked link
+            // Lấy số trang từ liên kết đã nhấp
             const pageNumber = this.textContent.trim();
 
-            // If it's not a navigation icon, update the URL with the new page parameter and reload
             if (!isNaN(pageNumber)) {
-                window.location.href = `${window.location.pathname}?page=${pageNumber}`;
+                currentPage = parseInt(pageNumber);
+                window.location.href = `${window.location.pathname}?page=${currentPage}`;
             }
         });
     });
 
-    // Highlight the active page based on the URL parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    const activePage = urlParams.get('page') || '1'; // Default to page 1 if no parameter
+    // Sự kiện cho nút left
+    leftButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        if (currentPage > 1) {
+            currentPage -= 1;
+            window.location.href = `${window.location.pathname}?page=${currentPage}`;
+        }
+    });
+
+    // Sự kiện cho nút right
+    rightButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        currentPage += 1; // Hoặc đảm bảo không vượt quá totalPages
+        window.location.href = `${window.location.pathname}?page=${currentPage}`;
+    });
+
+    // Đặt trang hiện tại làm trang active và cập nhật các nút điều hướng
     document.querySelectorAll('.pagination .page-item').forEach(item => {
-        if (item.textContent.trim() === activePage) {
+        if (item.textContent.trim() === String(currentPage)) {
             item.classList.add('active');
         } else {
             item.classList.remove('active');
         }
     });
+
+    updateNavigationButtons(); // Cập nhật trạng thái ban đầu của nút trái/phải
 });
-
-
-
 
 

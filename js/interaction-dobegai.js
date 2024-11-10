@@ -1,3 +1,4 @@
+// EVENT CHO CARD-PRODUCT
 document.addEventListener("DOMContentLoaded", function () {
     // Toggle color selection for each card
     const colorSelects = document.querySelectorAll('.color-select');

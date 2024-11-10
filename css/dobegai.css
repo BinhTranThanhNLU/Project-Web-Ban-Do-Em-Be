@@ -7,12 +7,15 @@
 }
 
 /* section bread-crumb */
+/* Breadcrumb Section */
 .bread-crumb {
     display: block;
     width: 100%;
     clear: both;
     position: relative;
-    margin: 20px 0 20px 180px; /* Gộp lệnh left và margin */
+    margin: 20px 0;
+    background-color: #f5f5f5;
+    padding: 10px 15px;
 }
 
 .bread-crumb .breadcrumb {
@@ -20,11 +23,64 @@
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
+    margin-left: 20px;
 }
 
 .bread-crumb .breadcrumb li {
     list-style-type: none;
+    color: #000; /* Black text color */
+    font-size: 14px;
 }
+
+.bread-crumb .breadcrumb li a {
+    text-decoration: none; /* Remove underline */
+    color: #000; /* Black text color */
+    font-weight: 500;
+}
+
+.bread-crumb .breadcrumb li + li::before {
+    content: " / ";
+    color: #888;
+    padding: 0 5px;
+}
+
+.bread-crumb .breadcrumb li:last-child a {
+    color: #666;
+    cursor: default;
+}
+
+.bread-crumb .breadcrumb li:last-child a:hover {
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .bread-crumb {
+        margin: 15px 10px; /* Adjust spacing on smaller screens */
+        padding: 8px 10px;
+    }
+
+    .bread-crumb .breadcrumb li {
+        font-size: 13px; /* Smaller font size for readability on mobile */
+    }
+}
+
+@media (max-width: 576px) {
+    .bread-crumb {
+        margin: 10px 5px;
+        padding: 5px;
+        text-align: center; /* Center align on very small screens */
+    }
+
+    .bread-crumb .breadcrumb {
+        justify-content: center; /* Center breadcrumb items */
+    }
+
+    .bread-crumb .breadcrumb li {
+        font-size: 12px; /* Even smaller font for extra-small screens */
+    }
+}
+
 
 /* section dbg-header-image */
 .dbg-header-image {
@@ -48,7 +104,8 @@
 
 /* Hiệu ứng phóng to khi di chuột */
 .header-image img:hover {
-    transform: scale(1.05); /* Phóng to khi hover */
+    transform: scale(1.05);
+    /* Phóng to khi hover */
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -89,7 +146,8 @@
 #sort-by {
     display: flex;
     align-items: baseline;
-    position: relative; /* Đảm bảo vị trí cho pseudo-element */
+    position: relative;
+    /* Đảm bảo vị trí cho pseudo-element */
 }
 
 #sort-by label {
@@ -101,7 +159,8 @@
 .coll-sortby select {
     margin-left: 5px;
     height: 30px;
-    padding: 0 20px 0 5px; /* Điều chỉnh lại padding để tránh trùng lặp */
+    padding: 0 20px 0 5px;
+    /* Điều chỉnh lại padding để tránh trùng lặp */
 }
 
 #sort-by::after {
@@ -137,6 +196,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 
@@ -144,8 +204,9 @@
 .container-filter {
     width: 230px;
     font-family: Arial, sans-serif;
-    margin-bottom: 180px;
+    margin-bottom: 300px;
     margin-left: 50px;
+
 }
 
 .filters h3 {
@@ -153,6 +214,10 @@
     font-weight: bold;
     margin-bottom: 10px;
     color: #333;
+}
+
+.filter-price {
+    width: 200px;
 }
 
 .filter-item {
@@ -235,6 +300,21 @@ input[type="checkbox"]:hover::after {
     transform: rotate(180deg);
 }
 
+/* Set height and overflow for collapsed sections */
+.filter-item .filter-color.collapsed,
+.filter-item .filter-price.collapsed,
+.filter-item .filter-size.collapsed,
+.filter-item .filter-type.collapsed {
+    height: 15vh; /* Adjust as needed */
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+/* Full height when expanded */
+.filter-color {
+    transition: height 0.3s ease; /* Smooth transition */
+}
+
 
 
 /* Container-products */
@@ -250,6 +330,7 @@ input[type="checkbox"]:hover::after {
     justify-content: space-around;
 }
 
+/* General card styling */
 .col-card {
     flex: 0 1 200px;
     margin-bottom: 50px;
@@ -271,14 +352,6 @@ input[type="checkbox"]:hover::after {
     width: 100%;
     height: auto;
     border-radius: 10px;
-}
-
-.discount {
-    background-color: red;
-    padding: 1px 4px;
-    font-size: 10px;
-    border-radius: 6px;
-    color: #fff;
 }
 
 .wishlist {
@@ -339,12 +412,47 @@ input[type="checkbox"]:hover::after {
     padding-top: 5px;
 }
 
+/* Color and size selectors */
+.color-select {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.color-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .color-select .btn {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    margin-right: 5px;
+    margin-bottom: 5px;
+    border: 2px solid; /* Set default border width */
 }
+
+.color-option .grey {
+    border-color: grey;
+}
+
+.color-option .red {
+    border-color: red;
+}
+
+.color-option .blue {
+    border-color: blue;
+}
+
+.color-name {
+    font-size: 10px;
+    color: #555;
+    text-align: center;
+}
+
+
+
 
 .size-select .btn {
     width: 15px;
@@ -376,11 +484,26 @@ input[type="checkbox"]:hover::after {
     color: grey;
 }
 
-.buy {
-    font-size: 12px;
+/* Button styling */
+.buy-btn, .details-btn {
+    background-color: transparent;
+    border: 1px solid purple;
     color: purple;
-    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    width: 80px;
+    text-align: center;
+    margin: 0 2px;
 }
+
+.buy-btn:hover, .details-btn:hover {
+    background-color: purple;
+    color: white;
+}
+
+  
 
 .voutchers {
     background-color: #fff;
@@ -428,3 +551,203 @@ input[type="checkbox"]:hover::after {
 .off {
     font-size: 14px;
 }
+
+/* Color option selected */
+.color-select .color-option input[type="button"].selected.grey {
+    background-color: grey;
+    border-color: grey;
+}
+
+.color-select .color-option input[type="button"].selected.red {
+    background-color: red;
+    border-color: red;
+}
+
+.color-select .color-option input[type="button"].selected.blue {
+    background-color: blue;
+    border-color: blue;
+}
+
+/* Gray background for selected size */
+.size-select .item-size.selected {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+/* Filled red heart for selected state */
+.wishlist .fa-heart.selected {
+    color: red;
+    font-weight: bold; /* Optional to make it look more filled */
+}
+
+
+
+/* Container-PageNav */
+.container-pagenav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    /* Điều chỉnh khoảng cách từ lề phải */
+    margin-bottom: 20px;
+    /* Khoảng cách phía trên nếu cần */
+}
+
+.nav_pagi {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0;
+    position: relative;
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+}
+
+.page-item {
+    display: inline-block;
+}
+
+
+.page-item a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.page-item a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.page-item.disabled a {
+    color: #ccc;
+    pointer-events: none;
+    border-color: #eee;
+}
+
+.page-item.active a {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.icon {
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+/* Fade out effect */
+.container-pagenav.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Fade in effect */
+.container-pagenav.fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pagination {
+        gap: 4px;
+    }
+
+    .page-item a {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}
+
+/* Container-descriptiom */
+.container-description {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.description-content p {
+    margin: 15px 0;
+}
+
+.description-content span {
+    font-weight: bold;
+    color: #FF5A00;
+}
+
+.body-content h2 {
+    color: #FF5A00;
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+}
+
+.body-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.body-content ul li {
+    margin: 8px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.body-content ul li::before {
+    content: "•";
+    color: #FF5A00;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.highlight {
+    color: #FF5A00;
+    font-weight: bold;
+}
+
+.italic-text {
+    font-style: italic;
+    text-align: center;
+    color: #555;
+    margin-top: 5px;
+}
+
+.body-content img {
+    width: 100%;
+    max-width: 800px; /* Matches container width */
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+.body-content div {
+    text-align: center;
+    margin: 20px 0;
+}
+
+@media (min-width: 768px) {
+    .body-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .body-content div {
+        width: 100%;
+    }
+}
+

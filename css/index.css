@@ -51,7 +51,7 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #f0f0f0;
+  background-color: #fff5e4;
   margin-right: 10px;
   margin-left: 20px;
 }
@@ -165,7 +165,7 @@ nav.sticky {
   position: absolute;
   top: -5px;
   right: -10px;
-  background-color: red;
+  background-color: #f7840b;
   color: white;
   border-radius: 50%;
   padding: 2px 5px;
@@ -470,6 +470,97 @@ nav.sticky {
   font-weight: bold;
 }
 /* ======================================section-exclusive-sale====================================== */
+
+.container-exclusive-sale {
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+.exclusive-sale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.exclusive-sale h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+/* thu */
+.timer {
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-number {
+  font-size: 16px;
+}
+
+.time-label {
+  display: block;
+  border-top: 1px solid #ccc; /* Đường gạch ngang */
+  padding-top: 5px; /* Khoảng cách giữa số và chữ */
+  margin-top: 5px;
+  text-align: center;
+  width: 100%;
+  font-size: 10px;
+}
+
+/* thu */
+.exclusive-sale .timer {
+  display: flex;
+  align-items: center;
+}
+.exclusive-sale .timer div {
+  background-color: #f7840b;
+  color: white;
+  padding: 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+.tabs-exclusive-sale {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.tabs-exclusive-sale div {
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.tabs-exclusive-sale .active-exclusive-sale {
+  color: #ff4d4f;
+
+  border-bottom: 2px solid #ff4d4f;
+}
+.active-exclusive-sale {
+  display: flex;
+  justify-content: space-between;
+}
+
+.load-more {
+  text-align: center;
+  margin: 20px 0;
+}
+.load-more button {
+  padding: 10px 20px;
+  border: 1px solid #999;
+  background-color: rgb(243, 84, 84);
+  color: #000;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 .container-sale {
   display: flex;
   /* align-items: center;
@@ -530,7 +621,7 @@ nav.sticky {
 }
 
 .card-title-price {
-  color: red;
+  color: #f7840b;
   display: flex;
   padding: 10px;
 }
@@ -585,12 +676,12 @@ nav.sticky {
     display: none;
   }
 }
-.card-sale-button {
+/* .card-sale-button {
   display: flex;
   color: red;
   gap: 80px;
   padding: 10px;
-}
+} */
 .card-sale-button .buy-sale {
   width: 120px;
   height: 30px;
@@ -677,102 +768,6 @@ nav.sticky {
     0.2
   ) !important; /* Màu nền bán trong suốt */
 }
-.container-exclusive-sale {
-  width: 100%;
-  /* max-width: 1200px; */
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-}
-.exclusive-sale {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.exclusive-sale h1 {
-  font-size: 24px;
-  font-weight: bold;
-}
-/* thu */
-.timer {
-  display: flex;
-  gap: 20px;
-  font-size: 1.5em;
-  text-align: center;
-}
-
-.time-unit {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.time-number {
-  font-size: 1em;
-}
-
-.time-label {
-  display: block;
-  border-top: 1px solid #ccc; /* Đường gạch ngang */
-  padding-top: 5px; /* Khoảng cách giữa số và chữ */
-  margin-top: 5px;
-  text-align: center;
-  width: 100%;
-  font-size: 10px;
-}
-
-/* thu */
-.exclusive-sale .timer {
-  display: flex;
-  align-items: center;
-}
-.exclusive-sale .timer div {
-  background-color: #ff4d4f;
-  color: white;
-  padding: 10px;
-  margin-left: 5px;
-  border-radius: 5px;
-  text-align: center;
-}
-.tabs-exclusive-sale {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
-.tabs-exclusive-sale div {
-  padding: 10px 20px;
-  cursor: pointer;
-  margin: 0 5px;
-}
-.tabs-exclusive-sale .active-exclusive-sale {
-  color: #ff4d4f;
-
-  border-bottom: 2px solid #ff4d4f;
-}
-.active-exclusive-sale {
-  display: flex;
-  justify-content: space-between;
-}
-
-.load-more {
-  text-align: center;
-  margin: 20px 0;
-}
-.load-more button {
-  padding: 10px 20px;
-  border: 1px solid #999;
-  background-color: rgb(243, 84, 84);
-  color: #000;
-  cursor: pointer;
-  border-radius: 5px;
-}
-li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: black;
-}
 .load-more {
   text-align: center;
   margin: 20px 0;
@@ -792,19 +787,24 @@ a {
   margin-left: 10%;
 }
 .container-best-seller {
-  width: 90%;
-  margin: 0 auto;
-  text-align: center;
-  align-items: center;
-  justify-items: center;
+  width: 100%;
+  margin: 0;
 }
+
 .container-best-seller h1 {
   font-size: 24px;
-  margin: 20px;
+  margin: 0;
 }
+
+.title-best-seller {
+  text-align: left; /* Căn trái tiêu đề */
+}
+
 .best-seller {
   margin: 40px 0;
   display: flex;
+  justify-content: center; /* Căn giữa các tab */
+  align-items: center; /* Căn giữa theo chiều dọc */
   text-align: center;
   font-size: 20px;
 }
@@ -857,7 +857,7 @@ a {
   margin: 0 auto;
 }
 .girl-fashion {
-  text-align: center;
+  text-align: start;
   padding: 20px 0;
 }
 .girl-fashion h1 {
@@ -919,7 +919,7 @@ a {
   padding: 20px 0;
 }
 .boy-fashion {
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
 }
 .boy-fashion h1 {
@@ -1094,7 +1094,6 @@ a {
 }
 
 .product-info {
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -1104,25 +1103,32 @@ a {
   font-weight: bold;
   width: 75%;
   margin-bottom: 20px;
+  display: block;
 }
 
 .price-container {
   text-align: right;
   align-items: center;
   height: 40px;
+  display: flex;
 }
 
 .new-price {
   font-size: 13px;
   font-weight: bold;
-  color: red;
+  color: #f7840b;
   height: 40px;
+  text-align: left;
+  flex: 50%;
 }
 
 .old-price {
-  font-size: 8px;
+  font-size: 13px;
   font-weight: bold;
   color: grey;
+  height: 40px;
+  text-align: right;
+  flex: 50%;
 }
 
 .color-size-selection {
@@ -1205,8 +1211,8 @@ a {
 .buy-btn,
 .details-btn {
   background-color: transparent;
-  border: 1px solid purple;
-  color: purple;
+  border: 1px solid #6a9c89;
+  color: #f7840b;
   padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
@@ -1268,3 +1274,9 @@ a {
 .off {
   font-size: 14px;
 }
+/* Bang Mau
+##f7840b
+#FFF5E4
+#C1D8C3
+#6A9C89
+*/

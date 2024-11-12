@@ -2,9 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Helvetica;
 }
-
+/* Bang Mau
+##f7840b
+#FFF5E4
+#C1D8C3
+#6A9C89
+#ff7f50
+*/
 /* ==========================header================================ */
 .section-header {
   margin-left: 10%;

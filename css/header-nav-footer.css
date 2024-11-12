@@ -309,13 +309,13 @@ nav.sticky {
 /* ================================footer========================== */
 
 .section-footer {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .footer {
   background-color: #fff;
-  padding: 40px 20px;
+  gap: 80px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -324,7 +324,7 @@ nav.sticky {
 
 .footer-column {
   flex: 1;
-  margin: 0 20px;
+  margin: 20px 0px 0px 0px;
 }
 
 .footer-column h3 {

@@ -453,13 +453,7 @@ nav.sticky {
   margin-left: 10%;
   margin-right: 10%;
 }
-.container-exclusive-sale {
-  width: 100%;
 
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-}
 .exclusive-sale {
   display: flex;
   justify-content: space-between;
@@ -473,9 +467,7 @@ nav.sticky {
 
 .container-exclusive-sale {
   width: 100%;
-  /* max-width: 1200px; */
-  margin: 0 auto;
-  padding: 20px;
+
   text-align: center;
 }
 .exclusive-sale {
@@ -483,10 +475,7 @@ nav.sticky {
   justify-content: space-between;
   align-items: center;
 }
-.exclusive-sale h1 {
-  font-size: 24px;
-  font-weight: bold;
-}
+
 /* thu */
 .timer {
   display: flex;
@@ -539,9 +528,8 @@ nav.sticky {
   margin: 0 5px;
 }
 .tabs-exclusive-sale .active-exclusive-sale {
-  color: #ff4d4f;
-
-  border-bottom: 2px solid #ff4d4f;
+  color: #f7840b;
+  border-bottom: 2px solid #f7840b;
 }
 .active-exclusive-sale {
   display: flex;
@@ -555,7 +543,6 @@ nav.sticky {
 .load-more button {
   padding: 10px 20px;
   border: 1px solid #999;
-  background-color: rgb(243, 84, 84);
   color: #000;
   cursor: pointer;
   border-radius: 5px;
@@ -581,7 +568,6 @@ nav.sticky {
   border: 2px solid transparent;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
   transition: 0.2s ease;
-  height: 400px;
 }
 .card-list .card-item .card-link:active {
   cursor: grabbing;
@@ -768,6 +754,7 @@ nav.sticky {
     0.2
   ) !important; /* Màu nền bán trong suốt */
 }
+
 .load-more {
   text-align: center;
   margin: 20px 0;
@@ -824,6 +811,7 @@ nav.sticky {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  justify-content: center;
 }
 .product-sale {
   background-color: #fff;
@@ -886,6 +874,7 @@ nav.sticky {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  justify-content: center;
 }
 .product-girl-fashion {
   background-color: white;
@@ -946,6 +935,7 @@ nav.sticky {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  justify-content: center;
 }
 .product-boy-fashion {
   background-color: #fff;
@@ -1048,7 +1038,7 @@ nav.sticky {
 
 /* General card styling */
 .col-card {
-  flex: 0 1 200px;
+  /* flex: 0 1 200px; */
   margin-bottom: 50px;
 }
 
@@ -1056,8 +1046,8 @@ nav.sticky {
   background-color: #fff;
   border: none;
   border-radius: 10px;
-  width: 270px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
 }
 
 .image-container {

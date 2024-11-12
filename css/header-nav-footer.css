@@ -3,22 +3,18 @@
   margin-left: 10%;
   margin-right: 10%;
 }
-
 .header {
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  border-bottom: 2px solid orange;
+  border-bottom: 2px solid #f7840b;
 }
-
 .logo-header {
   flex: 1;
 }
-
 .logo-header img {
   height: 50px;
 }
-
 .search-bar-header {
   flex: 2;
   display: flex;
@@ -27,7 +23,6 @@
   border-radius: 20px;
   padding: 5px 10px;
 }
-
 .search-bar-header input {
   border: none;
   outline: none;
@@ -35,16 +30,13 @@
   padding: 5px;
   font-size: 16px;
 }
-
 .search-bar-head .fa-search {
   color: gray;
 }
-
 .contact-info-header {
   display: flex;
   align-items: center;
 }
-
 .contact-info-header .icon-header {
   display: flex;
   align-items: center;
@@ -52,59 +44,50 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #f0f0f0;
+  background-color: #fff5e4;
   margin-right: 10px;
   margin-left: 20px;
 }
-
 .contact-info-header .icon-header i {
   color: gray;
   cursor: pointer;
 }
-
 .contact-info-header .text-header {
   font-size: 16px;
   color: black;
   cursor: pointer;
 }
-
 .contact-info-header .text-header:hover {
-  color: rgb(77, 189, 233);
+  color: #f7840b;
 }
-
 /* ============================nav ================================ */
 
 .navigation {
   margin-top: 10px;
 }
-
-.index-nav {
+nav {
   display: flex;
   justify-content: space-between;
   padding: 20px 70px;
   height: 70px;
   align-items: center;
-  position: fixed;
-  /* Đặt thanh điều hướng cố định */
-  top: 80px;
-  /* Vị trí ban đầu */
+  position: fixed; /* Đặt thanh điều hướng cố định */
+  top: 80px; /* Vị trí ban đầu */
   width: 100%;
   z-index: 1000;
-  background: rgba(225, 225, 225, 0.3);
+  background: #fff5e4;
 }
 
 .hidden {
-  top: 0;
-  /* Di chuyển lên đầu trang khi cuộn xuống */
+  top: 0; /* Di chuyển lên đầu trang khi cuộn xuống */
 }
 
 nav.sticky {
-  background: rgba(225, 225, 225, 1);
+  background: #fff5e4;
 }
-
-nav:hover {
-  background: rgba(225, 225, 225, 1);
-}
+/* nav:hover {
+ background: #FFF5E4;
+} */
 
 .navbar {
   padding: 10px 20px;
@@ -115,48 +98,32 @@ nav:hover {
   margin-left: 5%;
   margin-right: 5%;
 }
-
 .navbar a {
   text-decoration: none;
   color: black;
   margin: 0 10px;
   font-size: 16px;
-  position: relative;
-  /* Đặt relative để quản lý dropdown */
+  position: relative; /* Đặt relative để quản lý dropdown */
 }
-
 /* Thêm hiệu ứng dưới chân của nav */
 .navbar a::after {
-  content: "";
-  /* Tạo nội dung rỗng */
-  position: absolute;
-  /* Vị trí tuyệt đối */
-  left: 0;
-  /* Căn trái */
-  bottom: 0;
-  /* Căn dưới */
-  width: 100%;
-  /* Chiều rộng 100% */
-  height: 2px;
-  /* Độ cao của gạch chân */
-  background-color: black;
-  /* Màu gạch chân */
-  transform: scaleX(0);
-  /* Khởi tạo gạch chân chưa xuất hiện */
-  transform-origin: bottom right;
-  /* Điểm gốc cho hiệu ứng */
-  transition: transform 0.5s ease;
-  /* Hiệu ứng chuyển đổi */
+  content: ""; /* Tạo nội dung rỗng */
+  position: absolute; /* Vị trí tuyệt đối */
+  left: 0; /* Căn trái */
+  bottom: 0; /* Căn dưới */
+  width: 100%; /* Chiều rộng 100% */
+  height: 2px; /* Độ cao của gạch chân */
+  background-color: black; /* Màu gạch chân */
+  transform: scaleX(0); /* Khởi tạo gạch chân chưa xuất hiện */
+  transform-origin: bottom right; /* Điểm gốc cho hiệu ứng */
+  transition: transform 0.5s ease; /* Hiệu ứng chuyển đổi */
 }
-
 .navbar a:hover::after {
   /* text-decoration: underline; */
-  transform: scaleX(1);
-  /* Khi hover thì gạch chân xuất hiện */
+  transform: scaleX(1); /* Khi hover thì gạch chân xuất hiện */
   transform-origin: bottom left;
   /* Đổi điểm gốc khi hover */
 }
-
 /* hiệu ứng dưới chân của nav */
 .navheight {
   height: 50px;
@@ -169,44 +136,34 @@ nav:hover {
   align-items: center;
   height: 100%;
 }
-
 .navbar .menu a {
   margin: 0 20px;
 }
-
 .navbar .icons {
   display: flex;
-  align-items: center;
-  /* Đảm bảo các icon và chữ "đơn hàng" được căn giữa theo chiều dọc */
-  gap: 25px;
-  /* Điều chỉnh khoảng cách giữa các icon */
+  align-items: center; /* Đảm bảo các icon và chữ "đơn hàng" được căn giữa theo chiều dọc */
+  gap: 25px; /* Điều chỉnh khoảng cách giữa các icon */
 }
-
 .navbar .icons i {
-  margin: 0;
-  /* Loại bỏ khoảng cách bên ngoài của icon */
+  margin: 0; /* Loại bỏ khoảng cách bên ngoài của icon */
   font-size: 18px;
-  line-height: 1;
-  /* Đảm bảo icon căn đều với văn bản */
+  line-height: 1; /* Đảm bảo icon căn đều với văn bản */
 }
-
 .navbar .icons .cart {
   position: relative;
   display: flex;
   align-items: center;
 }
-
 .navbar .icons .cart .badge {
   position: absolute;
   top: -5px;
   right: -10px;
-  background-color: red;
+  background-color: #f7840b;
   color: white;
   border-radius: 50%;
   padding: 2px 5px;
   font-size: 12px;
 }
-
 /* Định dạng chung cho các dropdown */
 .dropdown,
 .dropdown-1,
@@ -238,10 +195,8 @@ nav:hover {
   display: flex;
   justify-content: center;
 }
-
 .dropdown-menu {
-  position: relative;
-  /* Đảm bảo dropdown căn theo mục cha */
+  position: relative; /* Đảm bảo dropdown căn theo mục cha */
 }
 
 /* Vị trí của từng dropdown */
@@ -251,20 +206,15 @@ nav:hover {
   line-height: 2;
   margin-top: -5px;
 }
-
 /* CSS chung cho các dropdown */
 .dropdown-1,
 .dropdown-3,
 .dropdown-4 {
   position: absolute;
-  top: 100%;
-  /* Đặt ngay bên dưới mục cha */
-  left: 50%;
-  /* Căn giữa theo chiều ngang */
-  transform: translateX(-50%);
-  /* Dịch chuyển để căn giữa */
-  width: 300px;
-  /* Đặt chiều rộng cụ thể */
+  top: 100%; /* Đặt ngay bên dưới mục cha */
+  left: 50%; /* Căn giữa theo chiều ngang */
+  transform: translateX(-50%); /* Dịch chuyển để căn giữa */
+  width: 250px; /* Đặt chiều rộng cụ thể */
   line-height: 2;
   background-color: white;
   border: 1px solid #e7e7e7;
@@ -282,7 +232,6 @@ nav:hover {
   justify-content: space-around;
   margin-top: -5px;
 }
-
 /* Định dạng chung cho các cột trong dropdown */
 .dropdown .column,
 .dropdown-1 .column,
@@ -319,10 +268,8 @@ nav:hover {
 .dropdown-3 .column a:hover,
 .dropdown-4 .column a:hover {
   /* text-decoration: underline; */
-  transition: transform 0.3s ease;
-  /* Hiệu ứng chuyển đổi */
+  transition: transform 0.3s ease; /* Hiệu ứng chuyển đổi */
 }
-
 /* dang nhập đăng kí user */
 .icons {
   display: flex;
@@ -336,8 +283,7 @@ nav:hover {
 }
 
 .user-menu .dropdown {
-  display: none;
-  /* Ẩn menu thả xuống theo mặc định */
+  display: none; /* Ẩn menu thả xuống theo mặc định */
   position: absolute;
   top: 43px;
   right: 0;
@@ -360,92 +306,6 @@ nav:hover {
   background-color: #f0f0f0;
   text-decoration: none;
 }
-
-/* ==============Hiệu ứng di chuyển hình ảnh ở đầu trang=========== */
-#Slider {
-  margin-top: 80px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #000;
-  overflow: hidden;
-  background: rgba(225, 225, 225, 0.3);
-}
-
-.slider {
-  width: 100%;
-  height: 500px;
-  margin: auto;
-  position: relative;
-  overflow: hidden;
-}
-
-.slider .list {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
-  display: flex;
-  transition: 1s;
-}
-
-.slider .list img {
-  width: 100vw;
-  /* Đặt chiều rộng của hình ảnh bằng chiều rộng màn hình */
-  height: 500px;
-  object-fit: cover;
-}
-
-.slider .buttons {
-  position: absolute;
-  top: 45%;
-  left: 5%;
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.slider .buttons button {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #fff5;
-  color: #fff;
-  border: none;
-  font-family: monospace;
-  font-weight: bold;
-}
-
-.slider .dots {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  color: #fff;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.slider .dots li {
-  list-style: none;
-  width: 10px;
-  height: 10px;
-  background-color: #c1d8c3;
-  margin: 10px;
-  border-radius: 20px;
-  transition: 0.5s;
-}
-
-.slider .dots li.active {
-  width: 30px;
-}
-
-@media screen and (max-width: 768px) {
-  .slider {
-    height: 200px;
-  }
-}
-
 /* ================================footer========================== */
 
 .section-footer {

@@ -180,7 +180,7 @@ nav.sticky {
 }
 /* Style cho thông báo */
 .login-message-cart {
-  display: none; /* Ẩn mặc định */
+   display: none !important; /* Ẩn mặc định */
   position: absolute;
   top: 75px; /* Đặt thông báo ngay dưới giỏ hàng */
   left: 85%;

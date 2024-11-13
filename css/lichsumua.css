@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+body {
+  /* background-color: #f5f5f5; */
+}
+.lichsumua {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.container {
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+.sidebar {
+  width: 250px;
+  /* background-color: #fff; */
+  padding: 20px;
+  border-right: 1px solid #e5e5e5;
+}
+.sidebar img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.sidebar .profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.sidebar .profile div {
+  margin-left: 10px;
+}
+.sidebar .profile div a {
+  color: #007bff;
+  text-decoration: none;
+}
+.sidebar .menu {
+  list-style: none;
+  padding: 0;
+}
+.sidebar .menu li {
+  margin-bottom: 15px;
+}
+.sidebar .menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+.sidebar .menu li a i {
+  margin-right: 10px;
+}
+.sidebar .menu li a.active {
+  color: #ee4d2d;
+}
+.content {
+  flex: 1;
+  padding: 20px;
+}
+.content .tabs {
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 20px;
+}
+.content .tabs a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  border-bottom: 2px solid transparent;
+  font-size: 16px; /* Đảm bảo kích thước chữ đồng nhất */
+}
+.content .tabs a.active {
+  color: #ee4d2d;
+  border-bottom: 2px solid #ee4d2d;
+}
+.content .search-bar {
+  margin-bottom: 20px;
+}
+.content .search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+}
+.content .order {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+}
+.content .order .order-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.content .order .order-header .shop-info {
+  display: flex;
+  align-items: center;
+}
+.content .order .order-header .shop-info i {
+  margin-right: 10px;
+}
+.content .order .order-header .shop-info a {
+  text-decoration: none;
+  color: #007bff;
+  margin-right: 10px;
+}
+.content .order .order-header .shop-info button {
+  background-color: #ee4d2d;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.content .order .order-header .order-status {
+  color: #ee4d2d;
+}
+.content .order .order-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.content .order .order-item img {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+}
+.content .order .order-item .item-info {
+  flex: 1;
+}
+.content .order .order-item .item-info .item-name {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.content .order .order-item .item-info .item-quantity {
+  color: #999;
+}
+.content .order .order-item .item-price {
+  font-size: 16px;
+  color: #333;
+}
+.content .order .order-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.content .order .order-total .total-price {
+  font-size: 16px;
+  color: #333;
+}
+.content .order .order-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.content .order .order-actions button {
+  background-color: #ee4d2d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.content .order .order-actions button.contact-seller {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #e5e5e5;
+}
+/* ========================cho thanh toan====================== */
+.cho-thanh-toan {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+  height: 500px;
+}
+.cho-thanh-toan img {
+  width: 100px;
+  height: 100px;
+  margin-top: 100px;
+}
+.cho-thanh-toan p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+.tabs a.active {
+  color: #ff4500;
+  /* font-weight: bold; */
+  border-bottom: 2px solid #ff4500;
+}
+.order,
+.cho-thanh-toan {
+  display: none; /* Ẩn tất cả nội dung tab mặc định */
+}
+.active-tab {
+  display: block; /* Hiển thị nội dung của tab đang chọn */
+}
+/*  */
+.cho-van-chuyen {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+  height: 500px;
+}
+.cho-van-chuyen img {
+  width: 100px;
+  height: 100px;
+  margin-top: 100px;
+}
+.cho-van-chuyen p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+.tabs a.active {
+  color: #ff4500;
+  /* font-weight: bold; */
+  border-bottom: 2px solid #ff4500;
+}
+.order,
+.cho-van-chuyen {
+  display: none; /* Ẩn tất cả nội dung tab mặc định */
+}
+.active-tab {
+  display: block; /* Hiển thị nội dung của tab đang chọn */
+}
+/* ========================== */
+.cho-giao-hang {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+  height: 500px;
+}
+.cho-giao-hang img {
+  width: 100px;
+  height: 100px;
+  margin-top: 100px;
+}
+.cho-giao-hang p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+.tabs a.active {
+  color: #ff4500;
+  /* font-weight: bold; */
+  border-bottom: 2px solid #ff4500;
+}
+.order,
+.cho-giao-hang {
+  display: none; /* Ẩn tất cả nội dung tab mặc định */
+}
+.active-tab {
+  display: block; /* Hiển thị nội dung của tab đang chọn */
+}
+/* ========================== */
+.hoan-thanh {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+  height: 500px;
+}
+.hoan-thanh img {
+  width: 100px;
+  height: 100px;
+  margin-top: 100px;
+}
+.hoan-thanh p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+.tabs a.active {
+  color: #ff4500;
+  /* font-weight: bold; */
+  border-bottom: 2px solid #ff4500;
+}
+.order,
+.hoan-thanh {
+  display: none; /* Ẩn tất cả nội dung tab mặc định */
+}
+.active-tab {
+  display: block; /* Hiển thị nội dung của tab đang chọn */
+}
+/* ========================== */
+.da-huy {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+  height: 500px;
+}
+.da-huy img {
+  width: 100px;
+  height: 100px;
+  margin-top: 100px;
+}
+.da-huy p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+.tabs a.active {
+  color: #ff4500;
+  /* font-weight: bold; */
+  border-bottom: 2px solid #ff4500;
+}
+.order,
+.da-huy {
+  display: none; /* Ẩn tất cả nội dung tab mặc định */
+}
+.active-tab {
+  display: block; /* Hiển thị nội dung của tab đang chọn */
+}
+/* ========================== */
+.tra-hang-hoan-tien {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+  height: 500px;
+}
+.tra-hang-hoan-tien img {
+  width: 100px;
+  height: 100px;
+  margin-top: 100px;
+}
+.tra-hang-hoan-tien p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+.tabs a.active {
+  color: #ff4500;
+  /* font-weight: bold; */
+  border-bottom: 2px solid #ff4500;
+}
+.order,
+.tra-hang-hoan-tien {
+  display: none; /* Ẩn tất cả nội dung tab mặc định */
+}
+.active-tab {
+  display: block; /* Hiển thị nội dung của tab đang chọn */
+}

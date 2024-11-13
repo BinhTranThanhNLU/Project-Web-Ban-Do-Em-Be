@@ -1,221 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Đồ Bé Gái</title>
+  <title>Bé Gái</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <link rel="stylesheet" href="./css/header-nav-footer.css">
-  <link rel="stylesheet" href="./css/dobegai.css">
+  <link rel="stylesheet" href="../css/header-nav-footer.css">
+  <link rel="stylesheet" href="../css/be-gai.css">
+  <link rel="stylesheet" href="../css/card-product.css">
 </head>
 
 <body>
-  <!-- HEADER -->
-  <section class="section-header">
-    <div class="header">
-      <div class="logo-header">
-        <img
-          alt="Company Logo"
-          height="50"
-          src="./images/logo.png"
-          width="100"
-        />
-      </div>
-      <div class="search-bar-header">
-        <input placeholder="Bạn cần tìm gì?" type="text" />
-        <i class="fas fa-search"> </i>
-      </div>
-      <div class="contact-info-header">
-        <div class="icon-header">
-          <i class="fas fa-phone-alt"> </i>
-        </div>
-        <div class="text-header">1900633520</div>
-        <div class="icon-header">
-          <i class="fas fa-file-alt"> </i>
-        </div>
-        <div class="text-header">Kiểm tra đơn hàng</div>
-      </div>
-    </div>
-  </section>
-  <!-- NAVIGATION -->
-  <section class="navigation" style="height: 90px;">
-    <nav class="index-nav">
-      <!-- menu  -->
-      <div class="navbar">
-        <div class="menu">
-          <a href="#">Trang Chủ</a>
-          <div class="dropdown-menu">
-            <!-- Thêm lớp cho Bé gái -->
-            <div class="navheight">
-              <a href="#">Bé gái</a>
-              <!-- <ion-icon name="chevron-down-outline"></ion-icon> -->
-            </div>
-            <div class="dropdown dropdown-full">
-              <!-- Dropdown cho Bé gái -->
-              <div class="column">
-                <h3>ĐẦM VÁY</h3>
-                <a href="#">Tất cả Đầm váy</a>
-                <a href="#">Đầm ngắn tay</a>
-                <a href="#">Đầm dài tay</a>
-                <a href="#">Đầm hai dây</a>
-                <a href="#">Đầm sát nách</a>
-                <a href="#">Đầm Váy Elsa/Anna</a>
-                <a href="#">Đầm công chúa</a>
-                <a href="#">Chân váy</a>
-                <a href="#">Yếm bé gái</a>
-              </div>
-              <div class="column">
-                <h3>ÁO</h3>
-                <a href="#">Tất cả Áo</a>
-                <a href="#">Áo thun</a>
-                <a href="#">Áo dài tay</a>
-                <a href="#">Áo khoác</a>
-                <a href="#">Áo nỉ</a>
-                <a href="#">Áo gile</a>
-              </div>
-              <div class="column">
-                <h3>QUẦN</h3>
-                <a href="#">Tất cả quần</a>
-                <a href="#">Quần short</a>
-                <a href="#">Quần dài</a>
-              </div>
-              <div class="column">
-                <h3>ĐỒ BỘ</h3>
-                <a href="#">Tất cả đồ bộ</a>
-                <a href="#">Bộ ngắn tay</a>
-                <a href="#">Bộ dài tay</a>
-                <a href="#">Bộ Easy Wear</a>
-              </div>
-              <div class="column">
-                <h3>PHỤ KIỆN</h3>
-                <a href="#">Đồ Lót</a>
-                <a href="#">Balo/túi xách</a>
-                <a href="#">Phụ kiện tóc</a>
-                <a href="#">Giày dép</a>
-                <a href="#">Gấu bông</a>
-                <a href="#">Mũ nón</a>
-                <a href="#">Tất/vớ</a>
-                <a href="#">Bình nước</a>
-              </div>
-            </div>
+<!-- HEADER -->
+    <!-- HEADER -->
+    <section class="section-header">
+      <div class="header">
+        <div class="header">
+          <div class="logo-header">
+            <a href="../index.html"
+              ><img
+                alt="Company Logo"
+                height="50"
+                src="../images/logo.png"
+                width="100"
+              />
+            </a>
           </div>
-          <div class="dropdown-menu">
-            <!-- Thêm lớp cho Bé gái -->
-            <div class="navheight">
-              <a href="#">Bé trai</a>
-            </div>
-
-            <div class="dropdown dropdown-full">
-              <!-- Dropdown cho Bé gái -->
-              <div class="column">
-                <h3>Áo</h3>
-                <a href="#">Tất cả áo</a>
-                <a href="#">Áo thun ngắn tay</a>
-                <a href="#">Áo dài tay</a>
-                <a href="#">Áo sơ mi</a>
-                <a href="#">Áo khoác</a>
-                <a href="#">Áo nỉ</a>
-                <a href="#">Áo gile</a>
-              </div>
-              <div class="column">
-                <h3>QUẦN</h3>
-                <a href="#">Tất cả quần</a>
-                <a href="#">Quần short</a>
-                <a href="#">Quần dài</a>
-                <a href="#">Quần yếm</a>
-              </div>
-              <div class="column">
-                <h3>ĐỒ BỘ</h3>
-                <a href="#">Tất cả đồ bộ</a>
-                <a href="#">Bộ ngắn tay</a>
-                <a href="#">Bộ dài tay</a>
-                <a href="#">Bộ sát nách</a>
-                <a href="#">Bộ Easy Wear</a>
-              </div>
-              <div class="column">
-                <h3>PHỤ KIỆN</h3>
-                <a href="#">Đồ Lót</a>
-                <a href="#">Giày dép</a>
-                <a href="#">Balo</a>
-                <a href="#">Mũ nón</a>
-                <a href="#">Tất/vớ</a>
-                <a href="#">Bình nước</a>
-              </div>
-              <div class="column">
-                <h3>&nbsp;</h3>
-              </div>
-            </div>
+          <div class="search-bar-header">
+            <input placeholder="Bạn cần tìm gì?" type="text" />
+            <i class="fas fa-search"> </i>
           </div>
-          <div class="dropdown-menu">
-            <div class="navheight"><a href="#">Bộ sưu tập</a></div>
-            <div class="dropdown-1">
-              <!-- Dropdown cho Bé gái -->
-              <div class="column">
-                <!-- <h3>Áo</h3> -->
-                <a href="#">✨BST Disney - Friends</a>
-                <a href="#">🍂BST Thu Đông 2024</a>
-                <a href="#">🌼BST Vintage - Beaming Days</a>
-                <a href="#">🏠BST Đồ Bộ Mặc Nhà</a>
-                <a href="#">🎒Be Cool At School Collection🎒</a>
-              </div>
+          <div class="contact-info-header">
+            <div class="icon-header">
+              <i class="fas fa-phone-alt"> </i>
             </div>
-          </div>
-
-          <div class="dropdown-menu">
-            <div class="navheight"><a href="#">Sale sốc</a></div>
-            <!-- <div class="dropdown-2">
-              <div class="column"></div>
-            </div> -->
-          </div>
-          <div class="dropdown-menu">
-            <div class="navheight"><a href="#">New Arrival</a></div>
-            <div class="dropdown-3">
-              <!-- Dropdown cho Sale -->
-              <div class="column">
-                <!-- <h3>Áo</h3> -->
-                <a href="#">New Arrival Bé gái</a>
-                <a href="#"> New Arrival Bé trai</a>
-                <a href="#">BEST SELLER</a>
-              </div>
+            <div class="text-header">1900633520</div>
+            <div class="icon-header">
+              <i class="fas fa-file-alt"> </i>
             </div>
-          </div>
-          <div class="dropdown-menu">
-            <div class="navheight"><a href="#">Tin Tức</a></div>
-            <div class="dropdown-4">
-              <!-- Dropdown cho Sale -->
-              <div class="column">
-                <!-- <h3>Áo</h3> -->
-                <a href="#">Tin tức Rabity</a>
-                <a href="#">Khuyến mãi</a>
-                <a href="#">Tin mẹ & bé</a>
-              </div>
-            </div>
+            <div class="text-header">Kiểm tra đơn hàng</div>
           </div>
         </div>
+        <div class="search-bar-header">
+          <input placeholder="Bạn cần tìm gì?" type="text" />
+          <i class="fas fa-search"> </i>
+        </div>
+        <div class="contact-info-header">
+          <div class="icon-header">
+            <i class="fas fa-phone-alt"> </i>
+          </div>
+          <div class="text-header">1900633520</div>
+          <div class="icon-header">
+            <i class="fas fa-file-alt"> </i>
+          </div>
+          <div class="text-header">Kiểm tra đơn hàng</div>
+        </div>
+      </div>
+    </section>
+    <!-- =====================================Nav================================= -->
+    <section class="navigation">
+      <nav>
+        <!-- menu  -->
+        <div class="navbar">
+          <div class="menu">
+            <a href="../index.html">Trang Chủ</a>
+            <div class="dropdown-menu">
+              <!-- Thêm lớp cho Bé gái -->
+              <div class="navheight">
+                <a href="#">Bé gái</a>
+                <!-- <ion-icon name="chevron-down-outline"></ion-icon> -->
+              </div>
+              <div class="dropdown dropdown-full">
+                <!-- Dropdown cho Bé gái -->
+                <div class="column">
+                  <h3>ĐẦM VÁY</h3>
+                  <a href="#">Tất cả Đầm váy</a>
+                  <a href="#">Đầm ngắn tay</a>
+                  <a href="#">Đầm dài tay</a>
+                  <a href="#">Đầm hai dây</a>
+                  <a href="#">Đầm sát nách</a>
+                  <a href="#">Đầm Váy Elsa/Anna</a>
+                  <a href="#">Đầm công chúa</a>
+                  <a href="#">Chân váy</a>
+                  <a href="#">Yếm bé gái</a>
+                </div>
+                <div class="column">
+                  <h3>ÁO</h3>
+                  <a href="#">Tất cả Áo</a>
+                  <a href="#">Áo thun</a>
+                  <a href="#">Áo dài tay</a>
+                  <a href="#">Áo khoác</a>
+                  <a href="#">Áo nỉ</a>
+                  <a href="#">Áo gile</a>
+                </div>
+                <div class="column">
+                  <h3>QUẦN</h3>
+                  <a href="#">Tất cả quần</a>
+                  <a href="#">Quần short</a>
+                  <a href="#">Quần dài</a>
+                </div>
+                <div class="column">
+                  <h3>ĐỒ BỘ</h3>
+                  <a href="#">Tất cả đồ bộ</a>
+                  <a href="#">Bộ ngắn tay</a>
+                  <a href="#">Bộ dài tay</a>
+                  <a href="#">Bộ Easy Wear</a>
+                </div>
+                <div class="column">
+                  <h3>PHỤ KIỆN</h3>
+                  <a href="#">Đồ Lót</a>
+                  <a href="#">Balo/túi xách</a>
+                  <a href="#">Phụ kiện tóc</a>
+                  <a href="#">Giày dép</a>
+                  <a href="#">Gấu bông</a>
+                  <a href="#">Mũ nón</a>
+                  <a href="#">Tất/vớ</a>
+                  <a href="#">Bình nước</a>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown-menu">
+              <!-- Thêm lớp cho Bé gái -->
+              <div class="navheight">
+                <a href="#">Bé trai</a>
+              </div>
 
-        <div class="icons">
-          <!-- <input type="text" placeholder="Tìm kiếm sản phẩm"> -->
-          <i class="fas fa-search"></i>
+              <div class="dropdown dropdown-full">
+                <!-- Dropdown cho Bé gái -->
+                <div class="column">
+                  <h3>Áo</h3>
+                  <a href="#">Tất cả áo</a>
+                  <a href="#">Áo thun ngắn tay</a>
+                  <a href="#">Áo dài tay</a>
+                  <a href="#">Áo sơ mi</a>
+                  <a href="#">Áo khoác</a>
+                  <a href="#">Áo nỉ</a>
+                  <a href="#">Áo gile</a>
+                </div>
+                <div class="column">
+                  <h3>QUẦN</h3>
+                  <a href="#">Tất cả quần</a>
+                  <a href="#">Quần short</a>
+                  <a href="#">Quần dài</a>
+                  <a href="#">Quần yếm</a>
+                </div>
+                <div class="column">
+                  <h3>ĐỒ BỘ</h3>
+                  <a href="#">Tất cả đồ bộ</a>
+                  <a href="#">Bộ ngắn tay</a>
+                  <a href="#">Bộ dài tay</a>
+                  <a href="#">Bộ sát nách</a>
+                  <a href="#">Bộ Easy Wear</a>
+                </div>
+                <div class="column">
+                  <h3>PHỤ KIỆN</h3>
+                  <a href="#">Đồ Lót</a>
+                  <a href="#">Giày dép</a>
+                  <a href="#">Balo</a>
+                  <a href="#">Mũ nón</a>
+                  <a href="#">Tất/vớ</a>
+                  <a href="#">Bình nước</a>
+                </div>
+                <div class="column">
+                  <h3>&nbsp;</h3>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown-menu">
+              <div class="navheight"><a href="#">Bộ sưu tập</a></div>
+              <div class="dropdown-1">
+                <!-- Dropdown cho Bé gái -->
+                <div class="column">
+                  <!-- <h3>Áo</h3> -->
+                  <a href="#">✨BST Disney - Friends</a>
+                  <a href="#">🍂BST Thu Đông 2024</a>
+                  <a href="#">🌼BST Vintage - Beaming Days</a>
+                  <a href="#">🏠BST Đồ Bộ Mặc Nhà</a>
+                  <a href="#">🎒Be Cool At School Collection🎒</a>
+                </div>
+              </div>
+            </div>
 
-          <!-- Biểu tượng người dùng với menu đăng nhập/đăng ký -->
-          <div class="user-menu">
-            <i class="fas fa-user"></i>
-            <div class="dropdown">
-              <a href="#login">Đăng nhập</a>
-              <a href="#register">Đăng ký</a>
+            <div class="dropdown-menu">
+              <div class="navheight"><a href="#">Sale sốc</a></div>
+              <!-- <div class="dropdown-2">
+                <div class="column"></div>
+              </div> -->
+            </div>
+            <div class="dropdown-menu">
+              <div class="navheight"><a href="#">New Arrival</a></div>
+              <div class="dropdown-3">
+                <!-- Dropdown cho Sale -->
+                <div class="column">
+                  <!-- <h3>Áo</h3> -->
+                  <a href="#">New Arrival Bé gái</a>
+                  <a href="#"> New Arrival Bé trai</a>
+                  <a href="#">BEST SELLER</a>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown-menu">
+              <div class="navheight"><a href="#">Tin Tức</a></div>
+              <div class="dropdown-4">
+                <!-- Dropdown cho Sale -->
+                <div class="column">
+                  <!-- <h3>Áo</h3> -->
+                  <a href="#">Tin tức Little Whale</a>
+                  <a href="#">Khuyến mãi</a>
+                  <a href="#">Tin mẹ & bé</a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="cart">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="badge">0</span>
+          <div class="icons">
+            <!-- <input type="text" placeholder="Tìm kiếm sản phẩm"> -->
+            <i class="fas fa-search"></i>
+
+            <!-- Biểu tượng người dùng với menu đăng nhập/đăng ký -->
+            <div class="user-menu">
+              <i class="fas fa-user"></i>
+              <div class="dropdown">
+                <a href="./dangnhap.html">Đăng nhập</a>
+                <a href="./dangki.html">Đăng ký</a>
+              </div>
+            </div>
+
+            <div class="cart">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="badge">0</span>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
-  </section>
+      </nav>
+    </section>
 
   <!-- Thanh dieu huong bread-crumb -->
   <section class="bread-crumb">
@@ -229,7 +249,7 @@
           </li>
 
           <li>
-            <a href="" itemprop="url" target="_self"><span itemprop="title">Thời Trang Bé Gái</span></a>
+            <a href="./be-gai.html" itemprop="url" target="_self"><span itemprop="title">Thời Trang Bé Gái</span></a>
             <span class="">&nbsp;/&nbsp;</span>
           </li>
 
@@ -241,7 +261,7 @@
   <!-- IMAGE -->
   <section class="dbg-header-image">
     <div class="header-image">
-      <img src="https://file.hstatic.net/1000290074/collection/website_1_23e6a9fe2e194526b25366c64affd1ff.jpg"
+      <img src="https://file.hstatic.net/1000290074/collection/kvblackfireday_begai_1e777bc17d8b42ac8e89039400469fcd.jpg"
         width="1410" height="183" alt="Đầm - Váy Bé Gái">
     </div>
   </section>
@@ -284,7 +304,7 @@
   
         <div class="container-filter-products">
           <!-- Lọc và sản phẩm -->
-          <div class="container-filter">
+          <div class="container-filter" style="margin-bottom: 500px;">
             <!-- Filter Sidebar -->
             <div class="filters">
               <div class="filter-item">
@@ -331,14 +351,18 @@
               <div class="filter-item">
                 <div class="filter-size">
                   <h3>Kích thước</h3>
-                  <label><input type="checkbox" /> 1Y-9 11kg</label>
-                  <label><input type="checkbox" /> 2Y-11 12kg</label>
-                  <label><input type="checkbox" /> 3Y-12 13kg</label>
-                  <label><input type="checkbox" /> 4Y-12 16kg</label>
-                  <label><input type="checkbox" /> 5Y-12 19kg</label>
-                  <label><input type="checkbox" /> 7Y-12 21kg</label>
-                  <label><input type="checkbox" /> 9Y-12 25kg</label>
-                  <label><input type="checkbox" /> 10Y-12 30kg</label>
+                  <label><input type="checkbox" /> 1Y 9-11kg</label>
+                  <label><input type="checkbox" /> 2Y 11-12kg</label>
+                  <label><input type="checkbox" /> 3Y 12-13kg</label>
+                  <label><input type="checkbox" /> 4Y 14-16kg</label>
+                  <label><input type="checkbox" /> 5Y 17-19kg</label>
+                  <label><input type="checkbox" /> 6Y 19-21kg</label>
+                  <label><input type="checkbox" /> 7Y 21-23kg</label>
+                  <label><input type="checkbox" /> 8Y 23-25kg</label>
+                  <label><input type="checkbox" /> 9Y 25-27kg</label>
+                  <label><input type="checkbox" /> 10Y 27-31kg</label>
+                  <label><input type="checkbox" /> 11Y 31-33kg</label>
+                  <label><input type="checkbox" /> 12Y 33-35kg</label>
                 </div>
                 <button class="collapse-btn">Thu gọn <i class="fa-solid fa-chevron-up"></i></button>
               </div>
@@ -387,9 +411,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -454,9 +478,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -521,9 +545,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -588,9 +612,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -658,9 +682,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -725,9 +749,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -792,9 +816,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -859,9 +883,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -929,9 +953,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -996,9 +1020,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -1063,9 +1087,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -1130,9 +1154,9 @@
                       </div>
   
                       <div class="size-select">
-                        <span class="item-size btn">S</span>
-                        <span class="item-size btn">M</span>
-                        <span class="item-size btn">L</span>
+                        <span class="item-size btn">8Y</span>
+                        <span class="item-size btn">9Y</span>
+                        <span class="item-size btn">10Y</span>
                       </div>
                     </div>
   
@@ -1187,7 +1211,7 @@
   <section class="container-description">
     <div class="description-content">
       <p>
-        <span>Rabity</span> là một thương hiệu thời trang trẻ em hàng đầu Việt Nam với chất lượng cao cấp, đa dạng mẫu mã,
+        <span>Little Whale</span> là một thương hiệu thời trang trẻ em hàng đầu Việt Nam với chất lượng cao cấp, đa dạng mẫu mã,
         màu
         sắc và phong cách với hệ thống cửa hàng phủ sóng trên toàn quốc,
         mang đến cho bé những bộ quần áo thoải mái, "tự do khám phá" thế giới và trải nghiệm niềm vui mỗi ngày, với hàng
@@ -1197,24 +1221,24 @@
       </p>
   
       <div class="body-content">
-        <h2>1. Thời trang bé gái tại Rabity có những dòng sản phẩm hot nào?</h3>
-          <p>Với sự phong phú và sáng tạo trong thời trang trẻ em, Rabity đã cho ra mắt đa dạng dòng sản phẩm từ áo quần,
+        <h2>1. Thời trang bé gái tại Little Whale có những dòng sản phẩm hot nào?</h3>
+          <p>Với sự phong phú và sáng tạo trong thời trang trẻ em, Little Whale đã cho ra mắt đa dạng dòng sản phẩm từ áo quần,
             đầm váy đến phụ kiện. Do đó, ba mẹ có thể dễ dàng tìm ra những bộ trang phục dành cho bé gái phù hợp với phong
             cách và sở thích riêng của bé nhà mình. Dưới đây là một số BST đang rất được ưa chuộng tại hệ thống bán lẻ
-            Rabity:</p>
+            Little Whale:</p>
           <ul>
             <li><span class="highlight">Đầm, váy:</span> Chúng không chỉ là một item làm đẹp mà còn giúp bé gái đáng yêu
               và dịu dàng. Các sản phẩm váy đầm đầy màu sắc, dễ thương phù hợp với các bé gái ở mọi lứa tuổi.</li>
-            <li><span class="highlight">Quần áo bộ:</span> Các thiết kế đồ bộ trẻ em của Rabity mang lại sự thoải mái khi
+            <li><span class="highlight">Quần áo bộ:</span> Các thiết kế đồ bộ trẻ em của Little Whale mang lại sự thoải mái khi
               vận động. Đây cũng là sản phẩm không thể thiếu trong bất kỳ BST nào dành cho các bé gái vì sự dễ thương và
               phù hợp với mọi tình huống.</li>
-            <li><span class="highlight">Quần legging, quần jean:</span> Rabity cung cấp đa dạng mẫu quần cho bé gái từ
+            <li><span class="highlight">Quần legging, quần jean:</span> Little Whale cung cấp đa dạng mẫu quần cho bé gái từ
               quần short đến quần dài với kiểu dáng thời trang và chất liệu vải thoáng mát, thoải mái khi vận động.</li>
             <li><span class="highlight">Áo phông, áo thun:</span> Các mẫu áo thun với họa tiết dễ thương và đa dạng màu
-              sắc được thiết kế phù hợp cho mọi lứa tuổi. Áo thun của Rabity có chất liệu cotton an toàn, rất mềm mịn, dễ
+              sắc được thiết kế phù hợp cho mọi lứa tuổi. Áo thun của Little Whale có chất liệu cotton an toàn, rất mềm mịn, dễ
               chịu khi mặc và không gây ngứa da.</li>
             <li><span class="highlight">Áo khoác, áo gió:</span> Một item không thể thiếu cho những ngày lạnh đầu và giữa
-              mùa đông, với áo khoác giữ ấm nhưng không gây nặng nề khi mặc. Rabity với sự đa dạng màu sắc, mẫu mã giúp bé
+              mùa đông, với áo khoác giữ ấm nhưng không gây nặng nề khi mặc. Little Whale với sự đa dạng màu sắc, mẫu mã giúp bé
               gái của bạn luôn nổi bật.</li>
             <li><span class="highlight">Chân váy bé gái:</span> Là một trong những dòng sản phẩm bé gái phổ biến nhất,
               chân váy thiết kế làm nổi bật sự đáng yêu, dễ thương phù hợp với mọi lứa tuổi từ 1-14 tuổi.</li>
@@ -1228,10 +1252,10 @@
       </div>
   
       <div class="body-content">
-        <h2>2. Phong cách thời trang cho bé gái đẹp, đặc trưng từ thương hiệu Rabity</h2>
+        <h2>2. Phong cách thời trang cho bé gái đẹp, đặc trưng từ thương hiệu Little Whale</h2>
         <p>
   
-          Đây là một trong những phong cách chính mà Rabity đang hướng tới và chiếm phần lớn thiết kế
+          Đây là một trong những phong cách chính mà Little Whale đang hướng tới và chiếm phần lớn thiết kế
           các sản phẩm quần áo thời trang cho bé gái tại nhà Thỏ. Với những thiết kế tối giản, tính ứng dụng cao nhưng vẫn
           vô cùng năng động, đáng yêu
           và hiện đại để công chúa nhỏ tha hồ diện và phối nhiều outfits khác nhau trong mọi hoàn cảnh từ đi học, đi chơi
@@ -1256,15 +1280,15 @@
         <p>
           <span>Phong cách tươi sáng, sắc màu xuống phố:</span>
           Không dừng lại ở các kiểu dáng đồ bé gái trơn, đơn giản,
-          Rabity còn tạo ra những trang phục với vô vàn màu sắc phù hợp với sở thích khác nhau của các nàng thơ nhí.
+          Little Whale còn tạo ra những trang phục với vô vàn màu sắc phù hợp với sở thích khác nhau của các nàng thơ nhí.
         </p>
         <div>
           <img src="https://file.hstatic.net/1000290074/file/thoi-trang-be-gai-phong-cach-thanh-lich-di-hoc_a87e50f370564132a3b6b28a7eb46718.jpg" alt="">
-          <p class="italic-text">Rabity sở hữu những bộ đồ bé gái phong cách sắc màu tươi sáng </p>
+          <p class="italic-text">Little Whale sở hữu những bộ đồ bé gái phong cách sắc màu tươi sáng </p>
         </div>
         <p>
           <span>Phong cách thanh lịch, chỉn chu đi học:</span>
-          đây cũng là một phong cách nữa mà đồ bé gái Rabity cũng hướng tới, với lối thiết kế tối giản nhưng vẫn hiện đại, 
+          đây cũng là một phong cách nữa mà đồ bé gái Little Whale cũng hướng tới, với lối thiết kế tối giản nhưng vẫn hiện đại, 
           phá cách từ những chiếc áo sơ mi, áo polo hay những chiếc quần dài, chân váy kaki và jean đứng form.
         </p>
         <div>
@@ -1282,11 +1306,11 @@
         <img
           alt="Little Whale Logo"
           height="50"
-          src="./images/logo.png"
+          src="../images/logo.png"
           width="100"
         />
         <p>
-          Rabity là thương hiệu thời trang trẻ em hàng đầu Việt Nam với hơn 60
+          Little Whale là thương hiệu thời trang trẻ em hàng đầu Việt Nam với hơn 60
           showroom trên toàn quốc, mang đến cho bé những bộ quần áo thoải mái
           cho bé "tự do khám phá" thế giới và trải nghiệm niềm vui mỗi ngày.
         </p>
@@ -1306,10 +1330,12 @@
       </div>
 
       <div class="footer-column">
-        <h3>VỀ RABITY</h3>
-        <a href="#">Giới thiệu về Rabity</a>
+        <h3>VỀ Little Whale</h3>
+        <a href="#">Giới thiệu về Little Whale</a>
         <br />
-        <a href="#">Tin tức Rabity</a>
+        <a href="#">Tin tức Little Whale</a>
+        <br />
+        <a href="contact.html">Liên hệ với chúng tôi</a>
       </div>
 
       <div class="footer-column">
@@ -1345,8 +1371,9 @@
     </div>
   </section>
 
-  <script src="./js/script.js"></script>
-  <script src="./js/interaction-dobegai.js"></script>
+  <script src="../js/scriptnav.js"></script>
+  <script src="../js/interaction-dobegai.js"></script>
+
 
 </body>
 

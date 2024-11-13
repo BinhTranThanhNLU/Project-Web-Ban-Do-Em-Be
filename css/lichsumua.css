@@ -177,10 +177,12 @@ body {
   text-align: center;
   margin-top: 20px;
   color: #555;
+  height: 500px;
 }
 .cho-thanh-toan img {
   width: 100px;
   height: 100px;
+  margin-top: 100px;
 }
 .cho-thanh-toan p {
   margin-top: 20px;
@@ -204,10 +206,12 @@ body {
   text-align: center;
   margin-top: 20px;
   color: #555;
+  height: 500px;
 }
 .cho-van-chuyen img {
   width: 100px;
   height: 100px;
+  margin-top: 100px;
 }
 .cho-van-chuyen p {
   margin-top: 20px;
@@ -231,10 +235,12 @@ body {
   text-align: center;
   margin-top: 20px;
   color: #555;
+  height: 500px;
 }
 .cho-giao-hang img {
   width: 100px;
   height: 100px;
+  margin-top: 100px;
 }
 .cho-giao-hang p {
   margin-top: 20px;
@@ -258,10 +264,12 @@ body {
   text-align: center;
   margin-top: 20px;
   color: #555;
+  height: 500px;
 }
 .hoan-thanh img {
   width: 100px;
   height: 100px;
+  margin-top: 100px;
 }
 .hoan-thanh p {
   margin-top: 20px;
@@ -285,10 +293,12 @@ body {
   text-align: center;
   margin-top: 20px;
   color: #555;
+  height: 500px;
 }
 .da-huy img {
   width: 100px;
   height: 100px;
+  margin-top: 100px;
 }
 .da-huy p {
   margin-top: 20px;
@@ -312,10 +322,12 @@ body {
   text-align: center;
   margin-top: 20px;
   color: #555;
+  height: 500px;
 }
 .tra-hang-hoan-tien img {
   width: 100px;
   height: 100px;
+  margin-top: 100px;
 }
 .tra-hang-hoan-tien p {
   margin-top: 20px;

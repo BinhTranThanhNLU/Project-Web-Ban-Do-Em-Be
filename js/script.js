@@ -279,3 +279,13 @@ new Swiper(".card-wrapper", {
     },
   },
 });
+// JavaScript để hiển thị thông báo khi nhấn vào giỏ hàng
+document.getElementById("cart").addEventListener("click", function () {
+  const message = document.getElementById("loginMessageCart");
+  message.style.display = "block";
+
+  // Ẩn thông báo sau 3 giây
+  setTimeout(function () {
+    message.style.display = "none";
+  }, 3000);
+});

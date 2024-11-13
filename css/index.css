@@ -166,6 +166,7 @@ nav.sticky {
   position: relative;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .navbar .icons .cart .badge {
   position: absolute;
@@ -176,6 +177,23 @@ nav.sticky {
   border-radius: 50%;
   padding: 2px 5px;
   font-size: 12px;
+}
+/* Style cho thông báo */
+.login-message-cart {
+  display: none; /* Ẩn mặc định */
+  position: absolute;
+  top: 75px; /* Đặt thông báo ngay dưới giỏ hàng */
+  left: 85%;
+  transform: translateX(-50%);
+  width: 320px;
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 10;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 /* Định dạng chung cho các dropdown */
 .dropdown,
@@ -545,9 +563,9 @@ nav.sticky {
   margin: 0 5px;
 }
 .tabs-exclusive-sale .active-exclusive-sale {
-  color: #ff4d4f;
+  color: #f7840b;
 
-  border-bottom: 2px solid #ff4d4f;
+  border-bottom: 2px solid #f7840b;
 }
 .active-exclusive-sale {
   display: flex;
@@ -558,13 +576,12 @@ nav.sticky {
   text-align: center;
   margin: 20px 0;
 }
-.load-more button {
-  padding: 10px 20px;
-  border: 1px solid #999;
-  background-color: rgb(243, 84, 84);
+.load-more button a {
   color: #000;
   cursor: pointer;
   border-radius: 5px;
+  text-decoration: none;
+  width: 100%;
 }
 
 .container-sale {
@@ -774,18 +791,6 @@ nav.sticky {
     0.2
   ) !important; /* Màu nền bán trong suốt */
 }
-.load-more {
-  text-align: center;
-  margin: 20px 0;
-}
-.load-more button {
-  padding: 10px 20px;
-  border: 1px solid #999;
-  background-color: rgb(243, 84, 84);
-  color: #000;
-  cursor: pointer;
-  border-radius: 5px;
-}
 
 /* ========================bán chạy nhất============================*/
 .section-best-seller {
@@ -809,6 +814,7 @@ nav.sticky {
 .best-seller {
   margin: 40px 0;
   display: flex;
+  gap: 20px;
   justify-content: center; /* Căn giữa các tab */
   align-items: center; /* Căn giữa theo chiều dọc */
   text-align: center;
@@ -841,17 +847,7 @@ nav.sticky {
   box-sizing: border-box;
   text-align: left;
 }
-.load-more {
-  margin: 20px 0;
-}
-.load-more button {
-  background-color: #000;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+
 /* =============================girl-fashion-====================== */
 
 .section-girl-fashion {
@@ -902,18 +898,6 @@ nav.sticky {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.load-more {
-  text-align: center;
-  margin: 20px 0;
-}
-.load-more button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  background-color: white;
-  color: #000;
-  cursor: pointer;
-}
 /* =================================boy-fashion================================ */
 .section-boy-fashion {
   margin-left: 10%;
@@ -967,6 +951,7 @@ nav.sticky {
   margin-top: 20px;
 }
 .load-more button {
+  border-radius: 5px;
   padding: 10px 20px;
   font-size: 16px;
   border: 1px solid #000;

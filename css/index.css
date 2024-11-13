@@ -180,7 +180,7 @@ nav.sticky {
 }
 /* Style cho thông báo */
 .login-message-cart {
-  display: none; /* Ẩn mặc định */
+  display: none !important; /* Ẩn mặc định */
   position: absolute;
   top: 75px; /* Đặt thông báo ngay dưới giỏ hàng */
   left: 85%;
@@ -195,6 +195,7 @@ nav.sticky {
   z-index: 10;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 /* Định dạng chung cho các dropdown */
 .dropdown,
 .dropdown-1,
@@ -988,7 +989,8 @@ nav.sticky {
   line-height: 1.6;
 }
 .footer-column a:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  color: #f7840b;
 }
 .footer-column .subscribe {
   display: flex;
@@ -1120,6 +1122,7 @@ nav.sticky {
   height: 40px;
   text-align: right;
   flex: 50%;
+  text-decoration: line-through;
 }
 
 .color-size-selection {

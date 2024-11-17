@@ -1,0 +1,7 @@
+.hidden-search-bar {
+  display: none;
+}
+
+.hidden-search-bar.active {
+  display: block;
+}

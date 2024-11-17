@@ -1,10 +1,21 @@
 //=================================cuộn lên xuống thanh menu==========================
+document.addEventListener("DOMContentLoaded", function () {
+  // Thiết lập vị trí ban đầu cho navbar khi trang tải
+  const initialScroll =
+    window.pageYOffset || document.documentElement.scrollTop;
+  if (initialScroll > 80) {
+    navbar.style.top = "-80px";
+  } else {
+    navbar.style.top = "0";
+  }
+});
+
 let lastScrollTop = 0; // Vị trí cuộn trước đó
 const navbar = document.querySelector("nav"); // Chọn thanh điều hướng
 window.addEventListener("scroll", function () {
   const currentScroll =
     window.pageYOffset || document.documentElement.scrollTop;
-  if (currentScroll > lastScrollTop && currentScroll > 80) {
+  if (currentScroll > lastScrollTop && currentScroll > 60) {
     // Nếu cuộn xuống và đã cuộn qua 80px
     navbar.style.top = "-80px"; // Đưa navbar lên ngoài màn hình
   } else if (currentScroll < lastScrollTop) {

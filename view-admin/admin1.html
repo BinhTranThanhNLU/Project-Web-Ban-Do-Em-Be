@@ -246,22 +246,25 @@
                 <!-- Container Chart -->
                 <div class="container-chart">
                     <div class="charts">
-                        <div class="chart" id="lineChartDemo">
-                            <h3>Thống kê 6 tháng doanh thu</h3>
-                            <!-- Nội dung biểu đồ sẽ được thêm bằng JavaScript -->
-                        </div>
                         <div class="chart" id="barChartDemo">
-                            <h3>Thống kê 6 số sản phẩm bán chạy</h3>
-                            <!-- Nội dung biểu đồ sẽ được thêm bằng JavaScript -->
+                            <h3>Thống kê 6 tháng doanh thu</h3>
+                            <canvas id="barChart"></canvas>
+                        </div>
+                        <div class="chart" id="pieChartDemo">
+                            <h3>Thống kê 6 sản phẩm bán chạy</h3>
+                            <canvas id="pieChart"></canvas>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-
     </div>
 
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/charts.js"></script>
+    
 
 </body>
 

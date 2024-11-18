@@ -399,7 +399,7 @@ body {
 }
 
 /* Modal Styling */
-.modal {
+.edit-modal {
     display: none;
     position: fixed;
     top: 0;
@@ -411,29 +411,32 @@ body {
     align-items: center;
 }
 
-.modal-content {
+.edit-modal-content {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    width: 400px;
+    width: 500px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.modal-header {
+.edit-modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.modal-header h5 {
+.edit-modal-header h5 {
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
+    color: #333;
+    font-weight: bolder;
+    text-align: center;
 }
 
-.close-modal {
+.close-edit-modal {
     background: none;
     border: none;
     font-size: 18px;
@@ -441,47 +444,58 @@ body {
     color: #333;
 }
 
-.modal-body form {
-    display: flex;
-    flex-direction: column;
+.edit-modal-body form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+    row-gap: 15px;
 }
 
-.modal-body form label {
+.edit-modal-body form label {
     font-weight: bold;
-    margin: 10px 0 5px;
+    margin: 0;
+    align-self: center;
+    color: #333;
 }
 
-.modal-body form input[type="text"],
-.modal-body form input[type="date"],
-.modal-body form select {
+.edit-modal-body form input[type="text"],
+.edit-modal-body form input[type="date"],
+.edit-modal-body form select {
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    margin-bottom: 15px;
+    width: 100%; /* Full width in its grid cell */
 }
 
-.modal-body form button {
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
+.edit-modal-actions {
+    grid-column: 1 / -1; /* Span across both columns */
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 15px;
 }
 
-.modal-body form button:first-child {
+.btn-save {
     background-color: #4CAF50;
     color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.modal-body form button:last-child {
+.btn-cancel {
     background-color: #f44336;
     color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.modal-body form button:hover {
-    opacity: 0.9;
-}
+
 
 /* Model Confirm */
 .modal-confirm {

@@ -284,24 +284,24 @@
                 <div class="edit-modal-content">
                     <div class="edit-modal-header">
                         <h5>Chỉnh sửa thông tin nhân viên cơ bản</h5>
-                        <button class="close-edit-modal" onclick="closeEditModal()">x</button>
+                        <button class="close-edit-modal" onclick="closeEditModal()"><i class="fa-solid fa-xmark"></i></button>
                     </div>
                     <div class="edit-modal-body">
                         <form>
-                            <label>ID nhân viên</label>
-                            <input type="text" value="#CD2187" disabled>
+                            <label for="newID">ID nhân viên</label>
+                            <input type="text" name="newID" id="newID" placeholder="Enter New ID" disabled>
             
-                            <label>Họ và tên</label>
-                            <input type="text" value="Võ Trường">
+                            <label for="newName">Họ và tên</label>
+                            <input type="text" name="newName" id="newName" placeholder="Enter New Name">
             
-                            <label>Số điện thoại</label>
-                            <input type="text" value="09267312388">
+                            <label for="newPhone">Số điện thoại</label>
+                            <input type="text" name="newPhone" id="newPhone" placeholder="Enter New Phone">
             
-                            <label>Địa chỉ email</label>
-                            <input type="text" value="truong.vd2000@gmail.com">
+                            <label for="newEmail">Địa chỉ email</label>
+                            <input type="email" name="newEmail" id="newEmail" placeholder="Enter New Email">
             
-                            <label>Ngày sinh</label>
-                            <input type="date" value="2000-03-15">
+                            <label for="newDate">Ngày sinh</label>
+                            <input type="date" name="newDate" id="newDate" placeholder="Enter New Date">
             
                             <label>Chức vụ</label>
                             <select>
@@ -320,7 +320,6 @@
                                 <button type="button" class="btn-save" onclick="saveChanges()">Lưu lại</button>
                                 <button type="button" class="btn-cancel" onclick="closeEditModal()">Hủy bỏ</button>
                             </div>
-                            <div class="edit-modal-advanced">Chỉnh sửa nâng cao</div>
                         </form>
                     </div>
                 </div>

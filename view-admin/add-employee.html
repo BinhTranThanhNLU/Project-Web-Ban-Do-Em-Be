@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thêm Nhân Viên</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/add-employee.css">
 </head>
 <body>
@@ -184,9 +187,14 @@
                         </div>
                         <div class="form-group col-md-12">
                             <label class="control-label">Ảnh 3x4 nhân viên</label>
-                            <input type="file" id="uploadfile" name="ImageUpload" onchange="readURL(this);">
+                            <div id="boxchoice">
+                                <label for="uploadfile" class="upload-icon">
+                                    <i class="fa-solid fa-upload"></i>
+                                </label>
+                                <input type="file" id="uploadfile" name="ImageUpload" onchange="readURL(this);" style="display: none;">
+                            </div>
                             <div id="thumbbox">
-                                <img height="300" width="300" alt="Thumb image" id="thumbimage" style="display: none">
+                                <img height="100" width="100" alt="Thumb image" id="thumbimage" style="display: none">
                             </div>
                         </div>
                     </form>
@@ -197,5 +205,7 @@
         </div>
     </div>
     
+    <script src="../js/add-employee.js"></script>
+
 </body>
 </html>

@@ -254,3 +254,135 @@ body {
     font-weight: 500;
     color: #fff;
 }
+
+/* container-add-employee */
+.container-add-employee {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tile-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.tile-body {
+    padding: 20px;
+}
+
+/* Form Styling */
+form.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 48%; /* Chia thành 2 cột bằng cách đặt chiều rộng */
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #ffffff;
+}
+
+/* Select and File Input Styling */
+select.form-control {
+    appearance: none;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* Thumbnail Display */
+#thumbbox {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#thumbimage {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons Styling */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    margin-top: 20px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+    text-decoration: none; /* Loại bỏ gạch chân */
+}
+
+.btn-save {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-save:hover {
+    background-color: #218838;
+}
+
+.btn-cancel {
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none; /* Loại bỏ gạch chân */
+}
+
+.btn-cancel:hover {
+    background-color: #c82333;
+}
+
+#boxchoice {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1a1a3d; /* Màu nền cho nút tải lên */
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#boxchoice .upload-icon {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    width: 200px;
+}
+
+#boxchoice:hover {
+    background-color: #333357; /* Màu khi hover cho nút tải lên */
+}

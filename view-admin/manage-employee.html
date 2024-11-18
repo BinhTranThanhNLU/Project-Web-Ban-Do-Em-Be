@@ -40,13 +40,13 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a class="menu-link" href="index.html">
+                    <a class="menu-link" href="./admin1.html">
                         <span class="menu-icon"><i class="fa fa-tachometer-alt"></i></span>
                         <span class="menu-title">Bảng điều khiển</span>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a class="menu-link active" href="table-data-table.html">
+                    <a class="menu-link active" href="./manage-employee.html">
                         <span class="menu-icon"><i class="fa fa-id-card"></i></span>
                         <span class="menu-title">Quản lý nhân viên</span>
                     </a>
@@ -127,6 +127,10 @@
                         <button class="btn btn-excel">Xuất Excel</button>
                         <button class="btn btn-pdf">Xuất PDF</button>
                         <button class="btn btn-delete">Xóa tất cả</button>
+                    </div>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Tìm kiếm nhân viên..." />
+                        <button class="btn btn-search">Tìm kiếm</button>
                     </div>
                     <table class="table table-hover">
                         <thead>
@@ -263,7 +267,7 @@
                                 <td>Bán hàng</td>
                                 <td>
                                     <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
-                                    <button class="btn btn-edit" onclick="openEditModal()"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
                                 </td>
                             </tr>
                         </tbody>
@@ -276,29 +280,29 @@
                 </div>
             </div>
             <!-- Modal chỉnh sửa thông tin nhân viên -->
-            <div class="modal" id="editModal" style="display: none;">
-                <div class="modal-content">
-                    <div class="modal-header">
+            <div class="edit-modal" id="editModal" style="display: none;">
+                <div class="edit-modal-content">
+                    <div class="edit-modal-header">
                         <h5>Chỉnh sửa thông tin nhân viên cơ bản</h5>
-                        <button class="close-modal" onclick="closeEditModal()">x</button>
+                        <button class="close-edit-modal" onclick="closeEditModal()">x</button>
                     </div>
-                    <div class="modal-body">
+                    <div class="edit-modal-body">
                         <form>
                             <label>ID nhân viên</label>
                             <input type="text" value="#CD2187" disabled>
-
+            
                             <label>Họ và tên</label>
                             <input type="text" value="Võ Trường">
-
+            
                             <label>Số điện thoại</label>
                             <input type="text" value="09267312388">
-
+            
                             <label>Địa chỉ email</label>
                             <input type="text" value="truong.vd2000@gmail.com">
-
+            
                             <label>Ngày sinh</label>
                             <input type="date" value="2000-03-15">
-
+            
                             <label>Chức vụ</label>
                             <select>
                                 <option>Bán hàng</option>
@@ -311,15 +315,30 @@
                                 <option>Bảo vệ</option>
                                 <option>Tạp vụ</option>
                             </select>
-
-                            <button type="button" onclick="saveChanges()">Lưu lại</button>
-                            <button type="button" onclick="closeEditModal()">Hủy bỏ</button>
+            
+                            <div class="edit-modal-actions">
+                                <button type="button" class="btn-save" onclick="saveChanges()">Lưu lại</button>
+                                <button type="button" class="btn-cancel" onclick="closeEditModal()">Hủy bỏ</button>
+                            </div>
+                            <div class="edit-modal-advanced">Chỉnh sửa nâng cao</div>
                         </form>
                     </div>
                 </div>
             </div>
+            
+            <!-- Model Confirm -->
+            <div id="confirmModal" class="modal-confirm">
+                <div class="modal-content">
+                    <h2>Cảnh báo</h2>
+                    <p>Bạn có chắc chắn là muốn xóa nhân viên này?</p>
+                    <button class="btn btn-cancel" onclick="closeModal()">Hủy bỏ</button>
+                    <button class="btn btn-confirm" onclick="deleteEmployee()">Đồng ý</button>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script src="../js/manage-employee.js"></script>
 
 </body>
 

@@ -110,6 +110,21 @@ if (selectAllCheckbox) {
         });
     });
 }
+// Hàm cập nhật thời gian hiện tại
+function updateTime() {
+    const now = new Date();
+    const dayNames = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
+    const day = dayNames[now.getDay()];
+    const date = now.toLocaleDateString('vi-VN');
+    const time = now.toLocaleTimeString('vi-VN');
+    document.getElementById('current-time').innerText = `${day}, ${date} - ${time}`;
+}
+
+// Cập nhật thời gian mỗi giây
+setInterval(updateTime, 1000);
+
+// Gọi ngay khi trang tải
+updateTime();
 
 
 // Gọi hàm thiết lập dropdown cho từng phần

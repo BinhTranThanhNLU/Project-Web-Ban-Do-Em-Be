@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../css/manage-user.css">
+    <link rel="stylesheet" href="../../css/admin-css/navbar-left-top.css">
+    <link rel="stylesheet" href="../../css/admin-css/manage-user.css">
+    <link rel="stylesheet" href="../../css/admin-css/modal-confirm.css">
 </head>
 <body>
 
@@ -17,7 +19,7 @@
             <div class="sidebar-header">
                 <div class="user-profile">
                     <div class="sidebar-title">
-                        <a href="index.html" class="brand-logo-mini"><img src="../images/logo.png" alt="logo"></a>
+                        <a href="index.html" class="brand-logo-mini"><img src="../../images/logo.png" alt="logo"></a>
                         <h2>Litte Whale</h2>
                     </div>
                     <img class="user-avatar"
@@ -159,9 +161,10 @@
                                 
                                 <td>
                                     <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
-                                    <button class="btn btn-edit" onclick="openEditModal()"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
                                 </td>
                             </tr>
+
                             <tr>
                                 <td><input type="checkbox"></td>
                                 <td>#CD12837</td>
@@ -175,25 +178,10 @@
                                 
                                 <td>
                                     <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
-                                    <button class="btn btn-edit" onclick="openEditModal()"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td><input type="checkbox"></td>
-                                <td>#CD12837</td>
-                                <td>nguyenA</td>
-                                <td>Nguyễn Văn A</td>
-                                <td>nguyenvana@example.com</td>
-                                <td>0901234567</td>
-                                <td>123 Đường ABC, Quận 1, TP.HCM</td>
-                                <td>5</td>
-                                <td>5,000,000 VND</td>
-                               
-                                <td>
-                                    <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
-                                    <button class="btn btn-edit" onclick="openEditModal()"><i class="fas fa-edit"></i></button>
-                                </td>
-                            </tr>
+                            
                             <tr>
                                 <td><input type="checkbox"></td>
                                 <td>#CD12837</td>
@@ -207,9 +195,10 @@
                                 
                                 <td>
                                     <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
-                                    <button class="btn btn-edit" onclick="openEditModal()"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
                                 </td>
                             </tr>
+                            
                             <tr>
                                 <td><input type="checkbox"></td>
                                 <td>#CD12837</td>
@@ -223,9 +212,10 @@
                                 
                                 <td>
                                     <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
-                                    <button class="btn btn-edit" onclick="openEditModal()"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
                                 </td>
                             </tr>
+                           
                             <tr>
                                 <td><input type="checkbox"></td>
                                 <td>#CD12837</td>
@@ -239,9 +229,10 @@
                                 
                                 <td>
                                     <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
-                                    <button class="btn btn-edit" onclick="openEditModal()"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
                                 </td>
                             </tr>
+
                         </tbody>
                     </table>
                     <div class="pagination">
@@ -251,63 +242,76 @@
                     </div>
                 </div>
             </div>
-            <!-- Modal chỉnh sửa  -->
+            <!-- Modal chỉnh sửa thông tin khách hàng -->
             <div class="edit-modal" id="editModal" style="display: none;">
                 <div class="edit-modal-content">
                     <div class="edit-modal-header">
-                        <h5>Chỉnh sửa thông tin nhân viên cơ bản</h5>
-                        <button class="close-edit-modal" onclick="closeEditModal()"><i class="fa-solid fa-xmark"></i></button>
+                        <h5>Chỉnh sửa thông tin khách hàng</h5>
+                        <button class="close-edit-modal">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
                     </div>
                     <div class="edit-modal-body">
-                        <form>
-                            <label for="newID">ID nhân viên</label>
+                        <div class="form-group">
+                            <label for="newID">ID Khách Hàng</label>
                             <input type="text" name="newID" id="newID" disabled>
+                        </div>
             
-                            <label for="newName">Họ và tên</label>
-                            <input type="text" name="newName" id="newName" placeholder="Nhập Họ và tên">
+                        <div class="form-group">
+                            <label for="newUsername">Tên Tài Khoản</label>
+                            <input type="text" name="newUsername" id="newUsername" placeholder="Nhập Tên Tài Khoản">
+                        </div>
             
-                            <label for="newPhone">Số điện thoại</label>
-                            <input type="text" name="newPhone" id="newPhone" placeholder="Nhập Số điện thoại">
+                        <div class="form-group">
+                            <label for="newName">Họ và Tên</label>
+                            <input type="text" name="newName" id="newName" placeholder="Nhập Họ và Tên">
+                        </div>
             
-                            <label for="newEmail">Địa chỉ email</label>
-                            <input type="email" name="newEmail" id="newEmail" placeholder="Nhập Địa chỉ email">
+                        <div class="form-group">
+                            <label for="newPhone">Số Điện Thoại</label>
+                            <input type="text" name="newPhone" id="newPhone" placeholder="Nhập Số Điện Thoại">
+                        </div>
             
-                            <label for="newDate">Ngày sinh</label>
-                            <input type="date" name="newDate" id="newDate" placeholder="Nhập Ngày sinh">
+                        <div class="form-group">
+                            <label for="newEmail">Địa chỉ Email</label>
+                            <input type="email" name="newEmail" id="newEmail" placeholder="Nhập Địa chỉ Email">
+                        </div>
             
-                            <label for="newPosition">Chức vụ</label>
-                            <select name="newPosition" id="newPosition">
-                                <option>Bán hàng</option>
-                                <option>Tư vấn</option>
-                                <option>Dịch vụ</option>
-                                <option>Thu Ngân</option>
-                                <option>Quản kho</option>
-                                <option>Bảo trì</option>
-                                <option>Kiểm hàng</option>
-                                <option>Bảo vệ</option>
-                                <option>Tạp vụ</option>
-                            </select>
+                        <div class="form-group">
+                            <label for="newAddress">Địa Chỉ</label>
+                            <input type="text" name="newAddress" id="newAddress" placeholder="Nhập Địa Chỉ">
+                        </div>
             
-                            <div class="edit-modal-actions">
-                                <button type="button" class="btn-save" onclick="saveChanges()">Lưu lại</button>
-                                <button type="button" class="btn-cancel" onclick="closeEditModal()">Hủy bỏ</button>
-                            </div>
-                        </form>
+                        <div class="form-group">
+                            <label for="newDate">Ngày Tạo</label>
+                            <input type="date" name="newDate" id="newDate">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="newNote">Ghi Chú</label>
+                            <textarea name="newNote" id="newNote" placeholder="Nhập Ghi Chú"></textarea>
+                        </div>
+            
+                        <div class="edit-modal-actions">
+                            <button type="button" class="btn-save" onclick="saveChanges()">Lưu lại</button>
+                            <button type="button" class="btn-cancel">Hủy bỏ</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            
             <!-- Model Confirm -->
-            <div id="confirmModal" class="modal-confirm" style="display: none;">
+            <div id="confirmModal" class="modal-confirm">
                 <div class="modal-content">
                     <h2>Cảnh báo</h2>
-                    <p>Bạn có chắc chắn là muốn xóa nhân viên này?</p>
-                    <button class="btn btn-cancel" onclick="closeModal()">Hủy bỏ</button>
+                    <p>Bạn có chắc chắn là muốn xóa khách hàng này?</p>
+                    <button class="btn btn-cancel">Hủy bỏ</button>
                     <button class="btn btn-confirm" onclick="deleteEmployee()">Đồng ý</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="../../js/open-close-modal.js"></script>
     
 </body>
 </html>

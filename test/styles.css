@@ -1,0 +1,38 @@
+.product-card {
+  width: 200px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.5s ease-in-out; /* Thêm hiệu ứng transform */
+}
+
+.first-image {
+  opacity: 1;
+}
+
+.second-image {
+  opacity: 0;
+}
+
+.image-container:hover .first-image {
+  opacity: 0;
+  transform: scale(0.95); /* Phóng to 5% */
+}
+
+.image-container:hover .second-image {
+  opacity: 1;
+  transform: scale(0.95); /* Phóng to 5% */
+}

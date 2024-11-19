@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Helvetica;
+  font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 /* Bang Mau
 #f7840b
@@ -413,7 +415,7 @@ nav.sticky {
   padding-bottom: 10px;
   border-bottom: 2px solid #000;
   overflow: hidden;
-  background: rgba(225, 225, 225, 0.3);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .slider {
@@ -542,14 +544,14 @@ nav.sticky {
 }
 .category-item img {
   border-radius: 50%;
-  background-color: #ffe6f2;
+  background-color: #fff5e4;
   padding: 10px;
   width: 100px;
   height: 100px;
 }
 .category-item-boy img {
   border-radius: 50%;
-  background-color: #50dde7;
+  background-color: #fff5e4;
   padding: 10px;
   width: 100px;
   height: 100px;
@@ -646,50 +648,39 @@ nav.sticky {
   justify-content: space-between;
 }
 
-.load-more {
-  text-align: center;
-  margin: 20px 0;
-}
-.load-more button a {
-  color: #000;
-  cursor: pointer;
-  border-radius: 5px;
-  text-decoration: none;
-  width: 100%;
-}
-
 .container-sale {
   display: flex;
-  height: 400px;
+  height: 440px;
 }
 .card-wapper {
   margin: 0 60px 35px;
   padding: 20px 10px;
   overflow: hidden;
-  height: 400px;
+  height: 440px;
 }
 .card-list .card-item .card-link {
   user-select: none;
   display: block;
-  background: #fff;
+  background: #ffffff;
   border-radius: 1px;
   text-decoration: none;
   border: 2px solid transparent;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
   transition: 0.2s ease;
   min-height: 300px;
-  height: 400px;
+  height: 440px;
 }
 .card-list .card-item .card-link:active {
   cursor: grabbing;
 }
 .card-list .card-item .card-link {
-  border-color: #6a9c89;
+  /* border-color: #6a9c89; */
+  border-radius: 10px;
 }
 .card-link img {
   width: 100%;
   height: 340px;
-  border-radius: 1px;
+  border-radius: 10px;
 }
 .card-list .card-item .card-image {
   width: 100%;
@@ -698,18 +689,18 @@ nav.sticky {
   border-radius: 10px;
 }
 .card-list .card-link .badge {
-  color: #5372f0;
   padding: 8px 16px;
   font-size: 0.95rem;
   margin: 16px 0 18px;
-  background: #dde4ff;
+  background: #ffffff;
   width: fit-content;
   border-radius: 50px;
 }
 .card-list .card-link .card-title {
   font-size: 16px;
   color: black;
-  font-weight: 200;
+  font-weight: 400;
+  padding-top: 20px;
   text-align: start;
   transition: color 0.3s ease; /* Hiệu ứng mượt khi đổi màu */
   white-space: nowrap; /* Không cho phép xuống dòng */
@@ -723,6 +714,7 @@ nav.sticky {
 }
 
 .card-title-price {
+  padding-top: 20px;
   color: #f7840b;
   display: flex;
   /* padding: 5px; */
@@ -798,7 +790,35 @@ nav.sticky {
   border-radius: 5px;
   flex: 50%;
 }
+.image-container-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 
+.image-card {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Hiệu ứng mượt */
+}
+
+.image2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; /* Ẩn ảnh 2 ban đầu */
+  z-index: 1; /* Đảm bảo ảnh 2 chồng lên ảnh 1 */
+}
+
+.image-container-card:hover .image1 {
+  opacity: 0; /* Ẩn ảnh 1 khi hover */
+  transform: scale(0.9); /* Thu nhỏ 5% */
+}
+
+.image-container-card:hover .image2 {
+  opacity: 1; /* Hiển thị ảnh 2 khi hover */
+  transform: scale(0.9); /* Thu nhỏ 5% */
+}
 .color-options {
   display: flex;
   justify-content: start;
@@ -1047,11 +1067,15 @@ nav.sticky {
 }
 .load-more button {
   border-radius: 5px;
+  border: 1px solid #6a9c89;
   padding: 10px 20px;
   font-size: 16px;
   border: 1px solid #000;
   background-color: #fff;
   cursor: pointer;
+}
+.load-more button:hover {
+  color: #f7840b;
 }
 /* ================================footer========================== */
 
@@ -1123,9 +1147,8 @@ nav.sticky {
 .container-products {
   width: 100%;
   display: flex;
-  gap: 40px;
+  gap: 3%;
   justify-content: space-between; /* Căn đều với khoảng cách giữa các phần tử */
-  margin: 0 auto; /* Căn giữa container nếu có chiều rộng nhỏ hơn 100% */
 }
 
 .row {
@@ -1133,6 +1156,7 @@ nav.sticky {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  width: 25%;
 }
 
 /* General card styling */
@@ -1147,19 +1171,46 @@ nav.sticky {
   border: none;
   border-radius: 10px;
   width: 100%;
-  height: 450px;
+  min-height: 450px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.thumbnail-image {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng transform */
+}
+
+.thumbnail-image.second-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .image-container {
   position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
 }
 
-.thumbnail-image {
+.image-container .thumbnail-image {
+  position: absolute;
   width: 100%;
-  height: auto;
-  border-radius: 10px;
-  height: 300px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-container:hover .thumbnail-image.first-image {
+  opacity: 0;
+  transform: scale(0.9); /* Thu nhỏ 5% */
+}
+.image-container:hover .thumbnail-image.second-image {
+  opacity: 1;
+  transform: scale(0.9); /* Thu nhỏ 5% */
 }
 
 .wishlist {
@@ -1276,7 +1327,7 @@ nav.sticky {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #fff;
+  background: #ffffff;
   border: 1px solid grey;
   color: grey;
   font-size: 10px;
@@ -1471,6 +1522,7 @@ a {
   color: #f7840b;
 }
 /* fhklqdaaaaaaaaaaaaawaaeilu */
+
 swiper-container {
   width: 300px;
   height: 318px;

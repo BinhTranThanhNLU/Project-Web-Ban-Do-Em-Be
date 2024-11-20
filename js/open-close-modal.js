@@ -99,6 +99,33 @@ function setupDropdown(buttonId, menuClass) {
     }
   });
 }
+// Lấy checkbox "Chọn tất cả" và tất cả các checkbox dòng
+const selectAllCheckbox = document.getElementById('select-all');
+const rowCheckboxes = document.querySelectorAll('.row-checkbox');
+
+if (selectAllCheckbox) {
+    selectAllCheckbox.addEventListener('click', () => {
+        rowCheckboxes.forEach((checkbox) => {
+            checkbox.checked = selectAllCheckbox.checked;
+        });
+    });
+}
+// Hàm cập nhật thời gian hiện tại
+function updateTime() {
+    const now = new Date();
+    const dayNames = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
+    const day = dayNames[now.getDay()];
+    const date = now.toLocaleDateString('vi-VN');
+    const time = now.toLocaleTimeString('vi-VN');
+    document.getElementById('current-time').innerText = `${day}, ${date} - ${time}`;
+}
+
+// Cập nhật thời gian mỗi giây
+setInterval(updateTime, 1000);
+
+// Gọi ngay khi trang tải
+updateTime();
+
 
 // Gọi hàm thiết lập dropdown cho từng phần
 setupDropdown("selectedCategory", "dropdown-content-danhmuc"); // Danh Mục

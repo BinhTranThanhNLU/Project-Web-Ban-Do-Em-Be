@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.header-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #212529;
+}
+
+.header-timestamp {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.container-manage-main {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+}
+
+.container-manage-main .action-buttons {
+    display: flex;
+    gap: 8px;
+    /* Khoảng cách giữa các nút */
+    margin: 20px 15px;
+
+}
+
+.container-manage-main .action-buttons .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+
+
+}
+
+.container-manage-main .action-buttons .btn i {
+    margin-right: 8px;
+    /* Khoảng cách giữa biểu tượng và chữ */
+}
+
+.container-manage-main .btn-add {
+    background-color: #7cf192;
+    /* Màu xanh lá nhạt */
+}
+
+.container-manage-main .btn-upload {
+    background-color: #fdfd96;
+    /* Màu vàng nhạt */
+    color: #444;
+}
+
+.container-manage-main .btn-print {
+    background-color: #a6bdf1;
+    /* Màu xanh dương nhạt */
+}
+
+.container-manage-main .btn-copy {
+    background-color: #afafee;
+    /* Màu tím nhạt */
+}
+
+.container-manage-main .btn-excel {
+    background-color: #98fb98;
+    /* Màu xanh lá cây */
+}
+
+.container-manage-main .btn-pdf {
+    background-color: #ff6961;
+    /* Màu đỏ nhạt */
+}
+
+.container-manage-main .btn-delete {
+    background-color: #d3d3d3;
+    /* Màu xám nhạt */
+    color: #444;
+}
+
+/* Hiệu ứng hover */
+.container-manage-main .action-buttons .btn:hover {
+    opacity: 0.8;
+}
+
+/* phần main  */
+
+.container-manage-main .table-container {
+    border-top: 1px solid #dddddd;
+
+}
+
+.table-header {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.table-header .search-bar {
+    
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    margin: 20px 0;
+    float: right;
+
+
+}
+
+.table-header .search-bar input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+}
+
+/* phần table */
+.container-manage-main .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    text-align: left;
+    background-color: #fff; /* Thêm màu nền trắng */
+    border-radius: 8px; /* Bo góc bảng */
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Thêm đổ bóng nhẹ */
+}
+
+.container-manage-main .table thead {
+    background-color: #f9f9f9;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.container-manage-main .table th,
+.container-manage-main .table td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+    text-align: center; /* Canh giữa nội dung */
+}
+
+.container-manage-main .table th {
+    font-weight: bold;
+    color: #333;
+}
+
+.container-manage-main .table tbody tr:nth-child(even) {
+    background-color: #f8f8f8; /* Màu nền cho hàng chẵn */
+}
+
+.container-manage-main .table tbody tr:hover {
+    background-color: #f1f1f1; /* Màu nền khi hover */
+}
+
+.container-manage-main .table td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+/* Nút chung */
+.container-manage-main .btn {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Nút Trash */
+.container-manage-main .btn-trash {
+    background-color: #ff4d4d;
+    color: #fff;
+}
+
+.container-manage-main .btn-trash:hover {
+    background-color: #e60000;
+}
+
+/* Nút Edit */
+.container-manage-main .btn-edit {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.container-manage-main .btn-edit:hover {
+    background-color: #e0a800;
+}
+
+
+
+
+
+
+
+/* Status Styling */
+.container-manage-main .status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px
+}
+
+

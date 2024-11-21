@@ -1,32 +1,26 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Contact Us</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../images/favicon.png"
-    />
-    <link rel="stylesheet" href="../css/contact.css" />
-    <link rel="stylesheet" href="../css/header-nav-footer.css" />
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Đăng Nhập </title>
+   <link rel="stylesheet" href="../css/dangnhap.css">
+   <link rel="stylesheet" href="../css/header-nav-footer.css">
+   <link rel="stylesheet" href="../css/index.css">
+   <link
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+   rel="stylesheet"
+ />
+ <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   </head>
-  <body>
+<body >
     <!-- HEADER -->
     <section class="section-header hidden-search-bar" id="hiddenSearchBar">
       <div class="header">
         <div class="logo-header">
-          <a href=""
-            ><img
-              alt="Company Logo"
-              height="50"
-              src="../images/logo.png"
-              width="100"
-          /></a>
+          <a href=""><img alt="Company Logo" height="50" src="../images/logo.png" width="100" /></a>
         </div>
         <div class="search-bar-header">
           <input placeholder="Bạn cần tìm gì?" type="text" />
@@ -36,9 +30,7 @@
           <div class="icon-header">
             <i class="fas fa-phone-alt"></i>
           </div>
-          <div class="text-header">
-            <a href="./view/contact.html">Liên hệ với chúng tôi</a>
-          </div>
+          <div class="text-header"><a href="./contact.html">Liên hệ với chúng tôi</a></div>
           <div class="icon-header">
             <i class="fas fa-file-alt"></i>
           </div>
@@ -56,7 +48,7 @@
             <div class="dropdown-menu">
               <!-- Thêm lớp cho Bé gái -->
               <div class="navheight">
-                <a href="./be-gai.html">Bé gái</a>
+                <a href="be-gai.html">Bé gái</a>
                 <!-- <ion-icon name="chevron-down-outline"></ion-icon> -->
               </div>
               <div class="dropdown dropdown-full">
@@ -149,7 +141,7 @@
                   <a href="#" class="menu-link">Mũ nón</a>
                   <a href="#" class="menu-link">Tất/vớ</a>
                   <a href="#" class="menu-link">Bình nước</a>
-                </div>
+                </div>                
                 <div class="column">
                   <h3>&nbsp;</h3>
                 </div>
@@ -165,9 +157,7 @@
                   <a class="menu-link" href="#">🍂BST Thu Đông 2024</a>
                   <a class="menu-link" href="#">🌼BST Vintage - Beaming Days</a>
                   <a class="menu-link" href="#">🏠BST Đồ Bộ Mặc Nhà</a>
-                  <a class="menu-link" href="#"
-                    >🎒Be Cool At School Collection🎒</a
-                  >
+                  <a class="menu-link" href="#">🎒Be Cool At School Collection🎒</a>
                 </div>
               </div>
             </div>
@@ -206,7 +196,7 @@
 
           <div class="icons">
             <!-- <input type="text" placeholder="Tìm kiếm sản phẩm"> -->
-            <i class="fas fa-search"></i>
+            <i class="fas fa-search"></i> 
             <!-- Biểu tượng người dùng với menu đăng nhập/đăng ký -->
             <div class="user-menu">
               <i class="fas fa-user"></i>
@@ -216,168 +206,199 @@
               </div>
             </div>
             <div class="cart" id="cart">
-              <a href="./gio-hang.html" class="cart-a"
-                ><i class="fas fa-shopping-cart"></i
-              ></a>
+              <a href="./gio-hang.html" class="cart-a"><i class="fas fa-shopping-cart"></i></a>
               <span class="badge">0</span>
             </div>
-            <div class="login-message-cart" id="loginMessageCart">
+            <!-- <div class="login-message-cart" id="loginMessageCart">
               Chưa có sản phẩm nào
-            </div>
+            </div> -->
           </div>
         </div>
       </nav>
     </section>
-    <!-- COntact -->
-    <div class="container">
-      <div class="left-section">
+    
+  
+
+   <div class="login-container">
+    
+      <div>
+         <div class="logo">
+            
+         </div>
+         <div class="register">
+            <div>Đăng nhập tài khoản</div>
+            <p>Đăng nhập để truy cập tất cả các tính năng của dịch vụ chúng tôi. Quản lý doanh nghiệp của bạn ở một nơi. Hoàn toàn miễn phí.</p>
+            <div class="social">
+               <a data-toggle="tooltip" title="Facebook" href=""><i class="fab fa-facebook-f"></i></a>
+               <a data-toggle="tooltip" title="Google" href=""><i class="fab fa-google"></i></a>
+               <a data-toggle="tooltip" title="Github" href=""><i class="fab fa-github"></i></a>
+            </div>
+         </div>
+      </div>
+
+      <div class="form-login">
+         <form action="" method="POST" class="form" id="form-2">
+            <h3 class="heading">Đăng Nhập</h3>      
+      
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control">
+              <span class="form-message"></span>
+            </div>
+      
+            <div class="form-group">
+              <label for="password" class="form-label">Mật khẩu</label>
+              <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+              <span class="form-message"></span>
+            </div>
+
+            <div class="form-group f-term">
+               <label for="agree" class="form-label">Quên mật khẩu? Nhấn vào <a href="">đây</a></label>               
+               <span class="form-message"></span>
+             </div>
+      
+            <div class="sign-up">
+               <div class="dangnhap">
+                <a href="./user.html" >Đăng nhập</a>
+               </div>
+               <div class="dangki">
+                <a href="dangki.html">Đăng kí tại đây</a>
+               </div>
+               
+            </div>
+            <div class="form-icon">
+              <p>Hoặc đăng nhập bằng </p>
+              <div class="button_icon "> 
+                <a href="#" class="login-button google-login"><i class="fab fa-google-plus-g"></i>Đăng nhập Google</a>
+                <a href="#" class="login-button facebook-login"><i class="fab fa-facebook-f"></i></i>Đăng nhập Facebook</a>
+              </div>
+            </div>
+
+
+          </form>
+
+      </div>
+     
+   </div>
+   <section class="section-footer">
+    <div class="footer">
+      <div class="footer-column">
         <img
-          alt="Three children wearing cartoon-themed clothes, with promotional text 'Freeship 15k' and 'Voucher 50k' in colorful speech bubbles"
-          height="400"
-          src="../images/imgcontact.png"
-          width="600"
+          alt="Little Whale Logo"
+          height="50"
+          src="../images/logo.png"
+          width="100"
         />
+        <p>
+          Rabity là thương hiệu thời trang trẻ em hàng đầu Việt Nam với hơn 60
+          showroom trên toàn quốc, mang đến cho bé những bộ quần áo thoải mái
+          cho bé "tự do khám phá" thế giới và trải nghiệm niềm vui mỗi ngày.
+        </p>
+        <h3>ĐĂNG KÝ NHẬN TIN</h3>
+        <div class="subscribe">
+          <input placeholder="Nhập địa chỉ email" type="email" />
+          <button>Đăng ký</button>
+        </div>
+        <div class="social-icons">
+          <a href="#">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
       </div>
-      <div class="right-section">
-        <h2>Liên Hệ Với Chúng Tôi</h2>
-        <div class="form-group">
-          <label for="name"> Tên </label>
-          <input id="name" placeholder="Nhập vào tên của bạn" type="text" />
-        </div>
-        <div class="form-group">
-          <label for="email"> Email </label>
-          <input
-            id="email"
-            placeholder="Nhập vào địa chỉ Email của bạn"
-            type="email"
-          />
-        </div>
-        <div class="form-group">
-          <label for="message"> Tin Nhắn </label>
-          <textarea
-            id="message"
-            placeholder="Nhập Vào Tin Nhắn Của Bạn"
-            rows="5"
-          ></textarea>
-        </div>
-        <div class="form-group-flex">
-          <input id="terms" type="checkbox" />
-          <label for="terms">
-            I accept the <span class="terms"> Terms of Service </span>
-          </label>
-        </div>
 
-        <button class="submit-btn">SUBMIT</button>
+      <div class="footer-column">
+        <h3>VỀ RABITY</h3>
+        <a href="#">Giới thiệu về Rabity</a>
+        <br />
+        <a href="#">Tin tức Rabity</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+        <a href="./tracuudonhang.html">Tra cứu đơn hàng</a>
+        <br />
+        <a href="./chinhsachdoitra.html">Chính sách đổi trả hàng Online</a>
+        <br />
+        <a href="./chinhsachkhachangthanthiet.html">Chính sách Khách hàng thân thiết</a>
+        <br />
+        <a href="./giaohang-phigiaohang.html">Giao hàng &amp; phí giao hàng</a>
+        <br />
+        <a href="#">Hướng dẫn chọn size</a>
+        <br />
+        <a href="#">Chính sách bảo mật thông tin</a>
+        <br />
+        <a href="#">Chính sách đại lý</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>CÔNG TY TNHH Little Whale</h3>
+        <p>Địa chỉ:</p>
+        <p>
+          Văn phòng phía Bắc: VQCR+GP6, khu phố 6, Thủ Đức, Hồ Chí Minh
+        </p>
+        <p>
+          Văn phòng phía Nam: Số 33 đường 12A Khu Đô Thị Lake View City, Bình
+          Trưng Đông, Quận 2, TP HCM
+        </p>
+        <p>Điện thoại: 1900633520</p>
+        <p>Email: cskh@littleWhale</p>
       </div>
     </div>
-    <div class="info-section">
-      <div class="info-box">
-        <div class="icons-h3">
-          <i class="fas fa-phone-alt"> </i>
-          <h3>Gọi cho chúng tôi</h3>
-        </div>
-        <p>
-          0969 969 969
-          <br />
-          0969 969 968
-        </p>
-      </div>
-      <div class="info-box">
-        <div class="icons-h3">
-          <i class="fas fa-map-marker-alt"> </i>
-          <h3>Địa Chỉ</h3>
-        </div>
-        <p>
-          Linh Trung Thủ Đức <br />
-          TP.Hồ Chí Minh
-        </p>
-      </div>
-      <div class="info-box">
-        <div class="icons-h3">
-          <i class="fas fa-clock"> </i>
-          <h3>Thời Gian Mở Cửa</h3>
-        </div>
-        <p>
-          Thứ Hai Thứ Sáu ...7h30 – 20h, <br />
-          Thứ 7 - Chủ Nhật ...8h – 20h
-        </p>
-      </div>
-    </div>
-    <!-- ====================================footer=============================== -->
-    <section class="section-footer">
-      <div class="footer">
-        <div class="footer-column">
-          <img
-            alt="Little Whale Logo"
-            height="50"
-            src="../images/logo.png"
-            width="100"
-          />
-          <p>
-            Little Whale là thương hiệu thời trang trẻ em hàng đầu Việt Nam với
-            hơn 60 showroom trên toàn quốc, mang đến cho bé những bộ quần áo
-            thoải mái cho bé "tự do khám phá" thế giới và trải nghiệm niềm vui
-            mỗi ngày.
-          </p>
-          <h3>ĐĂNG KÝ NHẬN TIN</h3>
-          <div class="subscribe">
-            <input placeholder="Nhập địa chỉ email" type="email" />
-            <button>Đăng ký</button>
-          </div>
-          <div class="social-icons">
-            <a href="#">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-tiktok"></i>
-            </a>
-          </div>
-        </div>
+  </section>
 
-        <div class="footer-column">
-          <h3>VỀ Little Whale</h3>
-          <a href="#">Giới thiệu về Little Whale</a>
-          <br />
-          <a href="#">Tin tức Little Whale</a>
-          <br />
-          <a href="./contact.html">Liên hệ với chúng tôi</a>
-        </div>
 
-        <div class="footer-column">
-          <h3>HỖ TRỢ KHÁCH HÀNG</h3>
-          <a href="./tracuudonhang.html">Tra cứu đơn hàng</a>
-          <br />
-          <a href="./chinhsachdoitra.html">Chính sách đổi trả hàng Online</a>
-          <br />
-          <a href="./chinhsachkhachangthanthiet.html"
-            >Chính sách Khách hàng thân thiết</a
-          >
-          <br />
-          <a href="./giaohang-phigiaohang.html"
-            >Giao hàng &amp; phí giao hàng</a
-          >
-          <br />
-          <a href="">Hướng dẫn chọn size</a>
-          <br />
-          <a href="">Chính sách bảo mật thông tin</a>
-          <br />
-          <a href="">Chính sách đại lý</a>
-        </div>
+   <!-- <script src="validate.js"></script>
 
-        <div class="footer-column">
-          <h3>CÔNG TY TNHH Little Whale</h3>
-          <p>Địa chỉ:</p>
-          <p>khu phố 6, Thủ Đức, Hồ Chí Minh</p>
-          <p>
-            Văn phòng phía Nam: Số 33 đường 12A Khu Đô Thị Lake View City, Bình
-            Trưng Đông, Quận 2, TP HCM
-          </p>
-          <p>Điện thoại: 0969 969 969</p>
-          <p>Email: cskh@littleWhale</p>
-        </div>
-      </div>
-    </section>
-    <script src="../js/contacts.js"></script>
-    <script src="../js/scriptnav.js"></script>
-  </body>
+   <script>
+      // Select all elements with data-toggle="tooltips" in the document
+      $('[data-toggle="tooltip"]').tooltip();
+
+      // Select a specified element
+      // $('#myTooltip').tooltip();
+    
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Mong muốn của chúng ta
+      Validator({
+        form: '#form-1',
+        formGroupSelector: '.form-group',
+        errorSelector: '.form-message',
+        rules: [
+          Validator.isRequired('#fullname', 'Vui lòng nhập tên đầy đủ của bạn'),
+          Validator.isEmail('#email'),
+          Validator.minLength('#password', 6),
+          Validator.isRequired('#password_confirmation'),
+          Validator.isConfirmed('#password_confirmation', function () {
+            return document.querySelector('#form-1 #password').value;
+          }, 'Mật khẩu nhập lại không chính xác')
+        ],
+        onSubmit: function (data) {
+          // Call API
+          console.log(data);
+        }
+      });
+
+
+      Validator({
+        form: '#form-2',
+        formGroupSelector: '.form-group',
+        errorSelector: '.form-message',
+        rules: [
+          Validator.isEmail('#email'),
+          Validator.minLength('#password', 6),
+        ],
+        onSubmit: function (data) {
+          // Call API
+          console.log(data);
+        }
+      });
+    });
+
+  </script> -->
+  
+</body>
+<script src="../js/scriptnav.js"></script>
 </html>

@@ -15,6 +15,7 @@ body {
   display: flex;
   margin-top: 100px;
   margin-bottom: 40px;
+  margin-top: 150px;
 }
 .sidebar {
   width: 250px;

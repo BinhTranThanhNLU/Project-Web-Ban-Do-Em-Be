@@ -10,9 +10,16 @@
     />
     <link rel="stylesheet" href="../css/ho-tro-khach-hang.css" />
     <link rel="stylesheet" href="../css/header-nav-footer.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon.png"
+    />
   </head>
   <body>
-    <section class="section-header">
+    <!-- HEADER -->
+    <section class="section-header hidden-search-bar" id="hiddenSearchBar">
       <div class="header">
         <div class="logo-header">
           <a href=""
@@ -21,20 +28,21 @@
               height="50"
               src="../images/logo.png"
               width="100"
-            />
-          </a>
+          /></a>
         </div>
         <div class="search-bar-header">
           <input placeholder="Bạn cần tìm gì?" type="text" />
-          <i class="fas fa-search"> </i>
+          <i class="fas fa-search"></i>
         </div>
         <div class="contact-info-header">
           <div class="icon-header">
-            <i class="fas fa-phone-alt"> </i>
+            <i class="fas fa-phone-alt"></i>
           </div>
-          <div class="text-header">1900633520</div>
+          <div class="text-header">
+            <a href="./contact.html">Liên hệ với chúng tôi</a>
+          </div>
           <div class="icon-header">
-            <i class="fas fa-file-alt"> </i>
+            <i class="fas fa-file-alt"></i>
           </div>
           <div class="text-header">Kiểm tra đơn hàng</div>
         </div>
@@ -50,55 +58,55 @@
             <div class="dropdown-menu">
               <!-- Thêm lớp cho Bé gái -->
               <div class="navheight">
-                <a href="../view/be-gai.html">Bé gái</a>
+                <a href="./be-gai.html">Bé gái</a>
                 <!-- <ion-icon name="chevron-down-outline"></ion-icon> -->
               </div>
               <div class="dropdown dropdown-full">
                 <!-- Dropdown cho Bé gái -->
                 <div class="column">
                   <h3>ĐẦM VÁY</h3>
-                  <a href="#">Tất cả Đầm váy</a>
-                  <a href="#">Đầm ngắn tay</a>
-                  <a href="#">Đầm dài tay</a>
-                  <a href="#">Đầm hai dây</a>
-                  <a href="#">Đầm sát nách</a>
-                  <a href="#">Đầm Váy Elsa/Anna</a>
-                  <a href="#">Đầm công chúa</a>
-                  <a href="#">Chân váy</a>
-                  <a href="#">Yếm bé gái</a>
+                  <a href="#" class="menu-link">Tất cả Đầm váy</a>
+                  <a href="#" class="menu-link">Đầm ngắn tay</a>
+                  <a href="#" class="menu-link">Đầm dài tay</a>
+                  <a href="#" class="menu-link">Đầm hai dây</a>
+                  <a href="#" class="menu-link">Đầm sát nách</a>
+                  <a href="#" class="menu-link">Đầm Váy Elsa/Anna</a>
+                  <a href="#" class="menu-link">Đầm công chúa</a>
+                  <a href="#" class="menu-link">Chân váy</a>
+                  <a href="#" class="menu-link">Yếm bé gái</a>
                 </div>
                 <div class="column">
                   <h3>ÁO</h3>
-                  <a href="#">Tất cả Áo</a>
-                  <a href="#">Áo thun</a>
-                  <a href="#">Áo dài tay</a>
-                  <a href="#">Áo khoác</a>
-                  <a href="#">Áo nỉ</a>
-                  <a href="#">Áo gile</a>
+                  <a href="#" class="menu-link">Tất cả Áo</a>
+                  <a href="#" class="menu-link">Áo thun</a>
+                  <a href="#" class="menu-link">Áo dài tay</a>
+                  <a href="#" class="menu-link">Áo khoác</a>
+                  <a href="#" class="menu-link">Áo nỉ</a>
+                  <a href="#" class="menu-link">Áo gile</a>
                 </div>
                 <div class="column">
                   <h3>QUẦN</h3>
-                  <a href="#">Tất cả quần</a>
-                  <a href="#">Quần short</a>
-                  <a href="#">Quần dài</a>
+                  <a href="#" class="menu-link">Tất cả quần</a>
+                  <a href="#" class="menu-link">Quần short</a>
+                  <a href="#" class="menu-link">Quần dài</a>
                 </div>
                 <div class="column">
                   <h3>ĐỒ BỘ</h3>
-                  <a href="#">Tất cả đồ bộ</a>
-                  <a href="#">Bộ ngắn tay</a>
-                  <a href="#">Bộ dài tay</a>
-                  <a href="#">Bộ Easy Wear</a>
+                  <a href="#" class="menu-link">Tất cả đồ bộ</a>
+                  <a href="#" class="menu-link">Bộ ngắn tay</a>
+                  <a href="#" class="menu-link">Bộ dài tay</a>
+                  <a href="#" class="menu-link">Bộ Easy Wear</a>
                 </div>
                 <div class="column">
                   <h3>PHỤ KIỆN</h3>
-                  <a href="#">Đồ Lót</a>
-                  <a href="#">Balo/túi xách</a>
-                  <a href="#">Phụ kiện tóc</a>
-                  <a href="#">Giày dép</a>
-                  <a href="#">Gấu bông</a>
-                  <a href="#">Mũ nón</a>
-                  <a href="#">Tất/vớ</a>
-                  <a href="#">Bình nước</a>
+                  <a href="#" class="menu-link">Đồ Lót</a>
+                  <a href="#" class="menu-link">Balo/túi xách</a>
+                  <a href="#" class="menu-link">Phụ kiện tóc</a>
+                  <a href="#" class="menu-link">Giày dép</a>
+                  <a href="#" class="menu-link">Gấu bông</a>
+                  <a href="#" class="menu-link">Mũ nón</a>
+                  <a href="#" class="menu-link">Tất/vớ</a>
+                  <a href="#" class="menu-link">Bình nước</a>
                 </div>
               </div>
             </div>
@@ -112,37 +120,37 @@
                 <!-- Dropdown cho Bé gái -->
                 <div class="column">
                   <h3>Áo</h3>
-                  <a href="#">Tất cả áo</a>
-                  <a href="#">Áo thun ngắn tay</a>
-                  <a href="#">Áo dài tay</a>
-                  <a href="#">Áo sơ mi</a>
-                  <a href="#">Áo khoác</a>
-                  <a href="#">Áo nỉ</a>
-                  <a href="#">Áo gile</a>
+                  <a href="#" class="menu-link">Tất cả áo</a>
+                  <a href="#" class="menu-link">Áo thun ngắn tay</a>
+                  <a href="#" class="menu-link">Áo dài tay</a>
+                  <a href="#" class="menu-link">Áo sơ mi</a>
+                  <a href="#" class="menu-link">Áo khoác</a>
+                  <a href="#" class="menu-link">Áo nỉ</a>
+                  <a href="#" class="menu-link">Áo gile</a>
                 </div>
                 <div class="column">
                   <h3>QUẦN</h3>
-                  <a href="#">Tất cả quần</a>
-                  <a href="#">Quần short</a>
-                  <a href="#">Quần dài</a>
-                  <a href="#">Quần yếm</a>
+                  <a href="#" class="menu-link">Tất cả quần</a>
+                  <a href="#" class="menu-link">Quần short</a>
+                  <a href="#" class="menu-link">Quần dài</a>
+                  <a href="#" class="menu-link">Quần yếm</a>
                 </div>
                 <div class="column">
                   <h3>ĐỒ BỘ</h3>
-                  <a href="#">Tất cả đồ bộ</a>
-                  <a href="#">Bộ ngắn tay</a>
-                  <a href="#">Bộ dài tay</a>
-                  <a href="#">Bộ sát nách</a>
-                  <a href="#">Bộ Easy Wear</a>
+                  <a href="#" class="menu-link">Tất cả đồ bộ</a>
+                  <a href="#" class="menu-link">Bộ ngắn tay</a>
+                  <a href="#" class="menu-link">Bộ dài tay</a>
+                  <a href="#" class="menu-link">Bộ sát nách</a>
+                  <a href="#" class="menu-link">Bộ Easy Wear</a>
                 </div>
                 <div class="column">
                   <h3>PHỤ KIỆN</h3>
-                  <a href="#">Đồ Lót</a>
-                  <a href="#">Giày dép</a>
-                  <a href="#">Balo</a>
-                  <a href="#">Mũ nón</a>
-                  <a href="#">Tất/vớ</a>
-                  <a href="#">Bình nước</a>
+                  <a href="#" class="menu-link">Đồ Lót</a>
+                  <a href="#" class="menu-link">Giày dép</a>
+                  <a href="#" class="menu-link">Balo</a>
+                  <a href="#" class="menu-link">Mũ nón</a>
+                  <a href="#" class="menu-link">Tất/vớ</a>
+                  <a href="#" class="menu-link">Bình nước</a>
                 </div>
                 <div class="column">
                   <h3>&nbsp;</h3>
@@ -155,11 +163,13 @@
                 <!-- Dropdown cho Bé gái -->
                 <div class="column">
                   <!-- <h3>Áo</h3> -->
-                  <a href="#">✨BST Disney - Friends</a>
-                  <a href="#">🍂BST Thu Đông 2024</a>
-                  <a href="#">🌼BST Vintage - Beaming Days</a>
-                  <a href="#">🏠BST Đồ Bộ Mặc Nhà</a>
-                  <a href="#">🎒Be Cool At School Collection🎒</a>
+                  <a class="menu-link" href="#">✨BST Disney - Friends</a>
+                  <a class="menu-link" href="#">🍂BST Thu Đông 2024</a>
+                  <a class="menu-link" href="#">🌼BST Vintage - Beaming Days</a>
+                  <a class="menu-link" href="#">🏠BST Đồ Bộ Mặc Nhà</a>
+                  <a class="menu-link" href="#"
+                    >🎒Be Cool At School Collection🎒</a
+                  >
                 </div>
               </div>
             </div>
@@ -167,8 +177,8 @@
             <div class="dropdown-menu">
               <div class="navheight"><a href="#">Sale sốc</a></div>
               <!-- <div class="dropdown-2">
-              <div class="column"></div>
-            </div> -->
+                <div class="column"></div>
+              </div> -->
             </div>
             <div class="dropdown-menu">
               <div class="navheight"><a href="#">New Arrival</a></div>
@@ -176,9 +186,9 @@
                 <!-- Dropdown cho Sale -->
                 <div class="column">
                   <!-- <h3>Áo</h3> -->
-                  <a href="#">New Arrival Bé gái</a>
-                  <a href="#"> New Arrival Bé trai</a>
-                  <a href="#">BEST SELLER</a>
+                  <a class="menu-link" href="#">New Arrival Bé gái</a>
+                  <a class="menu-link" href="#"> New Arrival Bé trai</a>
+                  <a class="menu-link" href="#">BEST SELLER</a>
                 </div>
               </div>
             </div>
@@ -188,9 +198,9 @@
                 <!-- Dropdown cho Sale -->
                 <div class="column">
                   <!-- <h3>Áo</h3> -->
-                  <a href="#">Tin tức Little Whale</a>
-                  <a href="#">Khuyến mãi</a>
-                  <a href="#">Tin mẹ & bé</a>
+                  <a class="menu-link" href="#">Tin tức Little Whale</a>
+                  <a class="menu-link" href="#">Khuyến mãi</a>
+                  <a class="menu-link" href="#">Tin mẹ & bé</a>
                 </div>
               </div>
             </div>
@@ -199,23 +209,23 @@
           <div class="icons">
             <!-- <input type="text" placeholder="Tìm kiếm sản phẩm"> -->
             <i class="fas fa-search"></i>
-
             <!-- Biểu tượng người dùng với menu đăng nhập/đăng ký -->
             <div class="user-menu">
               <i class="fas fa-user"></i>
               <div class="dropdown">
-                <a href="./dangnhap.html">Đăng nhập</a>
-                <a href="./dangki.html">Đăng ký</a>
+                <a class="menu-link" href="./dangnhap.html">Đăng nhập</a>
+                <a class="menu-link" href="./dangki.html">Đăng ký</a>
               </div>
             </div>
-
             <div class="cart" id="cart">
-              <i class="fas fa-shopping-cart"></i>
+              <a href="./gio-hang.html" class="cart-a"
+                ><i class="fas fa-shopping-cart"></i
+              ></a>
               <span class="badge">0</span>
             </div>
-            <div class="login-message-cart" id="loginMessageCart">
+            <!-- <div class="login-message-cart" id="loginMessageCart">
               Chưa có sản phẩm nào
-            </div>
+            </div> -->
           </div>
         </div>
       </nav>

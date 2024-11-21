@@ -14,7 +14,6 @@
 #ff7f50
 */
 /* ==========================header================================ */
-/* Ẩn phần thanh tìm kiếm ẩn */
 .hidden-search-bar {
   /* display: none; */
   position: fixed;
@@ -513,6 +512,7 @@ nav.sticky {
   font-size: 20px;
   margin: 0 15px;
   position: relative; /* Để tạo vị trí cho phần tử giả */
+  cursor: pointer;
 }
 .category-header a.active::after {
   content: ""; /* Tạo phần tử giả */
@@ -535,12 +535,26 @@ nav.sticky {
   text-align: center;
   margin: 10px;
 }
+.category-item a {
+  text-align: center;
+  margin: 10px;
+  cursor: pointer;
+}
 .category-item p:hover {
   color: #f7840b;
 }
 .category-item-boy {
   text-align: center;
   margin: 10px;
+  cursor: pointer;
+}
+.category-item-boy a {
+  text-align: center;
+  margin: 10px;
+  cursor: pointer;
+}
+.category-item-boy p:hover {
+  color: #f7840b;
 }
 .category-item img {
   border-radius: 50%;
@@ -708,7 +722,9 @@ nav.sticky {
   text-overflow: ellipsis; /* Hiển thị dấu "..." nếu văn bản quá dài */
   max-width: 100%; /* Đặt chiều rộng tối đa để kích hoạt hiệu ứng "..." */
 }
-
+.card-title {
+  cursor: pointer;
+}
 .card-list .card-link .card-title:hover {
   color: #f7840b; /* Đổi sang màu cam khi hover */
 }
@@ -744,6 +760,27 @@ nav.sticky {
   color: #fff;
   background: #c1d8c3;
 }
+.discount-wrap {
+  position: absolute; /* Đặt phần tử này chồng lên ảnh */
+  top: 20px; /* Cách phía trên của ảnh 10px */
+  left: 15px; /* Cách phía trái của ảnh 10px */
+  width: 30px;
+  height: 30px;
+  background: #fa3535;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.discount {
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  z-index: 100;
+}
+
 .card-wapper .swiper-pagination-bullet {
   height: 13px;
   width: 13px;
@@ -1035,8 +1072,10 @@ nav.sticky {
   justify-items: center;
   text-align: center;
 }
+
 .tab {
   padding-bottom: 5px;
+  cursor: pointer;
 }
 .nav-boy-fashion p.active {
   color: #f7840b;
@@ -1077,72 +1116,7 @@ nav.sticky {
 .load-more button:hover {
   color: #f7840b;
 }
-/* ================================footer========================== */
 
-.section-footer {
-  margin-left: 5%;
-  margin-right: 5%;
-}
-.footer {
-  background-color: #fff;
-  padding: 40px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  border-top: 1px solid #eaeaea;
-}
-.footer-column {
-  flex: 1;
-  margin: 0 20px;
-}
-.footer-column h3 {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-.footer-column p,
-.footer-column a {
-  font-size: 14px;
-  color: #333;
-  text-decoration: none;
-  line-height: 1.6;
-}
-.footer-column a:hover {
-  /* text-decoration: underline; */
-  color: #f7840b;
-}
-.footer-column .subscribe {
-  display: flex;
-  margin-top: 20px;
-}
-.footer-column .subscribe input[type="email"] {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px 0 0 4px;
-  flex: 1;
-}
-.footer-column .subscribe button {
-  padding: 10px 20px;
-  border: none;
-  background-color: #333;
-  color: #fff;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-  height: 40px;
-  width: 100px;
-}
-.footer-column .social-icons {
-  margin-top: 20px;
-}
-.footer-column .social-icons a {
-  margin-right: 10px;
-  color: #333;
-  font-size: 20px;
-}
-.footer-column .payment-icons img {
-  margin-right: 10px;
-  height: 100px;
-  width: 50px;
-}
 /* =============================== card===========================*/
 .container-products {
   width: 100%;
@@ -1247,6 +1221,7 @@ nav.sticky {
   width: 75%;
   margin-bottom: 20px;
   display: block;
+  /* cursor: pointer; */
 }
 .dress-name:hover {
   color: #f7840b; /* Màu khi hover */
@@ -1547,7 +1522,72 @@ swiper-slide img {
 .swiper-v {
   background: #eee;
 }
+/* ================================footer========================== */
 
+.section-footer {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.footer {
+  background-color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid #eaeaea;
+}
+.footer-column {
+  flex: 1;
+  margin: 0 20px;
+}
+.footer-column h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.footer-column p,
+.footer-column a {
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  line-height: 1.6;
+}
+.footer-column a:hover {
+  /* text-decoration: underline; */
+  color: #f7840b;
+}
+.footer-column .subscribe {
+  display: flex;
+  margin-top: 20px;
+}
+.footer-column .subscribe input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  flex: 1;
+}
+.footer-column .subscribe button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  height: 40px;
+  width: 100px;
+}
+.footer-column .social-icons {
+  margin-top: 20px;
+}
+.footer-column .social-icons a {
+  margin-right: 10px;
+  color: #333;
+  font-size: 20px;
+}
+.footer-column .payment-icons img {
+  margin-right: 10px;
+  height: 100px;
+  width: 50px;
+}
 /* Bang Mau
 ##f7840b
 #FFF5E4

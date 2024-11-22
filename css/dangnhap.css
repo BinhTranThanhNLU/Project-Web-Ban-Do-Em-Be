@@ -29,7 +29,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding-left: 100px;
-  color: #fff5e4;
+  color: #fff;
   font-weight: 300;
   margin-left: 10%;
   margin-top: 150px;
@@ -67,7 +67,7 @@ body {
 }
 
 .register .social i {
-  color: #fff5e4;
+  color: #fff;
   font-size: 15px;
 }
 
@@ -118,7 +118,7 @@ body {
   border: none;
   border-bottom: 1px solid rgba(159, 171, 175, 0.534);
   margin-top: 10px;
-  color: #fff5e4;
+  color: #fff;
   font-size: 17px;
 }
 
@@ -185,7 +185,7 @@ body {
   padding: 13px 10px;
   margin-left: 30px;
   text-decoration: none;
-  color: #fff5e4;
+  color: #fff;
   border-radius: 5px;
   font-size: 13px;
   font-weight: bold;

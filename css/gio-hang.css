@@ -90,12 +90,12 @@ body {
   display: block;
   width: 20px;
   height: 20px;
-  border: 1px solid #dddddd;
+  border: 1px solid #fff;
   cursor: pointer;
 }
 .cart-container-left table td {
   padding: 20px 0;
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid #fff;
 }
 .cart-container-left td:first-child img {
   width: 130px;
@@ -109,7 +109,7 @@ body {
 .cart-container-right {
   flex: 1;
   padding-left: 12px;
-  border-left: 2px solid #dddddd;
+  border-left: 2px solid #fff;
 }
 .cart-container-right table {
   width: 100%;
@@ -119,7 +119,7 @@ body {
 .cart-container-right table th {
   padding-bottom: 25px;
   border-collapse: collapse;
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid #fff;
 }
 .cart-container-right table td {
   border-collapse: collapse;
@@ -127,7 +127,7 @@ body {
   padding: 6px 0;
 }
 .cart-container-right tr:nth-child(4) td {
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid #fff;
 }
 .cart-container-right tr td:last-child {
   text-align: right;
@@ -147,22 +147,17 @@ body {
   padding: 0 10px;
   height: 35px;
   cursor: pointer;
+  border-radius: 5px;
 }
-.cart-container-right-buttom button:first-child {
-  background-color: #fff;
-  border: 1px solid black;
-  margin-right: 20px;
-}
-.cart-container-right-buttom button:first-child:hover {
-  background-color: #ddd;
-}
-.cart-container-right-buttom button:last-child {
-  background-color: black;
+
+
+.cart-container-right-buttom button {
+  background-color: #f7840b;
   border: none;
-  border: 1px solid black;
   color: #fff;
+
 }
-.cart-container-right-buttom button:last-child:hover {
-  background-color: #dddddd;
-  color: black;
+.cart-container-right-buttom button:hover {
+  opacity: 0.7;
+
 }

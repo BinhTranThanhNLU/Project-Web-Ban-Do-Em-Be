@@ -12,7 +12,7 @@ body {
     background-color: #f7f9fc;
 }
 
-.header-bar {
+.container-manage-bar .header-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,18 +23,23 @@ body {
     margin-bottom: 20px;
 }
 
-.header-title {
+.container-manage-bar .header-title {
     font-size: 1.2rem;
     font-weight: bold;
     color: #212529;
 }
 
-.header-timestamp {
-    font-size: 1rem;
+.container-manage-bar .header-timestamp {
+    font-size: 16px;
     color: #6c757d;
 }
+.container-manage-bar .header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
 
-.container-manage-main {
+.container-manage-bar .container-manage-main {
     background-color: #fff;
     border: 1px solid #e5e5e5;
     border-radius: 5px;
@@ -42,75 +47,32 @@ body {
 
 .container-manage-main .action-buttons {
     display: flex;
-    gap: 8px;
-    /* Khoảng cách giữa các nút */
-    margin: 20px 15px;
+    gap: 10px;
+    margin: 20px 0;
 
+}
+.container-manage-main .action-buttons a{
+    text-decoration: none;
 }
 
 .container-manage-main .action-buttons .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    color: black;
+    border-radius: 4px;
     cursor: pointer;
-    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
 
 
 }
 
-.container-manage-main .action-buttons .btn i {
-    margin-right: 8px;
-    /* Khoảng cách giữa biểu tượng và chữ */
-}
-
-.container-manage-main .btn-add {
-    background-color: #7cf192;
-    /* Màu xanh lá nhạt */
-}
-
-.container-manage-main .btn-upload {
-    background-color: #fdfd96;
-    /* Màu vàng nhạt */
-    color: #444;
-}
-
-.container-manage-main .btn-print {
-    background-color: #a6bdf1;
-    /* Màu xanh dương nhạt */
-}
-
-.container-manage-main .btn-copy {
-    background-color: #afafee;
-    /* Màu tím nhạt */
-}
-
-.container-manage-main .btn-excel {
-    background-color: #98fb98;
-    /* Màu xanh lá cây */
-}
-
-.container-manage-main .btn-pdf {
-    background-color: #ff6961;
-    /* Màu đỏ nhạt */
-}
-
-.container-manage-main .btn-delete {
-    background-color: #d3d3d3;
-    /* Màu xám nhạt */
-    color: #444;
-}
-
-/* Hiệu ứng hover */
-.container-manage-main .action-buttons .btn:hover {
-    opacity: 0.8;
-}
-
+.btn-add { background-color: #4CAF50; }
+.btn-upload { background-color: #2196F3; }
+.btn-print { background-color: #FF9800; }
+.btn-copy { background-color: #9C27B0; }
+.btn-excel { background-color: #28a745; }
+.btn-pdf { background-color: #f44336; }
+.btn-delete { background-color: #555; }
 /* phần main  */
 
 .container-manage-main .table-container {
@@ -126,24 +88,28 @@ body {
 
 .table-header .search-bar {
     
-    display: inline-block;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 5px;
-    margin: 20px 0;
-    float: right;
-
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
 
 }
-
-.table-header .search-bar input {
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 200px;
+.table-header .search-bar input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    width: 630px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.btn-search {
+    background-color: #d42047;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-search:hover {
+    background-color: #94054d;
 }
 
 /* phần table */
@@ -160,7 +126,7 @@ body {
 }
 
 .container-manage-main .table thead {
-    background-color: #f9f9f9;
+    background-color: #333;
     border-bottom: 2px solid #e5e5e5;
 }
 
@@ -174,7 +140,7 @@ body {
 
 .container-manage-main .table th {
     font-weight: bold;
-    color: #333;
+    color: #fff;
 }
 
 .container-manage-main .table tbody tr:nth-child(even) {
@@ -198,7 +164,7 @@ body {
     border: none;
     padding: 8px 12px;
     border-radius: 5px;
-    font-size: 0.9rem;
+    font-size: 16px;
     cursor: pointer;
     text-align: center;
     margin: 5px;
@@ -207,22 +173,24 @@ body {
 
 /* Nút Trash */
 .container-manage-main .btn-trash {
-    background-color: #ff4d4d;
+    background-color: #e74c3c;
     color: #fff;
+    font-size: 13px;
 }
 
 .container-manage-main .btn-trash:hover {
-    background-color: #e60000;
+    background-color: #c0392b;
 }
 
 /* Nút Edit */
 .container-manage-main .btn-edit {
-    background-color: #ffc107;
+    background-color: #2980b9;
     color: #fff;
+    font-size: 13px;
 }
 
 .container-manage-main .btn-edit:hover {
-    background-color: #e0a800;
+    background-color: #2980b9;
 }
 
 

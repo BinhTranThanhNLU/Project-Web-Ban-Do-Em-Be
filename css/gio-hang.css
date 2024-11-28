@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+
 body {
   line-height: 1;
   width: 100%;
@@ -90,12 +91,12 @@ body {
   display: block;
   width: 20px;
   height: 20px;
-  border: 1px solid #dddddd;
+  border: 1px solid #fff;
   cursor: pointer;
 }
 .cart-container-left table td {
   padding: 20px 0;
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid #fff;
 }
 .cart-container-left td:first-child img {
   width: 130px;
@@ -109,7 +110,7 @@ body {
 .cart-container-right {
   flex: 1;
   padding-left: 12px;
-  border-left: 2px solid #dddddd;
+  border-left: 2px solid #fff;
 }
 .cart-container-right table {
   width: 100%;
@@ -119,7 +120,7 @@ body {
 .cart-container-right table th {
   padding-bottom: 25px;
   border-collapse: collapse;
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid #fff;
 }
 .cart-container-right table td {
   border-collapse: collapse;
@@ -127,7 +128,7 @@ body {
   padding: 6px 0;
 }
 .cart-container-right tr:nth-child(4) td {
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid #fff;
 }
 .cart-container-right tr td:last-child {
   text-align: right;
@@ -139,30 +140,42 @@ body {
 .cart-container-right-text p {
   font-size: 13px;
 }
-.cart-container-right-buttom {
+
+.cart-container-right-button {
   text-align: center;
   align-items: center;
+  margin-top: 20px; /* Thêm khoảng cách trên nếu cần */
 }
-.cart-container-right-buttom button {
-  padding: 0 10px;
-  height: 35px;
+
+.cart-container-right-button .btn-payment {
+  padding: 10px 20px;
+  height: 45px; /* Tăng chiều cao để nút dễ nhấn hơn */
   cursor: pointer;
+  border-radius: 8px; /* Đường viền mềm mại hơn */
+  font-size: 16px; /* Cỡ chữ phù hợp */
+  font-weight: 600; /* Đậm chữ cho dễ nhìn */
+  text-align: center;
+  display: inline-block;
+  width: 100%; /* Chiếm hết chiều rộng của thẻ cha (nếu muốn nút lớn) */
+  max-width: 200px; /* Tối đa chiều rộng của nút */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ nhẹ */
+  transition: all 0.3s ease-in-out; /* Mượt mà khi hover */
 }
-.cart-container-right-buttom button:first-child {
-  background-color: #fff;
-  border: 1px solid black;
-  margin-right: 20px;
-}
-.cart-container-right-buttom button:first-child:hover {
-  background-color: #ddd;
-}
-.cart-container-right-buttom button:last-child {
-  background-color: black;
+
+.cart-container-right-button .btn-payment {
+  background-color: #f7840b; /* Màu cam nổi bật */
   border: none;
-  border: 1px solid black;
   color: #fff;
+  text-decoration: none; /* Bỏ gạch dưới */
 }
-.cart-container-right-buttom button:last-child:hover {
-  background-color: #dddddd;
-  color: black;
+
+.cart-container-right-button .btn-payment:hover {
+  background-color: #f15c00; /* Màu sắc khi hover */
+  opacity: 0.9; /* Giảm opacity một chút khi hover */
+  transform: translateY(-3px); /* Đẩy nút lên một chút khi hover */
 }
+
+.cart-container-right-button .btn-payment:active {
+  transform: translateY(1px); /* Tạo hiệu ứng khi nhấn */
+}
+

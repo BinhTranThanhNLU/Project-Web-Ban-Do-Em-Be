@@ -18,7 +18,7 @@
 
 .thumbnail-image {
     width: 100%;
-    height: auto;
+    height: 220px;
     border-radius: 10px;
 }
 
@@ -41,6 +41,19 @@
     justify-content: space-between;
 }
 
+.sale-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Đặt ở góc trên bên phải */
+    background-color: #ff0000; /* Màu nền đỏ */
+    color: #fff; /* Màu chữ trắng */
+    font-size: 14px;
+    padding: 3px 3px;
+    border-radius: 3px;
+    font-weight: bold;
+    z-index: 10; /* Đảm bảo nó hiển thị phía trên ảnh */
+  }
+
 .product-detail-container {
     padding: 10px;
 }
@@ -52,7 +65,7 @@
 }
 
 .dress-name {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
     width: 75%;
 }
@@ -62,15 +75,16 @@
 }
 
 .new-price {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
     color: red;
 }
 
 .old-price {
-    font-size: 8px;
+    font-size: 12px;
     font-weight: bold;
     color: grey;
+    text-decoration: line-through;
 }
 
 .color-size-selection {
@@ -164,82 +178,12 @@
     width: 80px;
     text-align: center;
     margin: 0 2px;
+    text-decoration: none;
 }
 
 .buy-btn:hover, .details-btn:hover {
     background-color: purple;
     color: white;
-}
-
-  
-
-.voutchers {
-    background-color: #fff;
-    border: none;
-    border-radius: 10px;
-    width: 190px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    overflow: hidden;
-    margin-top: 10px;
-}
-
-.voutcher-divider {
-    display: flex;
-}
-
-.voutcher-left {
-    width: 60%;
-    text-align: center;
-}
-
-.voutcher-name {
-    color: grey;
-    font-size: 9px;
-    font-weight: 500;
-}
-
-.voutcher-code {
-    color: red;
-    font-size: 11px;
-    font-weight: bold;
-}
-
-.voutcher-right {
-    width: 40%;
-    background-color: purple;
-    color: #fff;
-    text-align: center;
-}
-
-.discount-percent {
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.off {
-    font-size: 14px;
-}
-
-/* Color option selected */
-.color-select .color-option input[type="button"].selected.grey {
-    background-color: grey;
-    border-color: grey;
-}
-
-.color-select .color-option input[type="button"].selected.red {
-    background-color: red;
-    border-color: red;
-}
-
-.color-select .color-option input[type="button"].selected.blue {
-    background-color: blue;
-    border-color: blue;
-}
-
-/* Gray background for selected size */
-.size-select .item-size.selected {
-    background-color: #e0e0e0;
-    color: #000;
 }
 
 /* Filled red heart for selected state */

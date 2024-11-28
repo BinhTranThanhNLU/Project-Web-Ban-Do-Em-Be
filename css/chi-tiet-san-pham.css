@@ -514,6 +514,8 @@
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     flex: 1;
+    text-decoration: none;
+    text-align: center;
 }
 
 /* Hover effect */

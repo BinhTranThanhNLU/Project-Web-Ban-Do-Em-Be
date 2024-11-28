@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+
 body {
   line-height: 1;
   width: 100%;
@@ -139,25 +140,42 @@ body {
 .cart-container-right-text p {
   font-size: 13px;
 }
-.cart-container-right-buttom {
+
+.cart-container-right-button {
   text-align: center;
   align-items: center;
+  margin-top: 20px; /* Thêm khoảng cách trên nếu cần */
 }
-.cart-container-right-buttom button {
-  padding: 0 10px;
-  height: 35px;
+
+.cart-container-right-button .btn-payment {
+  padding: 10px 20px;
+  height: 45px; /* Tăng chiều cao để nút dễ nhấn hơn */
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px; /* Đường viền mềm mại hơn */
+  font-size: 16px; /* Cỡ chữ phù hợp */
+  font-weight: 600; /* Đậm chữ cho dễ nhìn */
+  text-align: center;
+  display: inline-block;
+  width: 100%; /* Chiếm hết chiều rộng của thẻ cha (nếu muốn nút lớn) */
+  max-width: 200px; /* Tối đa chiều rộng của nút */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ nhẹ */
+  transition: all 0.3s ease-in-out; /* Mượt mà khi hover */
 }
 
-
-.cart-container-right-buttom button {
-  background-color: #f7840b;
+.cart-container-right-button .btn-payment {
+  background-color: #f7840b; /* Màu cam nổi bật */
   border: none;
   color: #fff;
-
+  text-decoration: none; /* Bỏ gạch dưới */
 }
-.cart-container-right-buttom button:hover {
-  opacity: 0.7;
 
+.cart-container-right-button .btn-payment:hover {
+  background-color: #f15c00; /* Màu sắc khi hover */
+  opacity: 0.9; /* Giảm opacity một chút khi hover */
+  transform: translateY(-3px); /* Đẩy nút lên một chút khi hover */
 }
+
+.cart-container-right-button .btn-payment:active {
+  transform: translateY(1px); /* Tạo hiệu ứng khi nhấn */
+}
+

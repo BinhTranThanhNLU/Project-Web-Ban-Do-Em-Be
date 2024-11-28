@@ -103,7 +103,10 @@
 .contact-info-header .text-header:hover {
   color: #f7840b;
 }
-
+.avatar {
+  width: 30px;
+  height: 30px;
+}
 /* ============================nav ================================ */
 
 .navigation {
@@ -688,7 +691,7 @@ nav.sticky {
   cursor: grabbing;
 }
 .card-list .card-item .card-link {
-  /* border-color: #6a9c89; */
+  border-color: #6a9c89;
   border-radius: 10px;
 }
 .card-link img {
@@ -1232,8 +1235,8 @@ nav.sticky {
 .buy-btn,
 .details-btn {
   background-color: transparent;
-  border: 1px solid purple;
-  color: purple;
+  border: 1px solid #6a9c89;
+  color: #f7840b;
   padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
@@ -1250,7 +1253,7 @@ nav.sticky {
 
 .buy-btn:hover,
 .details-btn:hover {
-  background-color: purple;
+  background-color: #f7840b;
   color: white;
 }
 
@@ -1263,7 +1266,7 @@ nav.sticky {
   align-items: center;
   border-radius: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  position: absolute;  /* Đặt vị trí tuyệt đối */
+  position: absolute; /* Đặt vị trí tuyệt đối */
   top: 10px; /* Điều chỉnh khoảng cách từ trên */
   left: 10px; /* Điều chỉnh khoảng cách từ trái */
   z-index: 10; /* Đảm bảo trái tim hiển thị phía trên các hình ảnh */

@@ -113,6 +113,8 @@ window.addEventListener("click", function (event) {
     dropdown.style.display = "none";
   }
 });
+// đăng nhập  user ở thanh menu
+
 //==================================== boy-girl===========================
 const girlTab = document.getElementById("girl-tab");
 const boyTab = document.getElementById("boy-tab");

@@ -1,513 +1,349 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tài Khoản Của Tôi</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../css/user.css" />
-    <link rel="stylesheet" href="../css/header-nav-footer.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../images/favicon.png"
-    />
-  </head>
-  <body>
-    <!-- HEADER -->
-    <section class="section-header hidden-search-bar" id="hiddenSearchBar">
-      <div class="header">
-        <div class="logo-header">
-          <a href=""
-            ><img
-              alt="Company Logo"
-              height="50"
-              src="../images/logo.png"
-              width="100"
-          /></a>
-        </div>
-        <div class="search-bar-header">
-          <input placeholder="Bạn cần tìm gì?" type="text" />
-          <i class="fas fa-search"></i>
-        </div>
-        <div class="contact-info-header">
-          <div class="icon-header">
-            <i class="fas fa-phone-alt"></i>
-          </div>
-          <div class="text-header">
-            <a href="./contact.html">Liên hệ với chúng tôi</a>
-          </div>
-          <div class="icon-header">
-            <i class="fas fa-file-alt"></i>
-          </div>
-          <div class="text-header">Kiểm tra đơn hàng</div>
-        </div>
-      </div>
-    </section>
-    <!-- =====================================Nav================================= -->
-    <section class="navigation">
-      <nav>
-        <!-- menu  -->
-        <div class="navbar">
-          <div class="menu">
-            <a href="../index.html">Trang Chủ</a>
-            <div class="dropdown-menu">
-              <!-- Thêm lớp cho Bé gái -->
-              <div class="navheight">
-                <a href="./be-gai.html">Bé gái</a>
-                <!-- <ion-icon name="chevron-down-outline"></ion-icon> -->
-              </div>
-              <div class="dropdown dropdown-full">
-                <!-- Dropdown cho Bé gái -->
-                <div class="column">
-                  <h3>ĐẦM VÁY</h3>
-                  <a href="#" class="menu-link">Tất cả Đầm váy</a>
-                  <a href="#" class="menu-link">Đầm ngắn tay</a>
-                  <a href="#" class="menu-link">Đầm dài tay</a>
-                  <a href="#" class="menu-link">Đầm hai dây</a>
-                  <a href="#" class="menu-link">Đầm sát nách</a>
-                  <a href="#" class="menu-link">Đầm Váy Elsa/Anna</a>
-                  <a href="#" class="menu-link">Đầm công chúa</a>
-                  <a href="#" class="menu-link">Chân váy</a>
-                  <a href="#" class="menu-link">Yếm bé gái</a>
-                </div>
-                <div class="column">
-                  <h3>ÁO</h3>
-                  <a href="#" class="menu-link">Tất cả Áo</a>
-                  <a href="#" class="menu-link">Áo thun</a>
-                  <a href="#" class="menu-link">Áo dài tay</a>
-                  <a href="#" class="menu-link">Áo khoác</a>
-                  <a href="#" class="menu-link">Áo nỉ</a>
-                  <a href="#" class="menu-link">Áo gile</a>
-                </div>
-                <div class="column">
-                  <h3>QUẦN</h3>
-                  <a href="#" class="menu-link">Tất cả quần</a>
-                  <a href="#" class="menu-link">Quần short</a>
-                  <a href="#" class="menu-link">Quần dài</a>
-                </div>
-                <div class="column">
-                  <h3>ĐỒ BỘ</h3>
-                  <a href="#" class="menu-link">Tất cả đồ bộ</a>
-                  <a href="#" class="menu-link">Bộ ngắn tay</a>
-                  <a href="#" class="menu-link">Bộ dài tay</a>
-                  <a href="#" class="menu-link">Bộ Easy Wear</a>
-                </div>
-                <div class="column">
-                  <h3>PHỤ KIỆN</h3>
-                  <a href="#" class="menu-link">Đồ Lót</a>
-                  <a href="#" class="menu-link">Balo/túi xách</a>
-                  <a href="#" class="menu-link">Phụ kiện tóc</a>
-                  <a href="#" class="menu-link">Giày dép</a>
-                  <a href="#" class="menu-link">Gấu bông</a>
-                  <a href="#" class="menu-link">Mũ nón</a>
-                  <a href="#" class="menu-link">Tất/vớ</a>
-                  <a href="#" class="menu-link">Bình nước</a>
-                </div>
-              </div>
-            </div>
-            <div class="dropdown-menu">
-              <!-- Thêm lớp cho Bé gái -->
-              <div class="navheight">
-                <a href="#">Bé trai</a>
-              </div>
-
-              <div class="dropdown dropdown-full">
-                <!-- Dropdown cho Bé gái -->
-                <div class="column">
-                  <h3>Áo</h3>
-                  <a href="#" class="menu-link">Tất cả áo</a>
-                  <a href="#" class="menu-link">Áo thun ngắn tay</a>
-                  <a href="#" class="menu-link">Áo dài tay</a>
-                  <a href="#" class="menu-link">Áo sơ mi</a>
-                  <a href="#" class="menu-link">Áo khoác</a>
-                  <a href="#" class="menu-link">Áo nỉ</a>
-                  <a href="#" class="menu-link">Áo gile</a>
-                </div>
-                <div class="column">
-                  <h3>QUẦN</h3>
-                  <a href="#" class="menu-link">Tất cả quần</a>
-                  <a href="#" class="menu-link">Quần short</a>
-                  <a href="#" class="menu-link">Quần dài</a>
-                  <a href="#" class="menu-link">Quần yếm</a>
-                </div>
-                <div class="column">
-                  <h3>ĐỒ BỘ</h3>
-                  <a href="#" class="menu-link">Tất cả đồ bộ</a>
-                  <a href="#" class="menu-link">Bộ ngắn tay</a>
-                  <a href="#" class="menu-link">Bộ dài tay</a>
-                  <a href="#" class="menu-link">Bộ sát nách</a>
-                  <a href="#" class="menu-link">Bộ Easy Wear</a>
-                </div>
-                <div class="column">
-                  <h3>PHỤ KIỆN</h3>
-                  <a href="#" class="menu-link">Đồ Lót</a>
-                  <a href="#" class="menu-link">Giày dép</a>
-                  <a href="#" class="menu-link">Balo</a>
-                  <a href="#" class="menu-link">Mũ nón</a>
-                  <a href="#" class="menu-link">Tất/vớ</a>
-                  <a href="#" class="menu-link">Bình nước</a>
-                </div>
-                <div class="column">
-                  <h3>&nbsp;</h3>
-                </div>
-              </div>
-            </div>
-            <div class="dropdown-menu">
-              <div class="navheight"><a href="#">Bộ sưu tập</a></div>
-              <div class="dropdown-1">
-                <!-- Dropdown cho Bé gái -->
-                <div class="column">
-                  <!-- <h3>Áo</h3> -->
-                  <a class="menu-link" href="#">✨BST Disney - Friends</a>
-                  <a class="menu-link" href="#">🍂BST Thu Đông 2024</a>
-                  <a class="menu-link" href="#">🌼BST Vintage - Beaming Days</a>
-                  <a class="menu-link" href="#">🏠BST Đồ Bộ Mặc Nhà</a>
-                  <a class="menu-link" href="#"
-                    >🎒Be Cool At School Collection🎒</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <div class="dropdown-menu">
-              <div class="navheight"><a href="#">Sale sốc</a></div>
-              <!-- <div class="dropdown-2">
-                <div class="column"></div>
-              </div> -->
-            </div>
-            <div class="dropdown-menu">
-              <div class="navheight"><a href="#">New Arrival</a></div>
-              <div class="dropdown-3">
-                <!-- Dropdown cho Sale -->
-                <div class="column">
-                  <!-- <h3>Áo</h3> -->
-                  <a class="menu-link" href="#">New Arrival Bé gái</a>
-                  <a class="menu-link" href="#"> New Arrival Bé trai</a>
-                  <a class="menu-link" href="#">BEST SELLER</a>
-                </div>
-              </div>
-            </div>
-            <div class="dropdown-menu">
-              <div class="navheight"><a href="#">Tin Tức</a></div>
-              <div class="dropdown-4">
-                <!-- Dropdown cho Sale -->
-                <div class="column">
-                  <!-- <h3>Áo</h3> -->
-                  <a class="menu-link" href="#">Tin tức Little Whale</a>
-                  <a class="menu-link" href="#">Khuyến mãi</a>
-                  <a class="menu-link" href="#">Tin mẹ & bé</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="icons">
-            <!-- <input type="text" placeholder="Tìm kiếm sản phẩm"> -->
-            <i class="fas fa-search"></i>
-            <!-- Biểu tượng người dùng với menu đăng nhập/đăng ký -->
-            <div class="user-menu">
-              <i class="fas fa-user"></i>
-              <div class="dropdown">
-                <a class="menu-link" href="./dangnhap.html">Đăng nhập</a>
-                <a class="menu-link" href="./dangki.html">Đăng ký</a>
-              </div>
-            </div>
-            <div class="cart" id="cart">
-              <a href="./gio-hang.html" class="cart-a"
-                ><i class="fas fa-shopping-cart"></i
-              ></a>
-              <span class="badge">0</span>
-            </div>
-            <div class="login-message-cart" id="loginMessageCart">
-              Chưa có sản phẩm nào
-            </div>
-          </div>
-        </div>
-      </nav>
-    </section>
-    <section class="lichsumua">
-      <div class="container">
-        <div class="sidebar">
-          <div class="profile">
-            <img
-              alt="Profile Picture"
-              height="50"
-              src="https://storage.googleapis.com/a1aa/image/lZk15YwRKq7TPlNFLTlCsBl5oIfUCHaFWr7XX6vQmSRZvK4JA.jpg"
-              width="50"
-            />
-            <div>
-              <div>DanhSieuCapVippro</div>
-              <a href="#">&emsp;Sửa Hồ Sơ </a>
-            </div>
-          </div>
-          <ul class="menu">
-            <!-- <li>
-            <a href="#">
-              <i class="fas fa-calendar-alt"> </i>
-             
-              <span style="color: red"> New </span>
-            </a>
-          </li> -->
-            <li>
-              <a href="#">
-                <i class="fas fa-user"> </i>
-                Tài Khoản Của Tôi
-              </a>
-            </li>
-            <li>
-              <a class="active" href="#">
-                <i class="fas fa-shopping-cart"> </i>
-                Đơn Mua
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fas fa-bell"> </i>
-                Thông Báo
-              </a>
-            </li>
-            <!-- <li>
-              <a href="#">
-                <i class="fas fa-ticket-alt"> </i>
-                Kho Voucher
-              </a>
-            </li> -->
-            <!-- <li>
-              <a href="#">
-                <i class="fas fa-coins"> </i>
-                Shopee Xu
-              </a>
-            </li> -->
-          </ul>
-        </div>
-        <div class="content">
-          <div class="tabs">
-            <a class="active" href="#" data-tab="all"> Tất cả </a>
-            <a href="#" data-tab="pending"> Chờ thanh toán </a>
-            <a href="#" data-tab="shipping"> Vận chuyển </a>
-            <a href="#" data-tab="waiting"> Chờ giao hàng </a>
-            <a href="#" data-tab="completed"> Hoàn thành </a>
-            <a href="#" data-tab="canceled"> Đã hủy </a>
-            <a href="#" data-tab="return"> Trả hàng/Hoàn tiền </a>
-          </div>
-          <div class="search-bar">
-            <input
-              placeholder="Bạn có thể tìm kiếm theo tên Shop, ID đơn hàng hoặc Tên Sản phẩm"
-              type="text"
-            />
-          </div>
-
-          <!-- Tab content for "Tất cả" -->
-          <div class="order active-tab" data-content="all">
-            <div class="order-header">
-              <div class="shop-info">
-                <i class="fas fa-store"> </i>
-                <a href="#"> Little Whale </a>
-                <button>Chat</button>
-                <p>&emsp;</p>
-                <button>Xem Shop</button>
-              </div>
-              <div class="order-status">HOÀN THÀNH</div>
-            </div>
-            <div class="order-item">
-              <img
-                alt="Voucher Image"
-                height="80"
-                src="../images/10g.jpg"
-                width="80"
-              />
-              <div class="item-info">
-                <div class="item-name">Váy Bé Gái Màu Đỏ</div>
-                <div class="item-quantity">x1</div>
-              </div>
-              <div class="item-price">300.000₫</div>
-            </div>
-            <div class="order-total">
-              <div class="total-label">Thành tiền:</div>
-              <div class="total-price">300.000₫</div>
-            </div>
-            <div class="order-actions">
-              <button>Mua Lại</button>
-              <button class="contact-seller">Liên Hệ Cửa Hàng</button>
-            </div>
-          </div>
-          <div class="order active-tab" data-content="all">
-            <div class="order-header">
-              <div class="shop-info">
-                <i class="fas fa-store"> </i>
-                <a href="#"> Little Whale </a>
-                <button>Chat</button>
-                <p>&emsp;</p>
-                <button>Xem Shop</button>
-              </div>
-              <div class="order-status">HOÀN THÀNH</div>
-            </div>
-            <div class="order-item">
-              <img
-                alt="Voucher Image"
-                height="80"
-                src="../images/12.jpg"
-                width="80"
-              />
-              <div class="item-info">
-                <div class="item-name">Đồ Bộ Bé Trai</div>
-                <div class="item-quantity">x1</div>
-              </div>
-              <div class="item-price">300.000₫</div>
-            </div>
-            <div class="order-total">
-              <div class="total-label">Thành tiền:</div>
-              <div class="total-price">300.000₫</div>
-            </div>
-            <div class="order-actions">
-              <button>Mua Lại</button>
-              <button class="contact-seller">Liên Hệ Cửa Hàng</button>
-            </div>
-          </div>
-          <!-- Tab content for "Vận chuyển" -->
-          <div class="cho-van-chuyen" data-content="shipping">
-            <img
-              alt="Illustration of a clipboard with a pencil"
-              height="100"
-              src="https://storage.googleapis.com/a1aa/image/bcbhfdNcPy1la6VM4zEwWUxeKE9cDJ0eAJi2dWZLKKWcHrgnA.jpg"
-              width="100"
-            />
-            <p>Chưa Có đơn hàng đang vận chuyển</p>
-          </div>
-          <!-- Tab content for "Chờ giao hàng" -->
-          <div class="cho-giao-hang" data-content="waiting">
-            <img
-              alt="Illustration of a clipboard with a pencil"
-              height="100"
-              src="https://storage.googleapis.com/a1aa/image/bcbhfdNcPy1la6VM4zEwWUxeKE9cDJ0eAJi2dWZLKKWcHrgnA.jpg"
-              width="100"
-            />
-            <p>Chưa Có đơn hàng đang chờ giao hàng</p>
-          </div>
-          <!-- Tab content for "Hoàn thành" -->
-          <div class="hoan-thanh" data-content="completed">
-            <img
-              alt="Illustration of a clipboard with a pencil"
-              height="100"
-              src="https://storage.googleapis.com/a1aa/image/bcbhfdNcPy1la6VM4zEwWUxeKE9cDJ0eAJi2dWZLKKWcHrgnA.jpg"
-              width="100"
-            />
-            <p>Chưa Có đơn hàng đã hoàn thành</p>
-          </div>
-          <!-- Tab content for "Đã hủy" -->
-          <div class="da-huy" data-content="canceled">
-            <img
-              alt="Illustration of a clipboard with a pencil"
-              height="100"
-              src="https://storage.googleapis.com/a1aa/image/bcbhfdNcPy1la6VM4zEwWUxeKE9cDJ0eAJi2dWZLKKWcHrgnA.jpg"
-              width="100"
-            />
-            <p>Chưa Có đơn hàng đã hủy</p>
-          </div>
-
-          <!-- Tab content for "Chờ thanh toán" -->
-          <div class="cho-thanh-toan" data-content="pending">
-            <img
-              alt="Illustration of a clipboard with a pencil"
-              height="100"
-              src="https://storage.googleapis.com/a1aa/image/bcbhfdNcPy1la6VM4zEwWUxeKE9cDJ0eAJi2dWZLKKWcHrgnA.jpg"
-              width="100"
-            />
-            <p>Chưa có đơn hàng</p>
-          </div>
-          <!-- Tab content for "Trả hàng/Hoàn tiền" -->
-          <div class="tra-hang-hoan-tien" data-content="return">
-            <img
-              alt="Illustration of a clipboard with a pencil"
-              height="100"
-              src="https://storage.googleapis.com/a1aa/image/bcbhfdNcPy1la6VM4zEwWUxeKE9cDJ0eAJi2dWZLKKWcHrgnA.jpg"
-              width="100"
-            />
-            <p>Chưa Có đơn hàng đang được trả hoặc hoàn tiền</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ====================================footer=============================== -->
-    <section class="section-footer">
-      <div class="footer">
-        <div class="footer-column">
-          <img
-            alt="Little Whale Logo"
-            height="50"
-            src="../images/logo.png"
-            width="100"
-          />
-          <p>
-            Little Whale là thương hiệu thời trang trẻ em hàng đầu Việt Nam với
-            hơn 60 showroom trên toàn quốc, mang đến cho bé những bộ quần áo
-            thoải mái cho bé "tự do khám phá" thế giới và trải nghiệm niềm vui
-            mỗi ngày.
-          </p>
-          <h3>ĐĂNG KÝ NHẬN TIN</h3>
-          <div class="subscribe">
-            <input placeholder="Nhập địa chỉ email" type="email" />
-            <button>Đăng ký</button>
-          </div>
-          <div class="social-icons">
-            <a href="#">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-tiktok"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="footer-column">
-          <h3>VỀ Little Whale</h3>
-          <a href="#">Giới thiệu về Little Whale</a>
-          <br />
-          <a href="#">Tin tức Little Whale</a>
-          <br />
-          <a href="contact.html">Liên hệ với chúng tôi</a>
-        </div>
-
-        <div class="footer-column">
-          <h3>HỖ TRỢ KHÁCH HÀNG</h3>
-          <a href="./tracuudonhang.html">Tra cứu đơn hàng</a>
-          <br />
-          <a href="./chinhsachdoitra.html">Chính sách đổi trả hàng Online</a>
-          <br />
-          <a href="./chinhsachkhachangthanthiet.html"
-            >Chính sách Khách hàng thân thiết</a
-          >
-          <br />
-          <a href="./giaohang-phigiaohang.html"
-            >Giao hàng &amp; phí giao hàng</a
-          >
-          <br />
-          <a href="#">Hướng dẫn chọn size</a>
-          <br />
-          <a href="#">Chính sách bảo mật thông tin</a>
-          <br />
-          <a href="#">Chính sách đại lý</a>
-        </div>
-
-        <div class="footer-column">
-          <h3>CÔNG TY TNHH Little Whale</h3>
-          <p>Địa chỉ:</p>
-          <p>khu phố 6, Thủ Đức, Hồ Chí Minh</p>
-          <p>
-            Văn phòng phía Nam: Số 33 đường 12A Khu Đô Thị Lake View City, Bình
-            Trưng Đông, Quận 2, TP HCM
-          </p>
-          <p>Điện thoại: 0969 969 969</p>
-          <p>Email: cskh@littleWhale</p>
-        </div>
-      </div>
-    </section>
-  </body>
-  <script src="../js/lichsumua.js"></script>
-  <script src="../js/scriptnav.js"></script>
-</html>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+body {
+  /* background-color: #f5f5f5; */
+}
+.lichsumua {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.container {
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  margin-top: 150px;
+}
+.sidebar {
+  width: 250px;
+  /* background-color: #fff; */
+  padding: 20px;
+  border-right: 1px solid #e5e5e5;
+}
+.sidebar img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.sidebar .profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.sidebar .profile div {
+  margin-left: 10px;
+}
+.sidebar .profile div a {
+  color: #007bff;
+  text-decoration: none;
+}
+.sidebar .menu {
+  list-style: none;
+  padding: 0;
+}
+.sidebar .menu li {
+  margin-bottom: 15px;
+}
+.sidebar .menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+.sidebar .menu li a i {
+  margin-right: 10px;
+}
+.sidebar .menu li a.active {
+  color: #ee4d2d;
+}
+.content {
+  flex: 1;
+  padding: 20px;
+}
+.content .tabs {
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 20px;
+}
+.content .tabs a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  border-bottom: 2px solid transparent;
+  font-size: 16px; /* Đảm bảo kích thước chữ đồng nhất */
+}
+.content .tabs a.active {
+  color: #ee4d2d;
+  border-bottom: 2px solid #ee4d2d;
+}
+.content .search-bar {
+  margin-bottom: 20px;
+}
+.content .search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+}
+.content .order {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+}
+.content .order .order-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.content .order .order-header .shop-info {
+  display: flex;
+  align-items: center;
+}
+.content .order .order-header .shop-info i {
+  margin-right: 10px;
+}
+.content .order .order-header .shop-info a {
+  text-decoration: none;
+  color: #007bff;
+  margin-right: 10px;
+}
+.content .order .order-header .shop-info button {
+  background-color: #ee4d2d;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.content .order .order-header .order-status {
+  color: #ee4d2d;
+}
+.content .order .order-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.content .order .order-item img {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+}
+.content .order .order-item .item-info {
+  flex: 1;
+}
+.content .order .order-item .item-info .item-name {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.content .order .order-item .item-info .item-quantity {
+  color: #999;
+}
+.content .order .order-item .item-price {
+  font-size: 16px;
+  color: #333;
+}
+.content .order .order-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.content .order .order-total .total-price {
+  font-size: 16px;
+  color: #333;
+}
+.content .order .order-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.content .order .order-actions button {
+  background-color: #ee4d2d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.content .order .order-actions button.contact-seller {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #e5e5e5;
+}
+/* ========================cho thanh toan====================== */
+.cho-thanh-toan {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+  height: 500px;
+}
+.cho-thanh-toan img {
+  width: 100px;
+  height: 100px;
+  margin-top: 100px;
+}
+.cho-thanh-toan p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+.tabs a.active {
+  color: #ff4500;
+  /* font-weight: bold; */
+  border-bottom: 2px solid #ff4500;
+}
+.order,
+.cho-thanh-toan {
+  display: none; /* Ẩn tất cả nội dung tab mặc định */
+}
+.active-tab {
+  display: block; /* Hiển thị nội dung của tab đang chọn */
+}
+/*  */
+.cho-van-chuyen {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+  height: 500px;
+}
+.cho-van-chuyen img {
+  width: 100px;
+  height: 100px;
+  margin-top: 100px;
+}
+.cho-van-chuyen p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+.tabs a.active {
+  color: #ff4500;
+  /* font-weight: bold; */
+  border-bottom: 2px solid #ff4500;
+}
+.order,
+.cho-van-chuyen {
+  display: none; /* Ẩn tất cả nội dung tab mặc định */
+}
+.active-tab {
+  display: block; /* Hiển thị nội dung của tab đang chọn */
+}
+/* ========================== */
+.cho-giao-hang {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+  height: 500px;
+}
+.cho-giao-hang img {
+  width: 100px;
+  height: 100px;
+  margin-top: 100px;
+}
+.cho-giao-hang p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+.tabs a.active {
+  color: #ff4500;
+  /* font-weight: bold; */
+  border-bottom: 2px solid #ff4500;
+}
+.order,
+.cho-giao-hang {
+  display: none; /* Ẩn tất cả nội dung tab mặc định */
+}
+.active-tab {
+  display: block; /* Hiển thị nội dung của tab đang chọn */
+}
+/* ========================== */
+.hoan-thanh {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+  height: 500px;
+}
+.hoan-thanh img {
+  width: 100px;
+  height: 100px;
+  margin-top: 100px;
+}
+.hoan-thanh p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+.tabs a.active {
+  color: #ff4500;
+  /* font-weight: bold; */
+  border-bottom: 2px solid #ff4500;
+}
+.order,
+.hoan-thanh {
+  display: none; /* Ẩn tất cả nội dung tab mặc định */
+}
+.active-tab {
+  display: block; /* Hiển thị nội dung của tab đang chọn */
+}
+/* ========================== */
+.da-huy {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+  height: 500px;
+}
+.da-huy img {
+  width: 100px;
+  height: 100px;
+  margin-top: 100px;
+}
+.da-huy p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+.tabs a.active {
+  color: #ff4500;
+  /* font-weight: bold; */
+  border-bottom: 2px solid #ff4500;
+}
+.order,
+.da-huy {
+  display: none; /* Ẩn tất cả nội dung tab mặc định */
+}
+.active-tab {
+  display: block; /* Hiển thị nội dung của tab đang chọn */
+}
+/* ========================== */
+.tra-hang-hoan-tien {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+  height: 500px;
+}
+.tra-hang-hoan-tien img {
+  width: 100px;
+  height: 100px;
+  margin-top: 100px;
+}
+.tra-hang-hoan-tien p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+.tabs a.active {
+  color: #ff4500;
+  /* font-weight: bold; */
+  border-bottom: 2px solid #ff4500;
+}
+.order,
+.tra-hang-hoan-tien {
+  display: none; /* Ẩn tất cả nội dung tab mặc định */
+}
+.active-tab {
+  display: block; /* Hiển thị nội dung của tab đang chọn */
+}

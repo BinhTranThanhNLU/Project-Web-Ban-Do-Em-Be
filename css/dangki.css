@@ -160,6 +160,8 @@
 .form-login .form .sign-up .dangnhap a {
     text-decoration: none;
     color: rgb(190, 189, 187);
+    margin-left: 25px;
+    
 }
 
 .form-login .form .sign-up .dangnhap:hover {

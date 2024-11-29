@@ -394,9 +394,10 @@ nav.sticky {
   right: 0;
   border: 1px solid #ddd;
   border-radius: 5px;
-  width: 150px;
+  width: 170px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-decoration: none;
+
 }
 
 .user-menu .dropdown a {

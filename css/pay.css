@@ -130,3 +130,78 @@ h1 {
 .complete-order:hover {
     background-color: #0056b3;
 }
+
+/* Modal Content */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Làm tối nền khi modal xuất hiện */
+    display: none;
+    /* Ẩn modal mặc định */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* Đảm bảo modal nằm trên các thành phần khác */
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  /* Modal Icon */
+  .modal-icon {
+  
+    color: #4CAF50;
+    /* Màu xanh lá */
+    margin-bottom: 10px;
+  }
+  
+  .modal-icon i {
+    font-size: 34px;
+  }
+  
+  /* Đoạn văn thông báo */
+  .modal-content p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Nút Đóng */
+  .btn-close {
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-close:hover {
+    background-color: #FF4B47;
+  }
+  
+  /* Hiệu ứng fade-in cho modal */
+  @keyframes fadeIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+  
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }

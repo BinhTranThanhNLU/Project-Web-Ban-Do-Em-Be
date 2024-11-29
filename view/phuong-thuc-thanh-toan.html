@@ -3,6 +3,7 @@
 <head>
   <title>Phương thức thanh toán</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="../css/pay.css">
 </head>
 <body>
@@ -43,28 +44,19 @@
         TT qua ví MoMo
       </div>
     </div>
-    <button class="complete-order">Hoàn tất đơn hàng</button>
+    <button class="complete-order" id="save-btn">Hoàn tất đơn hàng</button>
   </div>
-  <div class="summary">
-    <div class="item">
-      <img src="https://storage.googleapis.com/a1aa/image/Av4FnLABNfXraSr5P2Mp0TYVlID0KeEDjJB2fr7Apv1GyMnnA.jpg" alt="Product image" width="50" height="50" />
-      <div class="item-details">
-        <p>Đầm váy ren dài tay bé gái Rabity 92726</p>
-        <p>Xanh rêu / 10Y-27-31kg</p>
-        <p>116,700đ</p>
-      </div>
+  <!-- Modal -->
+  <div class="modal-overlay" id="success-modal" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-icon">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <p>Bạn đã thanh toán thành công!</p>
+        <button type="button" class="btn-close" id="close-modal">Đóng</button>
     </div>
-    <div class="discount-code">
-      <input type="text" placeholder="Mã giảm giá" />
-      <button>Sử dụng</button>
-    </div>
-    <a class="discount-link" href="#">Xem thêm mã giảm giá</a>
-    <div class="discount-amount">Giảm 50,000đ</div>
-    <div class="totals">
-      <p>Tạm tính: 116,700đ</p>
-      <p>Phí vận chuyển: 25,000đ</p>
-      <p class="total-amount">Tổng cộng: VND 141,700đ</p>
-    </div>
-  </div>
+</div>
+
+<script src="../js/thong-tin-cua-toi.js"></script>
 </body>
 </html>

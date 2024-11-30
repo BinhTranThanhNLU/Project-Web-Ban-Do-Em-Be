@@ -127,13 +127,14 @@
         </div>
         <div class="action-buttons">
           <a href="./add-product.html" class="btn btn-add"><i class="fa-solid fa-plus"></i> Tạo Mới Sản Phẩm</a>
-              <button class="btn btn-upload">Tải từ file</button>
-              <button class="btn btn-print">In dữ liệu</button>
-              <button class="btn btn-copy">Sao chép</button>
-              <button class="btn btn-excel">Xuất Excel</button>
-              <button class="btn btn-pdf">Xuất PDF</button>
-              <button class="btn btn-delete">Xóa tất cả</button>
-      </div>
+          <button class="btn btn-add-quantity" onclick="openAddQuantityModal()">Thêm sản phẩm</button>
+          <button class="btn btn-upload">Tải từ file</button>
+          <button class="btn btn-print">In dữ liệu</button>
+          <button class="btn btn-copy">Sao chép</button>
+          <button class="btn btn-excel">Xuất Excel</button>
+          <button class="btn btn-pdf">Xuất PDF</button>
+          <button class="btn btn-delete">Xóa tất cả</button>
+        </div>
         <div class="search-product">
           <input type="text" id="search" name="search" />
           <button class="search-btn">Tìm Kiếm</button>
@@ -338,15 +339,9 @@
           </tbody>
         </table>
         <div class="pagination">
-          <div class="button-left">
-            <p style="margin-top: -1px;">Hiện 1 đến 6 của danh mục</p>
-          </div>
-          <div class="button-right">
-            <button class="page-prev"><i class="fa-solid fa-chevron-left"></i></button>
-            <span class="page-number">1</span>
-            <button class="page-next"><i class="fa-solid fa-angle-right"></i></button>
-          </div>
-
+          <button class="page-prev"><i class="fa-solid fa-chevron-left"></i></button>
+          <span class="page-number">1</span>
+          <button class="page-next"><i class="fa-solid fa-angle-right"></i></button>
         </div>
       </div>
 
@@ -443,11 +438,62 @@
           </button>
         </div>
       </div>
+
+      <!-- Modal -->
+      <div id="addQuantityModal" class="modal-add-quantity">
+        <div class="modal-add-quantity-content">
+          <!-- Header Modal -->
+          <div class="modal-add-quantity-header">
+            <h5 class="modal-add-quantity-title">Thêm Sản Phẩm</h5>
+            <span class="modal-add-quantity-close" onclick="closeAddQuantityModal()">&times;</span>
+          </div>
+
+          <!-- Body Modal -->
+          <div class="modal-add-quantity-body">
+            <form id="addQuantityForm">
+              <div class="form-group">
+                <label for="productId" class="form-label">ID Sản Phẩm</label>
+                <input type="text" id="productId" name="productId" class="form-input" required
+                  placeholder="Nhập ID sản phẩm">
+              </div>
+              <div class="form-group">
+                <label for="productQuantity" class="form-label">Số Lượng</label>
+                <input type="number" id="productQuantity" name="quantity" class="form-input" min="1" value="1" required>
+              </div>
+            </form>
+          </div>
+
+          <!-- Footer Modal -->
+          <div class="modal-add-quantity-footer">
+            <button type="button" class="btn-cancel" onclick="closeAddQuantityModal()">Hủy</button>
+            <button type="submit" form="addQuantityForm" class="btn-submit">Thêm</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- JS ĐỂ MỞ-ĐÓNG MODAL -->
   <script src="../../js/open-close-modal.js"></script>
+  <script>
+    // Mở modal Thêm sản phẩm
+    function openAddQuantityModal() {
+      document.getElementById("addQuantityModal").style.display = "block";
+    }
+  
+    // Đóng modal Thêm sản phẩm
+    function closeAddQuantityModal() {
+      document.getElementById("addQuantityModal").style.display = "none";
+    }
+  
+    // Đóng modal khi người dùng nhấp ra ngoài modal
+    window.onclick = function(event) {
+      if (event.target == document.getElementById("addQuantityModal")) {
+        closeAddQuantityModal();
+      }
+    }
+  </script>
+  
 </body>
 
 </html>

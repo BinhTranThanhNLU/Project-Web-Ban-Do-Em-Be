@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Rabity - Payment Method</title>
+  <title>Phương thức thanh toán</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="../css/phuong-thuc-thanh-toan.css">
   <link rel="stylesheet" href="../css/header-nav-footer.css">
 </head>
+
 <body>
   <!-- HEADER -->
   <section class="section-header hidden-search-bar" id="hiddenSearchBar">
@@ -29,8 +32,8 @@
       </div>
     </div>
   </section>
-   <!-- =====================================Nav================================= -->
-   <section class="navigation">
+  <!-- =====================================Nav================================= -->
+  <section class="navigation">
     <nav>
       <!-- menu  -->
       <div class="navbar">
@@ -194,7 +197,7 @@
             <a href="./view/gio-hang.html" class="cart-a"><i class="fas fa-shopping-cart"></i></a>
             <span class="badge">0</span>
           </div>
-          
+
           <div class="login-message-cart" id="loginMessageCart">
             Chưa có sản phẩm nào
           </div>
@@ -209,13 +212,13 @@
       </div>
     </nav>
   </section>
-   <!-- =====================================container================================= -->
+  <!-- =====================================container================================= -->
   <div class="container">
     <h1>Rabity</h1>
     <div class="breadcrumb">
       <a href="./gio-hang.html">Giỏ hàng</a> &gt;
-      <a href="./phuong-thuc-thanh-toan.html">Thông tin giao hàng</a> &gt;
-      <a href="./pay.html">Phương thức thanh toán</a>
+      <a href="./Thong-tin-giao-hang.html">Thông tin giao hàng</a> &gt;
+      <a href="./phuong-thuc-thanh-toan.html">Phương thức thanh toán</a>
     </div>
     <div class="shipping-method">
       <div class="section-title">Phương thức vận chuyển</div>
@@ -228,26 +231,40 @@
       <div class="section-title">Phương thức thanh toán</div>
       <div class="method-option">
         <input checked name="payment" type="radio" />
-        <img src="https://storage.googleapis.com/a1aa/image/pWAzKzYnOfVKaCG5Wll77fSf75o14AaVUnpaCffFdOBHIzceE.jpg" alt="COD icon" width="20" height="20" />
+        <img src="https://storage.googleapis.com/a1aa/image/pWAzKzYnOfVKaCG5Wll77fSf75o14AaVUnpaCffFdOBHIzceE.jpg"
+          alt="COD icon" width="20" height="20" />
         Thanh toán khi giao hàng (COD)
       </div>
       <div class="method-option">
         <input name="payment" type="radio" />
-        <img src="https://storage.googleapis.com/a1aa/image/zCVkqX9qIoZ8KxNf4gbkNaeK539oiafV7bKoHClueKoQkZOPB.jpg" alt="Bank transfer icon" width="20" height="20" />
+        <img src="https://storage.googleapis.com/a1aa/image/zCVkqX9qIoZ8KxNf4gbkNaeK539oiafV7bKoHClueKoQkZOPB.jpg"
+          alt="Bank transfer icon" width="20" height="20" />
         Chuyển khoản ngân hàng - Vietcombank
       </div>
       <div class="method-option">
         <input name="payment" type="radio" />
-        <img src="https://storage.googleapis.com/a1aa/image/3yHicwn0iu42IJXzU0pAd1tT4kPdI89cBQNyrt3eSvxfYmzTA.jpg" alt="VNPay icon" width="20" height="20" />
+        <img src="https://storage.googleapis.com/a1aa/image/3yHicwn0iu42IJXzU0pAd1tT4kPdI89cBQNyrt3eSvxfYmzTA.jpg"
+          alt="VNPay icon" width="20" height="20" />
         TT VNPay (ATM/Visa/MasterCard/JCB/QR Pay)
       </div>
       <div class="method-option">
         <input name="payment" type="radio" />
-        <img src="https://storage.googleapis.com/a1aa/image/Cbhgjr2miVpzLlHJkcMYRb4pecXujAefvUKoijflEoELkZOPB.jpg" alt="MoMo icon" width="20" height="20" />
+        <img src="https://storage.googleapis.com/a1aa/image/Cbhgjr2miVpzLlHJkcMYRb4pecXujAefvUKoijflEoELkZOPB.jpg"
+          alt="MoMo icon" width="20" height="20" />
         TT qua ví MoMo
       </div>
     </div>
-    <button class="complete-order">Hoàn tất đơn hàng</button>
+    <button class="complete-order" id="save-btn">Hoàn tất đơn hàng</button>
+    <!-- Modal -->
+    <div class="modal-overlay" id="success-modal" style="display: none;">
+      <div class="modal-content">
+        <div class="modal-icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <p>Bạn đã thanh toán thành công nhé!</p>
+        <button type="button" class="btn-close" id="close-modal">Đóng</button>
+      </div>
+    </div>
   </div>
   <!-- <div class="summary">
     <div class="item">
@@ -270,79 +287,74 @@
       <p class="total-amount">Tổng cộng: VND 141,700đ</p>
     </div>
   </div> -->
-<!-- ====================================footer=============================== -->
-<section class="section-footer">
-  <div class="footer">
-    <div class="footer-column">
-      <img
-        alt="Little Whale Logo"
-        height="50"
-        src="../images/logo.png"
-        width="100"
-      />
-      <p>
-        Little Whale là thương hiệu thời trang trẻ em hàng đầu Việt Nam với hơn 60
-        showroom trên toàn quốc, mang đến cho bé những bộ quần áo thoải mái
-        cho bé "tự do khám phá" thế giới và trải nghiệm niềm vui mỗi ngày.
-      </p>
-      <h3>ĐĂNG KÝ NHẬN TIN</h3>
-      <div class="subscribe">
-        <input placeholder="Nhập địa chỉ email" type="email" />
-        <button>Đăng ký</button>
+  <!-- ====================================footer=============================== -->
+  <section class="section-footer">
+    <div class="footer">
+      <div class="footer-column">
+        <img alt="Little Whale Logo" height="50" src="../images/logo.png" width="100" />
+        <p>
+          Little Whale là thương hiệu thời trang trẻ em hàng đầu Việt Nam với hơn 60
+          showroom trên toàn quốc, mang đến cho bé những bộ quần áo thoải mái
+          cho bé "tự do khám phá" thế giới và trải nghiệm niềm vui mỗi ngày.
+        </p>
+        <h3>ĐĂNG KÝ NHẬN TIN</h3>
+        <div class="subscribe">
+          <input placeholder="Nhập địa chỉ email" type="email" />
+          <button>Đăng ký</button>
+        </div>
+        <div class="social-icons">
+          <a href="#">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
       </div>
-      <div class="social-icons">
-        <a href="#">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="#">
-          <i class="fab fa-tiktok"></i>
-        </a>
+
+      <div class="footer-column">
+        <h3>VỀ Little Whale</h3>
+        <a href="#">Giới thiệu về Little Whale</a>
+        <br />
+        <a href="#">Tin tức Little Whale</a>
+        <br />
+        <a href="./view/contact.html">Liên hệ với chúng tôi</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+        <a href="./view/tracuudonhang.html">Tra cứu đơn hàng</a>
+        <br />
+        <a href="./view/chinhsachdoitra.html">Chính sách đổi trả hàng Online</a>
+        <br />
+        <a href="./view/chinhsachkhachangthanthiet.html">Chính sách Khách hàng thân thiết</a>
+        <br />
+        <a href="./view/giaohang-phigiaohang.html">Giao hàng &amp; phí giao hàng</a>
+        <br />
+        <a href="#">Hướng dẫn chọn size</a>
+        <br />
+        <a href="#">Chính sách bảo mật thông tin</a>
+        <br />
+        <a href="#">Chính sách đại lý</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>CÔNG TY TNHH Little Whale</h3>
+        <p>Địa chỉ:</p>
+        <p>
+          khu phố 6, Thủ Đức, Hồ Chí Minh
+        </p>
+        <p>
+          Văn phòng phía Nam: Số 33 đường 12A Khu Đô Thị Lake View City, Bình
+          Trưng Đông, Quận 2, TP HCM
+        </p>
+        <p>Điện thoại: 0969 969 969</p>
+        <p>Email: cskh@littleWhale</p>
       </div>
     </div>
-
-    <div class="footer-column">
-      <h3>VỀ Little Whale</h3>
-      <a href="#">Giới thiệu về Little Whale</a>
-      <br />
-      <a href="#">Tin tức Little Whale</a>
-      <br />
-      <a href="./view/contact.html">Liên hệ với chúng tôi</a>
-    </div>
-
-    <div class="footer-column">
-      <h3>HỖ TRỢ KHÁCH HÀNG</h3>
-      <a href="./view/tracuudonhang.html">Tra cứu đơn hàng</a>
-      <br />
-      <a href="./view/chinhsachdoitra.html">Chính sách đổi trả hàng Online</a>
-      <br />
-      <a href="./view/chinhsachkhachangthanthiet.html">Chính sách Khách hàng thân thiết</a>
-      <br />
-      <a href="./view/giaohang-phigiaohang.html">Giao hàng &amp; phí giao hàng</a>
-      <br />
-      <a href="#">Hướng dẫn chọn size</a>
-      <br />
-      <a href="#">Chính sách bảo mật thông tin</a>
-      <br />
-      <a href="#">Chính sách đại lý</a>
-    </div>
-
-    <div class="footer-column">
-      <h3>CÔNG TY TNHH Little Whale</h3>
-      <p>Địa chỉ:</p>
-      <p>
-         khu phố 6, Thủ Đức, Hồ Chí Minh
-      </p>
-      <p>
-        Văn phòng phía Nam: Số 33 đường 12A Khu Đô Thị Lake View City, Bình
-        Trưng Đông, Quận 2, TP HCM
-      </p>
-      <p>Điện thoại: 0969 969 969</p>
-      <p>Email: cskh@littleWhale</p>
-    </div>
-  </div>
-</section>
+  </section>
 </body>
 
 <script src="../js/scriptnav.js"></script>
-
+<script src="../js/thong-tin-cua-toi.js"></script>
 </html>

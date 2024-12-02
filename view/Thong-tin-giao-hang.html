@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rabity - Thông tin giao hàng</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/thong-tin-giao-hang.css">
   <link rel="stylesheet" href="../css/header-nav-footer.css" />
+  <link rel="stylesheet" href="../css/thong-tin-giao-hang.css">
+  <link rel="stylesheet" href="../css/index.css">
 </head>
 
 <body>
@@ -203,10 +204,11 @@
             Chưa có sản phẩm nào
           </div>
           <div class="user-menu">
-            <i class="fas fa-user"></i>
+            <i><img class="avatar" src="../images/avatar.webp" alt=""></i>
             <div class="dropdown">
-              <a class="menu-link" href="../view/dangnhap.html">Đăng nhập</a>
-              <a class="menu-link" href="../view/dangki.html">Đăng ký</a>
+              <a class="menu-link" href="../view/thong-tin-cua-toi.html">Thông tin của tôi</a>
+              <a class="menu-link" href="../view/don-hang-cua-toi.html">Đơn hàng của tôi</a>
+              <a class="menu-link" href="../index.html">Đăng xuất</a>
             </div>
           </div>
         </div>
@@ -231,20 +233,24 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="new-address">Thêm địa chỉ mới...</label>
-        <input id="new-address" type="text" value="70000, Vietnam" />
+        <label for="new-address">Dùng địa chỉ khác...</label>
+        <input id="new-address" type="text" placeholder="Nhập địa chỉ khác" />
       </div>
       <div class="form-group">
         <label for="full-name">Họ và tên</label>
-        <input id="full-name" type="text" value="Minh Minh" />
+        <input id="full-name" type="text" placeholder="Nhập Họ và Tên" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Email" />
       </div>
       <div class="form-group">
         <label for="phone">Số điện thoại</label>
-        <input id="phone" type="text" />
+        <input id="phone" type="text" placeholder="Nhập Số điện thoại"/>
       </div>
       <div class="form-group">
         <label for="address">Địa chỉ</label>
-        <input id="address" type="text" />
+        <input id="address" type="text" placeholder="Nhập địa chỉ"/>
       </div>
       <div class="form-group">
         <div class="half-width">

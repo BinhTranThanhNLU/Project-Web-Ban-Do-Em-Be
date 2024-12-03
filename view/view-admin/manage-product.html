@@ -358,12 +358,7 @@
           <div class="edit-modal-body">
             <div class="form-group">
               <label for="newID">Tên Sản Phẩm</label>
-              <input type="text" name="newID" id="newID" />
-            </div>
-
-            <div class="form-group">
-              <label for="newUsername">Mã Sản Phẩm</label>
-              <input type="text" name="newUsername" id="newUsername" placeholder="Nhập Mã Sản Phẩm" />
+              <input type="text" name="newID" id="newID" placeholder="Tên sản phẩm"/>
             </div>
             <div class="form-group">
               <label for="newEmail">Tình Trạng</label>
@@ -401,8 +396,27 @@
             </div>
 
             <div class="form-group">
-              <label for="newNote">Ghi Chú</label>
-              <textarea name="newNote" id="newNote" placeholder="Nhập Ghi Chú"></textarea>
+              <label for="price">Giá Bán</label>
+              <input type="text" name="price" id="price" placeholder="Giá Bán" />
+            </div>
+
+            <div class="form-group">
+              <label for="color">Màu sắc</label>
+              <select id="color" name="color">
+                <option>-- Chọn màu sắc --</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="size">Size</label>
+              <select id="size" name="size">
+                <option>-- Chọn size --</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="newNote">Mô tả sản phẩm</label>
+              <textarea name="newNote" id="newNote" placeholder="Nhập Mô tả sản phẩm"></textarea>
             </div>
 
             <div class="edit-modal-actions">

@@ -278,8 +278,7 @@
                         <!-- Name -->
                         <label for="first-name">1. Họ và Tên</label>
                         <div class="input-group">
-                            <input type="text" id="first-name" placeholder="First Name">
-                            <input type="text" id="last-name" placeholder="Last Name">
+                            <input type="text" id="fullname" placeholder="Nhập Họ Và Tên">
                         </div>
 
                         <!-- Email -->
@@ -298,16 +297,26 @@
                         <label for="address">5. Địa chỉ thường trú</label>
                         <input type="text" id="address" placeholder="Address">
 
-                        <!-- Gender -->
-                        <label>6. Giới tính</label>
-                        <div class="radio-group">
-                            <label><input type="radio" name="gender" value="male"> Trai</label>
-                            <label><input type="radio" name="gender" value="female"> Gái</label>
-                            <label><input type="radio" name="gender" value="other"> Khác</label>
-                        </div>
+                        <!-- Province -->
+                        <label for="province">6. Tỉnh/thành phố</label>
+                        <select id="province">
+                            <option>Chọn tỉnh/thành phố</option>
+                        </select>
+
+                        <!-- Province -->
+                        <label for="distric">7. Quận/Huyện</label>
+                        <select id="distric">
+                            <option>Chọn Quận/Huyện</option>
+                        </select>
+
+                        <!-- Province -->
+                        <label for="ward">8. Phường/Xã</label>
+                        <select id="ward">
+                            <option>Chọn Phường/Xã</option>
+                        </select>
 
                         <!-- Satisfaction -->
-                        <label>7. Mức độ thỏa mãn với dịch vụ của chúng tôi</label>
+                        <label>9. Mức độ thỏa mãn với dịch vụ của chúng tôi</label>
                         <div class="satisfaction-group">
                             <label><input type="radio" name="satisfaction" value="1"> 1</label>
                             <label><input type="radio" name="satisfaction" value="2"> 2</label>

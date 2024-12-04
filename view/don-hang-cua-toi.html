@@ -213,20 +213,20 @@
             <!-- <input type="text" placeholder="Tìm kiếm sản phẩm"> -->
             <i class="fas fa-search"></i>
             <!-- Biểu tượng người dùng với menu đăng nhập/đăng ký -->
-            <div class="user-menu">
-              <i><img class="avatar" src="../images/avatar.webp" alt="" /></i>
-              <div class="dropdown">
-                <a class="menu-link" href="../view/don-hang-cua-toi.html"
-                  >Tài Khoản</a
-                >
-                <a class="menu-link" href="../index.html">Đăng Xuất</a>
-              </div>
-            </div>
+           
             <div class="cart" id="cart">
               <a href="../view/gio-hang.html" class="cart-a"
                 ><i class="fas fa-shopping-cart"></i
               ></a>
               <span class="badge">0</span>
+            </div>
+            <div class="user-menu">
+              <i><img class="avatar" src="../images/avatar.webp" alt=""></i>
+              <div class="dropdown">
+                <a class="menu-link" href="../view/thong-tin-cua-toi.html">Thông tin của tôi</a>
+                <a class="menu-link" href="../view/don-hang-cua-toi.html">Đơn hàng của tôi</a>
+                <a class="menu-link" href="../index.html">Đăng xuất</a>
+              </div>
             </div>
             <div class="login-message-cart" id="loginMessageCart">
               Chưa có sản phẩm nào
@@ -298,7 +298,7 @@
             <a href="#" data-tab="waiting"> Chờ giao hàng </a>
             <a href="#" data-tab="completed"> Hoàn thành </a>
             <a href="#" data-tab="canceled"> Đã hủy </a>
-            <a href="#" data-tab="return"> Trả hàng/Hoàn tiền </a>
+            <a href="#" data-tab="return"> Trả hàng</a>
           </div>
           <div class="search-bar">
             <input
@@ -374,15 +374,38 @@
               <button class="contact-seller">Liên Hệ Cửa Hàng</button>
             </div>
           </div>
-          <!-- Tab content for "Vận chuyển" -->
-          <div class="cho-van-chuyen" data-content="shipping">
-            <img
-              alt="Illustration of a clipboard with a pencil"
-              height="100"
-              src="https://storage.googleapis.com/a1aa/image/bcbhfdNcPy1la6VM4zEwWUxeKE9cDJ0eAJi2dWZLKKWcHrgnA.jpg"
-              width="100"
-            />
-            <p>Chưa Có đơn hàng đang vận chuyển</p>
+          <div class="order active-tab" data-content="all">
+            <div class="order-header">
+              <div class="shop-info">
+                <i class="fas fa-store"> </i>
+                <a href="#"> Little Whale </a>
+                <button>Chat</button>
+                <p>&emsp;</p>
+                <button>Xem Shop</button>
+              </div>
+              <div class="order-status">CHƯA THANH TOÁN</div>
+            </div>
+            <div class="order-item">
+              <img
+                alt="Voucher Image"
+                height="80"
+                src="../images/10g.jpg"
+                width="80"
+              />
+              <div class="item-info">
+                <div class="item-name">Váy Bé Gái Màu Đỏ</div>
+                <div class="item-quantity">x1</div>
+              </div>
+              <div class="item-price">300.000₫</div>
+            </div>
+            <div class="order-total">
+              <div class="total-label">Thành tiền:</div>
+              <div class="total-price">300.000₫</div>
+            </div>
+            <div class="order-actions">
+              <button>Hủy Đơn Hàng</button>
+              <button class="contact-seller">Liên Hệ Cửa Hàng</button>
+            </div>
           </div>
           <!-- Tab content for "Chờ giao hàng" -->
           <div class="cho-giao-hang" data-content="waiting">
@@ -393,6 +416,16 @@
               width="100"
             />
             <p>Chưa Có đơn hàng đang chờ giao hàng</p>
+          </div>
+          <!-- Tab content for "Vận chuyển" -->
+          <div class="cho-van-chuyen" data-content="shipping">
+            <img
+              alt="Illustration of a clipboard with a pencil"
+              height="100"
+              src="https://storage.googleapis.com/a1aa/image/bcbhfdNcPy1la6VM4zEwWUxeKE9cDJ0eAJi2dWZLKKWcHrgnA.jpg"
+              width="100"
+            />
+            <p>Chưa Có đơn hàng đang vận chuyển</p>
           </div>
           <!-- Tab content for "Hoàn thành" -->
           <div class="hoan-thanh" data-content="completed">

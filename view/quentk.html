@@ -4,8 +4,8 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Đăng Nhập </title>
-   <link rel="stylesheet" href="../css/dangnhap.css">
+   <title>Quên Mật Khẩu </title>
+   <link rel="stylesheet" href="../css/quenmk.css">
    <link rel="stylesheet" href="../css/header-nav-footer.css">
    <link rel="stylesheet" href="../css/index.css">
    <link
@@ -55,7 +55,7 @@
                 <!-- Dropdown cho Bé gái -->
                 <div class="column">
                   <h3>ĐẦM VÁY</h3>
-                  <a href="./tat-ca-dam-vay.html" class="menu-link">Tất cả Đầm váy</a>
+                  <a href="#" class="menu-link">Tất cả Đầm váy</a>
                   <a href="#" class="menu-link">Đầm ngắn tay</a>
                   <a href="#" class="menu-link">Đầm dài tay</a>
                   <a href="#" class="menu-link">Đầm hai dây</a>
@@ -198,18 +198,18 @@
             <!-- <input type="text" placeholder="Tìm kiếm sản phẩm"> -->
             <i class="fas fa-search"></i> 
             <!-- Biểu tượng người dùng với menu đăng nhập/đăng ký -->
-          
+            
             <div class="cart" id="cart">
               <a href="./gio-hang.html" class="cart-a"><i class="fas fa-shopping-cart"></i></a>
               <span class="badge">0</span>
             </div>
             <div class="user-menu">
-              <i class="fas fa-user"></i>
-              <div class="dropdown">
-                <a class="menu-link" href="./dangnhap.html">Đăng nhập</a>
-                <a class="menu-link" href="./dangki.html">Đăng ký</a>
+                <i class="fas fa-user"></i>
+                <div class="dropdown">
+                  <a class="menu-link" href="./dangnhap.html">Đăng nhập</a>
+                  <a class="menu-link" href="./dangki.html">Đăng ký</a>
+                </div>
               </div>
-            </div>
             <!-- <div class="login-message-cart" id="loginMessageCart">
               Chưa có sản phẩm nào
             </div> -->
@@ -227,8 +227,8 @@
             
          </div>
          <div class="register">
-            <div>Đăng nhập tài khoản</div>
-            <p>Đăng nhập để truy cập tất cả các tính năng của dịch vụ chúng tôi. Quản lý doanh nghiệp của bạn ở một nơi. Hoàn toàn miễn phí.</p>
+            <div>Quên Mật Khẩu</div>
+            <p>Lấy lại mật khẩu để truy cập tất cả các tính năng của dịch vụ chúng tôi. Quản lý doanh nghiệp của bạn ở một nơi. Hoàn toàn miễn phí.</p>
             <div class="social">
                <a data-toggle="tooltip" title="Facebook" href=""><i class="fab fa-facebook-f"></i></a>
                <a data-toggle="tooltip" title="Google" href=""><i class="fab fa-google"></i></a>
@@ -239,28 +239,24 @@
 
       <div class="form-login">
          <form action="" method="POST" class="form" id="form-2">
-            <h3 class="heading">Đăng Nhập</h3>      
+            <h3 class="heading">Quên mật khẩu</h3>      
       
             <div class="form-group">
-              <label for="email" class="form-label">Tên tài khoản hoặc Email</label>
-              <input id="email" name="email" type="text" placeholder="Nhập tên tài khoản hoặc Email" class="form-control">
+              <label for="email" class="form-label">Email</label>
+              <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control">
               <span class="form-message"></span>
             </div>
       
-            <div class="form-group">
-              <label for="password" class="form-label">Mật khẩu</label>
-              <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
-              <span class="form-message"></span>
-            </div>
+           
 
             <div class="form-group f-term">
-               <label for="agree" class="form-label">Quên mật khẩu? Nhấn vào <a href="./quentk.html">đây</a></label>               
+               <label for="agree" class="form-label">bạn đã có tài khoản? Đăng nhập <a href="./dangnhap.html">đây</a></label>               
                <span class="form-message"></span>
              </div>
       
             <div class="sign-up">
                <div class="dangnhap">
-                <a href="../view/index-user.html" >Đăng nhập</a>
+                <a href="./quentk.html" >Tìm Kiếm</a>
                </div>
                <div class="dangki">
                 <a href="dangki.html">Đăng kí tại đây</a>

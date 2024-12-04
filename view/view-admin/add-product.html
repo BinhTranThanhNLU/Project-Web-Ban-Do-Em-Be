@@ -56,7 +56,7 @@
             </a>
           </li>
           <li class="menu-item">
-            <a class="menu-link active" href="./manage-employee.html">
+            <a class="menu-link " href="./manage-employee.html">
               <span class="menu-icon"><i class="fa fa-id-card"></i></span>
               <span class="menu-title">Quản lý nhân viên</span>
             </a>
@@ -68,7 +68,7 @@
             </a>
           </li>
           <li class="menu-item">
-            <a class="menu-link" href="table-data-product.html">
+            <a class="menu-link active" href="table-data-product.html">
               <span class="menu-icon"><i class="fa fa-box"></i></span>
               <span class="menu-title">Quản lý sản phẩm</span>
             </a>
@@ -140,9 +140,7 @@
             <hr />
           </div>
           <div class="button-group">
-            <button><i class="fas fa-plus"></i> Thêm nhà cung cấp</button>
             <button><i class="fas fa-plus"></i> Thêm danh mục</button>
-            <button><i class="fas fa-plus"></i> Thêm tình trạng</button>
           </div>
           <form>
             <div class="form-group">
@@ -176,9 +174,13 @@
               <select id="category" name="category">
                 <option>-- Chọn danh mục --</option>
               </select>
-              <label for="supplier">Nhà cung cấp</label>
-              <select id="supplier" name="supplier">
-                <option>-- Chọn nhà cung cấp --</option>
+              <label for="color">Màu sắc</label>
+              <select id="color" name="color">
+                <option>-- Chọn màu sắc --</option>
+              </select>
+              <label for="size">Size</label>
+              <select id="size" name="size">
+                <option>-- Chọn size --</option>
               </select>
               <label for="sale-price">Giá bán</label>
               <input
@@ -187,12 +189,12 @@
                 name="sale-price"
                 placeholder="Nhập Vào Giá Bấn"
               />
-              <label for="cost-price">Giá vốn</label>
+              <label for="create-at">Ngày tạo</label>
               <input
                 type="text"
-                id="cost-price"
-                name="cost-price"
-                placeholder="Nhập Vào Giá Vốn"
+                id="create-at"
+                name="create-at"
+                placeholder="Nhập Vào Giá Bấn"
               />
               <label for="product-image">Ảnh sản phẩm</label>
               <div class="file-input">

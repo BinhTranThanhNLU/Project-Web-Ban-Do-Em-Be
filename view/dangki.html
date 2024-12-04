@@ -221,18 +221,19 @@
             <!-- <input type="text" placeholder="Tìm kiếm sản phẩm"> -->
             <i class="fas fa-search"></i>
             <!-- Biểu tượng người dùng với menu đăng nhập/đăng ký -->
+           
+            <div class="cart" id="cart">
+              <a href="./gio-hang.html" class="cart-a"
+                ><i class="fas fa-shopping-cart"></i
+              ></a>
+              <span class="badge">0</span>
+            </div>
             <div class="user-menu">
               <i class="fas fa-user"></i>
               <div class="dropdown">
                 <a class="menu-link" href="./dangnhap.html">Đăng nhập</a>
                 <a class="menu-link" href="./dangki.html">Đăng ký</a>
               </div>
-            </div>
-            <div class="cart" id="cart">
-              <a href="./gio-hang.html" class="cart-a"
-                ><i class="fas fa-shopping-cart"></i
-              ></a>
-              <span class="badge">0</span>
             </div>
             <div class="login-message-cart" id="loginMessageCart">
               Chưa có sản phẩm nào
@@ -269,24 +270,24 @@
           <h3 class="heading">Đăng Kí</h3>
 
           <div class="form-group">
-            <label for="last-name" class="form-label">Họ</label>
+            <label for="username" class="form-label">Tên tài khoản</label>
             <input
-              id="last-name"
-              name="last-name"
+              id="username"
+              name="username"
               type="text"
-              placeholder="Nhập họ"
+              placeholder="Nhập Tên tài khoản"
               class="form-control"
             />
             <span class="form-message"></span>
           </div>
 
           <div class="form-group">
-            <label for="first-name" class="form-label">Tên</label>
+            <label for="fullname" class="form-label">Họ Và Tên</label>
             <input
-              id="first-name"
-              name="first-name"
+              id="fullname"
+              name="fullname"
               type="text"
-              placeholder="Nhập tên"
+              placeholder="Nhập Họ Và Tên"
               class="form-control"
             />
             <span class="form-message"></span>
@@ -305,12 +306,12 @@
           </div>
 
           <div class="form-group">
-            <label for="email" class="form-label">Gmail</label>
+            <label for="email" class="form-label">Email</label>
             <input
               id="email"
               name="email"
               type="email"
-              placeholder="VD: email@domain.com"
+              placeholder="Nhập Email"
               class="form-control"
             />
             <span class="form-message"></span>

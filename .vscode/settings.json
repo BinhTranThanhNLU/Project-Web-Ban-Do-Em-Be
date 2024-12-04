@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/view/be-gai.html"
+  "livePreview.defaultPreviewPath": "/view/be-gai.html",
+  "liveServer.settings.port": 5501
 }

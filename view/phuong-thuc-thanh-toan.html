@@ -17,6 +17,7 @@
 
   <body>
     <!-- HEADER -->
+
     <section class="section-header hidden-search-bar" id="hiddenSearchBar">
       <div class="header">
         <div class="logo-header">
@@ -37,7 +38,7 @@
             <i class="fas fa-phone-alt"></i>
           </div>
           <div class="text-header">
-            <a href="./view/contact.html">Liên hệ với chúng tôi</a>
+            <a href="./contact.html">Liên hệ với chúng tôi</a>
           </div>
           <div class="icon-header">
             <i class="fas fa-file-alt"></i>
@@ -52,18 +53,20 @@
         <!-- menu  -->
         <div class="navbar">
           <div class="menu">
-            <a href="./index.html">Trang Chủ</a>
+            <a href="../index.html">Trang Chủ</a>
             <div class="dropdown-menu">
               <!-- Thêm lớp cho Bé gái -->
               <div class="navheight">
-                <a href="./view/be-gai.html">Bé gái</a>
+                <a href="./be-gai.html">Bé gái</a>
                 <!-- <ion-icon name="chevron-down-outline"></ion-icon> -->
               </div>
               <div class="dropdown dropdown-full">
                 <!-- Dropdown cho Bé gái -->
                 <div class="column">
                   <h3>ĐẦM VÁY</h3>
-                  <a href="#" class="menu-link">Tất cả Đầm váy</a>
+                  <a href="./tat-ca-dam-vay.html" class="menu-link"
+                    >Tất cả Đầm váy</a
+                  >
                   <a href="#" class="menu-link">Đầm ngắn tay</a>
                   <a href="#" class="menu-link">Đầm dài tay</a>
                   <a href="#" class="menu-link">Đầm hai dây</a>
@@ -161,32 +164,29 @@
                 <!-- Dropdown cho Bé gái -->
                 <div class="column">
                   <!-- <h3>Áo</h3> -->
-                  <a class="menu-link" href="#">✨BST Disney - Friends</a>
-                  <a class="menu-link" href="#">🍂BST Thu Đông 2024</a>
-                  <a class="menu-link" href="#">🌼BST Vintage - Beaming Days</a>
-                  <a class="menu-link" href="#">🏠BST Đồ Bộ Mặc Nhà</a>
-                  <a class="menu-link" href="#"
-                    >🎒Be Cool At School Collection🎒</a
-                  >
+                  <a class="menu-link" href="#">🌼Bộ Sưu Tập Mùa Xuân</a>
+                  <a class="menu-link" href="#">✨Bộ Sưu Tập Mùa Hạ</a>
+                  <a class="menu-link" href="#">🍂Bộ Sưu Tập Mùa Thu</a>
+                  <a class="menu-link" href="#">🏠Bộ Sưu Tập Mùa Đông</a>
                 </div>
               </div>
             </div>
 
             <div class="dropdown-menu">
-              <div class="navheight"><a href="#">Sale sốc</a></div>
+              <div class="navheight"><a href="#">Giảm Giá Sốc</a></div>
               <!-- <div class="dropdown-2">
-              <div class="column"></div>
-            </div> -->
+                <div class="column"></div>
+              </div> -->
             </div>
             <div class="dropdown-menu">
-              <div class="navheight"><a href="#">New Arrival</a></div>
+              <div class="navheight"><a href="#">Hàng Mới Về</a></div>
               <div class="dropdown-3">
                 <!-- Dropdown cho Sale -->
                 <div class="column">
                   <!-- <h3>Áo</h3> -->
-                  <a class="menu-link" href="#">New Arrival Bé gái</a>
-                  <a class="menu-link" href="#"> New Arrival Bé trai</a>
-                  <a class="menu-link" href="#">BEST SELLER</a>
+                  <a class="menu-link" href="#">Hàng Mới Về Bé gái</a>
+                  <a class="menu-link" href="#">Hàng Mới Về Bé trai</a>
+                  <a class="menu-link" href="#">Bán Chạy Nhất</a>
                 </div>
               </div>
             </div>
@@ -210,27 +210,21 @@
             <!-- Biểu tượng người dùng với menu đăng nhập/đăng ký -->
 
             <div class="cart" id="cart">
-              <a href="./view/gio-hang.html" class="cart-a"
+              <a href="./gio-hang.html" class="cart-a"
                 ><i class="fas fa-shopping-cart"></i
               ></a>
               <span class="badge">0</span>
             </div>
-
-            <div class="login-message-cart" id="loginMessageCart">
-              Chưa có sản phẩm nào
-            </div>
             <div class="user-menu">
-              <i><img class="avatar" src="../images/avatar.webp" alt="" /></i>
+              <i class="fas fa-user"></i>
               <div class="dropdown">
-                <a class="menu-link" href="../view/thong-tin-cua-toi.html"
-                  >Thông tin của tôi</a
-                >
-                <a class="menu-link" href="../view/don-hang-cua-toi.html"
-                  >Đơn hàng của tôi</a
-                >
-                <a class="menu-link" href="../index.html">Đăng xuất</a>
+                <a class="menu-link" href="./dangnhap.html">Đăng nhập</a>
+                <a class="menu-link" href="./dangki.html">Đăng ký</a>
               </div>
             </div>
+            <!-- <div class="login-message-cart" id="loginMessageCart">
+              Chưa có sản phẩm nào
+            </div> -->
           </div>
         </div>
       </nav>
@@ -326,74 +320,84 @@
       <p class="total-amount">Tổng cộng: VND 141,700đ</p>
     </div>
   </div> -->
-  <!-- ====================================footer=============================== -->
-  <section class="section-footer">
-    <div class="footer">
-      <div class="footer-column">
-        <img alt="Little Whale Logo" height="50" src="../images/logo.png" width="100" />
-        <p>
-          Little Whale là thương hiệu thời trang trẻ em hàng đầu Việt Nam với hơn 60
-          showroom trên toàn quốc, mang đến cho bé những bộ quần áo thoải mái
-          cho bé "tự do khám phá" thế giới và trải nghiệm niềm vui mỗi ngày.
-        </p>
-        <h3>ĐĂNG KÝ NHẬN TIN</h3>
-        <div class="subscribe">
-          <input placeholder="Nhập địa chỉ email" type="email" />
-          <button>Đăng ký</button>
+    <!-- ====================================footer=============================== -->
+    <section class="section-footer">
+      <div class="footer">
+        <div class="footer-column">
+          <img
+            alt="Little Whale Logo"
+            height="50"
+            src="../images/logo.png"
+            width="100"
+          />
+          <p>
+            Little Whale là thương hiệu thời trang trẻ em hàng đầu Việt Nam với
+            hơn 60 showroom trên toàn quốc, mang đến cho bé những bộ quần áo
+            thoải mái cho bé "tự do khám phá" thế giới và trải nghiệm niềm vui
+            mỗi ngày.
+          </p>
+          <h3>ĐĂNG KÝ NHẬN TIN</h3>
+          <div class="subscribe">
+            <input placeholder="Nhập địa chỉ email" type="email" />
+            <button>Đăng ký</button>
+          </div>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
         </div>
-        <div class="social-icons">
-          <a href="#">
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-tiktok"></i>
-          </a>
+
+        <div class="footer-column">
+          <h3>VỀ Little Whale</h3>
+          <a href="#">Giới thiệu về Little Whale</a>
+          <br />
+          <a href="#">Tin tức Little Whale</a>
+          <br />
+          <a href="./view/contact.html">Liên hệ với chúng tôi</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+          <a href="./view/tracuudonhang.html">Tra cứu đơn hàng</a>
+          <br />
+          <a href="./view/chinhsachdoitra.html"
+            >Chính sách đổi trả hàng Online</a
+          >
+          <br />
+          <a href="./view/chinhsachkhachangthanthiet.html"
+            >Chính sách Khách hàng thân thiết</a
+          >
+          <br />
+          <a href="./view/giaohang-phigiaohang.html"
+            >Giao hàng &amp; phí giao hàng</a
+          >
+          <br />
+          <a href="#">Hướng dẫn chọn size</a>
+          <br />
+          <a href="#">Chính sách bảo mật thông tin</a>
+          <br />
+          <a href="#">Chính sách đại lý</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>CÔNG TY TNHH Little Whale</h3>
+          <p>Địa chỉ:</p>
+          <p>khu phố 6, Thủ Đức, Hồ Chí Minh</p>
+          <p>
+            Văn phòng phía Nam: Số 33 đường 12A Khu Đô Thị Lake View City, Bình
+            Trưng Đông, Quận 2, TP HCM
+          </p>
+          <p>Điện thoại: 0969 969 969</p>
+          <p>Email: cskh@littleWhale</p>
         </div>
       </div>
+    </section>
+  </body>
 
-      <div class="footer-column">
-        <h3>VỀ Little Whale</h3>
-        <a href="#">Giới thiệu về Little Whale</a>
-        <br />
-        <a href="#">Tin tức Little Whale</a>
-        <br />
-        <a href="./view/contact.html">Liên hệ với chúng tôi</a>
-      </div>
-
-      <div class="footer-column">
-        <h3>HỖ TRỢ KHÁCH HÀNG</h3>
-        <a href="./view/tracuudonhang.html">Tra cứu đơn hàng</a>
-        <br />
-        <a href="./view/chinhsachdoitra.html">Chính sách đổi trả hàng Online</a>
-        <br />
-        <a href="./view/chinhsachkhachangthanthiet.html">Chính sách Khách hàng thân thiết</a>
-        <br />
-        <a href="./view/giaohang-phigiaohang.html">Giao hàng &amp; phí giao hàng</a>
-        <br />
-        <a href="#">Hướng dẫn chọn size</a>
-        <br />
-        <a href="#">Chính sách bảo mật thông tin</a>
-        <br />
-        <a href="#">Chính sách đại lý</a>
-      </div>
-
-      <div class="footer-column">
-        <h3>CÔNG TY TNHH Little Whale</h3>
-        <p>Địa chỉ:</p>
-        <p>
-          khu phố 6, Thủ Đức, Hồ Chí Minh
-        </p>
-        <p>
-          Văn phòng phía Nam: Số 33 đường 12A Khu Đô Thị Lake View City, Bình
-          Trưng Đông, Quận 2, TP HCM
-        </p>
-        <p>Điện thoại: 0969 969 969</p>
-        <p>Email: cskh@littleWhale</p>
-      </div>
-    </div>
-  </section>
-</body>
-
-<script src="../js/scriptnav.js"></script>
-<script src="../js/thong-tin-cua-toi.js"></script>
+  <script src="../js/scriptnav.js"></script>
+  <script src="../js/thong-tin-cua-toi.js"></script>
 </html>

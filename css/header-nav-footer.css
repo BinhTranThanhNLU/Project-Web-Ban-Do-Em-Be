@@ -1,7 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+/* Bang Mau
+#f7840b
+#FFF5E4
+#C1D8C3
+#6A9C89
+#ff7f50
+*/
 /* ==========================header================================ */
-.section-header {
-  margin-left: 10%;
-  margin-right: 10%;
+.hidden-search-bar {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000; /* Đảm bảo phần này hiển thị trên các thành phần khác */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ để nổi bật */
+}
+
+.hidden-search-bar.active {
+  display: block;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 .header {
   display: flex;
@@ -9,12 +43,15 @@
   padding: 10px 20px;
   border-bottom: 2px solid #f7840b;
 }
+
 .logo-header {
   flex: 1;
 }
+
 .logo-header img {
   height: 50px;
 }
+
 .search-bar-header {
   flex: 2;
   display: flex;
@@ -23,6 +60,7 @@
   border-radius: 20px;
   padding: 5px 10px;
 }
+
 .search-bar-header input {
   border: none;
   outline: none;
@@ -30,13 +68,16 @@
   padding: 5px;
   font-size: 16px;
 }
-.search-bar-head .fa-search {
+
+.search-bar-header .fa-search {
   color: gray;
 }
+
 .contact-info-header {
   display: flex;
   align-items: center;
 }
+
 .contact-info-header .icon-header {
   display: flex;
   align-items: center;
@@ -48,18 +89,33 @@
   margin-right: 10px;
   margin-left: 20px;
 }
+
 .contact-info-header .icon-header i {
   color: gray;
   cursor: pointer;
 }
+
 .contact-info-header .text-header {
   font-size: 16px;
   color: black;
   cursor: pointer;
 }
+/* 21 sua */
+.text-header a {
+  text-decoration: none;
+  color: #333; /* Màu mặc định */
+  transition: color 0.3s ease; /* Thêm hiệu ứng chuyển đổi mượt */
+}
+
+.text-header a:hover {
+  color: #f7840b; /* Màu khi hover */
+  text-decoration: none; /* Tùy chọn: thêm gạch dưới khi hover */
+}
+
 .contact-info-header .text-header:hover {
   color: #f7840b;
 }
+/* 21 sua */
 /* ============================nav ================================ */
 
 .navigation {
@@ -72,7 +128,7 @@ nav {
   height: 70px;
   align-items: center;
   position: fixed; /* Đặt thanh điều hướng cố định */
-  top: 80px; /* Vị trí ban đầu */
+  top: 70px; /* Vị trí ban đầu */
   width: 100%;
   z-index: 1000;
   background: #fff5e4;
@@ -124,6 +180,24 @@ nav.sticky {
   transform-origin: bottom left;
   /* Đổi điểm gốc khi hover */
 }
+
+.menu-link {
+  position: relative;
+  text-decoration: none;
+  color: initial;
+}
+.menu-link:hover {
+  color: #f7840b !important;
+}
+/* Tắt hiệu ứng gạch chân bằng cách bỏ đoạn CSS bên dưới */
+.menu-link::after {
+  content: none !important;
+}
+
+.menu-link:hover::after {
+  content: none !important;
+}
+
 /* hiệu ứng dưới chân của nav */
 .navheight {
   height: 50px;
@@ -143,16 +217,19 @@ nav.sticky {
   display: flex;
   align-items: center; /* Đảm bảo các icon và chữ "đơn hàng" được căn giữa theo chiều dọc */
   gap: 25px; /* Điều chỉnh khoảng cách giữa các icon */
+  cursor: pointer;
 }
-.navbar .icons i {
+.navbar .icons a {
   margin: 0; /* Loại bỏ khoảng cách bên ngoài của icon */
   font-size: 18px;
   line-height: 1; /* Đảm bảo icon căn đều với văn bản */
 }
+
 .navbar .icons .cart {
   position: relative;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .navbar .icons .cart .badge {
   position: absolute;
@@ -164,6 +241,43 @@ nav.sticky {
   padding: 2px 5px;
   font-size: 12px;
 }
+
+.cart-a {
+  position: relative;
+  text-decoration: none;
+  color: initial;
+  cursor: pointer;
+}
+.cart-a:hover {
+  /* color: #f7840b !important; */
+}
+/* Tắt hiệu ứng gạch chân bằng cách bỏ đoạn CSS bên dưới */
+.cart-a::after {
+  content: none !important;
+}
+
+.cart-a:hover::after {
+  content: none !important;
+}
+
+/* Style cho thông báo */
+.login-message-cart {
+  display: none !important; /* Ẩn mặc định */
+  position: absolute;
+  top: 75px; /* Đặt thông báo ngay dưới giỏ hàng */
+  left: 85%;
+  transform: translateX(-50%);
+  width: 320px;
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 10;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Định dạng chung cho các dropdown */
 .dropdown,
 .dropdown-1,
@@ -287,7 +401,6 @@ nav.sticky {
   position: absolute;
   top: 43px;
   right: 0;
-  background-color: white;
   border: 1px solid #ddd;
   border-radius: 5px;
   width: 150px;
@@ -297,7 +410,7 @@ nav.sticky {
 
 .user-menu .dropdown a {
   display: block;
-  /* padding: 10px; */
+  padding: 10px;
   text-decoration: none;
   color: black;
 }
@@ -309,29 +422,25 @@ nav.sticky {
 /* ================================footer========================== */
 
 .section-footer {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
-
 .footer {
   background-color: #fff;
-  gap: 80px;
+  padding: 40px 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   border-top: 1px solid #eaeaea;
 }
-
 .footer-column {
   flex: 1;
-  margin: 20px 0px 0px 0px;
+  margin: 0 20px;
 }
-
 .footer-column h3 {
   font-size: 16px;
   margin-bottom: 20px;
 }
-
 .footer-column p,
 .footer-column a {
   font-size: 14px;
@@ -339,23 +448,20 @@ nav.sticky {
   text-decoration: none;
   line-height: 1.6;
 }
-
 .footer-column a:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  color: #f7840b;
 }
-
 .footer-column .subscribe {
   display: flex;
   margin-top: 20px;
 }
-
 .footer-column .subscribe input[type="email"] {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px 0 0 4px;
   flex: 1;
 }
-
 .footer-column .subscribe button {
   padding: 10px 20px;
   border: none;
@@ -366,17 +472,14 @@ nav.sticky {
   height: 40px;
   width: 100px;
 }
-
 .footer-column .social-icons {
   margin-top: 20px;
 }
-
 .footer-column .social-icons a {
   margin-right: 10px;
   color: #333;
   font-size: 20px;
 }
-
 .footer-column .payment-icons img {
   margin-right: 10px;
   height: 100px;

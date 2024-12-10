@@ -1,0 +1,467 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2a2d3e;
+    color: #fff;
+}
+
+/* Sidebar */
+.navbar-left {
+    width: 250px;
+    height: 100vh;
+    background-color: #1f212d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    transition: width 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-left:hover {
+    width: 260px;
+}
+
+.sidebar-header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #3a3f51;
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.sidebar-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-title h2 {
+    font-size: 1.5rem;
+    color: #a0a4b8;
+    margin: 8px 0 0;
+}
+
+.brand-logo-mini img {
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto;
+    display: block;
+    padding-top: 10px;
+}
+
+.user-avatar {
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%;
+    border: 2px solid #a0a4b8;
+    margin-top: 10px;
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+}
+
+.user-info .user-name {
+    font-weight: bold;
+    color: #fff;
+    margin-top: 8px;
+}
+
+.user-info .user-greeting {
+    color: #a0a4b8;
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.menu-item {
+    padding: 15px;
+    transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.menu-item a {
+    color: #a0a4b8;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.menu-item a .menu-icon {
+    margin-right: 12px;
+    font-size: 1.2rem;
+}
+
+.menu-item:hover {
+    background-color: #3a3f51;
+    padding-left: 20px;
+}
+
+.menu-link.active {
+    background-color: #353a50;
+    color: #ffffff;
+}
+
+.menu-link.active .menu-icon,
+.menu-link.active .menu-title {
+    color: #ffffff;
+}
+
+/* Container-Main */
+
+.container-main {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+
+/* Top Navbar */
+.container-main .navbar {
+    background-color: #1f212d;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #3a3f51;
+    color: #a0a4b8;
+    margin-bottom: 20px;
+}
+
+/* Navbar Left Section (Toggle Button + Search Bar) */
+.container-main .navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Navbar Toggler Icon */
+.container-main .navbar-toggler {
+    font-size: 24px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Search Bar Styling */
+.container-main .search {
+    flex-grow: 1;
+    max-width: 300px;
+    position: relative;
+}
+
+.container-main .search input {
+    width: 100%;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3a3f51;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Navbar Items */
+.container-main .navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Links */
+.container-main .navbar-nav .nav-item {
+    position: relative;
+}
+
+.container-main .navbar-nav .nav-link {
+    color: #a0a4b8;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+    padding: 5px 10px;
+    gap: 5px;
+}
+
+.container-main .navbar-nav .nav-link i {
+    font-size: 1.1rem; 
+    color: #a0a4b8;
+}
+
+.container-main .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+.container-main .navbar-nav .nav-link:hover i {
+    color: #fff;
+}
+
+/* Badge Styling */
+.container-main .badge {
+    background-color: #ff5c5c;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.75rem;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
+
+/* Profile Container Styling */
+.container-main .profile-container {
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+}
+
+.container-main .profile-container .profile-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.container-main .profile-container .profile-pic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.container-main .profile-container .profile-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+/* Main Content */
+.container-content-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Content */
+.content {
+    padding: 20px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+}
+
+.stat-card {
+    background-color: #3a3f51; 
+    padding: 20px; 
+    border-radius: 5px; 
+    text-align: center; 
+    color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng khi hover */
+}
+
+.stat-card:hover {
+    transform: translateY(-5px); /* Hiệu ứng di chuyển lên khi hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+.stat-card-icon {
+    font-size: 2rem; 
+    margin-bottom: 10px; 
+    color: #ffcc00; 
+}
+
+.stat-card span {
+    font-weight: bold; 
+    font-size: 1.2rem; 
+    display: block; 
+    margin-top: 10px;
+    color: #00bcd4;
+}
+
+
+/* Order Tables */
+.container-order {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.order-status-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #3a3f51;
+    font-size: 14px;
+}
+
+.order-status-table th,
+.order-status-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+    color: #fff;
+}
+
+.order-status-table th {
+    color: #a0a4b8;
+    font-weight: bold;
+}
+
+
+.order-status-table .customer-image {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    object-fit: cover;
+}
+
+.order-status-table td {
+    vertical-align: middle; 
+}
+
+.order-status-table th:nth-child(2),
+.order-status-table td:nth-child(2) {
+    text-align: center; 
+}
+
+.status-label {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-align: center;
+    min-width: 80px;
+}
+
+.status-label.pending {
+    color: #ff9800;
+    border: 1px solid #ff9800;
+}
+
+.status-label.in-transit {
+    color: #2196f3;
+    border: 1px solid #2196f3;
+}
+
+.status-label.completed {
+    color: #4caf50;
+    border: 1px solid #4caf50;
+}
+
+.status-label.cancelled {
+    color: #f44336;
+    border: 1px solid #f44336;
+}
+
+/* User Table */
+.container-customer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.new-customers-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #3a3f51;
+}
+
+.new-customers-table th,
+.new-customers-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+    color: #fff;
+}
+
+.new-customers-table th {
+    color: #a0a4b8;
+    font-weight: bold;
+}
+
+.new-customers-table .customer-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.new-customers-table .customer-name {
+    font-weight: bold;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.new-customers-table td {
+    vertical-align: middle;
+}
+
+/* Center-align image column */
+.new-customers-table th:nth-child(2),
+.new-customers-table td:nth-child(2) {
+    text-align: center;
+}
+
+
+/* Charts Section */
+.container-chart {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.charts {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.chart {
+    width: 45%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.chart h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333; 
+    font-weight: bold;
+}
+
+

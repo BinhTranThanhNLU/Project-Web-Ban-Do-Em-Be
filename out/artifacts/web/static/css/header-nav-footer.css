@@ -1,0 +1,487 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+/* Bang Mau
+#f7840b
+#FFF5E4
+#C1D8C3
+#6A9C89
+#ff7f50
+*/
+/* ==========================header================================ */
+.hidden-search-bar {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000; /* Đảm bảo phần này hiển thị trên các thành phần khác */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ để nổi bật */
+}
+
+.hidden-search-bar.active {
+  display: block;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 2px solid #f7840b;
+}
+
+.logo-header {
+  flex: 1;
+}
+
+.logo-header img {
+  height: 50px;
+}
+
+.search-bar-header {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.search-bar-header input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.search-bar-header .fa-search {
+  color: gray;
+}
+
+.contact-info-header {
+  display: flex;
+  align-items: center;
+}
+
+.contact-info-header .icon-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff5e4;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.contact-info-header .icon-header i {
+  color: gray;
+  cursor: pointer;
+}
+
+.contact-info-header .text-header {
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+}
+/* 21 sua */
+.text-header a {
+  text-decoration: none;
+  color: #333; /* Màu mặc định */
+  transition: color 0.3s ease; /* Thêm hiệu ứng chuyển đổi mượt */
+}
+
+.text-header a:hover {
+  color: #f7840b; /* Màu khi hover */
+  text-decoration: none; /* Tùy chọn: thêm gạch dưới khi hover */
+}
+
+.contact-info-header .text-header:hover {
+  color: #f7840b;
+}
+/* 21 sua */
+/* ============================nav ================================ */
+
+.navigation {
+  margin-top: 10px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 70px;
+  height: 70px;
+  align-items: center;
+  position: fixed; /* Đặt thanh điều hướng cố định */
+  top: 70px; /* Vị trí ban đầu */
+  width: 100%;
+  z-index: 1000;
+  background: #fff5e4;
+}
+
+.hidden {
+  top: 0; /* Di chuyển lên đầu trang khi cuộn xuống */
+}
+
+nav.sticky {
+  background: #fff5e4;
+}
+/* nav:hover {
+ background: #FFF5E4;
+} */
+
+.navbar {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.navbar a {
+  text-decoration: none;
+  color: black;
+  margin: 0 10px;
+  font-size: 16px;
+  position: relative; /* Đặt relative để quản lý dropdown */
+}
+/* Thêm hiệu ứng dưới chân của nav */
+.navbar a::after {
+  content: ""; /* Tạo nội dung rỗng */
+  position: absolute; /* Vị trí tuyệt đối */
+  left: 0; /* Căn trái */
+  bottom: 0; /* Căn dưới */
+  width: 100%; /* Chiều rộng 100% */
+  height: 2px; /* Độ cao của gạch chân */
+  background-color: black; /* Màu gạch chân */
+  transform: scaleX(0); /* Khởi tạo gạch chân chưa xuất hiện */
+  transform-origin: bottom right; /* Điểm gốc cho hiệu ứng */
+  transition: transform 0.5s ease; /* Hiệu ứng chuyển đổi */
+}
+.navbar a:hover::after {
+  /* text-decoration: underline; */
+  transform: scaleX(1); /* Khi hover thì gạch chân xuất hiện */
+  transform-origin: bottom left;
+  /* Đổi điểm gốc khi hover */
+}
+
+.menu-link {
+  position: relative;
+  text-decoration: none;
+  color: initial;
+}
+.menu-link:hover {
+  color: #f7840b !important;
+}
+/* Tắt hiệu ứng gạch chân bằng cách bỏ đoạn CSS bên dưới */
+.menu-link::after {
+  content: none !important;
+}
+
+.menu-link:hover::after {
+  content: none !important;
+}
+
+/* hiệu ứng dưới chân của nav */
+.navheight {
+  height: 50px;
+  width: 125px;
+  margin-top: 30px;
+}
+
+.navbar .menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.navbar .menu a {
+  margin: 0 20px;
+}
+.navbar .icons {
+  display: flex;
+  align-items: center; /* Đảm bảo các icon và chữ "đơn hàng" được căn giữa theo chiều dọc */
+  gap: 25px; /* Điều chỉnh khoảng cách giữa các icon */
+  cursor: pointer;
+}
+.navbar .icons a {
+  margin: 0; /* Loại bỏ khoảng cách bên ngoài của icon */
+  font-size: 18px;
+  line-height: 1; /* Đảm bảo icon căn đều với văn bản */
+}
+
+.navbar .icons .cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.navbar .icons .cart .badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #f7840b;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-size: 12px;
+}
+
+.cart-a {
+  position: relative;
+  text-decoration: none;
+  color: initial;
+  cursor: pointer;
+}
+.cart-a:hover {
+  /* color: #f7840b !important; */
+}
+/* Tắt hiệu ứng gạch chân bằng cách bỏ đoạn CSS bên dưới */
+.cart-a::after {
+  content: none !important;
+}
+
+.cart-a:hover::after {
+  content: none !important;
+}
+
+/* Style cho thông báo */
+.login-message-cart {
+  display: none !important; /* Ẩn mặc định */
+  position: absolute;
+  top: 75px; /* Đặt thông báo ngay dưới giỏ hàng */
+  left: 85%;
+  transform: translateX(-50%);
+  width: 320px;
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 10;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Định dạng chung cho các dropdown */
+.dropdown,
+.dropdown-1,
+.dropdown-2,
+.dropdown-3,
+.dropdown-4 {
+  display: none;
+  position: absolute;
+  top: 100%;
+  justify-content: space-around;
+  background-color: white;
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+  width: 20%;
+  z-index: 1000;
+}
+
+/* Hiển thị dropdown khi hover vào menu */
+.navbar .menu a:hover .dropdown,
+.navbar .menu a:hover .dropdown-1,
+.navbar .menu a:hover .dropdown-2,
+.navbar .menu a:hover .dropdown-3,
+.navbar .menu a:hover .dropdown-4,
+.navbar .menu .dropdown-menu:hover .dropdown,
+.navbar .menu .dropdown-menu:hover .dropdown-1,
+.navbar .menu .dropdown-menu:hover .dropdown-2,
+.navbar .menu .dropdown-menu:hover .dropdown-3,
+.navbar .menu .dropdown-menu:hover .dropdown-4 {
+  display: flex;
+  justify-content: center;
+}
+.dropdown-menu {
+  position: relative; /* Đảm bảo dropdown căn theo mục cha */
+}
+
+/* Vị trí của từng dropdown */
+.dropdown {
+  left: 0;
+  width: 100%;
+  line-height: 2;
+  margin-top: -5px;
+}
+/* CSS chung cho các dropdown */
+.dropdown-1,
+.dropdown-3,
+.dropdown-4 {
+  position: absolute;
+  top: 100%; /* Đặt ngay bên dưới mục cha */
+  left: 50%; /* Căn giữa theo chiều ngang */
+  transform: translateX(-50%); /* Dịch chuyển để căn giữa */
+  width: 250px; /* Đặt chiều rộng cụ thể */
+  line-height: 2;
+  background-color: white;
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  margin-top: -5px;
+}
+
+/* Full width cho dropdown của Bé gái và Bé trai */
+.dropdown-full {
+  width: 60vw;
+  left: 0;
+  padding: 20px;
+  justify-content: space-around;
+  margin-top: -5px;
+}
+/* Định dạng chung cho các cột trong dropdown */
+.dropdown .column,
+.dropdown-1 .column,
+.dropdown-2 .column,
+.dropdown-3 .column,
+.dropdown-4 .column {
+  width: 220px;
+}
+
+.dropdown .column h3,
+.dropdown-1 .column h3,
+.dropdown-2 .column h3,
+.dropdown-3 .column h3,
+.dropdown-4 .column h3 {
+  font-size: 16px;
+  /* margin-bottom: 10px; */
+}
+
+.dropdown .column a,
+.dropdown-1 .column a,
+.dropdown-2 .column a,
+.dropdown-3 .column a,
+.dropdown-4 .column a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.dropdown .column a:hover,
+.dropdown-1 .column a:hover,
+.dropdown-2 .column a:hover,
+.dropdown-3 .column a:hover,
+.dropdown-4 .column a:hover {
+  /* text-decoration: underline; */
+  transition: transform 0.3s ease; /* Hiệu ứng chuyển đổi */
+}
+/* dang nhập đăng kí user */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-menu .dropdown {
+  display: none; /* Ẩn menu thả xuống theo mặc định */
+  position: absolute;
+  top: 43px;
+  right: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.user-menu .dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.user-menu .dropdown a:hover {
+  background-color: #f0f0f0;
+  text-decoration: none;
+}
+/* ================================footer========================== */
+
+.section-footer {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.footer {
+  background-color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid #eaeaea;
+}
+.footer-column {
+  flex: 1;
+  margin: 0 20px;
+}
+.footer-column h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.footer-column p,
+.footer-column a {
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  line-height: 1.6;
+}
+.footer-column a:hover {
+  /* text-decoration: underline; */
+  color: #f7840b;
+}
+.footer-column .subscribe {
+  display: flex;
+  margin-top: 20px;
+}
+.footer-column .subscribe input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  flex: 1;
+}
+.footer-column .subscribe button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  height: 40px;
+  width: 100px;
+}
+.footer-column .social-icons {
+  margin-top: 20px;
+}
+.footer-column .social-icons a {
+  margin-right: 10px;
+  color: #333;
+  font-size: 20px;
+}
+.footer-column .payment-icons img {
+  margin-right: 10px;
+  height: 100px;
+  width: 50px;
+}

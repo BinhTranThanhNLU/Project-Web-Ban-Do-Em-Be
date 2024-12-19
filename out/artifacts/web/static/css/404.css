@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #FFF5E4; /* Light background color */
+}
+
+.error-container {
+    text-align: center;
+    color: #6A9C89; /* Dark green color */
+}
+
+.error-code {
+    font-size: 8rem;
+    font-weight: bold;
+    color: #CD5C08; /* Orange color */
+    animation: pulse 1.5s infinite;
+}
+
+.error-message {
+    font-size: 1.5rem;
+    color: #6A9C89;
+    margin-bottom: 20px;
+}
+
+.home-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #C1D8C3; /* Light green color */
+    color: #FFF5E4; /* Text color on button */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #CD5C08; /* Orange on hover */
+}
+
+.footer {
+    font-size: 0.8rem;
+    color: #C1D8C3;
+    margin-top: 30px;
+}
+
+/* Animation for the 404 text */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}

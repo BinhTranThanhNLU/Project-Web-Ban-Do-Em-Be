@@ -52,7 +52,7 @@
     <!-- menu  -->
     <div class="navbar">
       <div class="menu">
-        <a href="../index.jsp">Trang Chủ</a>
+        <a href="index.jsp">Trang Chủ</a>
         <div class="dropdown-menu">
           <!-- Thêm lớp cho Bé gái -->
           <div class="navheight">

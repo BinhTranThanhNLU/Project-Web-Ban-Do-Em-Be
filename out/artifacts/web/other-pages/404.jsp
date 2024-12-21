@@ -12,7 +12,7 @@
 <div class="error-container">
     <h1 class="error-code">404</h1>
     <h2 class="error-message">SORRY! The page you’re looking for was not found.</h2>
-    <a href="../index.jsp" class="home-button">Back to home</a>
+    <a href="index.jsp" class="home-button">Back to home</a>
     <p class="footer">Copyright © 2024 All rights reserved.</p>
 </div>
 </body>

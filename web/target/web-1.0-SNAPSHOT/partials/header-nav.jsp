@@ -53,7 +53,7 @@
         <!-- menu  -->
         <div class="navbar">
             <div class="menu">
-                <a href="index.jsp">Trang Chủ</a>
+                <a href="${pageContext.request.contextPath}/home">Trang chủ</a>
                 <div class="dropdown-menu">
                     <!-- Thêm lớp cho Bé gái -->
                     <div class="navheight">

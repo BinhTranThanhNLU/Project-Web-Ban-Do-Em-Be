@@ -32,10 +32,10 @@
 <div class="container-scroller">
     <!-- Navbar-Left -->
     <navbar class="navbar-left" id="navbar-left">
-        <div class="sidebar-header">
             <div class="user-profile">
                 <div class="sidebar-title">
-                    <a href="index.jsp" class="brand-logo-mini"><img src="./images/logo.png" alt="logo"></a>
+                    <a href="${pageContext.request.contextPath}/home">Trang chủ</a>
+
                     <h2>Litte Whale</h2>
                 </div>
                 <img class="user-avatar"

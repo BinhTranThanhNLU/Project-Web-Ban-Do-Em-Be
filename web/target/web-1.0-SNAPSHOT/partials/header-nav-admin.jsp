@@ -35,7 +35,7 @@
         <div class="sidebar-header">
             <div class="user-profile">
                 <div class="sidebar-title">
-                    <a href="index.html" class="brand-logo-mini"><img src="./images/logo.png" alt="logo"></a>
+                    <a href="index.jsp" class="brand-logo-mini"><img src="./images/logo.png" alt="logo"></a>
                     <h2>Litte Whale</h2>
                 </div>
                 <img class="user-avatar"
@@ -50,43 +50,43 @@
         <hr>
         <ul class="sidebar-menu">
             <li class="menu-item">
-                <a class="menu-link" href="phan-mem-ban-hang.html">
+                <a class="menu-link" href="phan-mem-ban-hang.jsp">
                     <span class="menu-icon"><i class="fa fa-cart-plus"></i></span>
                     <span class="menu-title">POS Bán Hàng</span>
                 </a>
             </li>
             <li class="menu-item">
-                <a class="menu-link" href="./admin1.html">
+                <a class="menu-link" href="./admin1.jsp">
                     <span class="menu-icon"><i class="fa fa-tachometer-alt"></i></span>
                     <span class="menu-title">Bảng điều khiển</span>
                 </a>
             </li>
             <li class="menu-item">
-                <a class="menu-link active" href="./manage-employee.html">
+                <a class="menu-link active" href="./manage-employee.jsp">
                     <span class="menu-icon"><i class="fa fa-id-card"></i></span>
                     <span class="menu-title">Quản lý nhân viên</span>
                 </a>
             </li>
             <li class="menu-item">
-                <a class="menu-link" href="./manage-user.html">
+                <a class="menu-link" href="./manage-user.jsp">
                     <span class="menu-icon"><i class="fa fa-users"></i></span>
                     <span class="menu-title">Quản lý khách hàng</span>
                 </a>
             </li>
             <li class="menu-item">
-                <a class="menu-link" href="./manage-product.html">
+                <a class="menu-link" href="./manage-product.jsp">
                     <span class="menu-icon"><i class="fa fa-box"></i></span>
                     <span class="menu-title">Quản lý sản phẩm</span>
                 </a>
             </li>
             <li class="menu-item">
-                <a class="menu-link" href="./manage-order.html">
+                <a class="menu-link" href="./manage-order.jsp">
                     <span class="menu-icon"><i class="fa fa-tasks"></i></span>
                     <span class="menu-title">Quản lý đơn hàng</span>
                 </a>
             </li>
             <li class="menu-item">
-                <a class="menu-link" href="./report-revenue.html">
+                <a class="menu-link" href="./report-revenue.jsp">
                     <span class="menu-icon"><i class="fa fa-chart-bar"></i></span>
                     <span class="menu-title">Báo cáo doanh thu</span>
                 </a>
@@ -107,7 +107,7 @@
                 </div>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="./add-employee.html" class="nav-link"><i class="fa-solid fa-plus"></i>Thêm sản phẩm mới</a>
+                        <a href="./add-employee.jsp" class="nav-link"><i class="fa-solid fa-plus"></i>Thêm sản phẩm mới</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link"><i class="fa-solid fa-message"></i> Tin Nhắn <span

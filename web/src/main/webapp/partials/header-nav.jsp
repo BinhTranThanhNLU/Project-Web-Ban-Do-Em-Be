@@ -29,7 +29,10 @@
 <section class="section-header hidden-search-bar" id="hiddenSearchBar">
     <div class="header">
         <div class="logo-header">
-            <a href=""><img alt="Company Logo" height="50" src="./images/logo.png" width="100"/></a>
+            <a href="${pageContext.request.contextPath}/home">
+                <img src="${pageContext.request.contextPath}/images/logo.png" alt="Logo" style="height: 50px;">
+            </a>
+
         </div>
         <div class="search-bar-header">
             <input placeholder="Bạn cần tìm gì?" type="text"/>
@@ -53,7 +56,10 @@
         <!-- menu  -->
         <div class="navbar">
             <div class="menu">
-                <a href="${pageContext.request.contextPath}/home">Trang chủ</a>
+                <a href="${pageContext.request.contextPath}/home">
+                Trang Chủ
+                </a>
+
                 <div class="dropdown-menu">
                     <!-- Thêm lớp cho Bé gái -->
                     <div class="navheight">

@@ -38,18 +38,18 @@
             <br/>
             <a href="#">Tin tức Little Whale</a>
             <br/>
-            <a href="./view/contact.html">Liên hệ với chúng tôi</a>
+            <a href="/web_war/other-pages//contact.jsp">Liên hệ với chúng tôi</a>
         </div>
 
         <div class="footer-column">
             <h3>HỖ TRỢ KHÁCH HÀNG</h3>
-            <a href="./view/tracuudonhang.html">Tra cứu đơn hàng</a>
+            <a href="/web_war/other-pages/tracuudonhang.jsp">Tra cứu đơn hàng</a>
             <br/>
-            <a href="./view/chinhsachdoitra.html">Chính sách đổi trả hàng Online</a>
+            <a href="/web_war/other-pages/chinhsachdoitra.jsp">Chính sách đổi trả hàng Online</a>
             <br/>
-            <a href="./view/chinhsachkhachangthanthiet.html">Chính sách Khách hàng thân thiết</a>
+            <a href="/web_war/other-pages/chinhsachkhachangthanthiet.jsp">Chính sách Khách hàng thân thiết</a>
             <br/>
-            <a href="./view/giaohang-phigiaohang.html">Giao hàng &amp; phí giao hàng</a>
+            <a href="/web_war/other-pages/giaohang-phigiaohang.jsp">Giao hàng &amp; phí giao hàng</a>
             <br/>
             <a href="#">Hướng dẫn chọn size</a>
             <br/>

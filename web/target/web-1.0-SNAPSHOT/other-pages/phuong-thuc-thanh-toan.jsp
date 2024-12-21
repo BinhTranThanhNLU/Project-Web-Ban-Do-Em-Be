@@ -14,9 +14,9 @@
 <div class="container">
   <h1>Little Whale</h1>
   <div class="breadcrumb">
-    <a href="./gio-hang.html">Giỏ hàng</a> &gt;
-    <a href="./Thong-tin-giao-hang.html">Thông tin giao hàng</a> &gt;
-    <a href="./phuong-thuc-thanh-toan.html">Phương thức thanh toán</a>
+    <a href="/web_war/other-pages/gio-hang.jsp">Giỏ hàng</a> &gt;
+    <a href="/web_war/other-pages/Thong-tin-giao-hang.jsp">Thông tin giao hàng</a> &gt;
+    <a href="/web_war/other-pages/phuong-thuc-thanh-toan.jsp">Phương thức thanh toán</a>
   </div>
   <div class="shipping-method">
     <div class="section-title">Phương thức vận chuyển</div>

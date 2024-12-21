@@ -22,14 +22,14 @@
         </li>
 
         <li>
-          <a href="./be-gai.html" itemprop="url" target="_self"
+          <a href="/web_war/other-pages/be-gai.jsp" itemprop="url" target="_self"
           ><span itemprop="title">Thời Trang Bé Gái</span></a
           >
           <span class="">&nbsp;/&nbsp;</span>
         </li>
 
         <li>
-          <a href="./tat-ca-dam-vay.html" itemprop="url" target="_self"
+          <a href="/web_war/other-pages/tat-ca-dam-vay.jsp" itemprop="url" target="_self"
           ><span itemprop="title">Đầm-Váy Bé Gái</span></a
           >
           <span class="">&nbsp;/&nbsp;</span>
@@ -46,7 +46,7 @@
     <div class="product-slider">
       <div class="product-image">
         <img
-                src="../web/src/main/webapp/static/images/big-bodonguoinhen.jpg"
+                src="/src/main/webapp/static/images/big-bodonguoinhen.jpg"
                 alt="Đầm váy voan ngắn tay bé gái Rabity 950.047"
                 width="800px"
                 height="600px"
@@ -54,7 +54,7 @@
       </div>
       <div class="product-image">
         <img
-                src="../web/src/main/webapp/static/images/big-bodonguoinhene-vuong.jpg"
+                src="/src/main/webapp/static/images/big-bodonguoinhene-vuong.jpg"
                 alt="Another product image"
                 width="800px"
                 height="600px"
@@ -101,10 +101,10 @@
       <!-- New div for color thumbnails -->
       <div class="color-thumbnails">
         <div class="thumbnail selected">
-          <img src="../web/src/main/webapp/static/images/big-bodonguoinhen.jpg" alt="Green Dress" />
+          <img src="./web_war/other-pages/web/src/main/webapp/static/images/big-bodonguoinhen.jpg" alt="Green Dress" />
         </div>
         <div class="thumbnail">
-          <img src="../web/src/main/webapp/static/images/big-ao-khung-long-1red.jpg" alt="Red Dress" />
+          <img src="./web_war/other-pages/web/src/main/webapp/static/images/big-ao-khung-long-1red.jpg" alt="Red Dress" />
         </div>
       </div>
 
@@ -156,7 +156,7 @@
       </div>
 
       <div class="action-buttons">
-        <a href="./thong-tin-giao-hang.html" class="buy-now">MUA NGAY</a>
+        <a href="/web_war/other-pages/thong-tin-giao-hang.jsp" class="buy-now">MUA NGAY</a>
       </div>
 
       <div class="product-description">

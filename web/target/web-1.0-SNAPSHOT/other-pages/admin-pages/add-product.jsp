@@ -1,5 +1,13 @@
 
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<c:set var="title" value="Thêm sản phẩm"/>
+<c:set var="pageCssList" value="${['navbar-left-top.css', 'add-employee.css', 'add-product.css']}"/>
+<c:set var="pageJsList" value="${[]}"/>
+
+<%@ include file="/partials/header-nav-admin.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -216,6 +224,5 @@
     </div>
   </div>
 </div>
-</body>
-</html>
+<%@ include file="/partials/footer-admin.jsp" %>
 

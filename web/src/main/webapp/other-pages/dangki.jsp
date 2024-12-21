@@ -99,7 +99,7 @@
       <div class="form-group f-term">
         <label for="agree" class="form-label"
         >bạn đã có tài khoản? Đăng nhập
-          <a href="dangnhap.html">đây</a></label
+          <a href="/web_war/other-pages/dangnhap.jsp">đây</a></label
         >
         <span class="form-message"></span>
       </div>

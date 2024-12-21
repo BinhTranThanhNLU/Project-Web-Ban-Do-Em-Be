@@ -44,16 +44,16 @@
             </div>
 
             <div class="form-group f-term">
-                <label for="agree" class="form-label">Quên mật khẩu? Nhấn vào <a href="./quentk.html">đây</a></label>
+                <label for="agree" class="form-label">Quên mật khẩu? Nhấn vào <a href="/web_war/other-pages/quentk.jsp">đây</a></label>
                 <span class="form-message"></span>
             </div>
 
             <div class="sign-up">
                 <div class="dangnhap">
-                    <a href="../view/index-user.html">Đăng nhập</a>
+                    <a href="/web_war/other-pages/index-user.jsp">Đăng nhập</a>
                 </div>
                 <div class="dangki">
-                    <a href="dangki.html">Đăng kí tại đây</a>
+                    <a href="/web_war/other-pages/dangki.jsp">Đăng kí tại đây</a>
                 </div>
 
             </div>

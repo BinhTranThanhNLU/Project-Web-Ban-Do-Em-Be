@@ -21,7 +21,7 @@
                 </li>
 
                 <li>
-                    <a href="./be-gai.html" itemprop="url" target="_self"><span
+                    <a href="/web_war/other-pages//be-gai.jsp" itemprop="url" target="_self"><span
                             itemprop="title">Thời Trang Bé Gái</span></a>
                     <span class="">&nbsp;/&nbsp;</span>
                 </li>
@@ -180,7 +180,7 @@
                                             <span class="rating-number">4.8</span>
                                         </div>
                                         <button class="buy-btn">Thêm</button>
-                                        <a href="../view/chi-tiet-san-pham.html" class="details-btn">Chi tiết</a>
+                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
                                     </div>
                                 </div>
                             </div>
@@ -211,7 +211,7 @@
                                             <span class="rating-number">4.8</span>
                                         </div>
                                         <button class="buy-btn">Thêm</button>
-                                        <a href="../view/chi-tiet-san-pham.html" class="details-btn">Chi tiết</a>
+                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
                                     </div>
                                 </div>
                             </div>
@@ -242,7 +242,7 @@
                                             <span class="rating-number">4.8</span>
                                         </div>
                                         <button class="buy-btn">Thêm</button>
-                                        <a href="../view/chi-tiet-san-pham.html" class="details-btn">Chi tiết</a>
+                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
                                     </div>
                                 </div>
                             </div>
@@ -273,7 +273,7 @@
                                             <span class="rating-number">4.8</span>
                                         </div>
                                         <button class="buy-btn">Thêm</button>
-                                        <a href="../view/chi-tiet-san-pham.html" class="details-btn">Chi tiết</a>
+                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
                                     </div>
                                 </div>
                             </div>
@@ -307,7 +307,7 @@
                                             <span class="rating-number">4.8</span>
                                         </div>
                                         <button class="buy-btn">Thêm</button>
-                                        <a href="../view/chi-tiet-san-pham.html" class="details-btn">Chi tiết</a>
+                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
                                     </div>
                                 </div>
                             </div>
@@ -338,7 +338,7 @@
                                             <span class="rating-number">4.8</span>
                                         </div>
                                         <button class="buy-btn">Thêm</button>
-                                        <a href="../view/chi-tiet-san-pham.html" class="details-btn">Chi tiết</a>
+                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
                                     </div>
                                 </div>
                             </div>
@@ -369,7 +369,7 @@
                                             <span class="rating-number">4.8</span>
                                         </div>
                                         <button class="buy-btn">Thêm</button>
-                                        <a href="../view/chi-tiet-san-pham.html" class="details-btn">Chi tiết</a>
+                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
                                     </div>
                                 </div>
                             </div>
@@ -400,7 +400,7 @@
                                             <span class="rating-number">4.8</span>
                                         </div>
                                         <button class="buy-btn">Thêm</button>
-                                        <a href="../view/chi-tiet-san-pham.html" class="details-btn">Chi tiết</a>
+                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
                                     </div>
                                 </div>
                             </div>
@@ -434,7 +434,7 @@
                                             <span class="rating-number">4.8</span>
                                         </div>
                                         <button class="buy-btn">Thêm</button>
-                                        <a href="../view/chi-tiet-san-pham.html" class="details-btn">Chi tiết</a>
+                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
                                     </div>
                                 </div>
                             </div>
@@ -465,7 +465,7 @@
                                             <span class="rating-number">4.8</span>
                                         </div>
                                         <button class="buy-btn">Thêm</button>
-                                        <a href="../view/chi-tiet-san-pham.html" class="details-btn">Chi tiết</a>
+                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
                                     </div>
                                 </div>
                             </div>
@@ -496,7 +496,7 @@
                                             <span class="rating-number">4.8</span>
                                         </div>
                                         <button class="buy-btn">Thêm</button>
-                                        <a href="../view/chi-tiet-san-pham.html" class="details-btn">Chi tiết</a>
+                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
                                     </div>
                                 </div>
                             </div>
@@ -527,7 +527,7 @@
                                             <span class="rating-number">4.8</span>
                                         </div>
                                         <button class="buy-btn">Thêm</button>
-                                        <a href="../view/chi-tiet-san-pham.html" class="details-btn">Chi tiết</a>
+                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
                                     </div>
                                 </div>
                             </div>

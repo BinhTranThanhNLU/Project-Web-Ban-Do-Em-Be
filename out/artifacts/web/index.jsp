@@ -201,7 +201,7 @@
                 <!-- <input type="text" placeholder="Tìm kiếm sản phẩm"> -->
                 <i class="fas fa-search"></i>
                 <div class="cart" id="cart">
-                    <a href="./other-pages/gio-hang.jsp" class="cart-a"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="/web_war/other-pages/gio-hang.jsp" class="cart-a"><i class="fas fa-shopping-cart"></i></a>
                     <span class="badge">0</span>
                 </div>
                 <!-- Biểu tượng người dùng với menu đăng nhập/đăng ký -->
@@ -210,8 +210,8 @@
 
 
                     <div class="dropdown">
-                        <a class="menu-link" href="./other-pages/dangnhap.jsp">Đăng nhập</a>
-                        <a class="menu-link" href="./other-pages/dangki.jsp">Đăng ký</a>
+                        <a class="menu-link" href="/web_war/other-pages/dangnhap.jsp">Đăng nhập</a>
+                        <a class="menu-link" href="/web_war/other-pages/dangki.jsp">Đăng ký</a>
                     </div>
                 </div>
                 <div class="login-message-cart" id="loginMessageCart">

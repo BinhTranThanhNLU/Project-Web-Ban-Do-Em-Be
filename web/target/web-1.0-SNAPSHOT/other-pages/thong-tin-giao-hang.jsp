@@ -14,9 +14,9 @@
 <div class="container">
     <div class="left-section">
         <div class="breadcrumb">
-            <a href="./gio-hang.html">Giỏ hàng</a> &gt;
-            <a href="./Thong-tin-giao-hang.html">Thông tin giao hàng</a> &gt;
-            <a href="./phuong-thuc-thanh-toan.html">Phương thức thanh toán</a>
+            <a href="/web_war/other-pages/gio-hang.jsp">Giỏ hàng</a> &gt;
+            <a href="/web_war/other-pages/Thong-tin-giao-hang.jsp">Thông tin giao hàng</a> &gt;
+            <a href="/web_war/other-pages/phuong-thuc-thanh-toan.jsp">Phương thức thanh toán</a>
         </div>
         <div class="section-title">Thông tin giao hàng</div>
         <div class="user-info">
@@ -67,8 +67,8 @@
                 <option>Chọn phường / xã</option>
             </select>
         </div>
-        <a href="./phuong-thuc-thanh-toan.html" class="btn">Tiếp tục đến phương thức thanh toán</a>
-        <a href="./gio-hang.html" class="cart-link">Giỏ hàng</a>
+        <a href="/web_war/other-pages/phuong-thuc-thanh-toan.jsp" class="btn">Tiếp tục đến phương thức thanh toán</a>
+        <a href="/web_war/other-pages/gio-hang.jsp" class="cart-link">Giỏ hàng</a>
     </div>
     <div class="right-section">
         <div class="order-summary">

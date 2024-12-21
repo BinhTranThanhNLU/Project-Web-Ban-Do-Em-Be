@@ -4,6 +4,7 @@
 
 <c:set var="title" value="Admin"/>
 <c:set var="pageCssList" value="${['navbar-left-top.css', 'admin1.css']}"/>
+<c:set var="pageJsList" value="${[]}"/>
 
 <%@ include file="/partials/header-nav-admin.jsp" %>
 

@@ -3,7 +3,6 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -40,7 +39,7 @@
             <div class="icon-header">
                 <i class="fas fa-phone-alt"></i>
             </div>
-            <div class="text-header"><a href="./view/contact.html">Liên hệ với chúng tôi</a></div>
+            <div class="text-header"><a href="/web_war/other-pages/contact.jsp">Liên hệ với chúng tôi</a></div>
             <div class="icon-header">
                 <i class="fas fa-file-alt"></i>
             </div>
@@ -54,18 +53,18 @@
         <!-- menu  -->
         <div class="navbar">
             <div class="menu">
-                <a href="./index.html">Trang Chủ</a>
+                <a href="index.jsp">Trang Chủ</a>
                 <div class="dropdown-menu">
                     <!-- Thêm lớp cho Bé gái -->
                     <div class="navheight">
-                        <a href="./view/be-gai.html">Bé gái</a>
+                        <a href="/web_war/other-pages/be-gai.jsp">Bé gái</a>
                         <!-- <ion-icon name="chevron-down-outline"></ion-icon> -->
                     </div>
                     <div class="dropdown dropdown-full">
                         <!-- Dropdown cho Bé gái -->
                         <div class="column">
                             <h3>Tất Cả Sản Phẩm Bé Gái</h3>
-                            <a href="./view/tat-ca-dam-vay.html" class="menu-link">Váy Bé Gái</a>
+                            <a href="/web_war/other-pages/tat-ca-dam-vay.jsp" class="menu-link">Váy Bé Gái</a>
                             <a href="#" class="menu-link">Áo Bé Gái</a>
                             <a href="#" class="menu-link">Quần Bé Gái</a>
                             <a href="#" class="menu-link">Giày Bé Gái</a>
@@ -140,15 +139,15 @@
                 <!-- <input type="text" placeholder="Tìm kiếm sản phẩm"> -->
                 <i class="fas fa-search"></i>
                 <div class="cart" id="cart">
-                    <a href="./view/gio-hang.html" class="cart-a"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="/web_war/other-pages/gio-hang.jsp" class="cart-a"><i class="fas fa-shopping-cart"></i></a>
                     <span class="badge">0</span>
                 </div>
                 <!-- Biểu tượng người dùng với menu đăng nhập/đăng ký -->
                 <div class="user-menu">
                     <i class="fas fa-user"></i>
                     <div class="dropdown">
-                        <a class="menu-link" href="./view/dangnhap.html">Đăng nhập</a>
-                        <a class="menu-link" href="./view/dangki.html">Đăng ký</a>
+                        <a class="menu-link" href="/web_war/other-pages/dangnhap.jsp">Đăng nhập</a>
+                        <a class="menu-link" href="/web_war/other-pages/dangki.jsp">Đăng ký</a>
                     </div>
                 </div>
                 <div class="login-message-cart" id="loginMessageCart">

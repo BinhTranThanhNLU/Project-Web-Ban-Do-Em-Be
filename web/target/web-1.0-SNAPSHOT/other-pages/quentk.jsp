@@ -40,16 +40,16 @@
 
 
       <div class="form-group f-term">
-        <label for="agree" class="form-label">bạn đã có tài khoản? Đăng nhập <a id="agree" href="./dangnhap.html">đây</a></label>
+        <label for="agree" class="form-label">bạn đã có tài khoản? Đăng nhập <a id="agree" href="/web_war/other-pages/dangnhap.jsp">đây</a></label>
         <span class="form-message"></span>
       </div>
 
       <div class="sign-up">
         <div class="dangnhap">
-          <a href="./quentk.html" >Tìm Kiếm</a>
+          <a href="/web_war/other-pages/quentk.jsp" >Tìm Kiếm</a>
         </div>
         <div class="dangki">
-          <a href="dangki.html">Đăng kí tại đây</a>
+          <a href="/web_war/other-pages/dangki.jsp">Đăng kí tại đây</a>
         </div>
 
       </div>

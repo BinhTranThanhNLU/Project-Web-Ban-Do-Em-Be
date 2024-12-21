@@ -22,7 +22,7 @@
         />
         <div>
           <div>DanhSieuCapVippro</div>
-          <a href="./thong-tin-cua-toi.html"> Sửa Hồ Sơ </a>
+          <a href="/web_war/other-pages/thong-tin-cua-toi.jsp"> Sửa Hồ Sơ </a>
         </div>
       </div>
       <ul class="menu">
@@ -34,13 +34,13 @@
           </a>
         </li> -->
         <li>
-          <a href="./thong-tin-cua-toi.html" class="active">
+          <a href="/web_war/other-pages/thong-tin-cua-toi.jsp" class="active">
             <i class="fas fa-user"> </i>
             Tài Khoản Của Tôi
           </a>
         </li>
         <li>
-          <a href="./don-hang-cua-toi.html">
+          <a href="/web_war/other-pages/don-hang-cua-toi.jsp">
             <i class="fas fa-shopping-cart"> </i>
             Đơn Hàng Của Tôi
           </a>

@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+  gap: 10px;
+  margin-top: 150px;
+}
+.left-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 65%;
+}
+.left-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* .right-section {
+  flex: 1;
+  padding: 20px;
+  margin-right: 10%;
+  height: 100%;
+} */
+.right-section {
+  position: relative;
+  right: -100%; /* Đặt phần liên hệ ngoài màn hình bên phải */
+  opacity: 0;
+  transition: right 1s ease, opacity 1s ease; /* Thêm hiệu ứng chuyển */
+  flex: 35%;
+}
+.right-section.show {
+  right: 0; /* Đặt lại vị trí về giữa màn hình */
+  opacity: 1;
+}
+
+.right-section h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.form-group {
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+
+  border-radius: 5px;
+  font-size: 14px;
+}
+.form-group input[type="checkbox"] {
+  width: auto;
+}
+.form-group-flex {
+  display: flex;
+  margin-bottom: 10px;
+}
+.form-group-flex #terms {
+  margin-right: 10px;
+}
+.form-group-flex .terms {
+  color: #f7840b;
+}
+
+.submit-btn {
+  background-color: #ff7f50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+}
+
+.info-section {
+  display: flex;
+  position: relative;
+  bottom: -100%; /* Đặt phần info-section ngoài màn hình phía dưới */
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  transition: bottom 1s ease, opacity 1s ease; /* Hiệu ứng chuyển động */
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.info-section.show {
+  bottom: 0; /* Đưa info-section lên vị trí ban đầu */
+  opacity: 1;
+  gap: 20px;
+}
+
+.info-box {
+  background-color: #ff7f50;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 33%;
+  margin-bottom: 50px;
+  padding: 30px;
+}
+.icons-h3 {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 10px;
+}
+.info-box i {
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-left: 50px; /* thêm thuộc tính để cách lề trái 50px */
+}
+.info-box p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-left: 50px; /* thêm thuộc tính để cách lề trái 50px */
+}
+
+.success-message {
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+/* 
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+textarea:invalid {
+  border: none;
+  border-bottom: 2px solid red;
+} */
+
+input[type="text"]:valid,
+input[type="email"]:valid,
+textarea:valid {
+  border: none;
+  border-bottom: 2px solid #ccc;
+}
+
+.error-message {
+  color: #ff0000; /* Màu đỏ */
+  font-size: 0.9em;
+  margin-top: 5px;
+}

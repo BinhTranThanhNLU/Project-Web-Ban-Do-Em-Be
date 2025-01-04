@@ -16,6 +16,7 @@ public class Size implements Serializable {
         this.name = name;
     }
 
+
     // toString() để hiển thị thông tin (tùy chọn)
     @Override
     public String toString() {
@@ -24,5 +25,7 @@ public class Size implements Serializable {
                 ", name='" + name + '\'' +
                 '}';
     }
+
+
 }
 

@@ -18,6 +18,30 @@ public class Color implements Serializable {
         this.hexCode = hexCode;
     }
 
-    // Không có getter và setter theo yêu cầu
+    // Getters và Setters
+
+    public int getIdColor() {
+        return idColor;
+    }
+
+    public void setIdColor(int idColor) {
+        this.idColor = idColor;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getHexCode() {
+        return hexCode;
+    }
+
+    public void setHexCode(String hexCode) {
+        this.hexCode = hexCode;
+    }
 }
 

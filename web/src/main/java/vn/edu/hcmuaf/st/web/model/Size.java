@@ -16,16 +16,20 @@ public class Size implements Serializable {
         this.name = name;
     }
 
-
-    // toString() để hiển thị thông tin (tùy chọn)
-    @Override
-    public String toString() {
-        return "Size{" +
-                "idSize=" + idSize +
-                ", name='" + name + '\'' +
-                '}';
+    // Getters và Setters
+    public int getIdSize() {
+        return idSize;
     }
 
+    public void setIdSize(int idSize) {
+        this.idSize = idSize;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
-

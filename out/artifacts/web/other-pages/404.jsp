@@ -1,5 +1,6 @@
 
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,7 @@
 <div class="error-container">
     <h1 class="error-code">404</h1>
     <h2 class="error-message">SORRY! The page you’re looking for was not found.</h2>
-    <a href="index.jsp" class="home-button">Back to home</a>
+    <a href="/web_war/other-pages/index.jsp" class="home-button">Back to home</a>
     <p class="footer">Copyright © 2024 All rights reserved.</p>
 </div>
 </body>

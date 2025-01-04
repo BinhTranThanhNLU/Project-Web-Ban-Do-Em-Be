@@ -154,7 +154,7 @@ body {
 }
 
 .discount-code button:hover {
-  background-color: #007bff;
+  background-color: #bbb;
 }
 
 .discount-link {
@@ -169,7 +169,7 @@ body {
 }
 
 .discount {
-
+  background-color: #e0f7fa;
   color: #007bff;
   padding: 5px 10px;
   border-radius: 4px;
@@ -183,6 +183,7 @@ body {
   text-align: right;
 }
 
+=======
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;

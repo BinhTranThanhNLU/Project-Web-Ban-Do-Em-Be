@@ -34,12 +34,8 @@
     <navbar class="navbar-left" id="navbar-left">
             <div class="user-profile">
                 <div class="sidebar-title">
-<<<<<<< HEAD
                     <a href="${pageContext.request.contextPath}/home">Trang chủ</a>
 
-=======
-                    <a href="index.jsp" class="brand-logo-mini"><img src="./images/logo.png" alt="logo"></a>
->>>>>>> 49b1ebd5da314915e84cdde5e9d0c463503ba01c
                     <h2>Litte Whale</h2>
                 </div>
                 <img class="user-avatar"

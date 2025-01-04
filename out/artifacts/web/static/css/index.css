@@ -3,8 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 /* Bang Mau
 #f7840b
@@ -331,7 +331,7 @@ nav.sticky {
 
 /* Full width cho dropdown của Bé gái và Bé trai */
 .dropdown-full {
-  width: 60vw;
+  width: 25vw;
   left: 0;
   padding: 20px;
   justify-content: space-around;
@@ -925,10 +925,10 @@ nav.sticky {
 .swiper-button-prev {
   border-radius: 50%; /* Làm cho nút tròn */
   background-color: rgba(
-    177,
-    173,
-    173,
-    0.2
+          177,
+          173,
+          173,
+          0.2
   ) !important; /* Màu nền bán trong suốt */
 }
 

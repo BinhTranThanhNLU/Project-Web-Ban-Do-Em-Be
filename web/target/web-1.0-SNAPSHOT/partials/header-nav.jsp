@@ -56,14 +56,10 @@
         <!-- menu  -->
         <div class="navbar">
             <div class="menu">
-<<<<<<< HEAD
-                <a href="${pageContext.request.contextPath}/home">Trang chủ</a>
-=======
                 <a href="${pageContext.request.contextPath}/home">
                 Trang Chủ
                 </a>
 
->>>>>>> 49b1ebd5da314915e84cdde5e9d0c463503ba01c
                 <div class="dropdown-menu">
                     <!-- Thêm lớp cho Bé gái -->
                     <div class="navheight">

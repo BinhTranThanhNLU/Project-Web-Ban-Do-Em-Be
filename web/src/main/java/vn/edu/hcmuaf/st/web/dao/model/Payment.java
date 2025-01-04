@@ -1,4 +1,4 @@
-package vn.edu.hcmuaf.st.web.model;
+package vn.edu.hcmuaf.st.web.dao.model;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

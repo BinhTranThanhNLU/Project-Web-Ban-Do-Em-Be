@@ -29,7 +29,7 @@
                 <th>ID nhân viên</th>
                 <th>Họ và tên</th>
                 <th>Vai trò</th>
-                <th>EmailEmail</th>
+                <th>Email</th>
                 <th>SĐT</th>
                 <th>Ngày sinh</th>
                 <th>Trạng thái</th>
@@ -37,80 +37,23 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td><input type="checkbox"></td>
-                <td>#CD12837</td>
-                <td>Hồ Thị Thanh Ngân</td>
-                <td>Quản trị viên</td>
-                <td>b@gmail.com</td>
-                <td>0926737168</td>
-                <td>12/02/1999</td>
-                <td>Hoạt động</td>
-                <td>
-                    <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
-                    <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
-                </td>
-            </tr>
 
-            <tr>
-                <td><input type="checkbox"></td>
-                <td>#CD12837</td>
-                <td>Hồ Thị Thanh Ngân</td>
-                <td>Quản trị viên</td>
-                <td>b@gmail.com</td>
-                <td>0926737168</td>
-                <td>12/02/1999</td>
-                <td>Hoạt động</td>
-                <td>
-                    <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
-                    <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
-                </td>
-            </tr>
-
-            <tr>
-                <td><input type="checkbox"></td>
-                <td>#CD12837</td>
-                <td>Hồ Thị Thanh Ngân</td>
-                <td>Quản trị viên</td>
-                <td>b@gmail.com</td>
-                <td>0926737168</td>
-                <td>12/02/1999</td>
-                <td>Hoạt động</td>
-                <td>
-                    <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
-                    <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
-                </td>
-            </tr>
-
-            <tr>
-                <td><input type="checkbox"></td>
-                <td>#CD12837</td>
-                <td>Hồ Thị Thanh Ngân</td>
-                <td>Quản trị viên</td>
-                <td>b@gmail.com</td>
-                <td>0926737168</td>
-                <td>12/02/1999</td>
-                <td>Hoạt động</td>
-                <td>
-                    <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
-                    <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
-                </td>
-            </tr>
-
-            <tr>
-                <td><input type="checkbox"></td>
-                <td>#CD12837</td>
-                <td>Hồ Thị Thanh Ngân</td>
-                <td>Quản trị viên</td>
-                <td>b@gmail.com</td>
-                <td>0926737168</td>
-                <td>12/02/1999</td>
-                <td>Hoạt động</td>
-                <td>
-                    <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
-                    <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
-                </td>
-            </tr>
+            <c:forEach var="user" items="${users}">
+                <tr>
+                    <td><input type="checkbox" name="selectedUsers" value="${user.idUser}"></td>
+                    <td>${user.idUser}</td>
+                    <td>${user.fullName}</td>
+                    <td>${user.role.name}</td> <!-- Truy cập roleName qua user.role -->
+                    <td>${user.email}</td>
+                    <td>${user.phoneNumber}</td>
+                    <td>${user.birthDate}</td>
+                    <td>${user.active ? "Hoạt động" : "Không hoạt động"}</td>
+                    <td>
+                        <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
+                        <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
+                    </td>
+                </tr>
+            </c:forEach>
 
             </tbody>
         </table>
@@ -141,7 +84,7 @@
             lengthChange: true, // Cho phép thay đổi số dòng hiển thị
             order: [[1, 'asc']], // Sắp xếp theo cột "ID nhân viên" (cột thứ 2) tăng dần
             columnDefs: [
-                { orderable: false, targets: [0, 7] } // Vô hiệu hóa sắp xếp ở cột checkbox và cột tính năng
+                {orderable: false, targets: [0, 7]} // Vô hiệu hóa sắp xếp ở cột checkbox và cột tính năng
             ],
             language: {
                 search: "Tìm kiếm:",

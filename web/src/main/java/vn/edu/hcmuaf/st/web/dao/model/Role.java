@@ -38,7 +38,7 @@ public class Role implements Serializable {
     public String toString() {
         return "Role{" +
                 "idRole=" + idRole +
-                ", name='" + name + '\'' +
+                ", name=" + name +
                 '}';
     }
 }

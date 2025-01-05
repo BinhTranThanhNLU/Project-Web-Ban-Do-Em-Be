@@ -34,7 +34,7 @@ public class UserDAO {
             CASE WHEN u.active = 1 THEN 'Hoạt động' ELSE 'Không hoạt động' END AS status 
         FROM users u 
         INNER JOIN roles r ON u.idRole = r.idRole
-        
+        WHERE r.`name` = 'nhân viên'
         ORDER BY u.idUser;
     """;
 

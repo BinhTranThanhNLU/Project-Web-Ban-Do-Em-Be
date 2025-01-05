@@ -11,8 +11,6 @@ body {
     color: #fff;
 }
 
-
-
 /* Main Content */
 .container-content-chart {
     display: flex;
@@ -33,35 +31,35 @@ body {
 
 .stats {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 20px; 
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
 .stat-card {
-    background-color: #3a3f51; 
-    padding: 20px; 
-    border-radius: 5px; 
-    text-align: center; 
-    color: #fff; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    background-color: #3a3f51;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng khi hover */
 }
 
 .stat-card:hover {
     transform: translateY(-5px); /* Hiệu ứng di chuyển lên khi hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .stat-card-icon {
-    font-size: 2rem; 
-    margin-bottom: 10px; 
-    color: #ffcc00; 
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffcc00;
 }
 
 .stat-card span {
-    font-weight: bold; 
-    font-size: 1.2rem; 
-    display: block; 
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: block;
     margin-top: 10px;
     color: #00bcd4;
 }
@@ -95,19 +93,19 @@ body {
 
 
 .order-status-table .customer-image {
-    width: 40px; 
-    height: 40px; 
-    border-radius: 50%; 
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     object-fit: cover;
 }
 
 .order-status-table td {
-    vertical-align: middle; 
+    vertical-align: middle;
 }
 
 .order-status-table th:nth-child(2),
 .order-status-table td:nth-child(2) {
-    text-align: center; 
+    text-align: center;
 }
 
 .status-label {
@@ -216,8 +214,6 @@ body {
 .chart h3 {
     margin-bottom: 20px;
     font-size: 1.5rem;
-    color: #333; 
+    color: #333;
     font-weight: bold;
 }
-
-

@@ -78,24 +78,28 @@
 <script>
     $(document).ready(function () {
         $('#employeeTable').DataTable({
-            paging: true,       // Bật phân trang
-            searching: true,    // Bật tìm kiếm
-            info: true,         // Hiển thị thông tin tổng số dòng
-            lengthChange: true, // Cho phép thay đổi số dòng hiển thị
-            order: [[1, 'asc']], // Sắp xếp theo cột "ID nhân viên" (cột thứ 2) tăng dần
+            paging: true,
+            searching: true,
+            info: true,
+            lengthChange: true,
+            order: [[1, 'asc']],
             columnDefs: [
-                {orderable: false, targets: [0, 7]} // Vô hiệu hóa sắp xếp ở cột checkbox và cột tính năng
+                { orderable: false, targets: [0, 7] } // Vô hiệu hóa sắp xếp ở cột checkbox và tính năng
             ],
             language: {
                 search: "Tìm kiếm:",
                 lengthMenu: "Hiển thị _MENU_ dòng",
                 info: "Hiển thị _START_ đến _END_ của _TOTAL_ dòng",
                 paginate: {
-                    first: "<i class='fas fa-angle-double-left'></i>", // Icon mũi tên kép trái
-                    last: "<i class='fas fa-angle-double-right'></i>", // Icon mũi tên kép phải
-                    next: "<i class='fas fa-angle-right'></i>", // Icon mũi tên phải
-                    previous: "<i class='fas fa-angle-left'></i>" // Icon mũi tên trái
+                    first: "<i class='fas fa-angle-double-left'></i>",
+                    last: "<i class='fas fa-angle-double-right'></i>",
+                    next: "<i class='fas fa-angle-right'></i>",
+                    previous: "<i class='fas fa-angle-left'></i>"
                 }
+            },
+            drawCallback: function () {
+                // Đảm bảo phần tử pagination được căn chỉnh lại khi vẽ lại bảng
+                $('.dataTables_paginate').addClass('custom-pagination');
             }
         });
     });

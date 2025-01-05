@@ -198,11 +198,11 @@ body {
 
 
 .dataTables_wrapper .dataTables_paginate {
-    float: right;
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    display: flex; /* Hiển thị pagination theo dạng hàng ngang */
+    justify-content: right; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-top: 20px; /* Khoảng cách với bảng */
+    gap: 10px; /* Khoảng cách giữa các nút */
 }
 
 /* Tùy chỉnh nút phân trang */
@@ -215,9 +215,12 @@ body {
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+/* Khi di chuột vào nút */
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #007bff;
+    color: #fff;
 }
 
 /* Vô hiệu hóa nút */

@@ -69,6 +69,10 @@
 
 
     // kiêm tra
+    // gặp lỗi
+
+
+
 
 
     // Lắng nghe sự kiện submit của form

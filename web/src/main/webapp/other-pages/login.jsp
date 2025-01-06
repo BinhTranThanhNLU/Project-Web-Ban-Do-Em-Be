@@ -67,6 +67,10 @@
     const emailInput = document.getElementById('username');
     const passwordInput = document.getElementById('password');
 
+
+    // kiêm tra
+
+
     // Lắng nghe sự kiện submit của form
     form.addEventListener('submit', function (event) {
         // Ngăn việc submit mặc định

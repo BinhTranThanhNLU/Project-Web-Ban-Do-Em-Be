@@ -68,9 +68,7 @@
     const passwordInput = document.getElementById('password');
 
 
-    // kiêm tra
-    // gặp lỗi
-
+    // kiêm traaaaaaaaa
 
 
 

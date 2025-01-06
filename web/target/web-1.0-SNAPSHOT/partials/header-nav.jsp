@@ -152,7 +152,7 @@
                 <div class="user-menu">
                     <i class="fas fa-user"></i>
                     <div class="dropdown">
-                        <a class="menu-link" href="/web_war/other-pages/dangnhap.jsp">Đăng nhập</a>
+                        <a class="menu-link" href="/web_war/other-pages/login.jsp">Đăng nhập</a>
                         <a class="menu-link" href="/web_war/other-pages/dangki.jsp">Đăng ký</a>
                     </div>
                 </div>

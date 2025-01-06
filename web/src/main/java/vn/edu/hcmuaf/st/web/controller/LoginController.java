@@ -1,24 +1,38 @@
 package vn.edu.hcmuaf.st.web.controller;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import vn.edu.hcmuaf.st.web.model.User;
+import vn.edu.hcmuaf.st.web.service.UserService;
 
 import java.io.IOException;
 
-//danh thêm
-@WebServlet(name = "LoginController", value = "/dangnhap")
 public class LoginController extends HttpServlet {
-
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/web_war/other-pages/dangnhap.jsp").forward(req, resp);
+    private static final long serialVersionUID = 1L;
+    public LoginController() {
+        super();
     }
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RequestDispatcher rd = request.getRequestDispatcher("/other-pages/login.jsp");
+        rd.forward(request, response);
     }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+        UserService service = new UserService();
+        User user = new User(username, password);
+        if (service.checkLogin(username,password)) {
+            response.sendRedirect("home");
+        } else {
+            response.sendRedirect("login?err=1");
+        }
+    }
+
 }

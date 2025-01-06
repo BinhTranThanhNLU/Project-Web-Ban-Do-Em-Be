@@ -6,7 +6,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import vn.edu.hcmuaf.st.web.dao.UserDAO;
-import vn.edu.hcmuaf.st.web.dao.model.User;
+import vn.edu.hcmuaf.st.web.model.User;
 
 import java.io.IOException;
 import java.util.List;

@@ -2,7 +2,7 @@ package vn.edu.hcmuaf.st.web.dao;
 
 import org.jdbi.v3.core.Jdbi;
 import vn.edu.hcmuaf.st.web.dao.db.JdbiConnect;
-import vn.edu.hcmuaf.st.web.dao.model.Role;
+import vn.edu.hcmuaf.st.web.model.Role;
 import java.util.List;
 
 public class RoleDAO {

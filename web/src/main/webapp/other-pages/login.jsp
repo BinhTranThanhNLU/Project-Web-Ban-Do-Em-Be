@@ -68,7 +68,9 @@
     const passwordInput = document.getElementById('password');
 
 
-    // kiêm tra
+    // kiêm traaaaaaaaa
+
+
 
 
     // Lắng nghe sự kiện submit của form

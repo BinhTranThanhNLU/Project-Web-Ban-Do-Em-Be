@@ -45,7 +45,6 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
         response.sendRedirect("login?err=1");
     }
 
-
     }
 
 }

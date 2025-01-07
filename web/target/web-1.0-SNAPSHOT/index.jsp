@@ -8,6 +8,13 @@
 
 <%@ include file="/partials/header-nav.jsp" %>
 
+<%--khi ccaan den 1 trang nào do--%>
+
+<%--  if(session.getAttribute("username")==null){--%>
+<%--    response.sendRedirect("/web_war/other-pages/login.jsp");--%>
+<%--  }--%>
+
+<%--%>--%>
 <!-- ================Hiệu ứng di chuyển hình ảnh ở đầu trang can js============-->
 <section id="Slider">
   <div class="slider">
@@ -3183,6 +3190,5 @@
     </div>
   </div>
 </section>
-
-<!-- ====================================footer=============================== -->
-<%@ include file="/partials/footer.jsp" %>
+  <!-- ====================================footer=============================== -->
+  <%@ include file="/partials/footer.jsp" %>

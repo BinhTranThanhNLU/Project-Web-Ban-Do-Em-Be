@@ -10,6 +10,7 @@
 <body >
 <!-- HEADER -->
 <div class="login-container">
+
     <div>
         <div class="logo">
 
@@ -24,6 +25,7 @@
             </div>
         </div>
     </div>
+
     <div class="form-login">
         <form action="" method="POST" class="form" id="form-2">
             <h3 class="heading">Đăng Nhập</h3>
@@ -41,7 +43,7 @@
             </div>
 
             <div class="form-group f-term">
-                <label class="form-label">Quên mật khẩu? Nhấn vào <a href="./quentk.html">đây</a></label>
+                <label for="agree" class="form-label">Quên mật khẩu? Nhấn vào <a href="./quentk.html">đây</a></label>
                 <span class="form-message"></span>
             </div>
 
@@ -61,68 +63,11 @@
                     <a href="#" class="login-button facebook-login"><i class="fab fa-facebook-f"></i></i>Đăng nhập Facebook</a>
                 </div>
             </div>
-
-
         </form>
-
     </div>
-
 </div>
-
-
 </body>
-<script>
-    // Lấy form và các input
-    const form = document.getElementById('form-2');
-    const emailInput = document.getElementById('username');
-    const passwordInput = document.getElementById('password');
 
-    // Lắng nghe sự kiện submit của form
-    form.addEventListener('submit', function (event) {
-        // Ngăn việc submit mặc định
-        event.preventDefault();
-
-        // Kiểm tra từng trường input
-        let isValid = true;
-
-        // Kiểm tra email
-        if (emailInput.value.trim() === '') {
-            showError(emailInput, 'Vui lòng nhập tên tài khoản hoặc Email');
-            isValid = false;
-        } else {
-            clearError(emailInput);
-        }
-
-        // Kiểm tra mật khẩu
-        if (passwordInput.value.trim() === '') {
-            showError(passwordInput, 'Vui lòng nhập mật khẩu');
-            isValid = false;
-        } else {
-            clearError(passwordInput);
-        }
-
-        // Nếu cả hai trường hợp đều đúng, submit form
-        if (isValid) {
-            alert('Đăng nhập thành công!');
-            form.submit();
-        }
-    });
-
-    // Hàm hiển thị lỗi
-    function showError(input, message) {
-        const formGroup = input.parentElement;
-        const errorSpan = formGroup.querySelector('.form-message');
-        errorSpan.textContent = message;
-        errorSpan.style.color = 'red';
-    }
-
-    // Hàm xóa lỗi
-    function clearError(input) {
-        const formGroup = input.parentElement;
-        const errorSpan = formGroup.querySelector('.form-message');
-        errorSpan.textContent = '';
-    }
-</script>
 <!-- ====================================footer=============================== -->
 <%@ include file="/partials/footer.jsp" %>
 

@@ -12,6 +12,7 @@
         rel="stylesheet"
 />
 <!-- HEADER -->
+<input type="hidden" id="status" value=" <%=request.getAttribute("status")%>">
 <div class="login-container">
     <div>
         <div class="logo">
@@ -29,9 +30,11 @@
     <div class="form-login">
         <form action="<%=request.getContextPath()%>/login" method="POST" class="form" id="form-2">
             <h3 class="heading">Đăng Nhập</h3>
+
             <div class="form-group">
                 <label for="username" class="form-label">Tên tài khoản hoặc Email</label>
-                <input id="username" name="username" type="text" placeholder="Nhập tên tài khoản hoặc Email" class="form-control">
+                <input id="username" name="username" type="text" placeholder="Nhập tên tài khoản hoặc Email"
+                       class="form-control">
                 <span class="form-message"></span>
             </div>
             <div class="form-group">
@@ -40,7 +43,7 @@
                 <span class="form-message"></span>
             </div>
             <div class="form-group f-term">
-                <label  class="form-label">Quên mật khẩu? Nhấn vào <a href="./quentk.html">đây</a></label>
+                <label class="form-label">Quên mật khẩu? Nhấn vào <a href="./quentk.html">đây</a></label>
                 <span class="form-message"></span>
             </div>
             <div class="sign-up">
@@ -48,71 +51,86 @@
                     <button type="submit" class="btn-login">Đăng nhập</button>
                 </div>
                 <div class="dangki">
-                    <a href="dangki.html">Đăng kí tại đây</a>
+                    <a href="register.jsp">Đăng kí tại đây</a>
                 </div>
             </div>
             <div class="form-icon">
                 <p>Hoặc đăng nhập bằng </p>
                 <div class="button_icon ">
-                    <a href="#" class="login-button google-login"><i class="fab fa-google-plus-g"></i>Đăng nhập Google</a>
-                    <a href="#" class="login-button facebook-login"><i class="fab fa-facebook-f"></i></i>Đăng nhập Facebook</a>
+                    <a href="#" class="login-button google-login"><i class="fab fa-google-plus-g"></i>Đăng nhập
+                        Google</a>
+                    <a href="#" class="login-button facebook-login"><i class="fab fa-facebook-f"></i></i>Đăng nhập
+                        Facebook</a>
                 </div>
             </div>
         </form>
     </div>
 </div>
-<script>
-    // Lấy form và các input
-    const form = document.getElementById('form-2');
-    const emailInput = document.getElementById('username');
-    const passwordInput = document.getElementById('password');
 
-    // Lắng nghe sự kiện submit của form
-    form.addEventListener('submit', function (event) {
-        // Ngăn việc submit mặc định
-        event.preventDefault();
+<%--<script>--%>
+<%--    // Lấy form và các input--%>
+<%--    const form = document.getElementById('form-2');--%>
+<%--    const emailInput = document.getElementById('username');--%>
+<%--    const passwordInput = document.getElementById('password');--%>
+<%--    // Lắng nghe sự kiện submit của form--%>
+<%--    form.addEventListener('submit', function (event) {--%>
+<%--        // Ngăn việc submit mặc định--%>
+<%--        event.preventDefault();--%>
 
-        // Kiểm tra từng trường input
-        let isValid = true;
+<%--        // Kiểm tra từng trường input--%>
+<%--        let isValid = true;--%>
+<%--        // Kiểm tra email--%>
+<%--        if (emailInput.value.trim() === '') {--%>
+<%--            showError(emailInput, 'Vui lòng nhập tên tài khoản hoặc Email');--%>
+<%--            isValid = false;--%>
+<%--        } else {--%>
+<%--            clearError(emailInput);--%>
+<%--        }--%>
 
-        // Kiểm tra email
-        if (emailInput.value.trim() === '') {
-            showError(emailInput, 'Vui lòng nhập tên tài khoản hoặc Email');
-            isValid = false;
-        } else {
-            clearError(emailInput);
-        }
+<%--        // Kiểm tra mật khẩu--%>
+<%--        if (passwordInput.value.trim() === '') {--%>
+<%--            showError(passwordInput, 'Vui lòng nhập mật khẩu');--%>
+<%--            isValid = false;--%>
+<%--        } else {--%>
+<%--            clearError(passwordInput);--%>
+<%--        }--%>
 
-        // Kiểm tra mật khẩu
-        if (passwordInput.value.trim() === '') {
-            showError(passwordInput, 'Vui lòng nhập mật khẩu');
-            isValid = false;
-        } else {
-            clearError(passwordInput);
-        }
+<%--        Nếu cả hai trường hợp đều đúng, submit form--%>
+<%--        if (isValid) {--%>
 
-        // Nếu cả hai trường hợp đều đúng, submit form
-        if (isValid) {
-            alert('Đăng nhập thành công!');
-            form.submit();
-        }
-    });
+<%--            form.submit();--%>
+<%--        }--%>
+<%--    });--%>
 
-    // Hàm hiển thị lỗi
-    function showError(input, message) {
-        const formGroup = input.parentElement;
-        const errorSpan = formGroup.querySelector('.form-message');
-        errorSpan.textContent = message;
-        errorSpan.style.color = 'red';
+<%--    // Hàm hiển thị lỗi--%>
+<%--    function showError(input, message) {--%>
+<%--        const formGroup = input.parentElement;--%>
+<%--        const errorSpan = formGroup.querySelector('.form-message');--%>
+<%--        errorSpan.textContent = message;--%>
+<%--        errorSpan.style.color = 'red';--%>
+<%--    }--%>
+
+<%--    // Hàm xóa lỗi--%>
+<%--    function clearError(input) {--%>
+<%--        const formGroup = input.parentElement;--%>
+<%--        const errorSpan = formGroup.querySelector('.form-message');--%>
+<%--        errorSpan.textContent = '';--%>
+<%--    }--%>
+<%--</script>--%>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" href="alert/dist/sweetalert.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript">
+    var status = document.getElementById('status').value;
+    if (status == "failed") {
+        swal("Thất Bại", "Đăng Nhập Thất bại", "failed");
+
+    } else {
+        swal("Thành Công", "Đăng Nhập Thành Công", "success");
     }
 
-    // Hàm xóa lỗi
-    function clearError(input) {
-        const formGroup = input.parentElement;
-        const errorSpan = formGroup.querySelector('.form-message');
-        errorSpan.textContent = '';
-    }
 </script>
+
 <!-- ====================================footer=============================== -->
 <%@ include file="/partials/footer.jsp" %>
 

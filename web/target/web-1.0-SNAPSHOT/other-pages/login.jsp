@@ -67,6 +67,7 @@
     const emailInput = document.getElementById('username');
     const passwordInput = document.getElementById('password');
 
+
     // Lắng nghe sự kiện submit của form
     form.addEventListener('submit', function (event) {
         // Ngăn việc submit mặc định
@@ -74,7 +75,6 @@
 
         // Kiểm tra từng trường input
         let isValid = true;
-
         // Kiểm tra email
         if (emailInput.value.trim() === '') {
             showError(emailInput, 'Vui lòng nhập tên tài khoản hoặc Email');

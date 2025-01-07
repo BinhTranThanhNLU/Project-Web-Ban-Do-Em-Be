@@ -13,6 +13,7 @@ import java.io.IOException;
 
 public class LoginController extends HttpServlet {
     private static final long serialVersionUID = 1L;
+
     public LoginController() {
         super();
     }
@@ -22,28 +23,16 @@ public class LoginController extends HttpServlet {
         rd.forward(request, response);
     }
 
-//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        String username = request.getParameter("username");
-//        String password = request.getParameter("password");
-//
-//        UserService service = new UserService();
-//        User user = new User(username, password);
-//        if (service.checkLogin(username,password)) {
-//            response.sendRedirect("home");
-//        } else {
-//            response.sendRedirect("login?err=1");
-//        }
-protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    String username = request.getParameter("username");
-    String password = request.getParameter("password");
-
-    UserService service = new UserService();
-    User user = new User(username, password);
-    if (service.checkLogin(username,password)) {
-        response.sendRedirect("home");
-    } else {
-        response.sendRedirect("login?err=1");
-    }
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        UserService service = new UserService();
+        User user = new User(username, password);
+        if (service.checkLogin(username, password)) {
+            response.sendRedirect("home");
+        } else {
+            response.sendRedirect("login?err=1");
+        }
 
     }
 

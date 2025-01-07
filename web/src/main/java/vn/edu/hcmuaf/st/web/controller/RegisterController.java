@@ -21,10 +21,11 @@ public class RegisterController extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher("/other-pages/dangky.jsp");
         rd.forward(request, response);
     }
-    // check lại đoạn này
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+
         UserService service = new UserService();
         User user = new User(username, password);
         if (service.checkLogin(username,password)) {
@@ -33,6 +34,5 @@ public class RegisterController extends HttpServlet {
             response.sendRedirect("login?err=1");
         }
     }
-
 
 }

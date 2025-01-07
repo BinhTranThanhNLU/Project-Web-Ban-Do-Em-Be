@@ -12,7 +12,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
 
     <%--    <link rel="stylesheet" href="./static/css/index.css"/>--%>
@@ -57,7 +58,7 @@
         <div class="navbar">
             <div class="menu">
                 <a href="${pageContext.request.contextPath}/home">
-                Trang Chủ
+                    Trang Chủ
                 </a>
 
                 <div class="dropdown-menu">
@@ -152,10 +153,20 @@
                 <div class="user-menu">
                     <i class="fas fa-user"></i>
                     <div class="dropdown">
-                        <a class="menu-link" href="/web_war/other-pages/login.jsp">Đăng nhập</a>
-                        <a class="menu-link" href="/web_war/other-pages/dangki.jsp">Đăng ký</a>
+                        <a class="name" href="<%=request.getContextPath()%>/logout">
+                            <%=session.getAttribute("username") %>
+                        </a>
+                        <a id="login-link" class="menu-link" href="/web_war/other-pages/login.jsp">Đăng nhập</a>
+                        <a id="register-link" class="menu-link" href="/web_war/other-pages/register.jsp">Đăng ký</a>
+                        <a id="logout-link" class="menu-link" href="<%=request.getContextPath()%>/logout"
+                           style="display: none;">Đăng Xuất</a>
+
+
+
+
                     </div>
                 </div>
+
                 <div class="login-message-cart" id="loginMessageCart">
                     Chưa có sản phẩm nào
                 </div>

@@ -8,137 +8,111 @@ body {
     font-family: Arial, sans-serif;
     background-color: #2a2d3e;
     color: #fff;
+    line-height: 1.6;
 }
 
-
-/* container-add-employee */
-.container-add-employee {
+.container {
     max-width: 1200px;
-    margin: auto;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa; /* Đồng nhất với nền tổng thể */
 }
 
-.tile-title {
+.container-add {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* Nền trắng cho form */
+    border-radius: 8px;
+    border: 1px solid #ddd; /* Viền nhạt */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #6c757d;
+}
+
+.breadcrumb a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.header {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #333;
+    color: #495057;
 }
 
-.tile-body {
-    padding: 20px;
-}
-
-/* Form Styling */
-form.row {
+form {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 15px;
 }
 
 .form-group {
-    margin-bottom: 15px;
-    width: 48%; /* Chia thành 2 cột bằng cách đặt chiều rộng */
+    display: flex;
+    flex-direction: column;
 }
 
 .form-group label {
-    font-weight: bold;
-    color: #555;
+    font-size: 16px;
     margin-bottom: 5px;
-    display: block;
+    color: #495057;
 }
 
-.form-control {
-    width: 100%;
+.form-group input {
     padding: 10px;
-    font-size: 16px;
-    color: #333;
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.form-control:focus {
-    border-color: #007bff;
-    outline: none;
-    background-color: #ffffff;
-}
-
-/* Select and File Input Styling */
-select.form-control {
-    appearance: none;
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-    padding: 10px;
-}
-
-input[type="file"] {
-    display: none;
-}
-
-/* Thumbnail Display */
-#thumbbox {
-    margin-top: 10px;
-    text-align: center;
-}
-
-#thumbimage {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Buttons Styling */
-.btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
+    font-size: 14px;
+    border: 1px solid #ced4da;
     border-radius: 5px;
-    border: none;
+    background-color: #fff;
+    color: #495057;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
-    margin-right: 10px;
-    transition: background-color 0.3s;
-    text-decoration: none; /* Loại bỏ gạch chân */
 }
 
-.btn-save {
-    background-color: #28a745;
-    color: white;
-}
-
-.btn-save:hover {
-    background-color: #218838;
-}
-
-.btn-cancel {
-    background-color: #dc3545;
-    color: white;
-    text-decoration: none; /* Loại bỏ gạch chân */
-}
-
-.btn-cancel:hover {
-    background-color: #c82333;
-}
-
-#boxchoice {
-    display: inline-block;
+.save-button,
+.cancel-button {
     padding: 10px 20px;
-    background-color: #1a1a3d; /* Màu nền cho nút tải lên */
-    border-radius: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    text-align: center;
 }
 
-#boxchoice .upload-icon {
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    width: 200px;
+.save-button {
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease;
 }
 
-#boxchoice:hover {
-    background-color: #333357; /* Màu khi hover cho nút tải lên */
+.save-button:hover {
+    background-color: #0056b3;
+}
+
+.cancel-button {
+    background-color: #6c757d;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+    background-color: #5a6268;
 }

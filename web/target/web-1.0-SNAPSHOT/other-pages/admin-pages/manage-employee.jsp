@@ -16,7 +16,7 @@
             <h2>Danh Sách Nhân Viên</h2>
         </div>
         <div class="action-buttons">
-            <a href="./add-employee.html" class="btn btn-add"><i class="fa-solid fa-plus"></i> Thêm nhân
+            <a href="/web_war/manage-employee/add-employee" class="btn btn-add"><i class="fa-solid fa-plus"></i> Thêm nhân
                 viên</a>
             <button class="btn btn-edits">Chỉnh nhiều dòng</button>
             <button class="btn btn-deletes">Xóa nhiều dòng</button>

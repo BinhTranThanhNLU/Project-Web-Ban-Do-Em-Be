@@ -72,6 +72,8 @@ public class AddEmployeeController extends HttpServlet {
             // Kiểm tra username
             if (username == null || username.trim().isEmpty()) {
                 errorMessages.append("Tên đăng nhập không được để trống.\n");
+            } else if (userDAO.isUsernameExists(username)) {
+                errorMessages.append("Tên đăng nhập đã tồn tại. Vui lòng chọn tên đăng nhập khác.\n");
             }
 
             // Kiểm tra password

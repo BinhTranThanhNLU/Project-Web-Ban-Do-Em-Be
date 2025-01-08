@@ -16,7 +16,6 @@
     <div class="register">
       <div>Đăng kí tài khoản</div>
       <p>
-
       </p>
       <div class="social">
         <a data-toggle="tooltip" title="Facebook" href=""
@@ -150,6 +149,10 @@
         <label class="form-label">
           bạn đã có tài khoản? Đăng nhập Tại
           <a href="/web_war/other-pages/login.jsp" style="font-size: 20px">đây</a></label>
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group f-term">
+        <label class="form-label">Quên mật khẩu? Nhấn vào <a href="/web_war/other-pages/forgotpassword.jsp">đây</a></label
         <span class="form-message"></span>
       </div>
       <div class="sign-up">

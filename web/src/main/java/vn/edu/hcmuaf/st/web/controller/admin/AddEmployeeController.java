@@ -61,6 +61,9 @@ public class AddEmployeeController extends HttpServlet {
             } else {
                 try {
                     idRole = Integer.parseInt(idRoleStr);
+                    if (idRole != 2) { // Chỉ cho phép idRole = 2
+                        errorMessages.append("Vai trò không hợp lệ. Vui lòng chọn vai trò nhân viên.\n");
+                    }
                 } catch (NumberFormatException e) {
                     errorMessages.append("Vai trò không hợp lệ.\n");
                 }
@@ -69,6 +72,8 @@ public class AddEmployeeController extends HttpServlet {
             // Kiểm tra username
             if (username == null || username.trim().isEmpty()) {
                 errorMessages.append("Tên đăng nhập không được để trống.\n");
+            } else if (userDAO.isUsernameExists(username)) {
+                errorMessages.append("Tên đăng nhập đã tồn tại. Vui lòng chọn tên đăng nhập khác.\n");
             }
 
             // Kiểm tra password
@@ -76,6 +81,12 @@ public class AddEmployeeController extends HttpServlet {
                 errorMessages.append("Mật khẩu không được để trống.\n");
             } else if (password.length() < 6) {
                 errorMessages.append("Mật khẩu phải có ít nhất 6 ký tự.\n");
+            } else if (!password.matches(".*[A-Z].*")) {
+                errorMessages.append("Mật khẩu phải có ít nhất 1 chữ hoa.\n");
+            } else if (!password.matches(".*\\d.*")) {
+                errorMessages.append("Mật khẩu phải có ít nhất 1 số.\n");
+            } else if (!password.matches(".*[!@#$%^&*(),.?\":{}|<>].*")) {
+                errorMessages.append("Mật khẩu phải có ít nhất 1 ký tự đặc biệt (như !@#$%^&*...).\n");
             }
 
             // Kiểm tra fullName
@@ -93,7 +104,7 @@ public class AddEmployeeController extends HttpServlet {
             // Kiểm tra phoneNumber
             if (phoneNumber == null || phoneNumber.trim().isEmpty()) {
                 errorMessages.append("Số điện thoại không được để trống.\n");
-            } else if (!phoneNumber.matches("^\\d{10,15}$")) {
+            } else if (!phoneNumber.matches("^\\d{10,11}$")) {
                 errorMessages.append("Số điện thoại phải là số từ 10 đến 15 chữ số.\n");
             }
 

@@ -131,6 +131,23 @@ public class UserDAO {
         }
     }
 
+    //Thanh Binh
+    public boolean isUsernameExists(String username) {
+        Jdbi jdbi = JdbiConnect.get(); // Kết nối Jdbi
+        String query = "SELECT COUNT(*) FROM users WHERE username = :username";
+        try {
+            return jdbi.withHandle(handle ->
+                    handle.createQuery(query)
+                            .bind("username", username) // Gắn giá trị username vào câu query
+                            .mapTo(Integer.class) // Chuyển kết quả COUNT(*) thành Integer
+                            .one() > 0 // Kiểm tra nếu kết quả > 0
+            );
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false; // Nếu xảy ra lỗi, trả về false
+        }
+    }
+
     public static void main(String[] args) {
         UserDAO userDAO = new UserDAO();
         List<User> users = userDAO.getEmployeeList();

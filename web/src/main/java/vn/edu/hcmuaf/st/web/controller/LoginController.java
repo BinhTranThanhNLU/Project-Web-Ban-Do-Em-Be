@@ -2,53 +2,61 @@ package vn.edu.hcmuaf.st.web.controller;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import vn.edu.hcmuaf.st.web.model.User;
-import vn.edu.hcmuaf.st.web.service.UserService;
 
 import java.io.IOException;
 import java.sql.*;
 
-@WebServlet(name = "LoginController", urlPatterns = {"/login"})
 public class LoginController extends HttpServlet {
     private static final long serialVersionUID = 1L;
+
     public LoginController() {
         super();
     }
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-    }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         HttpSession session = request.getSession();
         RequestDispatcher dispatcher = null;
+        if (username == null || username.trim().isEmpty()) {
+            request.setAttribute("status", "InvalidName"); // Gửi giá trị tới JSP
+            dispatcher = request.getRequestDispatcher("/other-pages/login.jsp");
+            dispatcher.forward(request, response);
+            return; // Dừng thực thi mã phía sau
+        }
+
+        if (password == null || password.trim().isEmpty()) {
+            request.setAttribute("status", "InvalidPassword"); // Gửi giá trị tới JSP
+            dispatcher = request.getRequestDispatcher("/other-pages/login.jsp");
+            dispatcher.forward(request, response);
+            return; // Dừng thực thi mã phía sau
+        }
+
         try {
-            try {
-                Class.forName("com.mysql.cj.jdbc.Driver");
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "");
-                Class.forName("com.mysql.jdbc.Driver");
-                PreparedStatement pst = con.prepareStatement("select * from username where username=? and password=?");
-                pst.setString(1, username);
-                pst.setString(2, password);
-                ResultSet rs = pst.executeQuery();
-                if (rs.next()) {
-                    session.setAttribute("username", rs.getString("username"));
-                    dispatcher = request.getRequestDispatcher("index.jsp");
-                } else {
-                    request.setAttribute("status", "failed");
-                    dispatcher = request.getRequestDispatcher("/other-pages/login.jsp");
-                }
-                dispatcher.forward(request, response);
-            } catch (Exception e) {
-                e.printStackTrace();
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project?useSSL=false", "root", "");
+            PreparedStatement ps = con.prepareStatement("select * from users where username=? and password=?");
+            ps.setString(1, username);
+            ps.setString(2, password);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                // Đăng nhập thành công
+                session.setAttribute("username", rs.getString("username"));
+                dispatcher = request.getRequestDispatcher("index.jsp");
+            } else {
+                // Sai tên đăng nhập hoặc mật khẩu
+                request.setAttribute("status", "failed");
+                dispatcher = request.getRequestDispatcher("/other-pages/login.jsp");
             }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+            dispatcher.forward(request, response);
+
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
         }
     }
 }

@@ -11,11 +11,16 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         rel="stylesheet"
 />
+<input type="hidden" id="status"
+       value="<%= request.getAttribute("status")%>"/>
+
+
 <!-- HEADER -->
-<input type="hidden" id="status" value=" <%=request.getAttribute("status")%>">
 <div class="login-container">
+
     <div>
         <div class="logo">
+
         </div>
         <div class="register">
             <div>Đăng nhập tài khoản</div>
@@ -27,6 +32,7 @@
             </div>
         </div>
     </div>
+
     <div class="form-login">
         <form action="<%=request.getContextPath()%>/login" method="POST" class="form" id="form-2">
             <h3 class="heading">Đăng Nhập</h3>
@@ -37,22 +43,27 @@
                        class="form-control">
                 <span class="form-message"></span>
             </div>
+
             <div class="form-group">
                 <label for="password" class="form-label">Mật khẩu</label>
                 <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
                 <span class="form-message"></span>
             </div>
+
             <div class="form-group f-term">
-                <label class="form-label">Quên mật khẩu? Nhấn vào <a href="./quentk.html">đây</a></label>
+                <label class="form-label">Quên mật khẩu? Nhấn vào <a
+                        href="/web_war/other-pages/forgotpassword.jsp">đây</a></label>
                 <span class="form-message"></span>
             </div>
+
             <div class="sign-up">
                 <div class="dangnhap">
                     <button type="submit" class="btn-login">Đăng nhập</button>
                 </div>
                 <div class="dangki">
-                    <a href="register.jsp">Đăng kí tại đây</a>
+                    <a href="/web_war/other-pages/register.jsp">Đăng kí tại đây</a>
                 </div>
+
             </div>
             <div class="form-icon">
                 <p>Hoặc đăng nhập bằng </p>
@@ -67,69 +78,34 @@
     </div>
 </div>
 
-<%--<script>--%>
-<%--    // Lấy form và các input--%>
-<%--    const form = document.getElementById('form-2');--%>
-<%--    const emailInput = document.getElementById('username');--%>
-<%--    const passwordInput = document.getElementById('password');--%>
-<%--    // Lắng nghe sự kiện submit của form--%>
-<%--    form.addEventListener('submit', function (event) {--%>
-<%--        // Ngăn việc submit mặc định--%>
-<%--        event.preventDefault();--%>
-
-<%--        // Kiểm tra từng trường input--%>
-<%--        let isValid = true;--%>
-<%--        // Kiểm tra email--%>
-<%--        if (emailInput.value.trim() === '') {--%>
-<%--            showError(emailInput, 'Vui lòng nhập tên tài khoản hoặc Email');--%>
-<%--            isValid = false;--%>
-<%--        } else {--%>
-<%--            clearError(emailInput);--%>
-<%--        }--%>
-
-<%--        // Kiểm tra mật khẩu--%>
-<%--        if (passwordInput.value.trim() === '') {--%>
-<%--            showError(passwordInput, 'Vui lòng nhập mật khẩu');--%>
-<%--            isValid = false;--%>
-<%--        } else {--%>
-<%--            clearError(passwordInput);--%>
-<%--        }--%>
-
-<%--        Nếu cả hai trường hợp đều đúng, submit form--%>
-<%--        if (isValid) {--%>
-
-<%--            form.submit();--%>
-<%--        }--%>
-<%--    });--%>
-
-<%--    // Hàm hiển thị lỗi--%>
-<%--    function showError(input, message) {--%>
-<%--        const formGroup = input.parentElement;--%>
-<%--        const errorSpan = formGroup.querySelector('.form-message');--%>
-<%--        errorSpan.textContent = message;--%>
-<%--        errorSpan.style.color = 'red';--%>
-<%--    }--%>
-
-<%--    // Hàm xóa lỗi--%>
-<%--    function clearError(input) {--%>
-<%--        const formGroup = input.parentElement;--%>
-<%--        const errorSpan = formGroup.querySelector('.form-message');--%>
-<%--        errorSpan.textContent = '';--%>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<%--<script type="text/javascript">--%>
+<%--    var x = "<%= request.getAttribute("status") %>"; // Lấy giá trị từ request--%>
+<%--    if (x === "failed") {--%>
+<%--        swal("Đăng Nhập Thất Bại", "Bạn Nhập Sai Tài Khoản Hoặc Mật Khẩu", "error");--%>
+<%--    } else if (x === "InvalidName") {--%>
+<%--        swal("Đăng Nhập Thất Bại", "Bạn Cần Nhập Vào Tài Khoản", "error");--%>
+<%--    } else if (x === "InvalidPassword") {--%>
+<%--        swal("Đăng Nhập Thất Bại", "Bạn Cần Nhập Vào Mật Khẩu", "error");--%>
 <%--    }--%>
 <%--</script>--%>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<link rel="stylesheet" href="alert/dist/sweetalert.css">
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script type="text/javascript">
-    var status = document.getElementById('status').value;
-    if (status == "failed") {
-        swal("Thất Bại", "Đăng Nhập Thất bại", "failed");
+    // Lấy giá trị từ request attribute
+    var status = "<%= request.getAttribute("status") != null ? request.getAttribute("status") : "" %>";
 
-    } else {
-        swal("Thành Công", "Đăng Nhập Thành Công", "success");
+    // Hiển thị thông báo tương ứng
+    if (status === "failed") {
+        swal("Đăng Nhập Thất Bại", "Bạn Nhập Sai Tài Khoản Hoặc Mật Khẩu", "error");
     }
-
+    if (status === "InvalidName") {
+        swal("Đăng Nhập Thất Bại", "Bạn Cần Nhập Vào Tài Khoản", "error");
+    }
+    if (status === "InvalidPassword") {
+        swal("Đăng Nhập Thất Bại", "Bạn Cần Nhập Vào Mật Khẩu", "error");
+    }
 </script>
+
 
 <!-- ====================================footer=============================== -->
 <%@ include file="/partials/footer.jsp" %>

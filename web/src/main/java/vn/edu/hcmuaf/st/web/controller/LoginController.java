@@ -22,13 +22,18 @@ public class LoginController extends HttpServlet {
         String password = request.getParameter("password");
         HttpSession session = request.getSession();
         RequestDispatcher dispatcher = null;
-
-        // Kiểm tra xem tên đăng nhập hoặc mật khẩu có để trống không
-        if (username == null || username.trim().isEmpty() || password == null || password.trim().isEmpty()) {
-            request.setAttribute("status", "emptyFields"); // Gán trạng thái lỗi
+        if (username == null || username.trim().isEmpty()) {
+            request.setAttribute("status", "InvalidName"); // Gửi giá trị tới JSP
             dispatcher = request.getRequestDispatcher("/other-pages/login.jsp");
             dispatcher.forward(request, response);
-            return; // Kết thúc phương thức để không thực hiện tiếp truy vấn DB
+            return; // Dừng thực thi mã phía sau
+        }
+
+        if (password == null || password.trim().isEmpty()) {
+            request.setAttribute("status", "InvalidPassword"); // Gửi giá trị tới JSP
+            dispatcher = request.getRequestDispatcher("/other-pages/login.jsp");
+            dispatcher.forward(request, response);
+            return; // Dừng thực thi mã phía sau
         }
 
         try {
@@ -50,9 +55,7 @@ public class LoginController extends HttpServlet {
             }
             dispatcher.forward(request, response);
 
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
     }

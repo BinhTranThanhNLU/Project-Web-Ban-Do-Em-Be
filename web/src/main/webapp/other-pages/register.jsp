@@ -67,6 +67,8 @@
                         type="text"
                         placeholder="Nhập Tên tài khoản"
                         class="form-control"
+                        value="<%= request.getAttribute("username") != null ? request.getAttribute("username") : "" %>"
+
                 />
                 <span class="form-message"></span>
             </div>
@@ -78,6 +80,7 @@
                         type="text"
                         placeholder="Nhập Họ Và Tên"
                         class="form-control"
+                        value="<%= request.getAttribute("fullName") != null ? request.getAttribute("fullName") : "" %>"
                 />
                 <span class="form-message"></span>
             </div>
@@ -87,11 +90,12 @@
                         id="birthDate"
                         name="birthDate"
                         type="text"
-                        placeholder="Nhập theo định dạng YYYY/MM/DD"
+                        placeholder="Nhập theo định dạng DD/MM/YYYY"
                         class="form-control"
                         pattern="\d{4}/\d{2}/\d{2}"
-                        title="Vui lòng nhập theo định dạng YYYY/MM/DD"
-                        required
+                        value="<%= request.getAttribute("birthDate") != null ? request.getAttribute("birthDate") : "" %>"
+
+
                 />
                 <span class="form-message"></span>
             </div>
@@ -103,6 +107,7 @@
                         type="text"
                         placeholder="Nhập số điện thoại"
                         class="form-control"
+                        value="<%= request.getAttribute("phoneNumber") != null ? request.getAttribute("phoneNumber") : "" %>"
                 />
                 <span class="form-message"></span>
             </div>
@@ -111,9 +116,11 @@
                 <input
                         id="email"
                         name="email"
-                        type="email"
+                        type="text"
                         placeholder="Nhập Email"
                         class="form-control"
+                        value="<%= request.getAttribute("email") != null ? request.getAttribute("email") : "" %>"
+
                 />
                 <span class="form-message"></span>
             </div>
@@ -140,13 +147,11 @@
                 <span class="form-message"></span>
             </div>
             <div class="form-group f-term">
-                <label class="form-label"
-                >bạn đã có tài khoản? Đăng nhập
-                    <a href="/web_war/other-pages/login.jsp">đây</a></label
-                >
+                <label class="form-label">
+                    bạn đã có tài khoản? Đăng nhập Tại
+                    <a href="/web_war/other-pages/login.jsp" style="font-size: 20px">đây</a></label>
                 <span class="form-message"></span>
             </div>
-
             <div class="sign-up">
                 <div class="dangnhap">
                     <button type="submit" class="btn-login">Đăng Ký</button>
@@ -167,13 +172,32 @@
     </div>
 </div>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 <script type="text/javascript">
     var x = document.getElementById("status").value; // Lấy giá trị của phần tử có id "status"
     if (x === "success") { // So sánh giá trị
         swal("Chúc Mừng", "Bạn Đã Tạo Tài Khoản Thành Công", "success");
+    } else if (x === "InvalidName") { // Kiểm tra tên tài khoản
+        swal("Bạn Chưa Điền Tên Tài Khoản", "Bạn Cần Nhập Vào Tài Khoản", "error");
+    } else if (x === "InvalidFullName") { // Kiểm tra họ và tên
+        swal("Bạn Chưa Điền Đầy Đủ Họ Và Tên", "Bạn Cần Nhập Vào Họ Và Tên", "error");
+    } else if (x === "InvalidBirthDate") { // Kiểm tra ngày tháng năm sinh
+        swal("Bạn Chưa Điền Ngày Tháng Năm Sinh", "Bạn Cần Nhập Vào Ngày Tháng Năm Sinh", "error");
+    } else if (x === "InvalidPhoneNumber") { // Kiểm tra số điện thoại
+        swal("Bạn Chưa Điền Số Điện Thoại", "Bạn Cần Nhập Vào Số Điện Thoại", "error");
+    } else if (x === "InvalidCheckPhoneNumber") { // Kiểm tra số điện thoại
+        swal("Số Điện Thoại Không Đúng", "Số Điện Thoại Phải Có 10 Số Và Bắt Đầu Bằng Số Không", "error");
+    } else if (x === "InvalidEmail") { // Kiểm tra email
+        swal("Bạn Chưa Điền Tên Email", "Bạn Cần Nhập Vào Email", "error");
+    } else if (x === "InvalidEmailFormat") { // Kiểm tra email
+        swal("Bạn Cần Nhập Email Đúng Định Dạng", "", "error");
+    } else if (x === "InvalidPassword") { // Kiểm tra mật khẩu
+        swal("Bạn Chưa Điền Mật Khẩu", "Bạn Cần Nhập Vào Mật Khẩu", "error");
+    } else if (x === "InvalidRePassword") { // Kiểm tra mật khẩu không khớp
+        swal("Mật Khẩu Không Khớp", "Bạn Cần Kiểm Tra Lại Mật Khẩu", "error");
     }
 
 
 </script>
-<%--Footer--%>
+
 <%@ include file="/partials/footer.jsp" %>

@@ -9,7 +9,7 @@ public class RoleDAO {
 
     public List<Role> getAll() {
         Jdbi jdbi = JdbiConnect.get();
-        String query = "SELECT idRole, name FROM roles";
+        String query = "SELECT DISTINCT idRole, name FROM roles";
         return jdbi.withHandle(handle ->
                 handle.createQuery(query)
                         .mapToBean(Role.class)

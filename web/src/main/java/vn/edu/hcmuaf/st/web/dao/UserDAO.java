@@ -13,6 +13,18 @@ import java.util.List;
 
 public class UserDAO {
 
+    private static UserDAO instance;
+
+    private UserDAO() {
+    }
+
+    public static synchronized UserDAO getInstance() {
+        if (instance == null) {
+            instance = new UserDAO();
+        }
+        return instance;
+    }
+
     public List<User> getAll() {
         Jdbi jdbi = JdbiConnect.get();
         String query = "" +
@@ -65,13 +77,6 @@ public class UserDAO {
         );
     }
 
-
-    public static void main(String[] args) {
-        UserDAO userDAO = new UserDAO();
-        List<User> users = userDAO.getEmployeeList();
-        users.forEach(System.out::println);
-    }
-
     public User getUserByUsernameAndPassword(String username, String password) {
         String query = "SELECT idUser, idRole, username, password, fullName, email, phoneNumber, active, birthDate, avatar " +
                 "FROM users WHERE username = ? AND password = ?";
@@ -100,5 +105,35 @@ public class UserDAO {
             e.printStackTrace();
         }
         return null; // Không tìm thấy người dùng
+    }
+
+    //Thanh Binh
+    public boolean addEmployee(int idRole, String username, String password, String fullName, String email, String phoneNumber, boolean active, String avatar, java.sql.Date birthDate) {
+        String query = "INSERT INTO users (idRole, username, password, fullName, email, phoneNumber, active, avatar, birthDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        try {
+            Jdbi jdbi = JdbiConnect.get();
+            return jdbi.withHandle(handle ->
+                    handle.createUpdate(query)
+                            .bind(0, idRole)
+                            .bind(1, username)
+                            .bind(2, password)
+                            .bind(3, fullName)
+                            .bind(4, email)
+                            .bind(5, phoneNumber)
+                            .bind(6, active ? 1 : 0)
+                            .bind(7, avatar)
+                            .bind(8, birthDate)
+                            .execute()
+            ) > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        UserDAO userDAO = new UserDAO();
+        List<User> users = userDAO.getEmployeeList();
+        users.forEach(System.out::println);
     }
 }

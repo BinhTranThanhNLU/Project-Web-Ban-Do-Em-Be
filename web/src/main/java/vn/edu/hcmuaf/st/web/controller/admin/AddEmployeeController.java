@@ -81,6 +81,12 @@ public class AddEmployeeController extends HttpServlet {
                 errorMessages.append("Mật khẩu không được để trống.\n");
             } else if (password.length() < 6) {
                 errorMessages.append("Mật khẩu phải có ít nhất 6 ký tự.\n");
+            } else if (!password.matches(".*[A-Z].*")) {
+                errorMessages.append("Mật khẩu phải có ít nhất 1 chữ hoa.\n");
+            } else if (!password.matches(".*\\d.*")) {
+                errorMessages.append("Mật khẩu phải có ít nhất 1 số.\n");
+            } else if (!password.matches(".*[!@#$%^&*(),.?\":{}|<>].*")) {
+                errorMessages.append("Mật khẩu phải có ít nhất 1 ký tự đặc biệt (như !@#$%^&*...).\n");
             }
 
             // Kiểm tra fullName

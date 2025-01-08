@@ -1,4 +1,3 @@
-/* CSS Reset */
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +17,7 @@ body {
   position: relative;
   z-index: 1;
 }
+
 .login-container {
   position: relative;
   width: 80%;
@@ -128,7 +128,7 @@ body {
 
 .form-login .form .form-label {
   color: rgb(255, 255, 255);
-  font-size: 20px;
+  font-size: 13px;
 }
 
 .form-login .form .heading {
@@ -223,6 +223,7 @@ body {
 .login-button:hover {
   opacity: 0.8;
 }
+
 /* Style cho nút đăng nhập */
 .btn-login {
   background-color: #e67300; /* Màu nền chính */
@@ -256,11 +257,13 @@ body {
   transform: translateY(2px); /* Di chuyển nhẹ xuống */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bóng đổ nhỏ hơn */
 }
+
 .form-message {
   color: #cc0000; /* Màu đỏ đậm */
   font-size: 14px; /* Kích thước chữ lớn hơn */
   font-weight: bold; /* Chữ đậm hơn */
 }
+
 .alert {
   position: relative;
   padding: 1rem 1rem;
@@ -280,6 +283,7 @@ body {
 .alert-dismissible {
   padding-right: 3rem;
 }
+
 .alert-dismissible .btn-close {
   position: absolute;
   top: 0;
@@ -293,6 +297,7 @@ body {
   background-color: #d1f2eb;
   border-color: #baebe1;
 }
+
 .alert-primary .alert-link {
   color: #0d5a4b;
 }
@@ -302,6 +307,7 @@ body {
   background-color: #d5d8dc;
   border-color: #c0c5cb;
 }
+
 .alert-secondary .alert-link {
   color: #151e26;
 }
@@ -311,6 +317,7 @@ body {
   background-color: #d1e7dd;
   border-color: #badbcc;
 }
+
 .alert-success .alert-link {
   color: #0c4128;
 }
@@ -320,6 +327,7 @@ body {
   background-color: #cff4fc;
   border-color: #b6effb;
 }
+
 .alert-info .alert-link {
   color: #066173;
 }
@@ -329,6 +337,7 @@ body {
   background-color: #fff3cd;
   border-color: #ffecb5;
 }
+
 .alert-warning .alert-link {
   color: #7a5d03;
 }
@@ -338,6 +347,7 @@ body {
   background-color: #f8d7da;
   border-color: #f5c2c7;
 }
+
 .alert-danger .alert-link {
   color: #6a1a21;
 }
@@ -347,6 +357,7 @@ body {
   background-color: #fefefe;
   border-color: #fdfdfe;
 }
+
 .alert-light .alert-link {
   color: #777778;
 }
@@ -356,6 +367,7 @@ body {
   background-color: #d3d3d4;
   border-color: #bcbebf;
 }
+
 .alert-dark .alert-link {
   color: #101214;
 }

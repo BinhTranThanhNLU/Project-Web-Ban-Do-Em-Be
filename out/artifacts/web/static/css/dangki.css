@@ -1,13 +1,13 @@
 /* CSS Reset */
-*{
+* {
     margin: 0;
     padding: 0;
     font-size: 100%;
-    font-family: 'Spartan', sans-serif;
+    font-family: "Spartan", sans-serif;
     box-sizing: border-box;
- }
- 
- body {
+}
+
+body {
     line-height: 1;
     width: 100%;
     height: 100%;
@@ -17,25 +17,23 @@
     align-items: center;
     position: relative;
     z-index: 1;
-    
- }
-
- .login-container {
+}
+.login-container {
     position: relative;
     width: 80%;
     height: 100%;
-    background-image: url('../images/dark-sunset.jpg');
+    background-image: url("https://images.pexels.com/photos/921703/pexels-photo-921703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: space-between;
     padding-left: 100px;
-    color: #FFF5E4;
+    color: #ffffff;
     font-weight: 300;
     margin-left: 10%;
-    margin-top: 100px;
+    margin-top: 150px;
     margin-bottom: 30px;
- }
+}
 
 .login-container > div:first-child {
     max-width: 45%;
@@ -55,7 +53,7 @@
 .register > p {
     font-size: 14px;
     line-height: 1.4;
-    color: rgb(197, 202, 206);
+    color: #ffffff;
     margin-bottom: 24px;
 }
 
@@ -68,12 +66,12 @@
 }
 
 .register .social i {
-    color: #FFF5E4;
+    color: #fff;
     font-size: 15px;
 }
 
 .register .social a:hover i {
-    color: #CD5C08;
+    color: #cd5c08;
 }
 
 .form-login {
@@ -104,7 +102,7 @@
 
 .f-term label a {
     margin-left: 2px;
-    color: #CD5C08;
+    color: #ffffff;
     font-size: 15px;
     text-decoration: none;
 }
@@ -119,7 +117,7 @@
     border: none;
     border-bottom: 1px solid rgba(159, 171, 175, 0.534);
     margin-top: 10px;
-    color: #FFF5E4;
+    color: #fff;
     font-size: 17px;
 }
 
@@ -129,7 +127,7 @@
 }
 
 .form-login .form .form-label {
-    color: rgba(255, 255, 255, 0.658);
+    color: rgb(255, 255, 255);
     font-size: 13px;
 }
 
@@ -145,7 +143,6 @@
 }
 
 .form-login .form .sign-up .dangnhap {
-    background-color: #CD5C08;
     width: 160px;
     height: 35px;
     border: none;
@@ -160,8 +157,7 @@
 .form-login .form .sign-up .dangnhap a {
     text-decoration: none;
     color: rgb(190, 189, 187);
-    margin-left: 25px;
-    
+    margin-left: 15px;
 }
 
 .form-login .form .sign-up .dangnhap:hover {
@@ -171,12 +167,12 @@
 
 .sign-up .dangki a {
     margin-left: 35px;
-    color: rgb(190, 189, 187);
+    color: rgb(255, 255, 255);
     font-size: 14px;
 }
 
 .sign-up .dangki a:hover {
-    color: red;
+    color: rgb(255, 255, 255);
 }
 
 /* Button */
@@ -188,7 +184,7 @@
     padding: 13px 10px;
     margin-left: 30px;
     text-decoration: none;
-    color: #FFF5E4;
+    color: #fff;
     border-radius: 5px;
     font-size: 13px;
     font-weight: bold;
@@ -197,7 +193,7 @@
 
 .form-icon > p {
     font-size: 16px;
-    color: rgb(197, 202, 206);
+    color: rgb(255, 255, 255);
     margin-top: 40px;
     margin-left: 130px;
 }
@@ -207,7 +203,7 @@
 }
 
 .google-login {
-    background-color: #CD5C08;
+    background-color: #e67300;
     display: flex;
     align-items: center;
 }
@@ -226,4 +222,42 @@
 
 .login-button:hover {
     opacity: 0.8;
+}
+/* Style cho nút đăng nhập */
+.btn-login {
+    background-color: #e67300; /* Màu nền chính */
+    color: #fff; /* Màu chữ */
+    width: 160px; /* Chiều rộng */
+    height: 45px; /* Chiều cao */
+    border: none; /* Không viền */
+    border-radius: 8px; /* Bo góc */
+    font-size: 16px; /* Kích thước chữ */
+    font-weight: bold; /* Chữ đậm */
+    text-transform: uppercase; /* Viết hoa toàn bộ */
+    letter-spacing: 1px; /* Khoảng cách chữ */
+    cursor: pointer; /* Con trỏ chuột */
+    transition: all 0.3s ease; /* Hiệu ứng khi hover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bóng đổ */
+}
+
+/* Hiệu ứng hover */
+.btn-login:hover {
+    background-color: #e67300; /* Màu nền khi hover */
+    color: #fff; /* Màu chữ */
+    transform: translateY(-2px); /* Hiệu ứng di chuyển nhẹ */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Bóng đổ mạnh hơn */
+}
+
+/* Hiệu ứng nhấn (active) */
+.btn-login:active {
+    transform: translateY(2px); /* Di chuyển nhẹ xuống */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bóng đổ nhỏ hơn */
+}
+.form-message {
+    color: #cc0000; /* Màu đỏ đậm */
+    font-size: 14px; /* Kích thước chữ lớn hơn */
+    font-weight: bold; /* Chữ đậm hơn */
 }

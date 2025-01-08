@@ -18,7 +18,17 @@ public class User implements Serializable {
     // Constructor rỗng
     public User() {
     }
-
+    public User(String email) {
+        this.email = email;
+    }
+    public User(String username, String password, String fullName,
+                String email, String phoneNumber) {
+        this.username = username;
+        this.password = password;
+        this.fullName = fullName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
     // Constructor đầy đủ
     public User(int idUser, int idRole, String username, String password, String fullName,
                 String email, String phoneNumber, boolean active, String birthDate, String avatar, Role role) {

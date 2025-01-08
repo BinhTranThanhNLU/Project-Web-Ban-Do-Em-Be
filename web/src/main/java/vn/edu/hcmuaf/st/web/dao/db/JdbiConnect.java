@@ -1,7 +1,10 @@
 package vn.edu.hcmuaf.st.web.dao.db;
 
+import jakarta.servlet.ServletContextEvent;
 import org.jdbi.v3.core.Jdbi;
 import com.mysql.cj.jdbc.MysqlDataSource;
+
+import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class JdbiConnect {
@@ -35,6 +38,16 @@ public class JdbiConnect {
         }
         jdbi = Jdbi.create(src);
     }
+
+    public void contextDestroyed(ServletContextEvent sce) {
+        try {
+            java.sql.DriverManager.deregisterDriver(DriverManager.getDrivers().nextElement());
+            com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkedShutdown();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public static void main(String[] args) {
         Jdbi j = get();

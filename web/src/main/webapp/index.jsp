@@ -7,19 +7,14 @@
 <c:set var="pageJsList" value="${['script.js']}"/>
 
 <%@ include file="/partials/header-nav.jsp" %>
-
-<%--khi ccaan den 1 trang nào do--%>
-
+<%--Dòng nàyddeexuat hien khi can chuyen den login ko can thi xoa--%>
 <%
-    if (session.getAttribute("username") == null) {
-        response.sendRedirect("/web_war/other-pages/forgotpassword.jsp");
-        return; // Dừng thực thi mã JSP còn lại
+    if (session.getAttribute("name") == null) {
+        response.sendRedirect("/web_war/other-pages/register.jsp");
     }
+
+
 %>
-
-
-
-<%--%>--%>
 <!-- ================Hiệu ứng di chuyển hình ảnh ở đầu trang can js============-->
 <section id="Slider">
     <div class="slider">
@@ -3358,5 +3353,6 @@
         </div>
     </div>
 </section>
+
 <!-- ====================================footer=============================== -->
 <%@ include file="/partials/footer.jsp" %>

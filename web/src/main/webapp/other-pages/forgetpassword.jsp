@@ -28,25 +28,21 @@
   </div>
 
   <div class="form-login">
-    <form action="" method="POST" class="form" id="form-2">
+    <form action="<%=request.getContextPath()%>/forgetpassword" method="POST" class="form" id="form-2">
       <h3 class="heading">Quên mật khẩu</h3>
 
       <div class="form-group">
         <label for="email" class="form-label">Email</label>
-        <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control">
+        <input id="email" name="email" type="text" placeholder="Ví Dụ: email@gmail.com" class="form-control">
         <span class="form-message"></span>
       </div>
-
-
-
       <div class="form-group f-term">
         <label for="agree" class="form-label">bạn đã có tài khoản? Đăng nhập <a id="agree" href="/web_war/other-pages/dangnhap.jsp">đây</a></label>
         <span class="form-message"></span>
       </div>
-
       <div class="sign-up">
         <div class="dangnhap">
-          <a href="/web_war/other-pages/quentk.jsp" >Tìm Kiếm</a>
+          <button type="submit" class="btn-login">Lấy Mật Khẩu Mới</button>
         </div>
         <div class="dangki">
           <a href="/web_war/other-pages/dangki.jsp">Đăng kí tại đây</a>

@@ -50,6 +50,28 @@ body {
     color: #495057;
 }
 
+.alert {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Màu xanh cho thành công */
+.alert-success {
+    color: #26ce4b !important;
+    background-color: #d4edda !important;
+    border: 1px solid #c3e6cb !important;
+}
+
+/* Màu đỏ cho lỗi */
+.alert-danger {
+    color: #c8273a !important;
+    background-color: #f8d7da !important;
+    border: 1px solid #f5c6cb !important;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -116,3 +138,4 @@ form {
 .cancel-button:hover {
     background-color: #5a6268;
 }
+

@@ -18,15 +18,21 @@
             Tạo mới người dùng
             <hr />
         </div>
-        <form>
+        <c:if test="${not empty sessionScope.message}">
+            <div style="color: white; font-weight: bold; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: ${sessionScope.success ? '#26ce4b' : '#FF9999'};">
+                    ${sessionScope.message}
+            </div>
+            <c:remove var="message" scope="session"/>
+            <c:remove var="success" scope="session"/>
+        </c:if>
+        <form action="${pageContext.request.contextPath}/manage-employee/add-employee" method="post">
             <!-- Vai trò -->
             <div class="form-group">
                 <label for="role">Vai trò</label>
                 <select id="role" name="idRole" required>
-                    <option value="">Chọn vai trò</option>
-                    <option value="1">Quản trị viên</option>
-                    <option value="2">Nhân viên</option>
-                    <!-- Thêm các vai trò khác từ bảng roles -->
+                    <c:forEach var="role" items="${roles}">
+                        <option value="${role.idRole}">${role.name}</option>
+                    </c:forEach>
                 </select>
             </div>
 
@@ -65,7 +71,8 @@
             <!-- Ngày sinh -->
             <div class="form-group">
                 <label for="birthDate">Ngày sinh</label>
-                <input type="date" id="birthDate" name="birthDate" />
+                <input type="text" id="birthDate" name="birthDate"
+                       value="<fmt:formatDate value='${user.birthDate}' pattern='dd/MM/yyyy' />" placeholder="dd/MM/yyyy" />
             </div>
 
             <!-- Ảnh đại diện -->

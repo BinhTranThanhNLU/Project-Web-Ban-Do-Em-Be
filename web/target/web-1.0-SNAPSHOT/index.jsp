@@ -10,7 +10,7 @@
 <%--Dòng nàyddeexuat hien khi can chuyen den login ko can thi xoa--%>
 <%
     if (session.getAttribute("name") == null) {
-        response.sendRedirect("/web_war/other-pages/register.jsp");
+        response.sendRedirect("/web_war/other-pages/forgotpassword.jsp");
     }
 
 

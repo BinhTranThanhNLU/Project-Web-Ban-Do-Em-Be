@@ -28,7 +28,6 @@ public class LoginController extends HttpServlet {
             dispatcher.forward(request, response);
             return; // Dừng thực thi mã phía sau
         }
-
         if (password == null || password.trim().isEmpty()) {
             request.setAttribute("status", "InvalidPassword"); // Gửi giá trị tới JSP
             dispatcher = request.getRequestDispatcher("/other-pages/login.jsp");

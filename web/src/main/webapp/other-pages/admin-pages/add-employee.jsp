@@ -19,13 +19,18 @@
             <hr />
         </div>
         <c:if test="${not empty sessionScope.message}">
-            <div style="color: white; font-weight: bold; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: ${sessionScope.success ? '#26ce4b' : '#FF9999'};">
-                    ${sessionScope.message}
+            <div style="color: white; font-weight: bold; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: ${sessionScope.success ? '#90EE90' : '#FF9999'};">
+                <ul style="margin: 0; padding: 0; list-style: none;">
+                    <c:forEach var="error" items="${sessionScope.message}">
+                        <li>${error}</li>
+                    </c:forEach>
+                </ul>
             </div>
             <c:remove var="message" scope="session"/>
             <c:remove var="success" scope="session"/>
         </c:if>
-        <form action="${pageContext.request.contextPath}/manage-employee/add-employee" method="post">
+
+        <form action="${pageContext.request.contextPath}/manage-employee/add-employee" method="post" enctype="multipart/form-data">
             <!-- Vai trò -->
             <div class="form-group">
                 <label for="role">Vai trò</label>

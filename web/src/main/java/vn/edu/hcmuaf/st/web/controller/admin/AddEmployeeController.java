@@ -1,22 +1,33 @@
 package vn.edu.hcmuaf.st.web.controller.admin;
 
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.Part;
 import vn.edu.hcmuaf.st.web.dao.RoleDAO;
 import vn.edu.hcmuaf.st.web.dao.UserDAO;
 import vn.edu.hcmuaf.st.web.model.Role;
 import vn.edu.hcmuaf.st.web.utils.PasswordUtils;
+import vn.edu.hcmuaf.st.web.utils.ValidationUtils;
 
+import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 @WebServlet(name = "AddEmployeeController", urlPatterns = "/manage-employee/add-employee")
+@MultipartConfig(
+        fileSizeThreshold = 1024 * 1024 * 2, // 2MB
+        maxFileSize = 1024 * 1024 * 10,      // 10MB
+        maxRequestSize = 1024 * 1024 * 50    // 50MB
+)
 public class AddEmployeeController extends HttpServlet {
 
     private UserDAO userDAO = UserDAO.getInstance();
@@ -45,67 +56,83 @@ public class AddEmployeeController extends HttpServlet {
             String email = req.getParameter("email");
             String phoneNumber = req.getParameter("phoneNumber");
             String birthDateStr = req.getParameter("birthDate"); // Ngày sinh dạng dd/MM/yyyy
-            String avatar = req.getParameter("avatar");
             String activeStr = req.getParameter("active");
 
-            // Mã hóa mật khẩu bằng MD5
-            String hashedPassword = PasswordUtils.hashPassword(password);
+            // Lấy file từ request
+            Part filePart = req.getPart("avatar"); // "avatar" là tên của input file
+            String fileName = extractFileName(filePart);
+            String avatar;
+
+            if (fileName != null && !fileName.isEmpty()) {
+                // Đường dẫn thư mục
+                //String uploadDir = new File(getServletContext().getRealPath("/uploads")).getAbsolutePath();
+                String uploadDir = "E:/uploads"; // Lưu tệp ở một thư mục cố định trên máy chủ
+                File uploadFolder = new File(uploadDir);
+                if (!uploadFolder.exists()) uploadFolder.mkdirs();
+
+                // Tạo tên file duy nhất
+                String uniqueFileName = UUID.randomUUID().toString() + "_" + fileName;
+                String filePath = uploadDir + File.separator + uniqueFileName;
+                filePart.write(filePath);
+
+                System.out.println("Upload Directory: " + uploadDir);
+                System.out.println("File Path: " + filePath);
+
+                // Đường dẫn tương đối
+                avatar = "uploads/" + uniqueFileName;
+            } else {
+                avatar = "/static/images/default-avatar.png";
+            }
 
             // Kiểm tra dữ liệu đầu vào
-            StringBuilder errorMessages = new StringBuilder();
+            List<String> errorMessages = new ArrayList<>();
 
             // Kiểm tra idRole
             int idRole = 0;
             if (idRoleStr == null || idRoleStr.trim().isEmpty()) {
-                errorMessages.append("Vui lòng chọn vai trò.\n");
+                errorMessages.add("Vui lòng chọn vai trò.");
             } else {
                 try {
                     idRole = Integer.parseInt(idRoleStr);
                     if (idRole != 2) { // Chỉ cho phép idRole = 2
-                        errorMessages.append("Vai trò không hợp lệ. Vui lòng chọn vai trò nhân viên.\n");
+                        errorMessages.add("Vai trò không hợp lệ. Vui lòng chọn vai trò nhân viên.");
                     }
                 } catch (NumberFormatException e) {
-                    errorMessages.append("Vai trò không hợp lệ.\n");
+                    errorMessages.add("Vai trò không hợp lệ.");
                 }
             }
 
             // Kiểm tra username
-            if (username == null || username.trim().isEmpty()) {
-                errorMessages.append("Tên đăng nhập không được để trống.\n");
+            if (!ValidationUtils.isNotEmpty(username)) {
+                errorMessages.add("Tên đăng nhập không được để trống.");
             } else if (userDAO.isUsernameExists(username)) {
-                errorMessages.append("Tên đăng nhập đã tồn tại. Vui lòng chọn tên đăng nhập khác.\n");
+                errorMessages.add("Tên đăng nhập đã tồn tại. Vui lòng chọn tên đăng nhập khác.");
             }
 
             // Kiểm tra password
-            if (password == null || password.trim().isEmpty()) {
-                errorMessages.append("Mật khẩu không được để trống.\n");
-            } else if (password.length() < 6) {
-                errorMessages.append("Mật khẩu phải có ít nhất 6 ký tự.\n");
-            } else if (!password.matches(".*[A-Z].*")) {
-                errorMessages.append("Mật khẩu phải có ít nhất 1 chữ hoa.\n");
-            } else if (!password.matches(".*\\d.*")) {
-                errorMessages.append("Mật khẩu phải có ít nhất 1 số.\n");
-            } else if (!password.matches(".*[!@#$%^&*(),.?\":{}|<>].*")) {
-                errorMessages.append("Mật khẩu phải có ít nhất 1 ký tự đặc biệt (như !@#$%^&*...).\n");
+            if (!ValidationUtils.isNotEmpty(password)) {
+                errorMessages.add("Mật khẩu không được để trống.");
+            } else if (!ValidationUtils.isValidPassword(password)) {
+                errorMessages.add("Mật khẩu phải dài hơn 6 kí tự, có ít nhất 1 chữ hoa, chữ thường, ký tự đặc biệt.");
             }
 
             // Kiểm tra fullName
-            if (fullName == null || fullName.trim().isEmpty()) {
-                errorMessages.append("Họ và tên không được để trống.\n");
+            if (!ValidationUtils.isNotEmpty(fullName)) {
+                errorMessages.add("Họ và tên không được để trống.");
             }
 
             // Kiểm tra email
-            if (email == null || email.trim().isEmpty()) {
-                errorMessages.append("Email không được để trống.\n");
-            } else if (!email.matches("^[\\w.%+-]+@[\\w.-]+\\.[a-zA-Z]{2,6}$")) {
-                errorMessages.append("Email không hợp lệ.\n");
+            if (!ValidationUtils.isNotEmpty(email)) {
+                errorMessages.add("Email không được để trống.");
+            } else if (!ValidationUtils.isValidEmail(email)) {
+                errorMessages.add("Email không hợp lệ.");
             }
 
             // Kiểm tra phoneNumber
-            if (phoneNumber == null || phoneNumber.trim().isEmpty()) {
-                errorMessages.append("Số điện thoại không được để trống.\n");
-            } else if (!phoneNumber.matches("^\\d{10,11}$")) {
-                errorMessages.append("Số điện thoại phải là số từ 10 đến 15 chữ số.\n");
+            if (!ValidationUtils.isNotEmpty(phoneNumber)) {
+                errorMessages.add("Số điện thoại không được để trống.");
+            } else if (!ValidationUtils.isValidPhoneNumber(phoneNumber)) {
+                errorMessages.add("Số điện thoại phải là số từ 10 đến 15 chữ số.");
             }
 
             // Kiểm tra birthDate
@@ -116,7 +143,7 @@ public class AddEmployeeController extends HttpServlet {
                     Date parsedDate = formatter.parse(birthDateStr); // Chuyển từ chuỗi sang java.util.Date
                     sqlBirthDate = new java.sql.Date(parsedDate.getTime()); // Chuyển sang java.sql.Date
                 } catch (ParseException e) {
-                    errorMessages.append("Định dạng ngày sinh không hợp lệ. Vui lòng nhập theo định dạng dd/MM/yyyy.\n");
+                    errorMessages.add("Định dạng ngày sinh không hợp lệ. Vui lòng nhập theo định dạng dd/MM/yyyy.\n");
                 }
             }
 
@@ -129,11 +156,14 @@ public class AddEmployeeController extends HttpServlet {
             }
 
             // Nếu có lỗi, trả về form với thông báo lỗi
-            if (errorMessages.length() > 0) {
-                req.getSession().setAttribute("message", errorMessages.toString());
+            if (errorMessages.size() > 0) {
+                req.getSession().setAttribute("message", errorMessages);
                 resp.sendRedirect(req.getContextPath() + "/manage-employee/add-employee");
                 return;
             }
+
+            // Mã hóa mật khẩu bằng MD5
+            String hashedPassword = PasswordUtils.hashPassword(password);
 
             // Gọi DAO để lưu dữ liệu
             boolean success = userDAO.addEmployee(idRole, username, hashedPassword, fullName, email, phoneNumber, active, avatar, sqlBirthDate);
@@ -156,5 +186,15 @@ public class AddEmployeeController extends HttpServlet {
         }
 
         resp.sendRedirect(req.getContextPath() + "/manage-employee/add-employee");
+    }
+
+    private String extractFileName(Part part) {
+        String contentDisp = part.getHeader("content-disposition");
+        for (String content : contentDisp.split(";")) {
+            if (content.trim().startsWith("filename")) {
+                return content.substring(content.indexOf("=") + 2, content.length() - 1);
+            }
+        }
+        return null;
     }
 }

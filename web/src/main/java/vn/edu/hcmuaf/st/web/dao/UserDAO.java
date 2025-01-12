@@ -222,6 +222,21 @@ public class UserDAO {
         }
     }
 
+    public boolean deleteEmployee(int idUser) {
+        String query = "DELETE FROM users WHERE idUser = :idUser";
+        Jdbi jdbi = JdbiConnect.get();
+        try {
+            return jdbi.withHandle(handle ->
+                    handle.createUpdate(query)
+                            .bind("idUser", idUser)
+                            .execute()
+            ) > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
     public static void main(String[] args) {
         UserDAO userDAO = new UserDAO();
         List<User> users = userDAO.getEmployeeList();

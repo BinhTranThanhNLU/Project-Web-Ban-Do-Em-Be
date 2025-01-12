@@ -45,3 +45,37 @@ function closeModal(modalId) {
     toggleModal(modalId, false);
 }
 
+document.querySelectorAll(".btn-trash").forEach((button) => {
+    button.addEventListener("click", function (event) {
+        event.preventDefault();
+        const idUser = button.getAttribute("data-id");
+        if (idUser) {
+            // Hiển thị modal xác nhận
+            openModal("confirmModal");
+
+            // Gắn sự kiện xác nhận
+            const confirmButton = document.querySelector(".btn-confirm");
+            confirmButton.onclick = function () {
+                fetch(`/web_war/manage-employee/delete-employee`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body: `idUser=${idUser}`,
+                })
+                    .then((response) => {
+                        if (response.ok) {
+                            location.reload(); // Reload lại trang nếu xóa thành công
+                        } else {
+                            alert("Xóa nhân viên thất bại!");
+                        }
+                    })
+                    .catch((error) => {
+                        console.error("Error:", error);
+                    });
+                closeModal("confirmModal"); // Đóng modal
+            };
+        }
+    });
+});
+

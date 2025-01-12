@@ -45,6 +45,3 @@ function closeModal(modalId) {
     toggleModal(modalId, false);
 }
 
-
-
-//2.Các chức năng liên quan đến model Edit

@@ -16,7 +16,8 @@
             <h2>Danh Sách Nhân Viên</h2>
         </div>
         <div class="action-buttons">
-            <a href="/web_war/manage-employee/add-employee" class="btn btn-add"><i class="fa-solid fa-plus"></i> Thêm nhân
+            <a href="/web_war/manage-employee/add-employee" class="btn btn-add"><i class="fa-solid fa-plus"></i> Thêm
+                nhân
                 viên</a>
             <button class="btn btn-edits">Chỉnh nhiều dòng</button>
             <button class="btn btn-deletes">Xóa nhiều dòng</button>
@@ -50,7 +51,9 @@
                     <td>${user.active ? "Hoạt động" : "Không hoạt động"}</td>
                     <td>
                         <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
-                        <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
+                        <a href="/web_war/manage-employee/update-employee" class="btn btn-edit">
+                            <i class="fas fa-edit"></i>
+                        </a>
                     </td>
                 </tr>
             </c:forEach>
@@ -84,7 +87,7 @@
             lengthChange: true,
             order: [[1, 'asc']],
             columnDefs: [
-                { orderable: false, targets: [0, 7] } // Vô hiệu hóa sắp xếp ở cột checkbox và tính năng
+                {orderable: false, targets: [0, 7]} // Vô hiệu hóa sắp xếp ở cột checkbox và tính năng
             ],
             language: {
                 search: "Tìm kiếm:",

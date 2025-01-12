@@ -15,7 +15,7 @@
             <a href="./manage-employee.jsp">Danh Sách Nhân Viên</a> / <span>Thêm Người Dùng</span>
         </div>
         <div class="header" style="color: black;">
-            Tạo mới người dùng
+            Tạo mới nhân viên
             <hr />
         </div>
         <c:if test="${not empty sessionScope.message}">
@@ -101,7 +101,7 @@
 
             <!-- Nút hành động -->
             <div class="form-actions">
-                <button type="submit" class="save-button">Lưu lại</button>
+                <button type="submit" class="save-button">Thêm</button>
                 <button type="button" class="cancel-button">Hủy bỏ</button>
             </div>
         </form>

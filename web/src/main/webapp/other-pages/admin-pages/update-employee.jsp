@@ -18,66 +18,44 @@
             Chỉnh sửa nhân viên
             <hr />
         </div>
-        <c:if test="${not empty sessionScope.message}">
-            <div style="color: white; font-weight: bold; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: ${sessionScope.success ? '#90EE90' : '#FF9999'};">
-                <ul style="margin: 0; padding: 0; list-style: none;">
-                    <c:forEach var="error" items="${sessionScope.message}">
-                        <li>${error}</li>
-                    </c:forEach>
-                </ul>
-            </div>
-            <c:remove var="message" scope="session"/>
-            <c:remove var="success" scope="session"/>
-        </c:if>
 
-        <form action="${pageContext.request.contextPath}/manage-employee/update-employee" method="post" enctype="multipart/form-data">
-            <!-- Vai trò -->
-<%--            <div class="form-group">--%>
-<%--                <label for="role">Vai trò</label>--%>
-<%--                <select id="role" name="idRole" required>--%>
-<%--                    <c:forEach var="role" items="${roles}">--%>
-<%--                        <option value="${role.idRole}">${role.name}</option>--%>
-<%--                    </c:forEach>--%>
-<%--                </select>--%>
-<%--            </div>--%>
+        <form action="${pageContext.request.contextPath}/manage-employee/update-employee" method="post">
+            <input type="hidden" name="idUser" value="${user.idUser}" /> <!-- Trường ID ẩn -->
 
             <!-- Tên đăng nhập -->
             <div class="form-group">
                 <label for="username">Tên đăng nhập</label>
-                <input type="text" id="username" name="username" placeholder="Nhập tên đăng nhập"
-                       required />
+                <input type="text" id="username" name="username" value="${user.username}" placeholder="Nhập tên đăng nhập" required />
             </div>
 
             <!-- Mật khẩu -->
             <div class="form-group">
                 <label for="password">Mật khẩu</label>
-                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required />
+                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" />
             </div>
 
             <!-- Họ và tên -->
             <div class="form-group">
                 <label for="fullName">Họ và tên</label>
-                <input type="text" id="fullName" name="fullName" placeholder="Nhập họ và tên" required />
+                <input type="text" id="fullName" name="fullName" value="${user.fullName}" placeholder="Nhập họ và tên" required />
             </div>
 
             <!-- Email -->
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Nhập email" required />
+                <input type="email" id="email" name="email" value="${user.email}" placeholder="Nhập email" required />
             </div>
 
             <!-- Số điện thoại -->
             <div class="form-group">
                 <label for="phoneNumber">Số điện thoại</label>
-                <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Nhập số điện thoại"
-                       required />
+                <input type="text" id="phoneNumber" name="phoneNumber" value="${user.phoneNumber}" placeholder="Nhập số điện thoại" required />
             </div>
 
             <!-- Ngày sinh -->
             <div class="form-group">
                 <label for="birthDate">Ngày sinh</label>
-                <input type="text" id="birthDate" name="birthDate"
-                       value="<fmt:formatDate value='${user.birthDate}' pattern='dd/MM/yyyy' />" placeholder="dd/MM/yyyy" />
+                <input type="text" id="birthDate" name="birthDate" value="${user.birthDate}" placeholder="dd/MM/yyyy" />
             </div>
 
             <!-- Ảnh đại diện -->
@@ -90,11 +68,11 @@
             <div class="form-group">
                 <label>Trạng thái hoạt động</label>
                 <div>
-                    <input type="radio" id="active-yes" name="active" value="1" checked />
+                    <input type="radio" id="active-yes" name="active" value="1" ${user.active ? 'checked' : ''} />
                     <label for="active-yes">Hoạt động</label>
                 </div>
                 <div>
-                    <input type="radio" id="active-no" name="active" value="0" />
+                    <input type="radio" id="active-no" name="active" value="0" ${!user.active ? 'checked' : ''} />
                     <label for="active-no">Không hoạt động</label>
                 </div>
             </div>

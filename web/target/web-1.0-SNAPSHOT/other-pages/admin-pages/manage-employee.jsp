@@ -23,6 +23,18 @@
             <button class="btn btn-deletes">Xóa nhiều dòng</button>
         </div>
 
+        <c:if test="${not empty sessionScope.message}">
+            <div style="color: white; font-weight: bold; margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: ${sessionScope.success ? '#90EE90' : '#FF9999'};">
+                <ul style="margin: 0; padding: 0; list-style: none;">
+                    <c:forEach var="error" items="${sessionScope.message}">
+                        <li>${error}</li>
+                    </c:forEach>
+                </ul>
+            </div>
+            <c:remove var="message" scope="session"/>
+            <c:remove var="success" scope="session"/>
+        </c:if>
+
         <table id="employeeTable" class="table table-hover">
             <thead>
             <tr>
@@ -51,7 +63,7 @@
                     <td>${user.active ? "Hoạt động" : "Không hoạt động"}</td>
                     <td>
                         <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
-                        <a href="/web_war/manage-employee/update-employee" class="btn btn-edit">
+                        <a href="/web_war/manage-employee/update-employee?idUser=${user.idUser}" class="btn btn-edit">
                             <i class="fas fa-edit"></i>
                         </a>
                     </td>

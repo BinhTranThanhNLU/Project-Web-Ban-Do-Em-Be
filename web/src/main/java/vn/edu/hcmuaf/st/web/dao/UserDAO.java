@@ -148,6 +148,80 @@ public class UserDAO {
         }
     }
 
+    public boolean updateEmployee(int idUser, String username, String password, String fullName, String email,
+                                  String phoneNumber, boolean active, String avatar, String birthDate) {
+        try {
+            // Xây dựng câu truy vấn SQL động
+            StringBuilder queryBuilder = new StringBuilder("UPDATE users SET username = ?, fullName = ?, email = ?, phoneNumber = ?, active = ?, birthDate = ?");
+            if (password != null && !password.isEmpty()) {
+                queryBuilder.append(", password = ?");
+            }
+            if (avatar != null && !avatar.isEmpty()) {
+                queryBuilder.append(", avatar = ?");
+            }
+            queryBuilder.append(" WHERE idUser = ?");
+
+            String query = queryBuilder.toString();
+
+            Jdbi jdbi = JdbiConnect.get();
+
+            // Thực thi truy vấn dựa trên các tham số được cung cấp
+            return jdbi.withHandle(handle -> {
+                var update = handle.createUpdate(query);
+
+                // Bind các tham số bắt buộc
+                update.bind(0, username);
+                update.bind(1, fullName);
+                update.bind(2, email);
+                update.bind(3, phoneNumber);
+                update.bind(4, active ? 1 : 0);
+                update.bind(5, birthDate);
+
+                int index = 6;
+
+                // Nếu mật khẩu được cung cấp, bind mật khẩu
+                if (password != null && !password.isEmpty()) {
+                    update.bind(index++, password);
+                }
+
+                // Nếu avatar được cung cấp, bind avatar
+                if (avatar != null && !avatar.isEmpty()) {
+                    update.bind(index++, avatar);
+                }
+
+                // Bind idUser
+                update.bind(index, idUser);
+
+                return update.execute();
+            }) > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public User getUserById(int idUser) {
+        String query = """
+        SELECT u.idUser, u.idRole, u.username, u.fullName, u.email, u.phoneNumber, u.active, u.birthDate, u.avatar, r.name AS roleName
+        FROM users u
+        INNER JOIN roles r ON u.idRole = r.idRole
+        WHERE u.idUser = :idUser
+    """;
+
+        Jdbi jdbi = JdbiConnect.get();
+        try {
+            return jdbi.withHandle(handle ->
+                    handle.createQuery(query)
+                            .bind("idUser", idUser)
+                            .mapToBean(User.class)
+                            .findOne().orElse(null)
+            );
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public static void main(String[] args) {
         UserDAO userDAO = new UserDAO();
         List<User> users = userDAO.getEmployeeList();

@@ -1,322 +1,122 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quản Lý Khách Hàng</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="../../web/src/main/webapp/static/css/admin-css/navbar-left-top.css">
-  <link rel="stylesheet" href="../../web/src/main/webapp/static/css/admin-css/manage-user.css">
-  <!-- <link rel="stylesheet" href="../../css/admin-css/modal-confirm.css"> -->
-</head>
-<body>
+<c:set var="title" value="Admin"/>
+<c:set var="pageCssList" value="${['navbar-left-top.css', 'manage-admin.css']}"/>
+<c:set var="pageJsList" value="${['admin-model.js']}"/>
 
-<div class="container-scroller">
-  <!-- Navbar-Left -->
-  <navbar class="navbar-left" id="navbar-left">
-    <div class="sidebar-header">
-      <div class="user-profile">
-        <div class="sidebar-title">
-          <a href="index.html" class="brand-logo-mini"><img src="../../web/src/main/webapp/static/images/logo.png" alt="logo"></a>
-          <h2>Litte Whale</h2>
-        </div>
-        <img class="user-avatar"
-             src="https://anhcute.net/wp-content/uploads/2024/09/Hinh-anh-chibi-Spiderman-sieu-dang-yeu.jpg"
-             alt="User Image">
-        <div class="user-info">
-          <p class="user-name">AdminName</p>
-          <p class="user-greeting">Chào mừng bạn trở lại</p>
-        </div>
-      </div>
+<%@ include file="/partials/header-nav-admin.jsp" %>
+
+<!-- Container-Manage-Employee -->
+<div class="container-management container-manage-employee">
+  <!-- Employee Management Table -->
+  <div class="container-management">
+    <div class="header">
+      <h2>Danh Sách Người Dùng</h2>
     </div>
-    <hr>
-    <ul class="sidebar-menu">
-      <li class="menu-item">
-        <a class="menu-link" href="phan-mem-ban-hang.html">
-          <span class="menu-icon"><i class="fa fa-cart-plus"></i></span>
-          <span class="menu-title">POS Bán Hàng</span>
-        </a>
-      </li>
-      <li class="menu-item">
-        <a class="menu-link" href="./admin1.html">
-          <span class="menu-icon"><i class="fa fa-tachometer-alt"></i></span>
-          <span class="menu-title">Bảng điều khiển</span>
-        </a>
-      </li>
-      <li class="menu-item">
-        <a class="menu-link " href="./manage-employee.html">
-          <span class="menu-icon"><i class="fa fa-id-card"></i></span>
-          <span class="menu-title">Quản lý nhân viên</span>
-        </a>
-      </li>
-      <li class="menu-item">
-        <a class="menu-link active" href="./manage-user.html">
-          <span class="menu-icon"><i class="fa fa-users"></i></span>
-          <span class="menu-title">Quản lý khách hàng</span>
-        </a>
-      </li>
-      <li class="menu-item">
-        <a class="menu-link" href="./manage-product.html">
-          <span class="menu-icon"><i class="fa fa-box"></i></span>
-          <span class="menu-title">Quản lý sản phẩm</span>
-        </a>
-      </li>
-      <li class="menu-item">
-        <a class="menu-link" href="./manage-order.html">
-          <span class="menu-icon"><i class="fa fa-tasks"></i></span>
-          <span class="menu-title">Quản lý đơn hàng</span>
-        </a>
-      </li>
-      <li class="menu-item">
-        <a class="menu-link" href="./report-revenue.html">
-          <span class="menu-icon"><i class="fa fa-chart-bar"></i></span>
-          <span class="menu-title">Báo cáo doanh thu</span>
-        </a>
-      </li>
-    </ul>
-  </navbar>
+    <div class="action-buttons">
+      <a href="/web_war/manage-employee/add-employee" class="btn btn-add"><i class="fa-solid fa-plus"></i> Thêm người dùng</a>
+      <button class="btn btn-edits">Chỉnh nhiều dòng</button>
+      <button class="btn btn-deletes">Xóa nhiều dòng</button>
+    </div>
 
-  <!-- MainContent -->
-  <div class="container-main">
-    <!-- Top Navbar -->
-    <nav class="navbar">
-      <div class="navbar-menu">
-        <button class="navbar-toggler" id="navbar-toggle">
-          <span class="navbar-icon">&#9776;</span>
-        </button>
-        <div class="search">
-          <input type="text" placeholder="Search products">
-        </div>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a href="./add-employee.html" class="nav-link"><i class="fa-solid fa-plus"></i>Thêm sản phẩm mới</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link"><i class="fa-solid fa-message"></i> Tin Nhắn <span class="badge">4</span></a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link"><i class="fa-solid fa-bell"></i> Thông Báo <span class="badge">3</span></a>
-          </li>
+    <c:if test="${not empty sessionScope.message}">
+      <div style="color: white; font-weight: bold; margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: ${sessionScope.success ? '#90EE90' : '#FF9999'};">
+        <ul style="margin: 0; padding: 0; list-style: none;">
+          <c:forEach var="error" items="${sessionScope.message}">
+            <li>${error}</li>
+          </c:forEach>
         </ul>
-        <div class="profile-container">
-          <a href="#" class="profile-link">
-            <img src="https://anhcute.net/wp-content/uploads/2024/09/Hinh-anh-chibi-Spiderman-sieu-dang-yeu.jpg"
-                 alt="Profile" class="profile-pic">
-            <span class="profile-name">AdminName</span>
-          </a>
-        </div>
       </div>
-    </nav>
+      <c:remove var="message" scope="session"/>
+      <c:remove var="success" scope="session"/>
+    </c:if>
 
-    <!-- Container-Manage-User -->
-    <div class="container-manage-user">
-      <!-- Employee Management Table -->
-      <div class="container-manage-user">
-        <div class="header-bar">
-          <span class="header-title">Thời gian hiện tại:</span>
-          <span id="current-time" class="header-timestamp"></span>
-        </div>
-        <div class="header">
-          <h2>Danh Sách Khách Hàng</h2>
-        </div>
-        <div class="action-buttons">
-          <a href="./add-user.html" class="btn btn-add"><i class="fa-solid fa-plus"></i> Thêm Khách Hàng</a>
-          <button class="btn btn-upload">Tải từ file</button>
-          <button class="btn btn-print">In dữ liệu</button>
-          <button class="btn btn-copy">Sao chép</button>
-          <button class="btn btn-excel">Xuất Excel</button>
-          <button class="btn btn-pdf">Xuất PDF</button>
-          <button class="btn btn-delete">Xóa tất cả</button>
-        </div>
-        <div class="search-bar">
-          <input type="text" placeholder="Tìm kiếm khách hàng..." />
-          <button class="btn btn-search">Tìm kiếm</button>
-        </div>
-        <table class="table table-hover">
-          <thead>
-          <tr>
-            <th><input type="checkbox"></th>
-            <th>ID Khách Hàng</th>
-            <th>Tên Tài Khoản</th>
-            <th>Họ và Tên</th>
-            <th>Email</th>
-            <th>Số Điện Thoại</th>
-            <th>Địa Chỉ</th>
-            <th>Lịch Sử Mua</th>
-            <th>Tổng Tiền Mua</th>
-            <th>Tính Năng</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>#CD12837</td>
-            <td>nguyenA</td>
-            <td>Nguyễn Văn A</td>
-            <td>nguyenvana@example.com</td>
-            <td>0901234567</td>
-            <td>123 Đường ABC, Quận 1, TP.HCM</td>
-            <td>5</td>
-            <td>5,000,000 VND</td>
+    <table id="userTable" class="table table-hover">
+      <thead>
+      <tr>
+        <th><input type="checkbox"></th>
+        <th>ID người dùng</th>
+        <th>Họ và tên</th>
+        <th>Vai trò</th>
+        <th>Email</th>
+        <th>SĐT</th>
+        <th>Ngày sinh</th>
+        <th>Trạng thái</th>
+        <th>Tính năng</th>
+      </tr>
+      </thead>
+      <tbody>
 
-            <td>
-              <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
-              <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
-            </td>
-          </tr>
+      <c:forEach var="user" items="${users}">
+        <tr>
+          <td><input type="checkbox" name="selectedUsers" value="${user.idUser}"></td>
+          <td>${user.idUser}</td>
+          <td>${user.fullName}</td>
+          <td>${user.role.name}</td> <!-- Truy cập roleName qua user.role -->
+          <td>${user.email}</td>
+          <td>${user.phoneNumber}</td>
+          <td>${user.birthDate}</td>
+          <td>${user.active ? "Hoạt động" : "Không hoạt động"}</td>
+          <td>
+            <button class="btn btn-trash" data-id="${user.idUser}"><i class="fas fa-trash-alt"></i></button>
+            <a href="/web_war/manage-employee/update-employee?idUser=${user.idUser}" class="btn btn-edit">
+              <i class="fas fa-edit"></i>
+            </a>
+          </td>
+        </tr>
+      </c:forEach>
 
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>#CD12837</td>
-            <td>nguyenA</td>
-            <td>Nguyễn Văn A</td>
-            <td>nguyenvana@example.com</td>
-            <td>0901234567</td>
-            <td>123 Đường ABC, Quận 1, TP.HCM</td>
-            <td>5</td>
-            <td>5,000,000 VND</td>
-
-            <td>
-              <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
-              <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
-            </td>
-          </tr>
-
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>#CD12837</td>
-            <td>nguyenA</td>
-            <td>Nguyễn Văn A</td>
-            <td>nguyenvana@example.com</td>
-            <td>0901234567</td>
-            <td>123 Đường ABC, Quận 1, TP.HCM</td>
-            <td>5</td>
-            <td>5,000,000 VND</td>
-
-            <td>
-              <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
-              <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
-            </td>
-          </tr>
-
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>#CD12837</td>
-            <td>nguyenA</td>
-            <td>Nguyễn Văn A</td>
-            <td>nguyenvana@example.com</td>
-            <td>0901234567</td>
-            <td>123 Đường ABC, Quận 1, TP.HCM</td>
-            <td>5</td>
-            <td>5,000,000 VND</td>
-
-            <td>
-              <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
-              <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
-            </td>
-          </tr>
-
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>#CD12837</td>
-            <td>nguyenA</td>
-            <td>Nguyễn Văn A</td>
-            <td>nguyenvana@example.com</td>
-            <td>0901234567</td>
-            <td>123 Đường ABC, Quận 1, TP.HCM</td>
-            <td>5</td>
-            <td>5,000,000 VND</td>
-
-            <td>
-              <button class="btn btn-trash"><i class="fas fa-trash-alt"></i></button>
-              <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
-            </td>
-          </tr>
-
-          </tbody>
-        </table>
-        <div class="pagination">
-          <button class="page-prev"><i class="fa-solid fa-chevron-left"></i></button>
-          <span class="page-number">1</span>
-          <button class="page-next"><i class="fa-solid fa-angle-right"></i></button>
-        </div>
-      </div>
-    </div>
-    <!-- Modal chỉnh sửa thông tin khách hàng -->
-    <div class="edit-modal" id="editModal" style="display: none;">
-      <div class="edit-modal-content">
-        <div class="edit-modal-header">
-          <h5>Chỉnh sửa thông tin khách hàng</h5>
-          <button class="close-edit-modal">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
-        <div class="edit-modal-body">
-          <div class="form-group">
-            <label for="newID">ID Khách Hàng</label>
-            <input type="text" name="newID" id="newID" disabled>
-          </div>
-
-          <div class="form-group">
-            <label for="newUsername">Tên Tài Khoản</label>
-            <input type="text" name="newUsername" id="newUsername" placeholder="Nhập Tên Tài Khoản">
-          </div>
-
-          <div class="form-group">
-            <label for="newName">Họ và Tên</label>
-            <input type="text" name="newName" id="newName" placeholder="Nhập Họ và Tên">
-          </div>
-
-          <div class="form-group">
-            <label for="newPhone">Số Điện Thoại</label>
-            <input type="text" name="newPhone" id="newPhone" placeholder="Nhập Số Điện Thoại">
-          </div>
-
-          <div class="form-group">
-            <label for="newEmail">Địa chỉ Email</label>
-            <input type="email" name="newEmail" id="newEmail" placeholder="Nhập Địa chỉ Email">
-          </div>
-
-          <div class="form-group">
-            <label for="newAddress">Địa Chỉ</label>
-            <input type="text" name="newAddress" id="newAddress" placeholder="Nhập Địa Chỉ">
-          </div>
-
-          <div class="form-group">
-            <label for="newDate">Ngày Tạo</label>
-            <input type="date" name="newDate" id="newDate">
-          </div>
-
-          <div class="form-group">
-            <label for="newNote">Ghi Chú</label>
-            <textarea name="newNote" id="newNote" placeholder="Nhập Ghi Chú"></textarea>
-          </div>
-
-          <div class="edit-modal-actions">
-            <button type="button" class="btn-save" onclick="saveChanges()">Lưu lại</button>
-            <button type="button" class="btn-cancel">Hủy bỏ</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Model Confirm -->
-    <div id="confirmModal" class="modal-confirm">
-      <div class="modal-content">
-        <h2>Cảnh báo</h2>
-        <p>Bạn có chắc chắn là muốn xóa khách hàng này?</p>
-        <button class="btn btn-cancel">Hủy bỏ</button>
-        <button class="btn btn-confirm" onclick="deleteEmployee()">Đồng ý</button>
-      </div>
-    </div>
+      </tbody>
+    </table>
   </div>
 </div>
 
-<script src="../../js/open-close-modal.js"></script>
+<!-- Model Confirm -->
+<div id="confirmModal" class="modal-confirm">
+  <div class="modal-content">
+    <h2>Cảnh báo</h2>
+    <p>Bạn có chắc chắn là muốn xóa người dùng này?</p>
+    <button class="btn btn-cancel">Hủy bỏ</button>
+    <button class="btn btn-confirm">Đồng ý</button>
+  </div>
+</div>
 
-</body>
-</html>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#userTable').DataTable({
+      paging: true,
+      searching: true,
+      info: true,
+      lengthChange: true,
+      order: [[1, 'asc']],
+      columnDefs: [
+        {orderable: false, targets: [0, 7]} // Vô hiệu hóa sắp xếp ở cột checkbox và tính năng
+      ],
+      language: {
+        search: "Tìm kiếm:",
+        lengthMenu: "Hiển thị _MENU_ dòng",
+        info: "Hiển thị _START_ đến _END_ của _TOTAL_ dòng",
+        paginate: {
+          first: "<i class='fas fa-angle-double-left'></i>",
+          last: "<i class='fas fa-angle-double-right'></i>",
+          next: "<i class='fas fa-angle-right'></i>",
+          previous: "<i class='fas fa-angle-left'></i>"
+        }
+      },
+      drawCallback: function () {
+        // Đảm bảo phần tử pagination được căn chỉnh lại khi vẽ lại bảng
+        $('.dataTables_paginate').addClass('custom-pagination');
+      }
+    });
+  });
+</script>
+
+<%@ include file="/partials/footer-admin.jsp" %>
 

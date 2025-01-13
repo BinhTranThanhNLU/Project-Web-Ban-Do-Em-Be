@@ -37,11 +37,9 @@ public class AddEmployeeController extends HttpServlet {
         // Kiểm tra Session có chứa danh sách roles không
         List<Role> roles = (List<Role>) req.getSession().getAttribute("roles");
         if (roles == null) {
-            // Chỉ lấy từ cơ sở dữ liệu nếu chưa có trong Session
             roles = new RoleDAO().getAll();
             req.getSession().setAttribute("roles", roles);
         }
-        // Forward đến JSP
         req.getRequestDispatcher("/other-pages/admin-pages/add-employee.jsp").forward(req, resp);
     }
 

@@ -3,6 +3,7 @@ package vn.edu.hcmuaf.st.web.model;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 public class Product implements Serializable {
     private int idProduct;
@@ -14,6 +15,10 @@ public class Product implements Serializable {
     private Date updateAt;
     private boolean isNew;
     private String description;
+
+    private Category category;
+    private List<ProductImage> images;
+    private List<ProductVariant> variants;
 
     // Constructor rỗng
     public Product() {
@@ -31,6 +36,25 @@ public class Product implements Serializable {
         this.updateAt = updateAt;
         this.isNew = isNew;
         this.description = description;
+    }
+
+    public Product(int idProduct, int idCategory, String title, BigDecimal price, Integer discount
+            , Date createAt, Date updateAt
+            , boolean isNew, String description
+            , Category category, List<ProductImage> images
+            , List<ProductVariant> variants) {
+        this.idProduct = idProduct;
+        this.idCategory = idCategory;
+        this.title = title;
+        this.price = price;
+        this.discount = discount;
+        this.createAt = createAt;
+        this.updateAt = updateAt;
+        this.isNew = isNew;
+        this.description = description;
+        this.category = category;
+        this.images = images;
+        this.variants = variants;
     }
 
     // Getters và Setters
@@ -105,5 +129,29 @@ public class Product implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public List<ProductImage> getImages() {
+        return images;
+    }
+
+    public void setImages(List<ProductImage> images) {
+        this.images = images;
+    }
+
+    public List<ProductVariant> getVariants() {
+        return variants;
+    }
+
+    public void setVariants(List<ProductVariant> variants) {
+        this.variants = variants;
     }
 }

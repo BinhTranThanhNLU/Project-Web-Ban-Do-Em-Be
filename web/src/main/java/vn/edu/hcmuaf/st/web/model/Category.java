@@ -1,18 +1,23 @@
 package vn.edu.hcmuaf.st.web.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Category implements Serializable {
     private int idCategory;
     private String name;
-    private Integer parentIdCategory;
+    private int parentIdCategory;
+
+    private Category parentCategory;
+    private List<Category> subCategories;
+    private List<Product> products;
 
     // Constructor rỗng
     public Category() {
     }
 
     // Constructor đầy đủ
-    public Category(int idCategory, String name, Integer parentIdCategory) {
+    public Category(int idCategory, String name, int parentIdCategory) {
         this.idCategory = idCategory;
         this.name = name;
         this.parentIdCategory = parentIdCategory;
@@ -36,12 +41,32 @@ public class Category implements Serializable {
         this.name = name;
     }
 
-    public Integer getParentIdCategory() {
-        return parentIdCategory;
+    public void setParentIdCategory(int parentIdCategory) {
+        this.parentIdCategory = parentIdCategory;
     }
 
-    public void setParentIdCategory(Integer parentIdCategory) {
-        this.parentIdCategory = parentIdCategory;
+    public Category getParentCategory() {
+        return parentCategory;
+    }
+
+    public void setParentCategory(Category parentCategory) {
+        this.parentCategory = parentCategory;
+    }
+
+    public List<Category> getSubCategories() {
+        return subCategories;
+    }
+
+    public void setSubCategories(List<Category> subCategories) {
+        this.subCategories = subCategories;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }
 

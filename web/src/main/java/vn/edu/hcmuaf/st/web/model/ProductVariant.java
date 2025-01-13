@@ -12,6 +12,10 @@ public class ProductVariant implements Serializable {
     private Date createAt;
     private boolean status;
 
+    private Product product;
+    private Color color;
+    private Size size;
+
     // Constructor rỗng
     public ProductVariant() {
     }
@@ -25,6 +29,21 @@ public class ProductVariant implements Serializable {
         this.stockQuantity = stockQuantity;
         this.createAt = createAt;
         this.status = status;
+    }
+
+    public ProductVariant(int idVariant, int idProduct, int idColor, int idSize, int stockQuantity
+            , Date createAt, boolean status
+            , Product product, Color color, Size size) {
+        this.idVariant = idVariant;
+        this.idProduct = idProduct;
+        this.idColor = idColor;
+        this.idSize = idSize;
+        this.stockQuantity = stockQuantity;
+        this.createAt = createAt;
+        this.status = status;
+        this.product = product;
+        this.color = color;
+        this.size = size;
     }
 
     // Getters và Setters
@@ -83,6 +102,30 @@ public class ProductVariant implements Serializable {
 
     public void setStatus(boolean status) {
         this.status = status;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public Size getSize() {
+        return size;
+    }
+
+    public void setSize(Size size) {
+        this.size = size;
     }
 }
 

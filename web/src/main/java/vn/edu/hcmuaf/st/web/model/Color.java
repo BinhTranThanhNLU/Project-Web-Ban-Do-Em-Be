@@ -1,11 +1,14 @@
 package vn.edu.hcmuaf.st.web.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Color implements Serializable {
     private int idColor;
     private String name;
     private String hexCode;
+
+    private List<ProductVariant> productVariants;
 
     // Constructor rỗng
     public Color() {
@@ -16,6 +19,13 @@ public class Color implements Serializable {
         this.idColor = idColor;
         this.name = name;
         this.hexCode = hexCode;
+    }
+
+    public Color(int idColor, String name, String hexCode, List<ProductVariant> productVariants) {
+        this.idColor = idColor;
+        this.name = name;
+        this.hexCode = hexCode;
+        this.productVariants = productVariants;
     }
 
     // Getters và Setters
@@ -42,6 +52,14 @@ public class Color implements Serializable {
 
     public void setHexCode(String hexCode) {
         this.hexCode = hexCode;
+    }
+
+    public void setProductVariants(List<ProductVariant> productVariants) {
+        this.productVariants = productVariants;
+    }
+
+    public List<ProductVariant> getProductVariants() {
+        return productVariants;
     }
 }
 

@@ -10,6 +10,8 @@ public class ProductImage implements Serializable {
     private boolean isPrimary;
     private Date createAt;
 
+    private Product product;
+
     // Constructor rỗng
     public ProductImage() {
     }
@@ -21,6 +23,15 @@ public class ProductImage implements Serializable {
         this.imageUrl = imageUrl;
         this.isPrimary = isPrimary;
         this.createAt = createAt;
+    }
+
+    public ProductImage(int idImage, int idProduct, String imageUrl, boolean isPrimary, Date createAt, Product product) {
+        this.idImage = idImage;
+        this.idProduct = idProduct;
+        this.imageUrl = imageUrl;
+        this.isPrimary = isPrimary;
+        this.createAt = createAt;
+        this.product = product;
     }
 
     // Getters và Setters
@@ -63,5 +74,13 @@ public class ProductImage implements Serializable {
 
     public void setCreateAt(Date createAt) {
         this.createAt = createAt;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 }

@@ -47,7 +47,7 @@
                     <!-- Main Heading -->
                     <div class="row justify-content-center align-items-center pt-3">
                         <h1>
-                            <strong>Reset Password</strong>
+                            <strong>Tạo Mới Mật Khẩu</strong>
                         </h1>
                     </div>
                     <div class="pt-3 pb-3">
@@ -55,7 +55,7 @@
                             <!-- User Name Input -->
                             <div class="form-group row justify-content-center px-3">
                                 <div class="col-9 px-0">
-                                    <input type="text" name="password" placeholder="&#xf084; &nbsp; New Password"
+                                    <input type="text" name="password" placeholder="&#xf084; &nbsp; Mật Khẩu Mới"
                                            class="form-control border-info placeicon">
                                 </div>
                             </div>
@@ -63,7 +63,7 @@
                             <div class="form-group row justify-content-center px-3">
                                 <div class="col-9 px-0">
                                     <input type="password" name="confPassword"
-                                           placeholder="&#xf084; &nbsp; Confirm New Password"
+                                           placeholder="&#xf084; &nbsp; Nhập Lại Mật Khẩu Mới"
                                            class="form-control border-info placeicon">
                                 </div>
                             </div>
@@ -71,7 +71,7 @@
                             <!-- Log in Button -->
                             <div class="form-group row justify-content-center">
                                 <div class="col-3 px-3 mt-3">
-                                    <input type="submit" value="Reset"
+                                    <input type="submit" value="Tạo"
                                            class="btn btn-block btn-info">
                                 </div>
                             </div>
@@ -88,8 +88,7 @@
                         <div class="pt-2">
                             <div class="row justify-content-center">
                                 <h5>
-                                    Don't have an Account?<span><a href="#"
-                                                                   class="text-danger"> Register Now!</a></span>
+                                    Không có Tài Khoản?<span><a href="#" class="text-danger"> Đăng Ký Ngay!</a></span>
                                 </h5>
                             </div>
                             <div

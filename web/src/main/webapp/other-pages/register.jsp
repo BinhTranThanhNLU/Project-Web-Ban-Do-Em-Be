@@ -199,8 +199,6 @@
   } else if (x === "InvalidRePassword") { // Kiểm tra mật khẩu không khớp
     swal("Mật Khẩu Không Khớp", "Bạn Cần Kiểm Tra Lại Mật Khẩu", "error");
   }
-
-
 </script>
 
 <%@ include file="/partials/footer.jsp" %>

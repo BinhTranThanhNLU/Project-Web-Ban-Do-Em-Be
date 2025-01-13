@@ -48,7 +48,7 @@ public class ForgotPasswordController extends HttpServlet {
                 MimeMessage message = new MimeMessage(mailSession);
                 message.setFrom(new InternetAddress("email")); // Email gửi
                 message.addRecipient(Message.RecipientType.TO, new InternetAddress(to)); // Email nhận
-                message.setSubject("Your OTP Code");
+                message.setSubject("Mã OTP của bạn");
                 message.setText("Your OTP is: " + otpValue);
 
                 // Gửi email
@@ -57,18 +57,18 @@ public class ForgotPasswordController extends HttpServlet {
 
                 // Chuyển hướng đến trang nhập OTP
                 dispatcher = request.getRequestDispatcher("/other-pages/enterOtp.jsp");
-                request.setAttribute("message", "OTP is sent to your email id");
+                request.setAttribute("message", "OTP đã được gửi vào email của bạn");
                 mySession.setAttribute("otp", otpValue);
                 mySession.setAttribute("email", email);
                 dispatcher.forward(request, response);
             } catch (MessagingException e) {
                 e.printStackTrace();
-                request.setAttribute("error", "Failed to send email: " + e.getMessage());
+                request.setAttribute("error", "Không Thể gửi: " + e.getMessage());
                 dispatcher = request.getRequestDispatcher("error.jsp");
                 dispatcher.forward(request, response);
             }
         } else {
-            request.setAttribute("error", "Email cannot be empty.");
+            request.setAttribute("error", "Email không được để trống.");
             dispatcher = request.getRequestDispatcher("forgot-password.jsp");
             dispatcher.forward(request, response);
         }

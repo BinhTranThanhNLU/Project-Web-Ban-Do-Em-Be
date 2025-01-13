@@ -34,7 +34,7 @@
     </div>
 
     <div class="form-login">
-                <form class="card mt-4" action="${pageContext.request.contextPath}/login" method="POST">
+        <form action="<%=request.getContextPath()%>/login" method="POST" class="form" id="form-2">
             <h3 class="heading">Đăng Nhập</h3>
 
             <div class="form-group">

@@ -12,7 +12,7 @@
 <div class="container">
     <div class="container-add">
         <div class="breadcrumb">
-            <a href="./manage-employee.jsp">Danh Sách Nhân Viên</a> / <span>Thêm Người Dùng</span>
+            <a href="./manage-employee.jsp">Danh Sách Nhân Viên</a> / <span>Thêm Nhân Viên</span>
         </div>
         <div class="header" style="color: black;">
             Tạo mới nhân viên

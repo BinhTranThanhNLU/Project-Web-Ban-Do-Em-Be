@@ -67,7 +67,7 @@ document.querySelectorAll(".btn-trash").forEach((button) => {
                         if (response.ok) {
                             location.reload(); // Reload lại trang nếu xóa thành công
                         } else {
-                            alert("Xóa nhân viên thất bại!");
+                            alert("Xóa thất bại!");
                         }
                     })
                     .catch((error) => {

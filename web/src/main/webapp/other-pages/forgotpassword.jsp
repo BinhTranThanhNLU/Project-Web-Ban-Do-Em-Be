@@ -1,103 +1,83 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<c:set var="title" value="Quên Mật Khẩu"/>
+<c:set var="pageCssList" value="${['header-nav-footer.css', 'dangnhap.css', 'index.css']}"/>
+<c:set var="pageJsList" value="${['scriptnav.js']}"/>
+
+<%@ include file="/partials/header-nav.jsp" %>
+<link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        rel="stylesheet"
+/>
+<input type="hidden" id="status"
+       value="<%= request.getAttribute("status")%>"/>
 
 
-<!doctype html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Snippet - BBBootstrap</title>
-    <link
-            href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css'
-            rel='stylesheet'>
-    <link href='' rel='stylesheet'>
-    <script type='text/javascript'
-            src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <style>
-        body {
-            background-position: center;
-            background-color: #eee;
-            background-repeat: no-repeat;
-            background-size: cover;
-            color: #505050;
-            font-family: "Rubik", Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            font-weight: normal;
-            line-height: 1.5;
-            text-transform: none
-        }
+<!-- HEADER -->
+<div class="login-container">
 
-        .forgot {
-            background-color: #fff;
-            padding: 12px;
-            border: 1px solid #dfdfdf
-        }
+    <div>
+        <div class="logo">
 
-        .padding-bottom-3x {
-            padding-bottom: 72px !important
-        }
-
-        .card-footer {
-            background-color: #fff
-        }
-
-        .btn {
-            font-size: 13px
-        }
-
-        .form-control:focus {
-            color: #495057;
-            background-color: #fff;
-            border-color: #76b7e9;
-            outline: 0;
-            box-shadow: 0 0 0 0px #28a745
-        }
-    </style>
-</head>
-<body oncontextmenu='return false' class='snippet-body'>
-<div class="container padding-bottom-3x mb-2 mt-5">
-    <div class="row justify-content-center">
-        <div class="col-lg-8 col-md-10">
-            <div class="forgot">
-                <h2>Forgot your password?</h2>
-                <p>Change your password in three easy steps. This will help you
-                    to secure your password!</p>
-                <ol class="list-unstyled">
-                    <li><span class="text-primary text-medium">1. </span>Enter
-                        your email address below.</li>
-                    <li><span class="text-primary text-medium">2. </span>Our
-                        system will send you an OTP to your email</li>
-                    <li><span class="text-primary text-medium">3. </span>Enter the OTP on the
-                        next page</li>
-                </ol>
+        </div>
+        <div class="register">
+            <div>Lấy Lại Mật Khẩu Của Bạn</div>
+            <p>Nhập Email đã đăng ký để lấy lại mật khẩu</p>
+            <div class="social">
+                <a data-toggle="tooltip" title="Facebook" href=""><i class="fab fa-facebook-f"></i></a>
+                <a data-toggle="tooltip" title="Google" href=""><i class="fab fa-google"></i></a>
+                <a data-toggle="tooltip" title="Github" href=""><i class="fab fa-github"></i></a>
             </div>
-            <form class="card mt-4" action="${pageContext.request.contextPath}/forgotpassword"  method="POST">
-                <div class="card-body">
-                    <div class="form-group">
-                        <label for="email-for-pass">Enter your email address</label> <input
-                            class="form-control" type="text" name="email" id="email-for-pass" required=""><small
-                            class="form-text text-muted">Enter the registered email address . Then we'll
-                        email a OTP to this address.</small>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-success" type="submit">Get New
-                        Password</button>
-                    <button class="btn btn-danger" type="submit">Back to
-                        Login</button>
-                </div>
-                <div class="form-group f-term">
-                    <label class="form-label">Quên mật khẩu? Nhấn vào <a
-                            href="/web_war/other-pages/login.jsp">đây</a></label>
-                    <span class="form-message"></span>
-                </div>
-            </form>
         </div>
     </div>
+
+    <div class="form-login">
+        <form action="<%=request.getContextPath()%>/forgotpassword" method="POST" class="form" id="form-2">
+            <h3 class="heading">Quên Mật Khẩu</h3>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Tên tài khoản hoặc Email</label>
+                <input id="email" name="email" type="text" placeholder="Nhập tên tài khoản hoặc Email"
+                       class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+
+
+            <div class="form-group f-term">
+                <label class="form-label">Quên mật khẩu? Nhấn vào <a
+                        href="/web_war/other-pages/forgotpassword.jsp">đây</a></label>
+                <span class="form-message"></span>
+            </div>
+
+            <div class="sign-up">
+                <div class="dangnhap">
+                    <button type="submit" class="btn-login">Lấy Mật Khẩu</button>
+                </div>
+                <div class="dangki">
+                    <a href="/web_war/other-pages/register.jsp">Đăng kí tại đây</a>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
 </div>
-<script type='text/javascript'
-        src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js'></script>
-<script type='text/javascript' src=''></script>
-<script type='text/javascript' src=''></script>
-<script type='text/Javascript'></script>
-</body>
-</html>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script type="text/javascript">
+    var x = document.getElementById("status").value; // Lấy giá trị của phần tử có id "status"
+     if (x === "InvalidEmail") { // Kiểm tra email
+        swal("Bạn Chưa Điền Tên Email", "Bạn Cần Nhập Vào Email", "error");
+    } else if (x === "InvalidEmailFormat") { // Kiểm tra email
+        swal("Bạn Cần Nhập Email Đúng Định Dạng", "", "error");
+    }
+</script>
+
+
+<!-- ====================================footer=============================== -->
+<%@ include file="/partials/footer.jsp" %>
+

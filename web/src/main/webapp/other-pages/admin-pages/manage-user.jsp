@@ -8,8 +8,8 @@
 
 <%@ include file="/partials/header-nav-admin.jsp" %>
 
-<!-- Container-Manage-Employee -->
-<div class="container-management container-manage-employee">
+<!-- Container-user -->
+<div class="container-management container-manage-">
   <!-- Employee Management Table -->
   <div class="container-management">
     <div class="header">
@@ -61,7 +61,7 @@
           <td>${user.active ? "Hoạt động" : "Không hoạt động"}</td>
           <td>
             <button class="btn btn-trash" data-id="${user.idUser}"><i class="fas fa-trash-alt"></i></button>
-            <a href="/web_war/manage-employee/update-employee?idUser=${user.idUser}" class="btn btn-edit">
+            <a href="/web_war/manage-user/update-user?idUser=${user.idUser}" class="btn btn-edit">
               <i class="fas fa-edit"></i>
             </a>
           </td>

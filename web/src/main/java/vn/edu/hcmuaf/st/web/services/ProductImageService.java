@@ -9,8 +9,8 @@ public class ProductImageService {
 
     private final ProductImageDAO productImageDAO;
 
-    public ProductImageService(ProductImageDAO productImageDAO) {
-        this.productImageDAO = productImageDAO;
+    public ProductImageService() {
+        this.productImageDAO = new ProductImageDAO();
     }
 
     public List<ProductImage> getAllProductImages() {

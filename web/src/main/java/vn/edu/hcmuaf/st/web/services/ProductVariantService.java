@@ -9,8 +9,8 @@ public class ProductVariantService {
 
     private final ProductVariantDAO productVariantDAO;
 
-    public ProductVariantService(ProductVariantDAO productVariantDAO) {
-        this.productVariantDAO = productVariantDAO;
+    public ProductVariantService() {
+        this.productVariantDAO = new ProductVariantDAO();
     }
 
     public List<ProductVariant> getAllProductVariants() {

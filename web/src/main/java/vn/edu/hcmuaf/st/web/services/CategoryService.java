@@ -9,8 +9,8 @@ public class CategoryService {
 
     private final CategoryDAO categoryDAO;
 
-    public CategoryService(CategoryDAO categoryDAO) {
-        this.categoryDAO = categoryDAO;
+    public CategoryService() {
+        this.categoryDAO = new CategoryDAO();
     }
 
     public List<Category> getAllCategories() {

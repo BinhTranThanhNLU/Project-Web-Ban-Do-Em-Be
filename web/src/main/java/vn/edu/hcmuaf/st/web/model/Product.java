@@ -20,11 +20,6 @@ public class Product implements Serializable {
     private List<ProductImage> images;
     private List<ProductVariant> variants;
 
-    private BigDecimal finalPrice; // Giá cuối cùng sau giảm giá
-    private String categoryName; // Tên của danh mục sản phẩm
-    private int totalStock; // Tổng số lượng tồn kho
-    private String primaryImage; // Ảnh chính
-
     // Constructor rỗng
     public Product() {
     }
@@ -41,25 +36,6 @@ public class Product implements Serializable {
         this.updateAt = updateAt;
         this.isNewProduct = isNewProduct;
         this.description = description;
-    }
-
-
-    public Product(int idProduct, int idCategory, String title, BigDecimal price, Integer discount,
-                   BigDecimal finalPrice, int totalStock, Date createAt, Date updateAt, boolean isNewProduct,
-                   String description, String primaryImage, String categoryName) {
-        this.idProduct = idProduct;
-        this.idCategory = idCategory;
-        this.title = title;
-        this.price = price;
-        this.discount = discount;
-        this.finalPrice = finalPrice;
-        this.totalStock = totalStock;
-        this.createAt = createAt;
-        this.updateAt = updateAt;
-        this.isNewProduct = isNewProduct;
-        this.description = description;
-        this.primaryImage = primaryImage;
-        this.categoryName = categoryName;
     }
 
     public Product(int idProduct, int idCategory, String title, BigDecimal price, Integer discount
@@ -123,13 +99,13 @@ public class Product implements Serializable {
         this.discount = discount;
     }
 
-    public BigDecimal getFinalPrice() {
-        return finalPrice;
-    }
-
-    public void setFinalPrice(BigDecimal finalPrice) {
-        this.finalPrice = finalPrice;
-    }
+//    public BigDecimal getFinalPrice() {
+//        return finalPrice;
+//    }
+//
+//    public void setFinalPrice(BigDecimal finalPrice) {
+//        this.finalPrice = finalPrice;
+//    }
 
     public Date getCreateAt() {
         return createAt;
@@ -163,13 +139,13 @@ public class Product implements Serializable {
         this.description = description;
     }
 
-    public String getCategoryName() {
-        return categoryName;
-    }
-
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
+//    public String getCategoryName() {
+//        return categoryName;
+//    }
+//
+//    public void setCategoryName(String categoryName) {
+//        this.categoryName = categoryName;
+//    }
 
     public Category getCategory() {
         return category;
@@ -195,19 +171,19 @@ public class Product implements Serializable {
         this.variants = variants;
     }
 
-    public int getTotalStock() {
-        return totalStock;
-    }
-
-    public void setTotalStock(int totalStock) {
-        this.totalStock = totalStock;
-    }
-
-    public String getPrimaryImage() {
-        return primaryImage;
-    }
-
-    public void setPrimaryImage(String primaryImage) {
-        this.primaryImage = primaryImage;
-    }
+//    public int getTotalStock() {
+//        return totalStock;
+//    }
+//
+//    public void setTotalStock(int totalStock) {
+//        this.totalStock = totalStock;
+//    }
+//
+//    public String getPrimaryImage() {
+//        return primaryImage;
+//    }
+//
+//    public void setPrimaryImage(String primaryImage) {
+//        this.primaryImage = primaryImage;
+//    }
 }

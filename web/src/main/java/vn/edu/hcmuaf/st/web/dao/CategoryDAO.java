@@ -2,6 +2,7 @@ package vn.edu.hcmuaf.st.web.dao;
 
 import org.jdbi.v3.core.Handle;
 import org.jdbi.v3.core.Jdbi;
+import vn.edu.hcmuaf.st.web.dao.db.JdbiConnect;
 import vn.edu.hcmuaf.st.web.model.Category;
 
 import java.util.List;
@@ -10,8 +11,8 @@ public class CategoryDAO {
 
     private final Jdbi jdbi;
 
-    public CategoryDAO(Jdbi jdbi) {
-        this.jdbi = jdbi;
+    public CategoryDAO() {
+        this.jdbi = JdbiConnect.get();
     }
 
     public List<Category> findAll() {
@@ -56,7 +57,4 @@ public class CategoryDAO {
         }
     }
 
-    public static void main(String[] args) {
-
-    }
 }

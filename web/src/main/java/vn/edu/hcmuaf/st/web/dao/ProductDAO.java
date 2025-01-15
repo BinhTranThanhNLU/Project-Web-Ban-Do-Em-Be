@@ -2,83 +2,72 @@ package vn.edu.hcmuaf.st.web.dao;
 
 import org.jdbi.v3.core.Jdbi;
 import vn.edu.hcmuaf.st.web.dao.db.JdbiConnect;
+import vn.edu.hcmuaf.st.web.model.Category;
 import vn.edu.hcmuaf.st.web.model.Product;
+import vn.edu.hcmuaf.st.web.model.ProductImage;
 
 import java.util.List;
 
 public class ProductDAO {
 
-    private static ProductDAO instance;
+    private final Jdbi jdbi;
 
-    private ProductDAO() {
+    public ProductDAO() {
+        this.jdbi = JdbiConnect.get();
     }
 
-    // Sử dụng Singleton pattern
-    public static synchronized ProductDAO getInstance() {
-        if (instance == null) {
-            instance = new ProductDAO();
-        }
-        return instance;
-    }
-
-//    public List<Product> findAll() {
-//        Jdbi jdbi = JdbiConnect.get();
-//        String query = "SELECT * FROM products";
-//        return jdbi.withHandle(handle ->
-//                handle.createQuery(query)
-//                        .mapToBean(Product.class)
-//                        .list()
-//        );
-//    }
-
-    public List<Product> findAll() {
-        Jdbi jdbi = JdbiConnect.get();
+    public List<Product> findAllDetailedProducts() {
         String query = """
-    SELECT 
-        p.idProduct,
-        p.title,
-        c.name AS categoryName,
-        p.price,
-        p.discount,
-        (p.price - (p.price * p.discount / 100)) AS finalPrice,
-        COALESCE(SUM(v.stockQuantity), 0) AS totalStock,
-        p.isNew,
-        img.imageUrl AS primaryImage
-    FROM 
-        products p
-    LEFT JOIN 
-        categories c ON p.idCategory = c.idCategory
-    LEFT JOIN 
-        productVariants v ON p.idProduct = v.idProduct
-    LEFT JOIN 
-        productImages img ON p.idProduct = img.idProduct AND img.isPrimary = 1
-    GROUP BY 
-        p.idProduct, p.title, c.name, p.price, p.discount, p.isNew, img.imageUrl
-    """;
+            SELECT 
+                p.idProduct,
+                p.title,
+                c.name AS categoryName,
+                p.price,
+                p.discount,
+                (p.price - (p.price * p.discount / 100)) AS finalPrice,
+                COALESCE(SUM(v.stockQuantity), 0) AS totalStock,
+                p.isNew,
+                p.createAt,
+                img.imageUrl AS primaryImage
+            FROM 
+                products p
+            LEFT JOIN 
+                categories c ON p.idCategory = c.idCategory
+            LEFT JOIN 
+                productVariants v ON p.idProduct = v.idProduct
+            LEFT JOIN 
+                productImages img ON p.idProduct = img.idProduct AND img.isPrimary = 1
+            GROUP BY 
+                p.idProduct, p.title, c.name, p.price, p.discount, p.isNew, p.createAt, img.imageUrl
+            """;
 
         return jdbi.withHandle(handle ->
                 handle.createQuery(query)
                         .map((rs, ctx) -> {
-                            // Ánh xạ các cột từ truy vấn vào đối tượng Product
                             Product product = new Product();
                             product.setIdProduct(rs.getInt("idProduct"));
                             product.setTitle(rs.getString("title"));
-                            product.setCategoryName(rs.getString("categoryName"));
                             product.setPrice(rs.getBigDecimal("price"));
                             product.setDiscount(rs.getInt("discount"));
-                            product.setFinalPrice(rs.getBigDecimal("finalPrice"));
-                            product.setTotalStock(rs.getInt("totalStock"));
+                            product.setCreateAt(rs.getDate("createAt"));
                             product.setNewProduct(rs.getBoolean("isNew"));
-                            product.setPrimaryImage(rs.getString("primaryImage"));
+
+                            Category category = new Category();
+                            category.setName(rs.getString("categoryName"));
+                            product.setCategory(category);
+
+                            ProductImage primaryImage = new ProductImage();
+                            primaryImage.setImageUrl(rs.getString("primaryImage"));
+
+                            product.setImages(List.of(primaryImage));
                             return product;
                         })
                         .list()
         );
     }
 
-
+    // Retrieve a product by ID
     public Product findById(int id) {
-        Jdbi jdbi = JdbiConnect.get();
         String query = "SELECT * FROM products WHERE idProduct = :id";
         return jdbi.withHandle(handle ->
                 handle.createQuery(query)
@@ -89,8 +78,8 @@ public class ProductDAO {
         );
     }
 
+    // Insert a new product
     public boolean insert(Product product) {
-        Jdbi jdbi = JdbiConnect.get();
         String query = """
                 INSERT INTO products (idCategory, title, price, discount, createAt, updateAt, isNew, description)
                 VALUES (:idCategory, :title, :price, :discount, :createAt, :updateAt, :isNew, :description)
@@ -98,12 +87,12 @@ public class ProductDAO {
         return jdbi.withHandle(handle ->
                 handle.createUpdate(query)
                         .bindBean(product)
-                        .execute()
-        ) > 0;
+                        .execute() > 0
+        );
     }
 
+    // Update an existing product
     public boolean update(Product product) {
-        Jdbi jdbi = JdbiConnect.get();
         String query = """
                 UPDATE products 
                 SET idCategory = :idCategory, title = :title, price = :price, discount = :discount,
@@ -113,32 +102,35 @@ public class ProductDAO {
         return jdbi.withHandle(handle ->
                 handle.createUpdate(query)
                         .bindBean(product)
-                        .execute()
-        ) > 0;
+                        .execute() > 0
+        );
     }
 
+    // Delete a product by ID
     public boolean delete(int id) {
-        Jdbi jdbi = JdbiConnect.get();
         String query = "DELETE FROM products WHERE idProduct = :id";
         return jdbi.withHandle(handle ->
                 handle.createUpdate(query)
                         .bind("id", id)
-                        .execute()
-        ) > 0;
+                        .execute() > 0
+        );
+    }
+
+    // Retrieve all products
+    public List<Product> findAll() {
+        String query = "SELECT * FROM products";
+        return jdbi.withHandle(handle ->
+                handle.createQuery(query)
+                        .mapToBean(Product.class)
+                        .list()
+        );
     }
 
     public static void main(String[] args) {
-        ProductDAO productDAO = ProductDAO.getInstance();
+        ProductDAO productDAO = new ProductDAO();
 
-        // Kiểm thử lấy tất cả sản phẩm
-        List<Product> products = productDAO.findAll();
+        // Test retrieving all detailed products
+        List<Product> products = productDAO.findAllDetailedProducts();
         products.forEach(System.out::println);
-
-        // Kiểm thử thêm sản phẩm mới
-        Product newProduct = new Product(0, 1, "Sản phẩm mới",
-                new java.math.BigDecimal("1000.00"), 10,
-                new java.util.Date(), null, true, "Mô tả sản phẩm");
-        boolean isInserted = productDAO.insert(newProduct);
-        System.out.println("Thêm sản phẩm: " + (isInserted ? "Thành công" : "Thất bại"));
     }
 }

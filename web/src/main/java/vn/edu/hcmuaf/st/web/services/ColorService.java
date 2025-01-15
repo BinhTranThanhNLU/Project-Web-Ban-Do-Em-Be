@@ -9,8 +9,8 @@ public class ColorService {
 
     private final ColorDAO colorDAO;
 
-    public ColorService(ColorDAO colorDAO) {
-        this.colorDAO = colorDAO;
+    public ColorService() {
+        this.colorDAO = new ColorDAO();
     }
 
     // Lấy danh sách tất cả các màu

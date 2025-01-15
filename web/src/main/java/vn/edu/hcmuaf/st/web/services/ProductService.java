@@ -7,43 +7,37 @@ import java.util.List;
 
 public class ProductService {
 
-    // Sử dụng ProductDAO như một thuộc tính tĩnh
-    static ProductDAO dao = ProductDAO.getInstance();
+    private final ProductDAO productDAO;
 
-    // Lấy tất cả sản phẩm
-    public List<Product> getAll() {
-        return dao.findAll();
+    public ProductService() {
+        this.productDAO = new ProductDAO();
     }
 
-    // Lấy chi tiết sản phẩm theo ID (dưới dạng String)
-    public Product getDetail(String in) {
-        try {
-            int id = Integer.parseInt(in); // Chuyển đổi String sang Integer
-            return dao.findById(id);
-        } catch (NumberFormatException e) {
-            // Nếu không thể chuyển đổi, trả về null
-            return null;
-        }
+    public List<Product> getAllDetailedProducts() {
+        return productDAO.findAllDetailedProducts();
     }
 
-    // Thêm sản phẩm mới
+    public Product getProductById(int id) {
+        return productDAO.findById(id);
+    }
+
     public boolean addProduct(Product product) {
-        return dao.insert(product);
+        return productDAO.insert(product);
     }
 
-    // Cập nhật thông tin sản phẩm
     public boolean updateProduct(Product product) {
-        return dao.update(product);
+        return productDAO.update(product);
     }
 
-    // Xóa sản phẩm theo ID
-    public boolean deleteProduct(String in) {
-        try {
-            int id = Integer.parseInt(in); // Chuyển đổi String sang Integer
-            return dao.delete(id);
-        } catch (NumberFormatException e) {
-            // Nếu không thể chuyển đổi, trả về false
-            return false;
-        }
+    public boolean deleteProduct(int id) {
+        return productDAO.delete(id);
+    }
+
+    public List<Product> getAllProducts() {
+        return productDAO.findAll();
+    }
+
+    public static void main(String[] args) {
+
     }
 }

@@ -1,5 +1,6 @@
 package vn.edu.hcmuaf.st.web.dao;
 
+import vn.edu.hcmuaf.st.web.dao.db.JdbiConnect;
 import vn.edu.hcmuaf.st.web.model.ProductImage;
 import org.jdbi.v3.core.Handle;
 import org.jdbi.v3.core.Jdbi;
@@ -10,8 +11,8 @@ public class ProductImageDAO {
 
     private final Jdbi jdbi;
 
-    public ProductImageDAO(Jdbi jdbi) {
-        this.jdbi = jdbi;
+    public ProductImageDAO() {
+        this.jdbi = JdbiConnect.get();
     }
 
     public List<ProductImage> findAll() {

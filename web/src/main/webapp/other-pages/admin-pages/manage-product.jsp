@@ -53,31 +53,31 @@
             </thead>
             <tbody>
 
-            <c:forEach var="product" items="${products}">
-                <tr>
-                    <td><input type="checkbox" name="selectedProducts" value="${product.idProduct}"></td>
-                    <td>${product.idProduct}</td>
-                    <td>${product.title}</td>
-                    <td>${product.categoryName}</td>
-                    <td><fmt:formatNumber value="${product.price}" type="currency" currencySymbol="₫"/></td>
-                    <td>${product.discount}</td>
-                    <td><fmt:formatNumber value="${product.finalPrice}" type="currency" currencySymbol="₫"/></td>
-                    <td>${product.totalStock}</td>
-                    <td>${product.newProduct ? "Mới" : "Cũ"}</td>
-                    <td>
-                        <img src="${product.primaryImage}" alt="Hình ảnh sản phẩm"
-                             style="width: 50px; height: 50px; object-fit: cover;"/>
-                    </td>
-                    <td>
-                        <button class="btn btn-trash" data-id="${product.idProduct}"><i class="fas fa-trash-alt"></i>
-                        </button>
-                        <a href="/web_war/manage-product/update-product?idProduct=${product.idProduct}"
-                           class="btn btn-edit">
-                            <i class="fas fa-edit"></i>
-                        </a>
-                    </td>
-                </tr>
-            </c:forEach>
+            <c:if test="${not empty products}">
+                <c:forEach var="product" items="${products}">
+                    <tr>
+                        <td><input type="checkbox" name="selectedProducts" value="${product.idProduct}"></td>
+                        <td>${product.idProduct}</td>
+                        <td>${product.title}</td>
+                        <td>${product.category.name}</td>
+                        <td><fmt:formatNumber value="${product.price}" type="currency" currencySymbol="₫"/></td>
+                        <td>${product.discount}</td>
+                        <td><fmt:formatNumber value="${product.price - (product.price * product.discount / 100)}" type="currency" currencySymbol="₫"/></td>
+                        <td>${product.variants.totalStock}</td>
+                        <td>${product.newProduct ? "Mới" : "Cũ"}</td>
+                        <td>
+                            <img src="${not empty product.images[0].imageUrl ? product.images[0].imageUrl : '/images/default-product.png'}"
+                                 alt="Hình ảnh sản phẩm" style="width: 50px; height: 50px; object-fit: cover;" />
+                        </td>
+                        <td>
+                            <button class="btn btn-trash" data-id="${product.idProduct}"><i class="fas fa-trash-alt"></i></button>
+                            <a href="/web_war/manage-product/update-product?idProduct=${product.idProduct}" class="btn btn-edit">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </c:forEach>
+            </c:if>
 
             </tbody>
         </table>
@@ -130,4 +130,3 @@
 </script>
 
 <%@ include file="/partials/footer-admin.jsp" %>
-

@@ -66,6 +66,7 @@ public class ProductDAO {
         );
     }
 
+
     // Retrieve a product by ID
     public Product findById(int id) {
         String query = "SELECT * FROM products WHERE idProduct = :id";

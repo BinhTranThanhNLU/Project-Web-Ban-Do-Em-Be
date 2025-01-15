@@ -20,6 +20,8 @@ public class Product implements Serializable {
     private List<ProductImage> images;
     private List<ProductVariant> variants;
 
+    private int totalStock;
+
     // Constructor rỗng
     public Product() {
     }
@@ -55,6 +57,13 @@ public class Product implements Serializable {
         this.category = category;
         this.images = images;
         this.variants = variants;
+    }
+
+    public int getTotalStock() {
+        if (variants == null || variants.isEmpty()) {
+            return 0; // Nếu không có variants, trả về 0
+        }
+        return variants.stream().mapToInt(ProductVariant::getStockQuantity).sum(); // Tính tổng
     }
 
     // Getters và Setters
@@ -99,14 +108,6 @@ public class Product implements Serializable {
         this.discount = discount;
     }
 
-//    public BigDecimal getFinalPrice() {
-//        return finalPrice;
-//    }
-//
-//    public void setFinalPrice(BigDecimal finalPrice) {
-//        this.finalPrice = finalPrice;
-//    }
-
     public Date getCreateAt() {
         return createAt;
     }
@@ -139,14 +140,6 @@ public class Product implements Serializable {
         this.description = description;
     }
 
-//    public String getCategoryName() {
-//        return categoryName;
-//    }
-//
-//    public void setCategoryName(String categoryName) {
-//        this.categoryName = categoryName;
-//    }
-
     public Category getCategory() {
         return category;
     }
@@ -171,19 +164,8 @@ public class Product implements Serializable {
         this.variants = variants;
     }
 
-//    public int getTotalStock() {
-//        return totalStock;
-//    }
-//
-//    public void setTotalStock(int totalStock) {
-//        this.totalStock = totalStock;
-//    }
-//
-//    public String getPrimaryImage() {
-//        return primaryImage;
-//    }
-//
-//    public void setPrimaryImage(String primaryImage) {
-//        this.primaryImage = primaryImage;
-//    }
+    public void setTotalStock(int totalStock) {
+        totalStock = getTotalStock();
+        this.totalStock = totalStock;
+    }
 }

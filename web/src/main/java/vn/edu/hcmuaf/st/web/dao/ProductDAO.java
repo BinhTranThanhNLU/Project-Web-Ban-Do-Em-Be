@@ -51,6 +51,7 @@ public class ProductDAO {
                             product.setDiscount(rs.getInt("discount"));
                             product.setCreateAt(rs.getDate("createAt"));
                             product.setNewProduct(rs.getBoolean("isNew"));
+                            product.setTotalStock(rs.getInt("totalStock"));
 
                             Category category = new Category();
                             category.setName(rs.getString("categoryName"));

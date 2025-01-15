@@ -45,7 +45,6 @@
                 <th>Giá gốc</th>
                 <th>Giảm giá (%)</th>
                 <th>Giá sau giảm</th>
-                <th>Số lượng trong kho</th>
                 <th>Trạng thái</th>
                 <th>Hình ảnh</th>
                 <th>Tính năng</th>
@@ -63,7 +62,6 @@
                         <td><fmt:formatNumber value="${product.price}" type="currency" currencySymbol="₫"/></td>
                         <td>${product.discount}</td>
                         <td><fmt:formatNumber value="${product.price - (product.price * product.discount / 100)}" type="currency" currencySymbol="₫"/></td>
-                        <td>${product.variants.totalStock}</td>
                         <td>${product.newProduct ? "Mới" : "Cũ"}</td>
                         <td>
                             <img src="${not empty product.images[0].imageUrl ? product.images[0].imageUrl : '/images/default-product.png'}"

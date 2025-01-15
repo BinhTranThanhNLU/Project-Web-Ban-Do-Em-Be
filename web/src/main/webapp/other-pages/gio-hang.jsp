@@ -91,10 +91,12 @@
                         </td>
                     </tr>
                 </table>
+
                 <div class="cart-container-right-button">
                     <a href="/web_war/other-pages/thong-tin-giao-hang.html" class="btn-payment">THANH TOÁN</a>
                 </div>
             </div>
+
         </div>
     </div>
 </section>

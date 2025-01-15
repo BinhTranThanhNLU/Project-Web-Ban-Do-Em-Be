@@ -56,14 +56,10 @@
         <!-- menu  -->
         <div class="navbar">
             <div class="menu">
-<<<<<<< HEAD
-                <a href="${pageContext.request.contextPath}/home">Trang chủ</a>
-=======
                 <a href="${pageContext.request.contextPath}/home">
                 Trang Chủ
                 </a>
 
->>>>>>> 49b1ebd5da314915e84cdde5e9d0c463503ba01c
                 <div class="dropdown-menu">
                     <!-- Thêm lớp cho Bé gái -->
                     <div class="navheight">
@@ -149,7 +145,7 @@
                 <!-- <input type="text" placeholder="Tìm kiếm sản phẩm"> -->
                 <i class="fas fa-search"></i>
                 <div class="cart" id="cart">
-                    <a href="/web_war/other-pages/gio-hang.jsp" class="cart-a"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="/web/other-pages/gio-hang.jsp" class="cart-a"><i class="fas fa-shopping-cart"></i></a>
                     <span class="badge">0</span>
                 </div>
                 <!-- Biểu tượng người dùng với menu đăng nhập/đăng ký -->

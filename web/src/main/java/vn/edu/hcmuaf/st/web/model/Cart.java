@@ -37,28 +37,18 @@ public class Cart implements Serializable {
 
     // Tính toán chi phí
     private void calculateInfo() {
-        int totalFabric = 0;
         double price = 0.0;
         int quantity = 0;
-        double area = 0.0;
 
         for (CartItem item : items.values()) {
             quantity += item.getQuantity();
             price += item.getTotalPrice();
-            if (isFabric(item)) { 
-                totalFabric += item.getQuantity();
-                area += item.getArea() * item.getQuantity();
-            }
         }
-
-        // Tính phí vận chuyển
-        this.shippingFee = calculateShippingFee(quantity, totalFabric);
 
         // Gán giá trị
         this.totalQuantity = quantity;
         this.totalPrice = price;
-        this.totalArea = area;
-        this.lastPrice = this.totalPrice + this.shippingFee;
+        this.lastPrice = this.totalPrice; // Nếu không cần phí vận chuyển
     }
 
     // Kiểm tra sản phẩm là loại vải
@@ -75,7 +65,7 @@ public class Cart implements Serializable {
         return 10000.0 * totalFabric; 
     }
 
-    // Xóa sản phẩm khỏi giỏ
+     //Xóa sản phẩm khỏi giỏ
     public void remove(int idStyle) {
         if (items.containsKey(idStyle)) {
             items.remove(idStyle);
@@ -92,6 +82,8 @@ public class Cart implements Serializable {
             this.calculateInfo();
         }
     }
+
+
 
     // Lấy danh sách sản phẩm
     public List<CartItem> getValues() {

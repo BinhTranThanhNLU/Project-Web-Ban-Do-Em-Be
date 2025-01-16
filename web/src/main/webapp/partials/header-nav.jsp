@@ -153,16 +153,21 @@
                 <div class="user-menu">
                     <i class="fas fa-user"></i>
                     <div class="dropdown">
-                        <a class="name" href="<%=request.getContextPath()%>/logout">
-                            <%=session.getAttribute("username") %>
+                        <% String username = (String) session.getAttribute("username"); %>
+                        <% if (username != null && !username.isEmpty()) { %>
+                        <a class="name" href="/web_war/other-pages/thong-tin-cua-toi.jsp">
+                            <%= username %>
                         </a>
+                        <% } %>
+                        <% if (username == null || username.isEmpty()) { %>
                         <a id="login-link" class="menu-link" href="/web_war/other-pages/login.jsp">Đăng nhập</a>
                         <a id="register-link" class="menu-link" href="/web_war/other-pages/register.jsp">Đăng ký</a>
-                        <a id="logout-link" class="menu-link" href="<%=request.getContextPath()%>/logout"
-                           style="display: none;">Đăng Xuất</a>
-
-
-
+                        <% } %>
+                        <% if (username != null && !username.isEmpty()) { %>
+                        <a class="name" href="<%=request.getContextPath()%>/logout">
+                            Đăng Xuất
+                        </a>
+                        <% } %>
 
                     </div>
                 </div>

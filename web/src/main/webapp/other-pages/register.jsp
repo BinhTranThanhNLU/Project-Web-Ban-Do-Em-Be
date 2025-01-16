@@ -88,8 +88,8 @@
         <input
                 id="birthDate"
                 name="birthDate"
-                type="text"
-                placeholder="Nhập theo định dạng DD/MM/YYYY"
+                type="date"
+                placeholder=""
                 class="form-control"
                 pattern="\d{4}/\d{2}/\d{2}"
                 value="<%= request.getAttribute("birthDate") != null ? request.getAttribute("birthDate") : "" %>"

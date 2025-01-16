@@ -157,7 +157,7 @@ public class RegisterController extends HttpServlet {
             pst.setString(8, birthDate);
             pst.setString(9, avatar);
             int rowCount = pst.executeUpdate();
-            dispatcher = request.getRequestDispatcher("/other-pages/register.jsp");
+            dispatcher = request.getRequestDispatcher("/other-pages/login.jsp");
             if (rowCount > 0) {
                 request.setAttribute("status", "success");
             } else {

@@ -8,13 +8,13 @@
 
 <%@ include file="/partials/header-nav.jsp" %>
 <%--Dòng nàyddeexuat hien khi can chuyen den login ko can thi xoa--%>
-<%
-    if (session.getAttribute("name") == null) {
-        response.sendRedirect("/web_war/other-pages/forgotpassword.jsp");
-    }
+<%--<%--%>
+<%--    if (session.getAttribute("name") == null) {--%>
+<%--        response.sendRedirect("/web_war/other-pages/forgotpassword.jsp");--%>
+<%--    }--%>
 
 
-%>
+<%--%>--%>
 <!-- ================Hiệu ứng di chuyển hình ảnh ở đầu trang can js============-->
 <section id="Slider">
     <div class="slider">

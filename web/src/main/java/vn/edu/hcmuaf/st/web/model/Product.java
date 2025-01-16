@@ -20,6 +20,8 @@ public class Product implements Serializable {
     private List<ProductImage> images;
     private List<ProductVariant> variants;
 
+    private BigDecimal discountedPrice;
+
     private int totalStock;
 
     // Constructor rỗng
@@ -167,5 +169,12 @@ public class Product implements Serializable {
     public void setTotalStock(int totalStock) {
         totalStock = getTotalStock();
         this.totalStock = totalStock;
+    }
+
+    public BigDecimal getDiscountedPrice() {
+        if (price == null || discount == null) {
+            return BigDecimal.ZERO; // Trả về 0 nếu giá hoặc giảm giá không tồn tại
+        }
+        return price.subtract(price.multiply(BigDecimal.valueOf(discount)).divide(BigDecimal.valueOf(100)));
     }
 }

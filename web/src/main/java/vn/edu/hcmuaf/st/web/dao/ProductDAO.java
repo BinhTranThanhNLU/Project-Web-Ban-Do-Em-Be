@@ -2,9 +2,7 @@ package vn.edu.hcmuaf.st.web.dao;
 
 import org.jdbi.v3.core.Jdbi;
 import vn.edu.hcmuaf.st.web.dao.db.JdbiConnect;
-import vn.edu.hcmuaf.st.web.model.Category;
-import vn.edu.hcmuaf.st.web.model.Product;
-import vn.edu.hcmuaf.st.web.model.ProductImage;
+import vn.edu.hcmuaf.st.web.model.*;
 
 import java.util.List;
 
@@ -14,6 +12,37 @@ public class ProductDAO {
 
     public ProductDAO() {
         this.jdbi = JdbiConnect.get();
+    }
+
+    public Product findProductDetailsById(int idProduct) {
+        String query = """
+        SELECT 
+            p.idProduct,
+            p.title,
+            p.price,
+            p.discount,
+            p.description,
+            p.createAt
+        FROM 
+            products p
+        WHERE 
+            p.idProduct = :idProduct
+    """;
+
+        return jdbi.withHandle(handle ->
+                handle.createQuery(query)
+                        .bind("idProduct", idProduct)
+                        .map((rs, ctx) -> {
+                            Product product = new Product();
+                            product.setIdProduct(rs.getInt("idProduct"));
+                            product.setTitle(rs.getString("title"));
+                            product.setPrice(rs.getBigDecimal("price"));
+                            product.setDiscount(rs.getInt("discount"));
+                            product.setDescription(rs.getString("description"));
+                            product.setCreateAt(rs.getDate("createAt"));
+                            return product;
+                        }).findOne().orElse(null)
+        );
     }
 
     public List<Product> findProductsByCategory(String categoryName) {
@@ -125,6 +154,7 @@ public class ProductDAO {
     // Retrieve a product by ID
     public Product findById(int id) {
         String query = "SELECT * FROM products WHERE idProduct = :id";
+        System.out.println("Querying product with ID: " + id);
         return jdbi.withHandle(handle ->
                 handle.createQuery(query)
                         .bind("id", id)

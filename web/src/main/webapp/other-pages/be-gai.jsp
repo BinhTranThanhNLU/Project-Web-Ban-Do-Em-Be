@@ -184,7 +184,7 @@
                                                 <span class="rating-number">4.8</span>
                                             </div>
                                             <button class="buy-btn">Thêm</button>
-                                            <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
+                                            <a href="${pageContext.request.contextPath}/product-detail?id=${product.idProduct}" class="details-btn">Chi tiết</a>
                                         </div>
                                     </div>
                                 </div>

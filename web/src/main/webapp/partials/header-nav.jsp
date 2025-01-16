@@ -64,7 +64,7 @@
                 <div class="dropdown-menu">
                     <!-- Thêm lớp cho Bé gái -->
                     <div class="navheight">
-                        <a href="/web_war/other-pages/be-gai.jsp">Bé gái</a>
+                        <a href="${pageContext.request.contextPath}/list-product">Bé gái</a>
                         <!-- <ion-icon name="chevron-down-outline"></ion-icon> -->
                     </div>
                     <div class="dropdown dropdown-full">

@@ -155,383 +155,41 @@
                     <!-- Row 1 -->
                     <div class="row">
                         <!-- Product 1 -->
-                        <div class="col-card">
-                            <div class="card">
-                                <div class="image-container">
-                                    <div class="first">
-                                        <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
+                        <c:forEach var="product" items="${product1s}">
+                            <div class="col-card">
+                                <div class="card">
+                                    <div class="image-container">
+                                        <div class="first">
+                                            <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
+                                        </div>
+                                        <div class="sale-badge">-${product.discount}%</div>
+                                        <img src="${product.images[0].imageUrl}" class="thumbnail-image" />
                                     </div>
-                                    <div class="sale-badge">-20%</div>
-                                    <img src="../web/src/main/webapp/static/images/1g.jpg"
-                                         class="thumbnail-image">
-                                </div>
 
-                                <div class="product-detail-container">
-                                    <div class="product-info">
-                                        <h5 class="dress-name">áo em bé gái</h5>
-                                        <div class="price-container">
-                                            <span class="new-price">400.000d</span>
-                                            <small class="old-price">500.000d</small>
+                                    <div class="product-detail-container">
+                                        <div class="product-info">
+                                            <h5 class="dress-name">${product.title}</h5>
+                                            <div class="price-container">
+                                                <span class="new-price">
+                                                    <fmt:formatNumber value="${product.price - (product.price * product.discount / 100)}" type="number" pattern="###,###"/>đ
+                                                </span>
+                                                <small class="old-price">
+                                                    <fmt:formatNumber value="${product.price}" type="number" pattern="###,###"/>đ
+                                                </small>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="rating-purchase">
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <span class="rating-number">4.8</span>
+                                        <div class="rating-purchase">
+                                            <div class="rating">
+                                                <i class="fa-solid fa-star"></i>
+                                                <span class="rating-number">4.8</span>
+                                            </div>
+                                            <button class="buy-btn">Thêm</button>
+                                            <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
                                         </div>
-                                        <button class="buy-btn">Thêm</button>
-                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Product 2 -->
-                        <div class="col-card">
-                            <div class="card">
-                                <div class="image-container">
-                                    <div class="first">
-                                        <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
-                                    </div>
-                                    <div class="sale-badge">-20%</div>
-                                    <img src="../web/src/main/webapp/static/images/1g.jpg"
-                                         class="thumbnail-image">
-                                </div>
-
-                                <div class="product-detail-container">
-                                    <div class="product-info">
-                                        <h5 class="dress-name">áo em bé gái</h5>
-                                        <div class="price-container">
-                                            <span class="new-price">400.000d</span>
-                                            <small class="old-price">500.000d</small>
-                                        </div>
-                                    </div>
-                                    <div class="rating-purchase">
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <span class="rating-number">4.8</span>
-                                        </div>
-                                        <button class="buy-btn">Thêm</button>
-                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product 3 -->
-                        <div class="col-card">
-                            <div class="card">
-                                <div class="image-container">
-                                    <div class="first">
-                                        <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
-                                    </div>
-                                    <div class="sale-badge">-20%</div>
-                                    <img src="../web/src/main/webapp/static/images/1g.jpg"
-                                         class="thumbnail-image">
-                                </div>
-
-                                <div class="product-detail-container">
-                                    <div class="product-info">
-                                        <h5 class="dress-name">áo em bé gái</h5>
-                                        <div class="price-container">
-                                            <span class="new-price">400.000d</span>
-                                            <small class="old-price">500.000d</small>
-                                        </div>
-                                    </div>
-                                    <div class="rating-purchase">
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <span class="rating-number">4.8</span>
-                                        </div>
-                                        <button class="buy-btn">Thêm</button>
-                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product 4 -->
-                        <div class="col-card">
-                            <div class="card">
-                                <div class="image-container">
-                                    <div class="first">
-                                        <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
-                                    </div>
-                                    <div class="sale-badge">-20%</div>
-                                    <img src="../web/src/main/webapp/static/images/1g.jpg"
-                                         class="thumbnail-image">
-                                </div>
-
-                                <div class="product-detail-container">
-                                    <div class="product-info">
-                                        <h5 class="dress-name">áo em bé gái</h5>
-                                        <div class="price-container">
-                                            <span class="new-price">400.000d</span>
-                                            <small class="old-price">500.000d</small>
-                                        </div>
-                                    </div>
-                                    <div class="rating-purchase">
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <span class="rating-number">4.8</span>
-                                        </div>
-                                        <button class="buy-btn">Thêm</button>
-                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Row 2 -->
-                    <div class="row">
-                        <!-- Product 1 -->
-                        <div class="col-card">
-                            <div class="card">
-                                <div class="image-container">
-                                    <div class="first">
-                                        <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
-                                    </div>
-                                    <div class="sale-badge">-20%</div>
-                                    <img src="../web/src/main/webapp/static/images/1g.jpg"
-                                         class="thumbnail-image">
-                                </div>
-
-                                <div class="product-detail-container">
-                                    <div class="product-info">
-                                        <h5 class="dress-name">áo em bé gái</h5>
-                                        <div class="price-container">
-                                            <span class="new-price">400.000d</span>
-                                            <small class="old-price">500.000d</small>
-                                        </div>
-                                    </div>
-                                    <div class="rating-purchase">
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <span class="rating-number">4.8</span>
-                                        </div>
-                                        <button class="buy-btn">Thêm</button>
-                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product 2 -->
-                        <div class="col-card">
-                            <div class="card">
-                                <div class="image-container">
-                                    <div class="first">
-                                        <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
-                                    </div>
-                                    <div class="sale-badge">-20%</div>
-                                    <img src="../web/src/main/webapp/static/images/1g.jpg"
-                                         class="thumbnail-image">
-                                </div>
-
-                                <div class="product-detail-container">
-                                    <div class="product-info">
-                                        <h5 class="dress-name">áo em bé gái</h5>
-                                        <div class="price-container">
-                                            <span class="new-price">400.000d</span>
-                                            <small class="old-price">500.000d</small>
-                                        </div>
-                                    </div>
-                                    <div class="rating-purchase">
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <span class="rating-number">4.8</span>
-                                        </div>
-                                        <button class="buy-btn">Thêm</button>
-                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product 3 -->
-                        <div class="col-card">
-                            <div class="card">
-                                <div class="image-container">
-                                    <div class="first">
-                                        <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
-                                    </div>
-                                    <div class="sale-badge">-20%</div>
-                                    <img src="../web/src/main/webapp/static/images/1g.jpg"
-                                         class="thumbnail-image">
-                                </div>
-
-                                <div class="product-detail-container">
-                                    <div class="product-info">
-                                        <h5 class="dress-name">áo em bé gái</h5>
-                                        <div class="price-container">
-                                            <span class="new-price">400.000d</span>
-                                            <small class="old-price">500.000d</small>
-                                        </div>
-                                    </div>
-                                    <div class="rating-purchase">
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <span class="rating-number">4.8</span>
-                                        </div>
-                                        <button class="buy-btn">Thêm</button>
-                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product 4 -->
-                        <div class="col-card">
-                            <div class="card">
-                                <div class="image-container">
-                                    <div class="first">
-                                        <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
-                                    </div>
-                                    <div class="sale-badge">-20%</div>
-                                    <img src="../web/src/main/webapp/static/images/1g.jpg"
-                                         class="thumbnail-image">
-                                </div>
-
-                                <div class="product-detail-container">
-                                    <div class="product-info">
-                                        <h5 class="dress-name">áo em bé gái</h5>
-                                        <div class="price-container">
-                                            <span class="new-price">400.000d</span>
-                                            <small class="old-price">500.000d</small>
-                                        </div>
-                                    </div>
-                                    <div class="rating-purchase">
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <span class="rating-number">4.8</span>
-                                        </div>
-                                        <button class="buy-btn">Thêm</button>
-                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Row 3 -->
-                    <div class="row">
-                        <!-- Product 1 -->
-                        <div class="col-card">
-                            <div class="card">
-                                <div class="image-container">
-                                    <div class="first">
-                                        <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
-                                    </div>
-                                    <div class="sale-badge">-20%</div>
-                                    <img src="../web/src/main/webapp/static/images/1g.jpg"
-                                         class="thumbnail-image">
-                                </div>
-
-                                <div class="product-detail-container">
-                                    <div class="product-info">
-                                        <h5 class="dress-name">áo em bé gái</h5>
-                                        <div class="price-container">
-                                            <span class="new-price">400.000d</span>
-                                            <small class="old-price">500.000d</small>
-                                        </div>
-                                    </div>
-                                    <div class="rating-purchase">
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <span class="rating-number">4.8</span>
-                                        </div>
-                                        <button class="buy-btn">Thêm</button>
-                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product 2 -->
-                        <div class="col-card">
-                            <div class="card">
-                                <div class="image-container">
-                                    <div class="first">
-                                        <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
-                                    </div>
-                                    <div class="sale-badge">-20%</div>
-                                    <img src="../web/src/main/webapp/static/images/1g.jpg"
-                                         class="thumbnail-image">
-                                </div>
-
-                                <div class="product-detail-container">
-                                    <div class="product-info">
-                                        <h5 class="dress-name">áo em bé gái</h5>
-                                        <div class="price-container">
-                                            <span class="new-price">400.000d</span>
-                                            <small class="old-price">500.000d</small>
-                                        </div>
-                                    </div>
-                                    <div class="rating-purchase">
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <span class="rating-number">4.8</span>
-                                        </div>
-                                        <button class="buy-btn">Thêm</button>
-                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product 3 -->
-                        <div class="col-card">
-                            <div class="card">
-                                <div class="image-container">
-                                    <div class="first">
-                                        <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
-                                    </div>
-                                    <div class="sale-badge">-20%</div>
-                                    <img src="../web/src/main/webapp/static/images/1g.jpg"
-                                         class="thumbnail-image">
-                                </div>
-
-                                <div class="product-detail-container">
-                                    <div class="product-info">
-                                        <h5 class="dress-name">áo em bé gái</h5>
-                                        <div class="price-container">
-                                            <span class="new-price">400.000d</span>
-                                            <small class="old-price">500.000d</small>
-                                        </div>
-                                    </div>
-                                    <div class="rating-purchase">
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <span class="rating-number">4.8</span>
-                                        </div>
-                                        <button class="buy-btn">Thêm</button>
-                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product 4 -->
-                        <div class="col-card">
-                            <div class="card">
-                                <div class="image-container">
-                                    <div class="first">
-                                        <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
-                                    </div>
-                                    <div class="sale-badge">-20%</div>
-                                    <img src="../web/src/main/webapp/static/images/1g.jpg"
-                                         class="thumbnail-image">
-                                </div>
-
-                                <div class="product-detail-container">
-                                    <div class="product-info">
-                                        <h5 class="dress-name">áo em bé gái</h5>
-                                        <div class="price-container">
-                                            <span class="new-price">400.000d</span>
-                                            <small class="old-price">500.000d</small>
-                                        </div>
-                                    </div>
-                                    <div class="rating-purchase">
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <span class="rating-number">4.8</span>
-                                        </div>
-                                        <button class="buy-btn">Thêm</button>
-                                        <a href="/web_war/other-pages/chi-tiet-san-pham.jsp" class="details-btn">Chi tiết</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </c:forEach>
                     </div>
                 </div>
             </div>
@@ -571,7 +229,7 @@
         </p>
 
         <div class="body-content">
-            <h2>1. Thời trang bé gái tại Little Whale có những dòng sản phẩm hot nào?</h3>
+            <h2>1. Thời trang bé gái tại Little Whale có những dòng sản phẩm hot nào?</h2>
                 <p>Với sự phong phú và sáng tạo trong thời trang trẻ em, Little Whale đã cho ra mắt đa dạng dòng sản
                     phẩm từ áo quần,
                     đầm váy đến phụ kiện. Do đó, ba mẹ có thể dễ dàng tìm ra những bộ trang phục dành cho bé gái phù hợp

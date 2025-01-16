@@ -7,12 +7,12 @@ import java.util.Map;
 
 public class Cart implements Serializable {
 
-    private Map<Integer, CartItem> items; // Map lưu trữ các sản phẩm trong giỏ
-    private int totalQuantity; // Tổng số lượng sản phẩm
-    private double totalPrice; // Tổng giá tiền
-    private double shippingFee; // Phí vận chuyển
-    private double lastPrice; // Tổng giá cuối cùng (tổng giá + phí ship)
-    private double totalArea; // Tổng diện tích sản phẩm
+    private Map<Integer, CartItem> items; 
+    private int totalQuantity; 
+    private double totalPrice; 
+    private double shippingFee; 
+    private double lastPrice; 
+    private double totalArea; 
 
     public Cart() {
         this.items = new HashMap<>();

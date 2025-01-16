@@ -1,8 +1,9 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<c:set var="title" value="Giỏ hàng"/>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
+
+<c:set var="title" value="Giỏ hàng" />
 <c:set var="pageCssList" value="${['header-nav-footer.css', 'index.css', 'gio-hang.css']}"/>
 <c:set var="pageJsList" value="${['scriptnav.js']}"/>
 
@@ -11,6 +12,24 @@
 
 <!-- ====================================cart=============================== -->
 <section class="cart-gio-hang">
+    <!-- <div class="container-cart ">
+            <div class="cart-top-wrap">
+                <div class="cart-top">
+                    <div class="cart-top-cart cart-top-item">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="cart-top-address cart-top-item">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="cart-top-payment cart-top-item">
+                        <i class="fas fa-money-check-alt"></i>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div> -->
     <div class="container-cart">
         <div class="cart-container-cart">
             <div class="cart-container-left">
@@ -49,7 +68,7 @@
                             </td>
                         </tr>
                     </c:forEach>
-                    </tr>
+
                 </table>
             </div>
             <div class="cart-container-right">
@@ -64,7 +83,7 @@
                     <tr>
                         <td>TỔNG TIỀN HÀNG</td>
                         <td>
-                            <p> 0<sup>đ</sup></p>
+                            <p>0<sup>đ</sup></p>
                         </td>
                     </tr>
                     <tr>
@@ -111,7 +130,6 @@
                 console.error(error);
             });
     }
-
     function removeFromCart(productVariantId) {
         if (confirm('Bạn có chắc muốn xóa sản phẩm này khỏi giỏ hàng?')) {
             fetch('/web_war/giohang', {
@@ -137,7 +155,6 @@
         }
     }
 </script>
-
 
 <!-- ====================================footer=============================== -->
 <%@ include file="/partials/footer.jsp" %>

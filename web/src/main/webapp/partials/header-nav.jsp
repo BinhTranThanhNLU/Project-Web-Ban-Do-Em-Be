@@ -35,10 +35,25 @@
             </a>
 
         </div>
-        <div class="search-bar-header">
-            <input placeholder="Bạn cần tìm gì?" type="text"/>
-            <i class="fas fa-search"></i>
-        </div>
+<%--        <div class="search-bar-header">--%>
+<%--            <input placeholder="Bạn cần tìm gì?" type="text"/>--%>
+<%--            <i class="fas fa-search"></i>--%>
+<%--        </div>--%>
+        <form action="<%=request.getContextPath()%>/search" method="get">
+            <div class="search-bar-header">
+                <input
+                        type="text"
+                        name="name"
+                        placeholder="Nhập tên sản phẩm..."
+                        value="${param.name}"
+                        class="search-input"
+                />
+                <button type="submit" aria-label="Tìm kiếm">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+        </form>
+
         <div class="contact-info-header">
             <div class="icon-header">
                 <i class="fas fa-phone-alt"></i>
@@ -144,7 +159,7 @@
 
             <div class="icons">
                 <!-- <input type="text" placeholder="Tìm kiếm sản phẩm"> -->
-                <i class="fas fa-search"></i>
+                <i class="fas fa-search" ></i>
                 <div class="cart" id="cart">
                     <a href="/web_war/other-pages/gio-hang.jsp" class="cart-a"><i class="fas fa-shopping-cart"></i></a>
                     <span class="badge">0</span>

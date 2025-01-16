@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.st.web.model;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.List;
 
 public class Category implements Serializable {
@@ -68,5 +69,7 @@ public class Category implements Serializable {
     public void setProducts(List<Product> products) {
         this.products = products;
     }
+
+
 }
 

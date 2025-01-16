@@ -61,6 +61,9 @@ public class Product implements Serializable {
         this.variants = variants;
     }
 
+    public Product(int i, String áoBéGái, String quầnÁoBéGái, BigDecimal bigDecimal) {
+    }
+
     public int getTotalStock() {
         if (variants == null || variants.isEmpty()) {
             return 0; // Nếu không có variants, trả về 0

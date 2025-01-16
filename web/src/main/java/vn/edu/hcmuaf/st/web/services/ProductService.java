@@ -40,7 +40,9 @@ public class ProductService {
     public List<Product> getAllProducts() {
         return productDAO.findAll();
     }
-
+    public List<Product> searchProductsByName(String name) {
+        return productDAO.searchProductsByName(name);
+    }
     public static void main(String[] args) {
 
     }

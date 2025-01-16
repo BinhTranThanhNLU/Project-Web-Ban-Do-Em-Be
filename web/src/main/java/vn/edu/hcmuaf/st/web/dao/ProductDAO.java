@@ -122,7 +122,7 @@ public class ProductDAO {
     }
 
 
-    // Retrieve a product by ID
+    
     public Product findById(int id) {
         String query = "SELECT * FROM products WHERE idProduct = :id";
         return jdbi.withHandle(handle ->
@@ -134,7 +134,7 @@ public class ProductDAO {
         );
     }
 
-    // Insert a new product
+    
     public boolean insert(Product product) {
         String query = """
                 INSERT INTO products (idCategory, title, price, discount, createAt, updateAt, isNew, description)
@@ -147,7 +147,7 @@ public class ProductDAO {
         );
     }
 
-    // Update an existing product
+    
     public boolean update(Product product) {
         String query = """
                 UPDATE products 
@@ -162,7 +162,7 @@ public class ProductDAO {
         );
     }
 
-    // Delete a product by ID
+  
     public boolean delete(int id) {
         String query = "DELETE FROM products WHERE idProduct = :id";
         return jdbi.withHandle(handle ->
@@ -172,7 +172,7 @@ public class ProductDAO {
         );
     }
 
-    // Retrieve all products
+    
     public List<Product> findAll() {
         String query = "SELECT * FROM products";
         return jdbi.withHandle(handle ->

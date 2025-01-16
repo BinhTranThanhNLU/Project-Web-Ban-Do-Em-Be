@@ -13,6 +13,10 @@ public class ProductService {
         this.productDAO = new ProductDAO();
     }
 
+    public List<Product> getProductsByCategory(String categoryName) {
+        return productDAO.findProductsByCategory(categoryName);
+    }
+
     public List<Product> getAllDetailedProducts() {
         return productDAO.findAllDetailedProducts();
     }

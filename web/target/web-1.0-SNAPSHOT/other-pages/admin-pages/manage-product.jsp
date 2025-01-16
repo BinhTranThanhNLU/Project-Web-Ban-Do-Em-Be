@@ -16,9 +16,7 @@
             <h2>Danh Sách Nhân Viên</h2>
         </div>
         <div class="action-buttons">
-            <a href="/web_war/manage-product/add-product" class="btn btn-add"><i class="fa-solid fa-plus"></i> Thêm
-                nhân
-                viên</a>
+            <a href="/web_war/manage-product/add-product" class="btn btn-add"><i class="fa-solid fa-plus"></i> Thêm sản phẩm</a>
             <button class="btn btn-edits">Chỉnh nhiều dòng</button>
             <button class="btn btn-deletes">Xóa nhiều dòng</button>
         </div>
@@ -76,7 +74,6 @@
                     </tr>
                 </c:forEach>
             </c:if>
-
             </tbody>
         </table>
     </div>

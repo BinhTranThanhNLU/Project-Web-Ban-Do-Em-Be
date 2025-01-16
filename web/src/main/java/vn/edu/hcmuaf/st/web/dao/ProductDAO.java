@@ -16,6 +16,60 @@ public class ProductDAO {
         this.jdbi = JdbiConnect.get();
     }
 
+    public List<Product> findProductsByCategory(String categoryName) {
+        String query = """
+        SELECT 
+            p.idProduct,
+            p.title,
+            c.name AS categoryName,
+            p.price,
+            p.discount,
+            (p.price - (p.price * p.discount / 100)) AS finalPrice,
+            COALESCE(SUM(v.stockQuantity), 0) AS totalStock,
+            p.isNew,
+            p.createAt,
+            img.imageUrl AS primaryImage
+        FROM 
+            products p
+        LEFT JOIN 
+            categories c ON p.idCategory = c.idCategory
+        LEFT JOIN 
+            productVariants v ON p.idProduct = v.idProduct
+        LEFT JOIN 
+            productImages img ON p.idProduct = img.idProduct AND img.isPrimary = 1
+        WHERE 
+            c.name = :categoryName
+        GROUP BY 
+            p.idProduct, p.title, c.name, p.price, p.discount, p.isNew, p.createAt, img.imageUrl
+        """;
+
+        return jdbi.withHandle(handle ->
+                handle.createQuery(query)
+                        .bind("categoryName", categoryName)
+                        .map((rs, ctx) -> {
+                            Product product = new Product();
+                            product.setIdProduct(rs.getInt("idProduct"));
+                            product.setTitle(rs.getString("title"));
+                            product.setPrice(rs.getBigDecimal("price"));
+                            product.setDiscount(rs.getInt("discount"));
+                            product.setCreateAt(rs.getDate("createAt"));
+                            product.setNewProduct(rs.getBoolean("isNew"));
+                            product.setTotalStock(rs.getInt("totalStock"));
+
+                            Category category = new Category();
+                            category.setName(rs.getString("categoryName"));
+                            product.setCategory(category);
+
+                            ProductImage primaryImage = new ProductImage();
+                            primaryImage.setImageUrl(rs.getString("primaryImage"));
+
+                            product.setImages(List.of(primaryImage));
+                            return product;
+                        })
+                        .list()
+        );
+    }
+
     public List<Product> findAllDetailedProducts() {
         String query = """
             SELECT 

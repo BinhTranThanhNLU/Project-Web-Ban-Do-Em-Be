@@ -38,8 +38,8 @@
             <h3 class="heading">Quên Mật Khẩu</h3>
 
             <div class="form-group">
-                <label for="email" class="form-label">Tên tài khoản hoặc Email</label>
-                <input id="email" name="email" type="text" placeholder="Nhập tên tài khoản hoặc Email"
+                <label for="email" class="form-label">Tên Email</label>
+                <input id="email" name="email" type="text" placeholder="Nhập Email"
                        class="form-control">
                 <span class="form-message"></span>
             </div>

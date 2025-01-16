@@ -168,7 +168,7 @@
 
                                     <div class="product-detail-container">
                                         <div class="product-info">
-                                            <h5 class="dress-name">${product.title}</h5>
+                                            <h5 class="dress-name"  style="font-size: 12px;">${product.title}</h5>
                                             <div class="price-container">
                                                 <span class="new-price">
                                                     <fmt:formatNumber value="${product.price - (product.price * product.discount / 100)}" type="number" pattern="###,###"/>đ
@@ -180,7 +180,7 @@
                                         </div>
                                         <div class="rating-purchase">
                                             <div class="rating">
-                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star" style="color: #ffd700;"></i>
                                                 <span class="rating-number">4.8</span>
                                             </div>
                                             <button class="buy-btn">Thêm</button>

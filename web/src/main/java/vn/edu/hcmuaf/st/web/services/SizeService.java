@@ -9,8 +9,8 @@ public class SizeService {
 
     private final SizeDAO sizeDAO;
 
-    public SizeService(SizeDAO sizeDAO) {
-        this.sizeDAO = sizeDAO;
+    public SizeService() {
+        this.sizeDAO = new SizeDAO();
     }
 
     public List<Size> getAllSizes() {

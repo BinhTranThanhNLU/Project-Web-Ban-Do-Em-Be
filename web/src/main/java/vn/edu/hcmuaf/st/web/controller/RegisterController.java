@@ -118,8 +118,6 @@ public class RegisterController extends HttpServlet {
             dispatcher.forward(request, response);
             return; // Dừng thực thi mã phía sau
         }
-
-
 // Kiểm tra mật khẩu
         if (password == null || password.trim().isEmpty()) {
             request.setAttribute("status", "InvalidPassword"); // Gửi giá trị tới JSP
@@ -142,7 +140,6 @@ public class RegisterController extends HttpServlet {
             dispatcher.forward(request, response);
             return; // Dừng thực thi mã phía sau
         }
-
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project?useSSL=false", "root", "");

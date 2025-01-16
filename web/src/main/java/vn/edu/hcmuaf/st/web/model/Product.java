@@ -22,11 +22,16 @@ public class Product implements Serializable {
 
     private BigDecimal discountedPrice;
 
+    private List<Color> colors; // Thêm thuộc tính lưu danh sách màu sắc
+    private List<Size> sizes;   // Thêm thuộc tính lưu danh sách kích thước
+
     private int totalStock;
 
     // Constructor rỗng
     public Product() {
     }
+
+
 
     // Constructor đầy đủ
     public Product(int idProduct, int idCategory, String title, BigDecimal price, Integer discount,
@@ -61,7 +66,27 @@ public class Product implements Serializable {
         this.variants = variants;
     }
 
-    public Product(int i, String áoBéGái, String quầnÁoBéGái, BigDecimal bigDecimal) {
+    public BigDecimal getDiscountedPrice() {
+        if (price == null || discount == null) {
+            return BigDecimal.ZERO; // Trả về 0 nếu giá hoặc giảm giá không tồn tại
+        }
+        return price.subtract(price.multiply(BigDecimal.valueOf(discount)).divide(BigDecimal.valueOf(100)));
+    }
+
+    public List<Color> getColors() {
+        return colors;
+    }
+
+    public void setColors(List<Color> colors) {
+        this.colors = colors;
+    }
+
+    public List<Size> getSizes() {
+        return sizes;
+    }
+
+    public void setSizes(List<Size> sizes) {
+        this.sizes = sizes;
     }
 
     public int getTotalStock() {
@@ -174,10 +199,5 @@ public class Product implements Serializable {
         this.totalStock = totalStock;
     }
 
-    public BigDecimal getDiscountedPrice() {
-        if (price == null || discount == null) {
-            return BigDecimal.ZERO; // Trả về 0 nếu giá hoặc giảm giá không tồn tại
-        }
-        return price.subtract(price.multiply(BigDecimal.valueOf(discount)).divide(BigDecimal.valueOf(100)));
-    }
+
 }

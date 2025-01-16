@@ -49,7 +49,7 @@ public class ForgotPasswordController extends HttpServlet {
                 message.setFrom(new InternetAddress("email")); // Email gửi
                 message.addRecipient(Message.RecipientType.TO, new InternetAddress(to)); // Email nhận
                 message.setSubject("Mã OTP của bạn");
-                message.setText("Your OTP is: " + otpValue);
+                message.setText("Mã OTP của bạn: " + otpValue);
 
                 // Gửi email
                 Transport.send(message);

@@ -75,13 +75,13 @@
                     <progress id="sales-progress" value="200" max="200"></progress>
                 </div>
                 <div class="price-container">
-                    <p class="current-price">
+                    <p class="current-price" style="font-size: 16px;">
                         Giá tiền: <fmt:formatNumber value="${product.discountedPrice}" type="number" pattern="###,###"/>đ
                     </p>
                     <p class="original-price">
                         <fmt:formatNumber value="${product.price}" type="number" pattern="###,###"/>đ
                     </p>
-                    <span class="discount-badge">${product.discount}</span>
+                    <span class="discount-badge">- ${product.discount}</span>
                 </div>
             </div>
 
@@ -153,20 +153,18 @@
     </div>
 </section>
 
+
 <script>
     document.querySelector('.add-to-cart').addEventListener('click', function () {
         const productId = parseInt(new URLSearchParams(window.location.search).get('id')); // Lấy ID sản phẩm từ URL
         const quantity = parseInt(document.getElementById('quantity').value); // Lấy số lượng từ input
-
         // Debug: In ra giá trị kiểm tra
         console.log('Product ID:', productId);
         console.log('Quantity:', quantity);
-
         if (!productId || quantity <= 0) {
             alert('Vui lòng chọn số lượng hợp lệ!');
             return;
         }
-
         fetch('/web_war/giohang', {
             method: 'POST',
             headers: {
@@ -188,22 +186,6 @@
                 console.error(error);
             });
     });
-</script>
-
-<script>
-    let currentIndex = 0;
-
-    function changeSlide(direction) {
-        const sliderContainer = document.querySelector('.slider-container');
-        const totalSlides = sliderContainer.children.length;
-
-        // Tính toán chỉ số slide mới
-        currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
-
-        // Dịch chuyển slider
-        sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
 </script>
 
 <!-- FOOTER -->

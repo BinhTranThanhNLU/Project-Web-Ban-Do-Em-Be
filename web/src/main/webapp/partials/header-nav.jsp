@@ -146,7 +146,7 @@
                 <!-- <input type="text" placeholder="Tìm kiếm sản phẩm"> -->
                 <i class="fas fa-search"></i>
                 <div class="cart" id="cart">
-                    <a href="/web_war/other-pages/gio-hang.jsp" class="cart-a"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="${pageContext.request.contextPath}/giohang" class="cart-a"><i class="fas fa-shopping-cart"></i></a>
                     <span class="badge">0</span>
                 </div>
                 <!-- Biểu tượng người dùng với menu đăng nhập/đăng ký -->

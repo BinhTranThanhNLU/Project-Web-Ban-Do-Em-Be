@@ -131,7 +131,7 @@
                         <i class="fa-solid fa-plus"></i>
                     </button>
                 </div>
-                <button class="add-to-cart">THÊM VÀO GIỎ</button>
+                <button class="add-to-cart" onclick="addToCart(${product.idProduct})">THÊM VÀO GIỎ</button>
             </div>
 
             <div class="action-buttons">
@@ -152,6 +152,43 @@
         </div>
     </div>
 </section>
+
+<script>
+    document.querySelector('.add-to-cart').addEventListener('click', function () {
+        const productId = parseInt(new URLSearchParams(window.location.search).get('id')); // Lấy ID sản phẩm từ URL
+        const quantity = parseInt(document.getElementById('quantity').value); // Lấy số lượng từ input
+
+        // Debug: In ra giá trị kiểm tra
+        console.log('Product ID:', productId);
+        console.log('Quantity:', quantity);
+
+        if (!productId || quantity <= 0) {
+            alert('Vui lòng chọn số lượng hợp lệ!');
+            return;
+        }
+
+        fetch('/web_war/giohang', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ productId, quantity })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Thêm vào giỏ hàng thành công!');
+                    window.location.href = '/web_war/giohang'; // Điều hướng tới trang giỏ hàng
+                } else {
+                    alert('Đã xảy ra lỗi: ' + (data.message || 'Không rõ nguyên nhân'));
+                }
+            })
+            .catch(error => {
+                alert('Đã xảy ra lỗi khi thêm vào giỏ hàng!');
+                console.error(error);
+            });
+    });
+</script>
 
 <script>
     let currentIndex = 0;

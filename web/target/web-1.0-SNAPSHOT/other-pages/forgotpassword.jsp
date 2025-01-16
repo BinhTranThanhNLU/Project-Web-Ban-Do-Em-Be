@@ -44,14 +44,14 @@
                 <span class="form-message"></span>
             </div>
 
-
-
             <div class="form-group f-term">
-                <label class="form-label">Quên mật khẩu? Nhấn vào <a
-                        href="/web_war/other-pages/forgotpassword.jsp">đây</a></label>
-                <span class="form-message"></span>
+                <div class="dangki">
+                    <a href="/web_war/other-pages/login.jsp">Đăng Nhập tại đây</a>
+                </div>
+                <div class="dangki">
+                    <a href="/web_war/other-pages/register.jsp">Đăng kí tại đây</a>
+                </div>
             </div>
-
             <div class="sign-up">
                 <div class="dangnhap">
                     <button type="submit" class="btn-login">Lấy Mật Khẩu</button>

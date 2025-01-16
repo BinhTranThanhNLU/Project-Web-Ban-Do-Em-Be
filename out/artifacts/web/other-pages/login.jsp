@@ -7,7 +7,14 @@
 <c:set var="pageJsList" value="${['scriptnav.js']}"/>
 
 <%@ include file="/partials/header-nav.jsp" %>
-<body >
+<link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        rel="stylesheet"
+/>
+<input type="hidden" id="status"
+       value="<%= request.getAttribute("status")%>"/>
+
+
 <!-- HEADER -->
 <div class="login-container">
 
@@ -27,12 +34,13 @@
     </div>
 
     <div class="form-login">
-        <form action="" method="POST" class="form" id="form-2">
+        <form action="<%=request.getContextPath()%>/login" method="POST" class="form" id="form-2">
             <h3 class="heading">Đăng Nhập</h3>
 
             <div class="form-group">
                 <label for="username" class="form-label">Tên tài khoản hoặc Email</label>
-                <input id="username" name="username" type="text" placeholder="Nhập tên tài khoản hoặc Email" class="form-control">
+                <input id="username" name="username" type="text" placeholder="Nhập tên tài khoản hoặc Email"
+                       class="form-control">
                 <span class="form-message"></span>
             </div>
 
@@ -43,30 +51,61 @@
             </div>
 
             <div class="form-group f-term">
-                <label for="agree" class="form-label">Quên mật khẩu? Nhấn vào <a href="./quentk.html">đây</a></label>
+                <label class="form-label">Quên mật khẩu? Nhấn vào <a
+                        href="/web_war/other-pages/forgotpassword.jsp">đây</a></label>
                 <span class="form-message"></span>
             </div>
 
             <div class="sign-up">
                 <div class="dangnhap">
-                    <button  class="btn-login">Đăng nhập</button>
+                    <button type="submit" class="btn-login">Đăng nhập</button>
                 </div>
                 <div class="dangki">
-                    <a href="dangki.html">Đăng kí tại đây</a>
+                    <a href="/web_war/other-pages/register.jsp">Đăng kí tại đây</a>
                 </div>
 
             </div>
             <div class="form-icon">
                 <p>Hoặc đăng nhập bằng </p>
                 <div class="button_icon ">
-                    <a href="#" class="login-button google-login"><i class="fab fa-google-plus-g"></i>Đăng nhập Google</a>
-                    <a href="#" class="login-button facebook-login"><i class="fab fa-facebook-f"></i></i>Đăng nhập Facebook</a>
+                    <a href="#" class="login-button google-login"><i class="fab fa-google-plus-g"></i>Đăng nhập
+                        Google</a>
+                    <a href="#" class="login-button facebook-login"><i class="fab fa-facebook-f"></i></i>Đăng nhập
+                        Facebook</a>
                 </div>
             </div>
         </form>
     </div>
 </div>
-</body>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<%--<script type="text/javascript">--%>
+<%--    var x = "<%= request.getAttribute("status") %>"; // Lấy giá trị từ request--%>
+<%--    if (x === "failed") {--%>
+<%--        swal("Đăng Nhập Thất Bại", "Bạn Nhập Sai Tài Khoản Hoặc Mật Khẩu", "error");--%>
+<%--    } else if (x === "InvalidName") {--%>
+<%--        swal("Đăng Nhập Thất Bại", "Bạn Cần Nhập Vào Tài Khoản", "error");--%>
+<%--    } else if (x === "InvalidPassword") {--%>
+<%--        swal("Đăng Nhập Thất Bại", "Bạn Cần Nhập Vào Mật Khẩu", "error");--%>
+<%--    }--%>
+<%--</script>--%>
+
+<script type="text/javascript">
+    // Lấy giá trị từ request attribute
+    var status = "<%= request.getAttribute("status") != null ? request.getAttribute("status") : "" %>";
+
+    // Hiển thị thông báo tương ứng
+    if (status === "failed") {
+        swal("Đăng Nhập Thất Bại", "Bạn Nhập Sai Tài Khoản Hoặc Mật Khẩu", "error");
+    }
+    if (status === "InvalidName") {
+        swal("Đăng Nhập Thất Bại", "Bạn Cần Nhập Vào Tài Khoản", "error");
+    }
+    if (status === "InvalidPassword") {
+        swal("Đăng Nhập Thất Bại", "Bạn Cần Nhập Vào Mật Khẩu", "error");
+    }
+</script>
+
 
 <!-- ====================================footer=============================== -->
 <%@ include file="/partials/footer.jsp" %>

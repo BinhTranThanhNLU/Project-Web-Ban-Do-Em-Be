@@ -2,102 +2,113 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<c:set var="title" value="Thêm người dùng"/>
-<c:set var="pageCssList" value="${['navbar-left-top.css', 'add-employee.css', 'add-order.css']}"/>
+<c:set var="title" value="Admin"/>
+<c:set var="pageCssList" value="${['navbar-left-top.css', 'add-employee.css']}"/>
 <c:set var="pageJsList" value="${[]}"/>
 
 <%@ include file="/partials/header-nav-admin.jsp" %>
 
 
 <div class="container">
-    <div class="breadcrumb">
-        <a href="#">Danh Sách Sản Phẩm</a> / <span>Thêm Sản Phẩm</span>
-    </div>
-    <div class="header">
-        Tạo mới sản phẩm
-        <hr/>
-    </div>
-    <div class="button-group">
-        <button><i class="fas fa-plus"></i> Thêm nhà cung cấp</button>
-        <button><i class="fas fa-plus"></i> Thêm danh mục</button>
-        <button><i class="fas fa-plus"></i> Thêm tình trạng</button>
-    </div>
-    <form>
-        <div class="form-group">
-            <label for="product-code">ID khách hàng</label>
-            <input
-                    type="text"
-                    id="product-code"
-                    name="product-code"
-                    placeholder="Nhập ID đơn hàng"
-            />
-
-            <label for="product-name">Tên tài khoảng</label>
-            <input
-                    type="text"
-                    id="product-name"
-                    name="product-name"
-                    placeholder="Nhập Tên Khách hàng"
-            />
-            <label for="fullName">Họ và tên </label>
-            <input
-                    type="text"
-                    id="fullName"
-                    name="quantity"
-                    placeholder="Nhập Đơn hàng"
-            />
-            <label for="email">Email</label>
-            <input
-                    type="text"
-                    id="email"
-                    name="quantity"
-                    placeholder="Email"
-            />
-            <label for="phone">Số điện thoại</label>
-            <input
-                    type="text"
-                    id="phone"
-                    name="quantity"
-                    placeholder="Nhập Số điện thoại"
-            />
-            <label for="address">Địa chỉ</label>
-            <input
-                    type="text"
-                    id="address"
-                    name="quantity"
-                    placeholder="Nhập Địa chỉ"
-            />
-            <label for="quantity">Lịch sử mua</label>
-            <input
-                    type="text"
-                    id="quantity"
-                    name="quantity"
-                    placeholder="Nhập Tổng tiền"
-            />
-            <label for="quantity">Tổng tiền mua</label>
-            <input
-                    type="text"
-                    id="quantity"
-                    name="quantity"
-                    placeholder="Nhập Tổng tiền"
-            />
-
-            <label for="product-image">Ảnh sản phẩm</label>
-            <div class="file-input">
-                <button type="button">
-                    <i class="fas fa-upload"></i> Chọn ảnh
-                </button>
-                <input type="file" id="product-image" name="product-image"/>
+    <div class="container-add">
+        <div class="breadcrumb">
+            <a href="./manage-user.jsp">Danh Sách Người Dùng</a> / <span>Thêm Người Dùng</span>
+        </div>
+        <div class="header" style="color: black;">
+            Tạo mới người dùng
+            <hr />
+        </div>
+        <c:if test="${not empty sessionScope.message}">
+            <div style="color: white; font-weight: bold; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: ${sessionScope.success ? '#90EE90' : '#FF9999'};">
+                <ul style="margin: 0; padding: 0; list-style: none;">
+                    <c:forEach var="error" items="${sessionScope.message}">
+                        <li>${error}</li>
+                    </c:forEach>
+                </ul>
             </div>
-            <label for="description">Mô tả sản phẩm</label>
-            <textarea id="description" name="description"></textarea>
-        </div>
-        <div class="form-actions">
-            <button type="submit" class="save-button">Lưu lại</button>
-            <button type="button" class="cancel-button">Hủy bỏ</button>
-        </div>
-    </form>
+            <c:remove var="message" scope="session"/>
+            <c:remove var="success" scope="session"/>
+        </c:if>
+
+        <form action="${pageContext.request.contextPath}/manage-user/add-user" method="post" enctype="multipart/form-data">
+            <!-- Vai trò -->
+            <div class="form-group">
+                <label for="role">Vai trò</label>
+                <select id="role" name="idRole" required>
+                    <c:forEach var="role" items="${roles}">
+                        <option value="${role.idRole}">${role.name}</option>
+                    </c:forEach>
+                </select>
+            </div>
+
+            <!-- Tên đăng nhập -->
+            <div class="form-group">
+                <label for="username">Tên đăng nhập</label>
+                <input type="text" id="username" name="username" placeholder="Nhập tên đăng nhập"
+                       required />
+            </div>
+
+            <!-- Mật khẩu -->
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required />
+            </div>
+
+            <!-- Họ và tên -->
+            <div class="form-group">
+                <label for="fullName">Họ và tên</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Nhập họ và tên" required />
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Nhập email" required />
+            </div>
+
+            <!-- Số điện thoại -->
+            <div class="form-group">
+                <label for="phoneNumber">Số điện thoại</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Nhập số điện thoại"
+                       required />
+            </div>
+
+            <!-- Ngày sinh -->
+            <div class="form-group">
+                <label for="birthDate">Ngày sinh</label>
+                <input type="text" id="birthDate" name="birthDate"
+                       value="<fmt:formatDate value='${user.birthDate}' pattern='dd/MM/yyyy' />" placeholder="dd/MM/yyyy" />
+            </div>
+
+            <!-- Ảnh đại diện -->
+            <div class="form-group">
+                <label for="avatar">Ảnh đại diện</label>
+                <input type="file" id="avatar" name="avatar" accept="image/*" />
+            </div>
+
+            <!-- Trạng thái hoạt động -->
+            <div class="form-group">
+                <label>Trạng thái hoạt động</label>
+                <div>
+                    <input type="radio" id="active-yes" name="active" value="1" checked />
+                    <label for="active-yes">Hoạt động</label>
+                </div>
+                <div>
+                    <input type="radio" id="active-no" name="active" value="0" />
+                    <label for="active-no">Không hoạt động</label>
+                </div>
+            </div>
+
+            <!-- Nút hành động -->
+            <div class="form-actions">
+                <button type="submit" class="save-button">Thêm</button>
+                <button type="button" class="cancel-button">Hủy bỏ</button>
+            </div>
+        </form>
+    </div>
 </div>
 </div>
 </div>
+
 <%@ include file="/partials/footer-admin.jsp" %>
+

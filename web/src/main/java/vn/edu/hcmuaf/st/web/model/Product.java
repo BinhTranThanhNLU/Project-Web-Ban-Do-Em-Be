@@ -13,12 +13,16 @@ public class Product implements Serializable {
     private Integer discount;
     private Date createAt;
     private Date updateAt;
-    private boolean isNew;
+    private boolean isNewProduct;
     private String description;
 
     private Category category;
     private List<ProductImage> images;
     private List<ProductVariant> variants;
+
+    private BigDecimal discountedPrice;
+
+    private int totalStock;
 
     // Constructor rỗng
     public Product() {
@@ -26,7 +30,7 @@ public class Product implements Serializable {
 
     // Constructor đầy đủ
     public Product(int idProduct, int idCategory, String title, BigDecimal price, Integer discount,
-                   Date createAt, Date updateAt, boolean isNew, String description) {
+                   Date createAt, Date updateAt, boolean isNewProduct, String description) {
         this.idProduct = idProduct;
         this.idCategory = idCategory;
         this.title = title;
@@ -34,13 +38,13 @@ public class Product implements Serializable {
         this.discount = discount;
         this.createAt = createAt;
         this.updateAt = updateAt;
-        this.isNew = isNew;
+        this.isNewProduct = isNewProduct;
         this.description = description;
     }
 
     public Product(int idProduct, int idCategory, String title, BigDecimal price, Integer discount
             , Date createAt, Date updateAt
-            , boolean isNew, String description
+            , boolean isNewProduct, String description
             , Category category, List<ProductImage> images
             , List<ProductVariant> variants) {
         this.idProduct = idProduct;
@@ -50,11 +54,18 @@ public class Product implements Serializable {
         this.discount = discount;
         this.createAt = createAt;
         this.updateAt = updateAt;
-        this.isNew = isNew;
+        this.isNewProduct = isNewProduct;
         this.description = description;
         this.category = category;
         this.images = images;
         this.variants = variants;
+    }
+
+    public int getTotalStock() {
+        if (variants == null || variants.isEmpty()) {
+            return 0; // Nếu không có variants, trả về 0
+        }
+        return variants.stream().mapToInt(ProductVariant::getStockQuantity).sum(); // Tính tổng
     }
 
     // Getters và Setters
@@ -115,12 +126,12 @@ public class Product implements Serializable {
         this.updateAt = updateAt;
     }
 
-    public boolean isNew() {
-        return isNew;
+    public boolean isNewProduct() {
+        return isNewProduct;
     }
 
-    public void setNew(boolean aNew) {
-        isNew = aNew;
+    public void setNewProduct(boolean isNewProduct) {
+        this.isNewProduct = isNewProduct;
     }
 
     public String getDescription() {
@@ -153,5 +164,17 @@ public class Product implements Serializable {
 
     public void setVariants(List<ProductVariant> variants) {
         this.variants = variants;
+    }
+
+    public void setTotalStock(int totalStock) {
+        totalStock = getTotalStock();
+        this.totalStock = totalStock;
+    }
+
+    public BigDecimal getDiscountedPrice() {
+        if (price == null || discount == null) {
+            return BigDecimal.ZERO; // Trả về 0 nếu giá hoặc giảm giá không tồn tại
+        }
+        return price.subtract(price.multiply(BigDecimal.valueOf(discount)).divide(BigDecimal.valueOf(100)));
     }
 }
